@@ -36,8 +36,8 @@
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
       
       <guid>/home/about/</guid>
-      <description>Biography Pedro Nascimento de Lima (Msc) is a Lecturer at UNISINOS University, southern Brazil, where he teaches Operational Research and Simulation Modeling to undergraduate courses. He is also a member of the GMAP Research Group, where he works building decision support tools.
-His undergraduate and master&amp;rsquo;s dissertations focused on wicked problems and decision under deep uncertainty, have received the Best Brazilian Dissertation in Production Engineering Prize from ABEPRO, in 2016 and 2018, respectively.</description>
+      <description>Hi, welcome to my personal website! This is a work-in-progress site where I&amp;rsquo;ll share blog posts, and other materials currently scattered across many websites. You might find interesting material here if you&amp;rsquo;re interested in R programming, simulation modelling, or even acoustic guitar spontaneus recordings. This website is divided into
+Biography I am a Lecturer at UNISINOS University, southern Brazil, where I teach Operational Research and Simulation Modeling to undergraduate courses.</description>
     </item>
     
     <item>
@@ -95,7 +95,7 @@ His undergraduate and master&amp;rsquo;s dissertations focused on wicked problem
     </item>
     
     <item>
-      <title>Projects</title>
+      <title>Projects &amp; Initiatives</title>
       <link>/home/projects/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
       
@@ -124,20 +124,20 @@ I am a teaching instructor for the following courses at University X:
     </item>
     
     <item>
-      <title>Search</title>
-      <link>/home/search/</link>
-      <pubDate>Mon, 23 Jul 2018 00:00:00 -0300</pubDate>
-      
-      <guid>/home/search/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Contact</title>
       <link>/home/contact/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
       
       <guid>/home/contact/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Search</title>
+      <link>/home/search/</link>
+      <pubDate>Mon, 23 Jul 2018 00:00:00 -0300</pubDate>
+      
+      <guid>/home/search/</guid>
       <description></description>
     </item>
     

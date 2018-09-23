@@ -28,8 +28,10 @@ weight = 5
 
 +++
 
+Hi, welcome to my personal website! This is a work-in-progress site where I'll share blog posts, and other materials currently scattered across many websites. You might find interesting material here if you're interested in R programming, simulation modelling, or even acoustic guitar spontaneus recordings. This website is divided into 
+
 # Biography
 
-Pedro Nascimento de Lima (Msc) is a Lecturer at UNISINOS University, southern Brazil, where he teaches Operational Research and Simulation Modeling to undergraduate courses. He is also a member of the GMAP Research Group, where he works building decision support tools. 
+I am a Lecturer at UNISINOS University, southern Brazil, where I teach Operational Research and Simulation Modeling to undergraduate courses. I am also a member of the GMAP Research Group, where I work building decision support tools. 
 
-His undergraduate and master's dissertations focused on wicked problems and decision under deep uncertainty, have received the Best Brazilian Dissertation in Production Engineering Prize from ABEPRO, in 2016 and 2018, respectively.
+My academic intersts often gravitate towards the intersection between OR, Programming and Managament of Wicked Problems. My undergraduate and master's dissertations focused on wicked problems and decision under deep uncertainty, have received the Best Brazilian Dissertation in Production Engineering Prize from ABEPRO, in 2016 and 2018, respectively.

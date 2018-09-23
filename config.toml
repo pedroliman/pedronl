@@ -106,7 +106,7 @@ enableGitInfo = true
   font = "playfair"
 
   # Description for social sharing and search engines. If undefined, author role is used in place.
-  description = ""
+  description = "Welcome to Pedro Nascimento de Lima personal website."
   
   # Default image for social sharing and search engines. Place image in `static/img/` folder and specify image name here.
   sharing_image = ""
