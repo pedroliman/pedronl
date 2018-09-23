@@ -4,40 +4,8 @@
     
     <url>
     
-      <loc>/tutorial/example/</loc>
-      <lastmod>2018-09-20T22:46:12-03:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/tutorial/</loc>
-      <lastmod>2018-09-20T22:46:12-03:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/privacy/</loc>
-      <lastmod>2018-09-20T22:46:12-03:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/talk/example-talk/</loc>
-      <lastmod>2018-09-20T22:46:12-03:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/post/</loc>
-      <lastmod>2018-09-20T22:46:12-03:00</lastmod>
+      <loc>/publication/impacts-additive-manufacturing-production-systems/</loc>
+      <lastmod>2018-09-23T12:29:20-03:00</lastmod>
     </url>
     
   
@@ -45,14 +13,6 @@
     <url>
     
       <loc>/publication/</loc>
-      <lastmod>2018-09-20T22:46:12-03:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/talk/</loc>
       <lastmod>2018-09-20T22:46:12-03:00</lastmod>
     </url>
     
@@ -78,30 +38,6 @@
     
       <loc>/project/avalia-brasil/</loc>
       <lastmod>2018-09-23T14:08:38-03:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/post/getting-started/</loc>
-      <lastmod>2018-09-20T22:46:12-03:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/post/2015-07-23-r-rmarkdown/</loc>
-      <lastmod>2018-09-20T21:42:01-03:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/publication/impacts-additive-manufacturing-production-systems/</loc>
-      <lastmod>2018-09-23T12:29:20-03:00</lastmod>
     </url>
     
   
@@ -143,15 +79,6 @@
     
     <url>
     
-      <loc>/tags/plot/</loc>
-      <lastmod>2018-09-20T21:42:01-03:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
       <loc>/project/</loc>
       <lastmod>2018-09-23T14:08:38-03:00</lastmod>
       <priority>0</priority>
@@ -164,50 +91,6 @@
       <loc>/publication_types/</loc>
       <lastmod>2018-09-23T12:29:20-03:00</lastmod>
       <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/categories/r/</loc>
-      <lastmod>2018-09-20T21:42:01-03:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/tags/r-markdown/</loc>
-      <lastmod>2018-09-20T21:42:01-03:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/tags/regression/</loc>
-      <lastmod>2018-09-20T21:42:01-03:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/slides/</loc>
-      <lastmod>2018-09-20T22:46:12-03:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/slides/example-slides/</loc>
-      <lastmod>2018-09-20T22:46:12-03:00</lastmod>
     </url>
     
   

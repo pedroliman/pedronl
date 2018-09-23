@@ -242,6 +242,11 @@ enableGitInfo = true
     icon_pack = "fas"
     link = "mailto:pedronl@unisinos.br"
 
+  [[params.social]]
+    icon = "linkedin"
+    icon_pack = "fab"
+    link = "https://www.linkedin.com/in/pedro-nascimento-de-lima/"
+
   # [[params.social]]
   #  icon = "twitter"
   #  icon_pack = "fab"

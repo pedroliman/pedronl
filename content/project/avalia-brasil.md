@@ -28,4 +28,3 @@ math = false
 
 +++
 
-About Avalia Brasil.
