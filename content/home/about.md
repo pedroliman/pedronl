@@ -28,8 +28,6 @@ weight = 5
 
 +++
 
-Hi, welcome to my personal website! This is a work-in-progress site where I'll share blog posts, and other materials currently scattered across many websites. You might find interesting material here if you're interested in R programming, simulation modelling, or even acoustic guitar spontaneus recordings. This website is divided into 
-
 # Biography
 
 I am a Lecturer at UNISINOS University, southern Brazil, where I teach Operational Research and Simulation Modeling to undergraduate courses. I am also a member of the GMAP Research Group, where I work building decision support tools. 
