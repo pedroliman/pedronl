@@ -48,9 +48,7 @@ runArenaApp()
 
 ```
 
-After running this command, this screen will pop-up. You can upload your csv files and play around with the Confidence Interval and Scatter Plots. 
-
-![Arena2R App](/img/arena2r-app.png)
+After running this command, the app screen will pop up. You can upload your csv files and play around with the Confidence Interval and Scatter Plots. 
 
 ## Using the Package with an R Script
 

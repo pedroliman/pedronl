@@ -45,11 +45,7 @@ library(ggplot2)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
 runArenaApp()
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;After running this command, this screen will pop-up. You can upload your csv files and play around with the Confidence Interval and Scatter Plots.&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/arena2r-app.png&#34; alt=&#34;Arena2R App&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Arena2R App&lt;/p&gt;
-&lt;/div&gt;
+&lt;p&gt;After running this command, the app screen will pop up. You can upload your csv files and play around with the Confidence Interval and Scatter Plots.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;using-the-package-with-an-r-script&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Using the Package with an R Script&lt;/h2&gt;
