@@ -11,13 +11,14 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Arena2R - An R Package for Arena Simulation Users</title>
-      <link>/post/arena2r-tutorial-analysing-arena-simulation-data-in-r/</link>
-      <pubDate>Sat, 29 Sep 2018 21:13:14 -0300</pubDate>
+      <title>Arena Test Post</title>
+      <link>/post/arena2r-tutorial/</link>
+      <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/arena2r-tutorial-analysing-arena-simulation-data-in-r/</guid>
+      <guid>/post/arena2r-tutorial/</guid>
       <description>&lt;div id=&#34;why-arena2r&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Why Arena2R&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://arenasimulation.com&#34;&gt;Arena Simulation&lt;/a&gt; is a well-known Discrete Event Simulation Software. However, if you’re a heavy user you might want to extend your analysis beyond what Arena’s Process Analyzer offers. In this tutorial, I’ll guide you through the main functions of Arena2R package.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://arenasimulation.com&#34;&gt;Arena Simulation&lt;/a&gt; is a well-known Discrete Event Simulation Software. However, if you’re a heavy user you might want to extend your analysis beyond what Arena’s Process Analyzer offers. In this tutorial, I’ll guide you through the main functions of Arena2R package.&lt;/p&gt;
 &lt;p&gt;If you’re not an R user, fear not! Arena2R comes with an app you can use to explore your Arena Simulation data. All you’ll have to do is to Install R and R Studio, and run two commands in your R console.&lt;/p&gt;
 &lt;div id=&#34;installation&#34; class=&#34;section level2&#34;&gt;
@@ -148,13 +149,13 @@ knitr::kable(head(results))&lt;/code&gt;&lt;/pre&gt;
 
 arena2r::plot_confint(sim_results = results, response_variable = &amp;quot;Entity 1.NumberOut&amp;quot;)
 ## Warning: Ignoring unknown parameters: mult&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/arena2r-tutorial-analysing-arena-simulation-data-in-R_files/figure-html/arena2r-confidence-interval-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-09-27-arena-test-post_files/figure-html/arena2r-confidence-interval-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Now let’s explore the relationship between two variables, across scenarios and replications:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
 # Now let&amp;#39;s plot analyse the relationship between two variables:
 
 arena2r::plot_scatter(sim_results = results, x_variable = &amp;quot;Entity 1.NumberIn&amp;quot;, y_variable = &amp;quot;Entity 1.NumberOut&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/arena2r-tutorial-analysing-arena-simulation-data-in-R_files/figure-html/arena2r-scatter-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-09-27-arena-test-post_files/figure-html/arena2r-scatter-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Now let’s go a bit deeper and leverage ggplot2 to create a plot faceted by Scenario:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
 # If you use ggplot and you want to get more customized plots, I suggest you to spread your data.frame:
@@ -167,7 +168,7 @@ wide_results = results %&amp;gt;%
 p = ggplot(data = wide_results, mapping = aes(x = `Resource 1.Utilization`, y = `Entity 1.NumberOut`, color = Scenario)) + geom_point() + facet_wrap(~Scenario)
 
 p&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/arena2r-tutorial-analysing-arena-simulation-data-in-R_files/figure-html/arena2r-custom-ggplot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-09-27-arena-test-post_files/figure-html/arena2r-custom-ggplot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Finally, let’s summarise every statistic across all scenarios.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
 statistics_summary = arena2r::get_statistics_summary(sim_results = results, confidence = 0.95)
@@ -242,14 +243,229 @@ knitr::kable(head(statistics_summary[,1:6]))&lt;/code&gt;&lt;/pre&gt;
     </item>
     
     <item>
-      <title>Arena Test Post</title>
-      <link>/post/arena-test-post/</link>
+      <title>Arena2R - An R Package for Arena Simulation Users</title>
+      <link>/post/arena2r-tutorial/</link>
       <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/arena-test-post/</guid>
-      <description>&lt;div id=&#34;why-arena2r&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Why Arena2R&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;https://arenasimulation.com&#34;&gt;Arena Simulation&lt;/a&gt; is a well-known Discrete Event Simulation Software. However, if you’re a heavy user you might want to extend your analysis beyond what Arena’s Process Analyzer offers. In this tutorial, I’ll guide you through the main functions of Arena2R package.&lt;/p&gt;
+      <guid>/post/arena2r-tutorial/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://arenasimulation.com&#34;&gt;Arena Simulation&lt;/a&gt; is a well-known Discrete Event Simulation Software. However, if you’re a heavy user you might want to extend your analysis beyond what Arena’s Process Analyzer offers. In this tutorial, I’ll guide you through the main functions of Arena2R package.&lt;/p&gt;
+&lt;p&gt;If you’re not an R user, fear not! Arena2R comes with an app you can use to explore your Arena Simulation data. All you’ll have to do is to Install R and R Studio, and run two commands in your R console.&lt;/p&gt;
+&lt;div id=&#34;installation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Installation&lt;/h2&gt;
+&lt;p&gt;You can install arena2r from github in R with:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# install.packages(&amp;quot;devtools&amp;quot;)
+devtools::install_github(&amp;quot;pedroliman/arena2r&amp;quot;)
+
+library(arena2r)
+
+library(ggplot2)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exporting-arena-report-database&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Exporting Arena Report Database&lt;/h2&gt;
+&lt;p&gt;This is a basic example which shows you how to get your Arena results quickly into R. The basic idea is to run different scenarios and save each of them to a separate csv file. (Yes, you could use Process Analyzer (PAN) to run all scenarios, but to my knowledge, there’s no way to get your data out of the PAN easily).&lt;/p&gt;
+&lt;p&gt;Follow these steps to get Arena simulation results to R:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Run your model with &lt;span class=&#34;math inline&#34;&gt;\(n\)&lt;/span&gt; replications. Do not change the number of replications between scenarios.&lt;/li&gt;
+&lt;li&gt;For each scenario, save a csv with simulation results clicking on “Tools &amp;gt; ReportDatabase &amp;gt; Export Summary Statistics to CSV File”. Use the standard options. If Arena throws an error, then you’ll have to figure out how to get your results into a csv file. Sometimes it’s necessary to save the report database as a *.mdb file before generating the csv file.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;using-the-shiny-app&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Using the Shiny App&lt;/h2&gt;
+&lt;p&gt;If you’re not familiar to R, you can run this command on R Console and use the example app.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
+runArenaApp()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After running this command, the app screen will pop up. You can upload your csv files and play around with the Confidence Interval and Scatter Plots.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;using-the-package-with-an-r-script&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Using the Package with an R Script&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Open a new .R file, and run the following code:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Load the library:
+
+library(arena2r)
+## Carregando pacotes exigidos: ggplot2
+## Carregando pacotes exigidos: dplyr
+## 
+## Attaching package: &amp;#39;dplyr&amp;#39;
+## The following objects are masked from &amp;#39;package:stats&amp;#39;:
+## 
+##     filter, lag
+## The following objects are masked from &amp;#39;package:base&amp;#39;:
+## 
+##     intersect, setdiff, setequal, union
+## Carregando pacotes exigidos: purrr
+## Carregando pacotes exigidos: shiny
+## Carregando pacotes exigidos: shinydashboard
+## 
+## Attaching package: &amp;#39;shinydashboard&amp;#39;
+## The following object is masked from &amp;#39;package:graphics&amp;#39;:
+## 
+##     box
+## Carregando pacotes exigidos: shinyBS
+## Carregando pacotes exigidos: shinyjs
+## 
+## Attaching package: &amp;#39;shinyjs&amp;#39;
+## The following object is masked from &amp;#39;package:shiny&amp;#39;:
+## 
+##     runExample
+## The following objects are masked from &amp;#39;package:methods&amp;#39;:
+## 
+##     removeClass, show
+library(ggplot2)
+
+# Define the path to your folder with Arena csv files. In my case, it&amp;#39;s here:
+
+my_path = &amp;quot;../../../arena2r/files/Arena14/&amp;quot;
+
+# Then, get a tidy results data.frame out of your files!
+
+results = arena2r::get_simulation_results(my_path)
+
+knitr::kable(head(results))&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;Scenario&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Statistic&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Replication&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;SCENARIO 1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Entity 1.NumberIn&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;233&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;SCENARIO 1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Entity 1.NumberIn&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;247&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;SCENARIO 1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Entity 1.NumberIn&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;239&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;SCENARIO 1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Entity 1.NumberIn&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;261&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;SCENARIO 1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Entity 1.NumberIn&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;264&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;SCENARIO 1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Entity 1.NumberIn&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;6&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;266&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;After these steps, now you have a tidy data.frame with your results. Let’s get into possible visualizations. Usually, you’ll be interested in the mean confidence interval for some response variable, across scenarios.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
+# Plot a Statistic confidence interval across scenarios for a response variable.
+
+arena2r::plot_confint(sim_results = results, response_variable = &amp;quot;Entity 1.NumberOut&amp;quot;)
+## Warning: Ignoring unknown parameters: mult&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-09-27-arena2r-tutorial_files/figure-html/arena2r-confidence-interval-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Now let’s explore the relationship between two variables, across scenarios and replications:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
+# Now let&amp;#39;s plot analyse the relationship between two variables:
+
+arena2r::plot_scatter(sim_results = results, x_variable = &amp;quot;Entity 1.NumberIn&amp;quot;, y_variable = &amp;quot;Entity 1.NumberOut&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-09-27-arena2r-tutorial_files/figure-html/arena2r-scatter-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Now let’s go a bit deeper and leverage ggplot2 to create a plot faceted by Scenario:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
+# If you use ggplot and you want to get more customized plots, I suggest you to spread your data.frame:
+
+wide_results = results %&amp;gt;%
+    tidyr::spread(Statistic, Value)
+
+# Recreating my plot with ggplot, now loking at Resource Utilization:
+
+p = ggplot(data = wide_results, mapping = aes(x = `Resource 1.Utilization`, y = `Entity 1.NumberOut`, color = Scenario)) + geom_point() + facet_wrap(~Scenario)
+
+p&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-09-27-arena2r-tutorial_files/figure-html/arena2r-custom-ggplot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Finally, let’s summarise every statistic across all scenarios.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
+statistics_summary = arena2r::get_statistics_summary(sim_results = results, confidence = 0.95)
+
+knitr::kable(head(statistics_summary[,1:6]))&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;Scenario&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Statistic&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Mean&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Median&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;LowerLimit&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;UpperLimit&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;SCENARIO 1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Entity 1.NumberIn&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;241.03333&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;238.000000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;235.143546&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;246.92312&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;SCENARIO 1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Entity 1.NumberOut&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;225.13333&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;226.000000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;222.244712&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;228.02195&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;SCENARIO 1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Entity 1.NVATime&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.000000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.000000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;SCENARIO 1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Entity 1.OtherTime&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.000000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.000000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;SCENARIO 1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Entity 1.TotalTime&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;11.15272&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;9.730454&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;9.341412&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;12.96402&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;SCENARIO 1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Entity 1.TranTime&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.000000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.000000&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.00000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;I hope you enjoyed the package. Feel free to suggest new features and to contribute to its development!&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

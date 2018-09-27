@@ -4,15 +4,15 @@
     
     <url>
     
-      <loc>/post/arena2r-tutorial-analysing-arena-simulation-data-in-r/</loc>
-      <lastmod>2018-09-27T14:24:29-03:00</lastmod>
+      <loc>/post/arena2r-tutorial/</loc>
+      <lastmod>2018-09-27T14:37:36-03:00</lastmod>
     </url>
     
   
     
     <url>
     
-      <loc>/post/arena-test-post/</loc>
+      <loc>/post/arena2r-tutorial/</loc>
       <lastmod>2018-09-27T00:00:00+00:00</lastmod>
     </url>
     
@@ -87,7 +87,7 @@
     <url>
     
       <loc>/tags/arena-simualtion/</loc>
-      <lastmod>2018-09-27T14:24:29-03:00</lastmod>
+      <lastmod>2018-09-27T14:37:36-03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -104,7 +104,7 @@
     <url>
     
       <loc>/tags/discrete-event-simulation/</loc>
-      <lastmod>2018-09-27T14:24:29-03:00</lastmod>
+      <lastmod>2018-09-27T14:37:36-03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -140,7 +140,7 @@
     <url>
     
       <loc>/categories/r/</loc>
-      <lastmod>2018-09-27T14:24:29-03:00</lastmod>
+      <lastmod>2018-09-27T14:37:36-03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -149,7 +149,7 @@
     <url>
     
       <loc>/tags/r-package/</loc>
-      <lastmod>2018-09-27T14:24:29-03:00</lastmod>
+      <lastmod>2018-09-27T14:37:36-03:00</lastmod>
       <priority>0</priority>
     </url>
     
