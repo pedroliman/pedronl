@@ -2,7 +2,7 @@
 title: Arena2R - An R Package for Arena Simulation Users
 author: Pedro Nascimento de Lima
 date: '2018-09-27'
-slug: arena2r-tutorial
+slug: arena2r-package-tutorial
 categories:
   - R
 tags:

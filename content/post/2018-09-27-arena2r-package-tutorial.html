@@ -2,7 +2,7 @@
 title: Arena2R - An R Package for Arena Simulation Users
 author: Pedro Nascimento de Lima
 date: '2018-09-27'
-slug: arena2r-tutorial
+slug: arena2r-package-tutorial
 categories:
   - R
 tags:
@@ -146,13 +146,13 @@ knitr::kable(head(results))</code></pre>
 
 arena2r::plot_confint(sim_results = results, response_variable = &quot;Entity 1.NumberOut&quot;)
 ## Warning: Ignoring unknown parameters: mult</code></pre>
-<p><img src="/post/2018-09-27-arena2r-tutorial_files/figure-html/arena2r-confidence-interval-plot-1.png" width="672" /></p>
+<p><img src="/post/2018-09-27-arena2r-package-tutorial_files/figure-html/arena2r-confidence-interval-plot-1.png" width="672" /></p>
 <p>Now let’s explore the relationship between two variables, across scenarios and replications:</p>
 <pre class="r"><code>
 # Now let&#39;s plot analyse the relationship between two variables:
 
 arena2r::plot_scatter(sim_results = results, x_variable = &quot;Entity 1.NumberIn&quot;, y_variable = &quot;Entity 1.NumberOut&quot;)</code></pre>
-<p><img src="/post/2018-09-27-arena2r-tutorial_files/figure-html/arena2r-scatter-plot-1.png" width="672" /></p>
+<p><img src="/post/2018-09-27-arena2r-package-tutorial_files/figure-html/arena2r-scatter-plot-1.png" width="672" /></p>
 <p>Now let’s go a bit deeper and leverage ggplot2 to create a plot faceted by Scenario:</p>
 <pre class="r"><code>
 # If you use ggplot and you want to get more customized plots, I suggest you to spread your data.frame:
@@ -165,7 +165,7 @@ wide_results = results %&gt;%
 p = ggplot(data = wide_results, mapping = aes(x = `Resource 1.Utilization`, y = `Entity 1.NumberOut`, color = Scenario)) + geom_point() + facet_wrap(~Scenario)
 
 p</code></pre>
-<p><img src="/post/2018-09-27-arena2r-tutorial_files/figure-html/arena2r-custom-ggplot-1.png" width="672" /></p>
+<p><img src="/post/2018-09-27-arena2r-package-tutorial_files/figure-html/arena2r-custom-ggplot-1.png" width="672" /></p>
 <p>Finally, let’s summarise every statistic across all scenarios.</p>
 <pre class="r"><code>
 statistics_summary = arena2r::get_statistics_summary(sim_results = results, confidence = 0.95)
