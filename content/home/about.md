@@ -30,6 +30,6 @@ weight = 5
 
 # Biography
 
-I am a Lecturer at UNISINOS University, southern Brazil, where I teach Operational Research and Simulation Modeling to undergraduate courses. I am also a member of the GMAP Research Group, where I work building decision support tools. 
+I am a Lecturer at [UNISINOS University](http://www.unisinos.br/global/en/), southern Brazil, where I teach Operational Research and Simulation Modeling to undergraduate courses. I am also a member of the [GMAP Research Group](http://gmap.unisinos.br), where I work building decision support tools. 
 
 My academic intersts often gravitate towards the intersection between OR, Programming and Managament of Wicked Problems. My undergraduate and master's dissertations focused on wicked problems and decision under deep uncertainty, have received the Best Brazilian Dissertation in Production Engineering Prize from ABEPRO, in 2016 and 2018, respectively.

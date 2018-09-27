@@ -4,8 +4,24 @@
     
     <url>
     
+      <loc>/post/arena2r-tutorial-analysing-arena-simulation-data-in-r/</loc>
+      <lastmod>2018-09-29T21:13:14-03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>/publication/impacts-additive-manufacturing-production-systems/</loc>
-      <lastmod>2018-09-23T12:29:20-03:00</lastmod>
+      <lastmod>2018-09-23T15:07:27-03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/post/</loc>
+      <lastmod>2018-09-20T22:46:12-03:00</lastmod>
     </url>
     
   
@@ -37,7 +53,7 @@
     <url>
     
       <loc>/project/avalia-brasil/</loc>
-      <lastmod>2018-09-23T14:08:38-03:00</lastmod>
+      <lastmod>2018-09-23T15:07:27-03:00</lastmod>
     </url>
     
   
@@ -45,7 +61,7 @@
     <url>
     
       <loc>/publication_types/6/</loc>
-      <lastmod>2018-09-23T12:29:20-03:00</lastmod>
+      <lastmod>2018-09-23T15:07:27-03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -62,7 +78,25 @@
     
     <url>
     
+      <loc>/tags/arena-simualtion/</loc>
+      <lastmod>2018-09-29T21:13:14-03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>/categories/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/discrete-event-simulation/</loc>
+      <lastmod>2018-09-29T21:13:14-03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -89,7 +123,25 @@
     <url>
     
       <loc>/publication_types/</loc>
-      <lastmod>2018-09-23T12:29:20-03:00</lastmod>
+      <lastmod>2018-09-23T15:07:27-03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/categories/r/</loc>
+      <lastmod>2018-09-29T21:13:14-03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/r-package/</loc>
+      <lastmod>2018-09-29T21:13:14-03:00</lastmod>
       <priority>0</priority>
     </url>
     
