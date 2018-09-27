@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publications on Pedro Nascimento de Lima</title>
-    <link>https://www.pedronl.com/publication/</link>
+    <link>/publication/</link>
     <description>Recent content in Publications on Pedro Nascimento de Lima</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0200</lastBuildDate>
     
-	<atom:link href="https://www.pedronl.com/publication/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>The Impacts of Additive Manufacturing on Production Systems</title>
-      <link>https://www.pedronl.com/publication/impacts-additive-manufacturing-production-systems/</link>
+      <link>/publication/impacts-additive-manufacturing-production-systems/</link>
       <pubDate>Sat, 01 Sep 2018 00:00:00 -0300</pubDate>
       
-      <guid>https://www.pedronl.com/publication/impacts-additive-manufacturing-production-systems/</guid>
+      <guid>/publication/impacts-additive-manufacturing-production-systems/</guid>
       <description></description>
     </item>
     

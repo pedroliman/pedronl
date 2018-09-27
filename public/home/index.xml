@@ -2,113 +2,113 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Homes on Pedro Nascimento de Lima</title>
-    <link>https://www.pedronl.com/home/</link>
+    <link>/home/</link>
     <description>Recent content in Homes on Pedro Nascimento de Lima</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Sun, 15 Oct 2017 00:00:00 -0300</lastBuildDate>
     
-	<atom:link href="https://www.pedronl.com/home/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/home/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>https://www.pedronl.com/home/hero_carousel/</link>
+      <link>/home/hero_carousel/</link>
       <pubDate>Sun, 15 Oct 2017 00:00:00 -0300</pubDate>
       
-      <guid>https://www.pedronl.com/home/hero_carousel/</guid>
+      <guid>/home/hero_carousel/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Academic</title>
-      <link>https://www.pedronl.com/home/hero/</link>
+      <link>/home/hero/</link>
       <pubDate>Sun, 15 Oct 2017 00:00:00 -0300</pubDate>
       
-      <guid>https://www.pedronl.com/home/hero/</guid>
+      <guid>/home/hero/</guid>
       <description>The highly flexible website framework for Hugo with an extensible plugin mechanism. Create a beautifully simple site in under 10 minutes 🚀 Latest release   Star</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://www.pedronl.com/home/about/</link>
+      <link>/home/about/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
       
-      <guid>https://www.pedronl.com/home/about/</guid>
+      <guid>/home/about/</guid>
       <description>Biography I am a Lecturer at UNISINOS University, southern Brazil, where I teach Operational Research and Simulation Modeling to undergraduate courses. I am also a member of the GMAP Research Group, where I work building decision support tools.
 My academic intersts often gravitate towards the intersection between OR, Programming and Managament of Wicked Problems. My undergraduate and master&amp;rsquo;s dissertations focused on wicked problems and decision under deep uncertainty, have received the Best Brazilian Dissertation in Production Engineering Prize from ABEPRO, in 2016 and 2018, respectively.</description>
     </item>
     
     <item>
       <title>Skills</title>
-      <link>https://www.pedronl.com/home/skills/</link>
+      <link>/home/skills/</link>
       <pubDate>Wed, 20 Sep 2017 00:00:00 -0300</pubDate>
       
-      <guid>https://www.pedronl.com/home/skills/</guid>
+      <guid>/home/skills/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recent Posts</title>
-      <link>https://www.pedronl.com/home/posts/</link>
+      <link>/home/posts/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
       
-      <guid>https://www.pedronl.com/home/posts/</guid>
+      <guid>/home/posts/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recent Publications</title>
-      <link>https://www.pedronl.com/home/publications/</link>
+      <link>/home/publications/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
       
-      <guid>https://www.pedronl.com/home/publications/</guid>
+      <guid>/home/publications/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Selected Talks</title>
-      <link>https://www.pedronl.com/home/talks_selected/</link>
+      <link>/home/talks_selected/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
       
-      <guid>https://www.pedronl.com/home/talks_selected/</guid>
+      <guid>/home/talks_selected/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recent &amp; Upcoming Talks</title>
-      <link>https://www.pedronl.com/home/talks/</link>
+      <link>/home/talks/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
       
-      <guid>https://www.pedronl.com/home/talks/</guid>
+      <guid>/home/talks/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Projects &amp; Initiatives</title>
-      <link>https://www.pedronl.com/home/projects/</link>
+      <link>/home/projects/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
       
-      <guid>https://www.pedronl.com/home/projects/</guid>
+      <guid>/home/projects/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Selected Publications</title>
-      <link>https://www.pedronl.com/home/publications_selected/</link>
+      <link>/home/publications_selected/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
       
-      <guid>https://www.pedronl.com/home/publications_selected/</guid>
+      <guid>/home/publications_selected/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Teaching</title>
-      <link>https://www.pedronl.com/home/teaching/</link>
+      <link>/home/teaching/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
       
-      <guid>https://www.pedronl.com/home/teaching/</guid>
+      <guid>/home/teaching/</guid>
       <description>This is an example of using the custom widget to create your own homepage section.
 I am a teaching instructor for the following courses at University X:
  CS101: An intro to computer science CS102: An intro to computer science CS103: An intro to computer science CS104: An intro to computer science CS105: An intro to computer science CS106: An intro to computer science CS107: An intro to computer science  </description>
@@ -116,28 +116,28 @@ I am a teaching instructor for the following courses at University X:
     
     <item>
       <title>Tags</title>
-      <link>https://www.pedronl.com/home/tags/</link>
+      <link>/home/tags/</link>
       <pubDate>Wed, 20 Sep 2017 00:00:00 -0300</pubDate>
       
-      <guid>https://www.pedronl.com/home/tags/</guid>
+      <guid>/home/tags/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Contact</title>
-      <link>https://www.pedronl.com/home/contact/</link>
+      <link>/home/contact/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
       
-      <guid>https://www.pedronl.com/home/contact/</guid>
+      <guid>/home/contact/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Search</title>
-      <link>https://www.pedronl.com/home/search/</link>
+      <link>/home/search/</link>
       <pubDate>Mon, 23 Jul 2018 00:00:00 -0300</pubDate>
       
-      <guid>https://www.pedronl.com/home/search/</guid>
+      <guid>/home/search/</guid>
       <description></description>
     </item>
     

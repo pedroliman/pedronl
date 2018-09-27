@@ -4,7 +4,23 @@
     
     <url>
     
-      <loc>https://www.pedronl.com/publication/impacts-additive-manufacturing-production-systems/</loc>
+      <loc>/post/arena2r-tutorial-analysing-arena-simulation-data-in-r/</loc>
+      <lastmod>2018-09-27T14:24:29-03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/post/arena-test-post/</loc>
+      <lastmod>2018-09-27T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/publication/impacts-additive-manufacturing-production-systems/</loc>
       <lastmod>2018-09-23T15:07:27-03:00</lastmod>
     </url>
     
@@ -12,15 +28,15 @@
     
     <url>
     
-      <loc>https://www.pedronl.com/post/</loc>
-      <lastmod>2018-09-27T14:15:18-03:00</lastmod>
+      <loc>/post/</loc>
+      <lastmod>2018-09-27T14:30:44-03:00</lastmod>
     </url>
     
   
     
     <url>
     
-      <loc>https://www.pedronl.com/publication/</loc>
+      <loc>/publication/</loc>
       <lastmod>2018-09-20T22:46:12-03:00</lastmod>
     </url>
     
@@ -28,7 +44,7 @@
     
     <url>
     
-      <loc>https://www.pedronl.com/project/arena2r/</loc>
+      <loc>/project/arena2r/</loc>
       <lastmod>2018-09-23T14:08:38-03:00</lastmod>
     </url>
     
@@ -36,7 +52,7 @@
     
     <url>
     
-      <loc>https://www.pedronl.com/project/sigepro/</loc>
+      <loc>/project/sigepro/</loc>
       <lastmod>2018-09-23T14:08:38-03:00</lastmod>
     </url>
     
@@ -44,7 +60,7 @@
     
     <url>
     
-      <loc>https://www.pedronl.com/project/avalia-brasil/</loc>
+      <loc>/project/avalia-brasil/</loc>
       <lastmod>2018-09-23T15:07:27-03:00</lastmod>
     </url>
     
@@ -52,7 +68,7 @@
     
     <url>
     
-      <loc>https://www.pedronl.com/publication_types/6/</loc>
+      <loc>/publication_types/6/</loc>
       <lastmod>2018-09-23T15:07:27-03:00</lastmod>
       <priority>0</priority>
     </url>
@@ -61,7 +77,7 @@
     
     <url>
     
-      <loc>https://www.pedronl.com/tags/academic/</loc>
+      <loc>/tags/academic/</loc>
       <lastmod>2018-09-23T14:08:38-03:00</lastmod>
       <priority>0</priority>
     </url>
@@ -70,7 +86,8 @@
     
     <url>
     
-      <loc>https://www.pedronl.com/categories/</loc>
+      <loc>/tags/arena-simualtion/</loc>
+      <lastmod>2018-09-27T14:24:29-03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -78,7 +95,24 @@
     
     <url>
     
-      <loc>https://www.pedronl.com/</loc>
+      <loc>/categories/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/discrete-event-simulation/</loc>
+      <lastmod>2018-09-27T14:24:29-03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/</loc>
       <lastmod>2018-09-20T22:46:12-03:00</lastmod>
       <priority>0</priority>
     </url>
@@ -87,7 +121,7 @@
     
     <url>
     
-      <loc>https://www.pedronl.com/project/</loc>
+      <loc>/project/</loc>
       <lastmod>2018-09-23T14:08:38-03:00</lastmod>
       <priority>0</priority>
     </url>
@@ -96,7 +130,7 @@
     
     <url>
     
-      <loc>https://www.pedronl.com/publication_types/</loc>
+      <loc>/publication_types/</loc>
       <lastmod>2018-09-23T15:07:27-03:00</lastmod>
       <priority>0</priority>
     </url>
@@ -105,7 +139,25 @@
     
     <url>
     
-      <loc>https://www.pedronl.com/tags/software/</loc>
+      <loc>/categories/r/</loc>
+      <lastmod>2018-09-27T14:24:29-03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/r-package/</loc>
+      <lastmod>2018-09-27T14:24:29-03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/software/</loc>
       <lastmod>2018-09-23T14:08:38-03:00</lastmod>
       <priority>0</priority>
     </url>
@@ -114,7 +166,7 @@
     
     <url>
     
-      <loc>https://www.pedronl.com/tags/</loc>
+      <loc>/tags/</loc>
       <lastmod>2018-09-23T14:08:38-03:00</lastmod>
       <priority>0</priority>
     </url>

@@ -1,0 +1,24 @@
+---
+title: Arena Test Post
+author: Pedro Nascimento de Lima
+date: '2018-09-27'
+slug: arena-test-post
+categories:
+  - R
+tags:
+  - Arena Simualtion
+  - Discrete Event Simulation
+  - R Package
+header:
+  caption: ''
+  image: ''
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+```
+
+# Why Arena2R
+
+[Arena Simulation](https://arenasimulation.com) is a well-known Discrete Event Simulation Software. However, if you're a heavy user you might want to extend your analysis beyond what Arena's Process Analyzer offers. In this tutorial, I'll guide you through the main functions of Arena2R package.
