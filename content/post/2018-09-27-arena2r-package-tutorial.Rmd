@@ -63,23 +63,36 @@ After running this command, the app screen will pop up. You can upload your csv 
 
 * Open a new .R file, and run the following code:
 
-```{r arena2r-example}
+```{r arena2r-example, eval = FALSE}
 # Load the library:
 
 library(arena2r)
-library(ggplot2)
 
 # Define the path to your folder with Arena csv files. In my case, it's here:
 
-my_path = "../../../arena2r/files/Arena14/"
+my_path = "../../../arena2r/inst/Arena14/"
 
 # Then, get a tidy results data.frame out of your files!
-
 results = arena2r::get_simulation_results(my_path)
+
+```
+
+You can also play around with the arena_results dataset included in the package. To use it, follow these steps:
+
+```{r arena2r-using-example-dataset}
+
+library(arena2r)
+
+# Load the example dataset:
+data("arena_results")
+
+# Let's call it results
+results = arena_results
 
 knitr::kable(head(results))
 
 ```
+
 
 After these steps, now you have a tidy data.frame with your results. Let's get into possible visualizations. Usually, you'll be interested in the mean confidence interval for some response variable, across scenarios.
 

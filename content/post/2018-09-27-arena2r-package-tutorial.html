@@ -53,6 +53,17 @@ runArenaApp()
 <pre class="r"><code># Load the library:
 
 library(arena2r)
+
+# Define the path to your folder with Arena csv files. In my case, it&#39;s here:
+
+my_path = &quot;../../../arena2r/inst/Arena14/&quot;
+
+# Then, get a tidy results data.frame out of your files!
+results = arena2r::get_simulation_results(my_path)
+</code></pre>
+<p>You can also play around with the arena_results dataset included in the package. To use it, follow these steps:</p>
+<pre class="r"><code>
+library(arena2r)
 ## Carregando pacotes exigidos: ggplot2
 ## Carregando pacotes exigidos: dplyr
 ## 
@@ -81,15 +92,12 @@ library(arena2r)
 ## The following objects are masked from &#39;package:methods&#39;:
 ## 
 ##     removeClass, show
-library(ggplot2)
 
-# Define the path to your folder with Arena csv files. In my case, it&#39;s here:
+# Load the example dataset:
+data(&quot;arena_results&quot;)
 
-my_path = &quot;../../../arena2r/files/Arena14/&quot;
-
-# Then, get a tidy results data.frame out of your files!
-
-results = arena2r::get_simulation_results(my_path)
+# Let&#39;s call it results
+results = arena_results
 
 knitr::kable(head(results))</code></pre>
 <table>
