@@ -19,7 +19,7 @@ header:
 knitr::opts_chunk$set(echo = TRUE, fig.align='center' ,warning = FALSE, message = FALSE, fig.height = 3)
 ```
 
-Este arquivo foi utilizado como arquivo de apoio à aulas ministradas sobre previsão de demanda utilizando o R. Para um tramento mais aprofundado sobre o tema, recorrer ao livro [Forecating: Principles and Practice](https://otexts.org/fpp2/).
+Este arquivo foi utilizado como arquivo de apoio à aulas ministradas sobre previsão de demanda utilizando o R. Para um tramento mais aprofundado sobre o tema, recorrer ao excelente livro [Forecating: Principles and Practice](https://otexts.org/fpp2/).
 
 
 ## Sobre o R
