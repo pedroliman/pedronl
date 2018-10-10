@@ -32,11 +32,16 @@ You can install arena2r from github in R with:
 ```{r arena2r-installation, eval = FALSE}
 # install.packages("devtools")
 devtools::install_github("pedroliman/arena2r")
+```
 
+Then, load the package:
+
+```{r}
 library(arena2r)
-
+library(dplyr)
 library(ggplot2)
 ```
+
 
 ## Exporting Arena Report Database
 

@@ -1,0 +1,393 @@
+---
+title: Previsão de Séries Temporais com o R
+author: Pedro Nascimento de lima
+date: '2018-10-10'
+slug: previsao-de-series-temporais-com-o-r
+categories:
+  - R
+tags:
+  - Previsão de Demanda
+  - Séries Temporais
+  - Suavização Exponencial
+header:
+  caption: 'Utilizando Modelos de Suavização Exponencial no R'
+  image: ''
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.align='center',warning = FALSE, message = FALSE)
+```
+
+# Sobre este post
+Este arquivo foi utilizado como arquivo de apoio à aulas ministradas sobre previsão de demanda utilizando o R. Para um tramento mais aprofundado sobre o tema, recorrer ao livro [Forecating: Principles and Practice](https://otexts.org/fpp2/).
+
+# Introdução - O Objeto de Séries Temporais {data-background=imgs/background-1.jpg data-background-size=cover}
+
+## Sobre o R
+- O R é um ambiente de computação estatística, com mais de 13 mil pacotes publicados.
+- Cada um destes pacotes tem um fim específico. Neste curso, utilizaremos principalmente as bibliotecas 'forecast' e o fpp2. Ambos os pacotes são utlizados no livro  [Forecating: Principles and Practice](https://otexts.org/fpp2/).
+
+## Passos para Realizar Previsões
+
+1. Faça um gráfico dos dados;
+2. Selecione uma função para a previsão;
+3. Estime os parâmetros da função;
+4. Avalie a Qualidade do modelo de previsão;
+5. Selecione e implemente o melhor modelo encontrado.
+
+
+## Instalando Bibliotecas no R
+- Instale E carregue as bibliotecas que iremos utilizar nesta aula rodando estes comandos:
+
+```{r eval=FALSE, echo=TRUE}
+bibliotecas = c("forecast", "fpp2", "readxl")
+
+install.packages(bibliotecas)
+
+# Caso encontre algum erro, rode o install packages separadamente para cada biblioteca:
+install.packages("forecast")
+install.packages("fpp2")
+install.packages("readxl")
+```
+
+## Antes de começar, carregue as bibliotecas:
+```{r}
+library(forecast)
+library(fpp2)
+library(readxl)
+```
+
+## Trabalhando com a Primeira Série
+- Observe as série gold:
+```{r echo = TRUE, fig.align='center'}
+# A série temporal "gold" foi carregada pela biblioteca forecast.
+autoplot(gold)
+```
+
+
+# Visualizando Séries Temporais {data-background=imgs/background-1.jpg data-background-size=cover}
+
+## Padrões em séries temporais
+ - Tendência: Os dados possuem uma tendência geral de aumento ou queda (exemplo: Crescimento da população).
+ - Sazonalidade: Os dados se comportam de modo similar, obedecendo padrões com **durações fixas** (exemplo: venda de ovos de páscoa).
+ - Ciclicidade: A série possui um comportamento variando em ciclos, porém **sem duração fixa** (exemplo: ciclos econômicos.).
+
+## Observando outras series temporais
+```{r fig.align='center'}
+# Produção de Lâ na Austrália
+autoplot(woolyrnq) 
+```
+
+## Observando outras series temporais
+```{r fig.align='center'}
+# Produção de Gás na Austrália
+autoplot(gas) 
+```
+
+## Observando o a Sazonalidade das Séries
+```{r fig.align='center'}
+# A função frequency determina a frequência da série. 
+# Para dados sazonais, irá definir o período dominante da sazonalidade, 
+# e para dados em ciclos, a duração média dos ciclos.
+frequency(gas) 
+```
+
+
+## Observando Gráficos Sazonais
+Observando a série temporal:
+```{r fig.align='center'}
+# Produção de Gás na Austrália
+autoplot(a10) + ylab("Demanda Anti-Diabeticos")
+```
+
+## Observando Gráficos Sazonais
+Observando um gráfico sazonal
+```{r fig.align='center'}
+ggseasonplot(a10) 
+```
+
+## Observando Gráficos Sazonais
+Observando um gráfico sazonal "polar":
+```{r fig.align='center'}
+ggseasonplot(a10, polar = T)
+```
+
+## Observando Gráficos Sazonais
+Observando a Venda de Cerveja:
+```{r fig.align='center'}
+beer <- window(ausbeer, start = 1992)
+autoplot(beer) + ylab("Venda de Cerveja")
+```
+
+## Observando Gráficos Sazonais
+Observando a Venda de Cerveja e sua Sazonalidade:
+```{r fig.align='center'}
+ggseasonplot(beer) 
+```
+
+## Observando Gráficos Sazonais
+Mais uma forma de visualizar a demanda sazonal
+```{r fig.align='center'}
+ggsubseriesplot(beer)
+```
+
+# Importando Dados para o R {data-background=imgs/background-1.jpg data-background-size=cover}
+
+## Criando Objetos 'ts' para Séries Temporais a partir de dados reais
+
+- Para manipular séries temporais no R, é interessante criar objetos do tipo 'ts'.
+- Podemos criar objetos a partir de arquivos do excel, csv, bases de dados, ou mesmo APIs públicas.
+
+## Criando objetos 'ts' a partir do excel
+- Podemos utilizar a biblioteca 'readxl' para ler arquivos do excel:
+```{r, out.width="100%"}
+library(readxl)
+dados_excel = readxl::read_xlsx(path = "2018-10-10-previsao-serie-temporais/VendasCarros.xlsx", sheet = "Dados")
+head(dados_excel)
+```
+## Transformando um Data Frame em uma Série Temporal
+- Para trabalhar com séries temporais, iremos transformar esta tabela:
+```{r, out.width="100%"}
+ts_vendas = ts(data = dados_excel$VendasCarros, start = c(2018,1),frequency = 12)
+ts_vendas
+```
+## Plotando a Série...
+- Agora que temos uma série temporal, vamos plotar:
+```{r, fig.align='center'}
+forecast::autoplot(ts_vendas)
+```
+
+
+
+# Previsões com Modelos Exponenciais {data-background=imgs/background-1.jpg data-background-size=cover}
+
+
+# Previsões com Modelos de Suavização Exponencial {data-background=imgs/background-1.jpg data-background-size=cover}
+
+## Suavização Exponencial Simples
+- Método da média simples: Leva em consideração todos os períodos;
+- Método "Naive": Leva em consideração apenas o último período;
+- Método da Suavização Exponencial: Leva em consideração a demanda observada nos períodos anteriores, porém faz com que o impacto dos períodos anteriores caia progressivamente.
+Notação da Previsão: $\hat{y}_{t+h|t}$ 
+
+Previsão para a demanda $y_{t+h}$, considerando dados disponiveis até $y_{t}$
+
+Equação da Previsão:
+$$\hat{y}_{t+h|t} = \alpha y_{t} + \alpha(1-\alpha)y_{t-1} + \alpha(1-\alpha)^2y_{t-2} + ... \ para \  0 \leq \alpha \leq 1$$
+
+## Suavização Exponencial Simples
+- Exemplo da Aplicação da Equação:
+
+$$\hat{y}_{t+h|t} = \alpha y_{t} + \alpha(1-\alpha)y_{t-1} + \alpha(1-\alpha)^2y_{t-2} + ... \ para \  0 \leq \alpha \leq 1$$
+
+| Obs. | $\alpha = 0.2$ |
+|------|----------------|
+|$y_{t}$| 0.2 |
+|$y_{t-1}$| 0.16 |
+|$y_{-2}$| 0.128 |
+
+## Modelo de Suavização Exponencial Simples
+Previsão: 
+$$\hat{y}_{t+h|t} = l_t$$
+Nível: 
+$$l_t = \alpha y_t + (1-\alpha)l_{t-1}$$
+O valor $\alpha$ é obtido minimizando os erros ao rodar o modelo em um set de teste.
+
+## Estimando o Modelo com o R
+- A função 'ses' (Simple Exponetial Smoothing) estima um modelo de suavização exponencial simples:
+```{r}
+dados_petroleo = window(oil, start= 1996)
+previsao_petroleo = ses(dados_petroleo, h = 5) # Previsao para os próximos 5 anos
+summary(previsao_petroleo)
+```
+
+## Estimando o Modelo com o R
+- Visualizando a Previsão:
+```{r}
+autoplot(previsao_petroleo)
+```
+
+## Modelo de Suavização Exponencial com Tendência Linear - Holt
+Previsão: 
+$$\hat{y}_{t+h|t} = l_t + h b_t$$
+Nível: 
+$$l_t = \alpha y_t + (1-\alpha)(l_{t-1}+b_{t-1})$$
+Tendência:
+$$b_t = \beta *(l_t-l_{t-1}) + (1-\beta)b_{t-1}$$
+
+## Estimando o Modelo com o R
+- A função 'holt' (Simple Exponetial Smoothing) estima o modelo de Holt (que considera a tendência): 
+```{r}
+previsao_petroleo_holt = holt(dados_petroleo, h = 5) # Previsao para os próximos 5 anos
+autoplot(previsao_petroleo_holt)
+```
+
+## Estimando o Modelo com o R
+- Também podemos observar os parâmetros estimados para o modelo: 
+```{r}
+summary(previsao_petroleo_holt)
+```
+
+## Modelo de Holt com "Damp"
+- Podemos utilizar o modelo Holt com "Damp", pressupondo que o crescimento não será linear no longo prazo. 
+
+Previsão: 
+$$\hat{y}_{t+h|t} = l_t + (\phi+\phi^2+...+\phi^h) b_t$$
+
+Nível: 
+$$l_t = \alpha y_t + (1-\alpha)(l_{t-1}+\phi b_{t-1})$$
+
+Tendência:
+$$b_t = \beta *(l_t-l_{t-1}) + (1-\beta) \phi b_{t-1}$$
+O parâmetro $\phi$ é entre 0 e 1. Se o parâmetro for igual a 1, o crescimento será linear.
+
+## Modelo de Holt com "Damp"
+```{r}
+previsao_petroleo_holt = holt(dados_petroleo, h = 15, PI = F)
+previsao_petroleo_holt_damp = holt(dados_petroleo, h = 15, damped = T, PI = F) # Previsao para os próximos 5 anos
+autoplot(dados_petroleo) + 
+  autolayer(previsao_petroleo_holt, series="Holt Linear") + 
+  autolayer(previsao_petroleo_holt_damp, series="Holt com Damp")
+```
+
+## Modelo de Suavização Exponencial com Tendência e Sazonalidade - Holt-Winters
+- Método Aditivo: Adequado quando a amplitude dos ciclos de sazonalidade não está correlacionada ao tempo.
+- Método Multiplicativo: Adequado quando a amplitude dos ciclos de sazonalidade está correlacionadao ao tempo.
+
+## Modelo Holt-Winters Aditivo
+
+Previsão: 
+$$\hat{y}_{t+h|t} = l_t + hb_t + s_{t-m+h_m^+}$$
+
+Nível: 
+$$l_t = \alpha (y_t-s_{t-m}) + (1-\alpha)(l_{t-1}+b_{t-1})$$
+
+Tendência:
+$$b_t = \beta *(l_t-l_{t-1}) + (1-\beta) b_{t-1}$$
+
+Sazonalidade:
+$$b_t = \gamma(y_t - l_{t-1 - b_{t-1}}) + (1-\gamma)s_{t-m} $$
+$s_{t-m+h_m^+}$: componente de sazonalidade do último ano de dados disponíveis.
+$m$: Período de sazonalidade.
+A média do componente de sazonalidade tende a zero.
+
+## Modelo Holt-Winters Multiplicatio
+
+Previsão: 
+$$\hat{y}_{t+h|t} = (l_t + hb_t) s_{t-m+h_m^+}$$
+
+Nível: 
+$$l_t = \alpha \frac{y_t}{s_{t-m}} + (1-\alpha)(l_{t-1}+b_{t-1})$$
+
+Tendência:
+$$b_t = \beta *(l_t-l_{t-1}) + (1-\beta) b_{t-1}$$
+
+Sazonalidade:
+$$b_t = \gamma  \frac{y_t}{l_{t-1} + b_{t-1}} + (1-\gamma)s_{t-m} $$
+$s_{t-m+h_m^+}$: componente de sazonalidade do último ano de dados disponíveis.
+$m$: Período de sazonalidade.
+A média do componente de sazonalidade tende a 1.
+
+## Exemplo - Holt-Winters Aditivo
+Relembrando a série de anti-glicêmicos.
+```{r fig.align='center'}
+# Produção de Gás na Austrália
+autoplot(a10) + ylab("Demanda AntiDiabeticos")
+```
+
+## Exemplo - Holt-Winters Aditivo
+Relembrando a série de anti-glicêmicos.
+```{r fig.align='center'}
+# Produção de Gás na Austrália
+previsao_anti_diab_aditivo = hw(a10, seasonal = "additive", PI= F)
+previsao_anti_diab_multiplicativo = hw(a10, seasonal = "multiplicative", PI = F)
+autoplot(a10) + ylab("Demanda de Remédios") +
+  autolayer(previsao_anti_diab_aditivo, series="HW Add.") + 
+  autolayer(previsao_anti_diab_multiplicativo, series="HW Mult.")
+
+```
+
+## Desafio(Para os que quiserem)
+- Colete dados de demanda de diferentes produts em sua empresa;
+- Verifique quais são as técnicas de previsão aplicadas a estes produtos;
+- Identifique se há ou não tendência e sazonalidade;
+- Aplique os métodos aprendidos;
+- Proponha um modelo de previsão novo;
+- Compare a acurácia do novo modelo em relação ao que existe atualmente na empresa.
+
+
+# Mais Aspectos Técnicos {data-background=imgs/background-1.jpg data-background-size=cover}
+
+## O modelo "Naive"
+- O modelo "naive" simplesmente pressupõe que o futuro repetirá o passado, logo a previsão é correspondente ao último valor observado.
+```{r, fig.align='center'}
+previsao = naive(oil)
+autoplot(oil, series="Dados") + 
+  xlab("Ano") +
+  autolayer(fitted(previsao), series = "Previsao") + 
+  ggtitle("Produção de Petróleo na Arábia Saudita")
+```
+
+
+## Observando os Erros
+- Os erros também podem ser plotados. Espera-se que os erros sejam "white noise". Se isso é verdade, é provável que o modelo tenha captado toda a informação disponível nos dados.
+```{r, fig.align='center'}
+autoplot(residuals(previsao))
+```
+
+## Pressupostos sobre os Erros
+- Os erros deveriam ser não-correlacionados;
+- Os erros devem ter média zero;
+Propriedades úteis:
+- Variância Constante;
+- São normalmente distribuídos.
+
+## Verificando Pressupostos sobre os Erros
+- A função 'checkresiduals' verifica os pressupostos indicados anteriormente. Espera-se que o resultado do p-valor do Ljung-box seja acima de 0.05, indicando que os erros não são correlacionados.
+```{r, fig.align='center', fig.height=3}
+checkresiduals(previsao)
+```
+## O que fazer se os erros não forem normais?
+- Ainda assim, as previsões podem ser boas e podem ser utilizadas, porém os intervalos de predição podem ser muito justos ou amplos em função deste problema.
+
+## Training and Test Sets
+- Traning Set: Parte dos dados que você utiliza para construir o modelo.
+- Test Set: Parte dos dados que você utiliza para testar o modelo.
+- O test set não pode ser usado para calcular a previsão.
+- Um modelo que se ajusta bem aos dados de treinamento não necessáriamente terá uma boa previsão;
+- É comum construirmos um modelo altamente complexo que possui poucos erros nos dados de treinamento, porém gera péssimas previsões. Isto é chamado de **overfitting**, e deve ser evitado.
+
+
+## Medidas de Acurácia da Previsão
+- Mean Absolute Error: $MAE = avg(|e_t|)$
+- Mean Square Error: $MAE = avg(|e_t^2|)$
+- Mean Absolute Percentage Error: $MAPE = 100 * avg(|e_t/y_t|)$
+- Mean Absolute Scaled Error: $MASE = MAE / Q$
+
+## Exemplo com um Modelo Naive
+- Separamos o modelo em duas partes, e geramos um modelo naive para ilustrar este ponto:
+```{r}
+treinamento = window(oil, end=2003)
+teste = window(oil, start= 2004)
+previsao = naive(treinamento,h = 10) # h = Número de períodos a prever
+autoplot(previsao) + 
+  ylab("Vendade Petróleo") + 
+  autolayer(teste, series = "Dados de Teste")
+```
+
+## O Comando Accuracy
+- Usar o Comando Accuracy para observar o modelo:
+```{r}
+accuracy(previsao, teste)
+```
+
+## Obtendo Mais Séries de Dados reais:
+- O agregador de dados [Quandl](https://www.quandl.com/) possui milhares de séries temporais disponíveis diretamente no R, pela biblioteca Quandl.
+- Exemplo: obtendo a série do índice Bovespa
+```{r, eval=F}
+library(Quandl)
+ts_bovespa = Quandl("BCB/7", type = "ts")
+autoplot(ts_bovespa)
+```
+

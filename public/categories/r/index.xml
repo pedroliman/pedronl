@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Thu, 27 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Oct 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Previsão de Séries Temporais com o R</title>
+      <link>/post/previsao-de-series-temporais-com-o-r/</link>
+      <pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/previsao-de-series-temporais-com-o-r/</guid>
+      <description>Sobre este postEste arquivo foi utilizado como arquivo de apoio à aulas ministradas sobre previsão de demanda utilizando o R. Para um tramento mais aprofundado sobre o tema, recorrer ao livro Forecating: Principles and Practice.
+Introdução - O Objeto de Séries TemporaisSobre o RO R é um ambiente de computação estatística, com mais de 13 mil pacotes publicados.Cada um destes pacotes tem um fim específico.</description>
+    </item>
     
     <item>
       <title>Arena2R - An R Package for Arena Simulation Users</title>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Séries Temporais on Pedro Nascimento de Lima</title>
+    <link>/tags/s%C3%A9ries-temporais/</link>
+    <description>Recent content in Séries Temporais on Pedro Nascimento de Lima</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 10 Oct 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/s%C3%A9ries-temporais/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Previsão de Séries Temporais com o R</title>
+      <link>/post/previsao-de-series-temporais-com-o-r/</link>
+      <pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/previsao-de-series-temporais-com-o-r/</guid>
+      <description>Sobre este postEste arquivo foi utilizado como arquivo de apoio à aulas ministradas sobre previsão de demanda utilizando o R. Para um tramento mais aprofundado sobre o tema, recorrer ao livro Forecating: Principles and Practice.
+Introdução - O Objeto de Séries TemporaisSobre o RO R é um ambiente de computação estatística, com mais de 13 mil pacotes publicados.Cada um destes pacotes tem um fim específico.</description>
+    </item>
+    
+  </channel>
+</rss>
