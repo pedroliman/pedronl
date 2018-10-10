@@ -32,5 +32,15 @@ Sobre o RO R é um ambiente de computação estatística, com mais de 13 mil p
 If you’re not an R user, fear not! Arena2R comes with an app you can use to explore your Arena Simulation data. All you’ll have to do is to Install R and R Studio, and run two commands in your R console.</description>
     </item>
     
+    <item>
+      <title>Introdução ao R - Aprendendo com o Moneyball</title>
+      <link>/post/introducao-ao-r-aprendendo-com-o-moneyball/</link>
+      <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/introducao-ao-r-aprendendo-com-o-moneyball/</guid>
+      <description>Este post corresponde aos slides do Mini-Curso “Introdução ao R - Aprendendo com o Moneyball”, realizado em 2017 no SIGEPRO. Cada um dos títulos neste post correspondia a um slide.
+O que Veremos neste Mini-Curso?O que é Data Analytics?Exemplo Moneyball.Como continuar aprendendo.Porque usar o R ?Open Source e Gratuito;Mais de 10 k bibliotecas gratuitas;Suporta muitos tipos de Análises;Conhecimento “cumulativo” e transferível a outros contextos.</description>
+    </item>
+    
   </channel>
 </rss>

@@ -129,7 +129,7 @@ ggsubseriesplot(beer)
 
 Para manipular séries temporais no R, é interessante criar objetos do tipo 'ts'. Podemos criar objetos a partir de arquivos do excel, csv, bases de dados, ou mesmo APIs públicas.
 
-Podemos utilizar a biblioteca 'readxl' para ler arquivos do excel:
+Podemos utilizar a biblioteca 'readxl' para ler arquivos do excel. Obtenha [aqui o arquivo de dados VendasCarros.xlsx](/post/2018-10-10-previsao-serie-temporais/VendasCarros.xlsx).
 ```{r, out.width="100%"}
 library(readxl)
 dados_excel = readxl::read_xlsx(path = "2018-10-10-previsao-serie-temporais/VendasCarros.xlsx", sheet = "Dados")

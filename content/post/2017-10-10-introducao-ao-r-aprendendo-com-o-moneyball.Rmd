@@ -1,0 +1,299 @@
+---
+title: Introdução ao R - Aprendendo com o Moneyball
+author: Pedro Nascimento de Lima
+date: '2017-10-10'
+slug: introducao-ao-r-aprendendo-com-o-moneyball
+categories:
+  - R
+tags: []
+header:
+  caption: ''
+  image: ''
+---
+
+Este post corresponde aos slides do Mini-Curso "Introdução ao R - Aprendendo com o Moneyball", realizado em 2017 no SIGEPRO. Cada um dos títulos neste post correspondia a um slide.
+
+### O que Veremos neste Mini-Curso?
+- O que é Data Analytics?
+- Exemplo Moneyball.
+- *Como continuar aprendendo.*
+
+### Porque usar o R ?
+- Open Source e Gratuito;
+- Mais de 10 k bibliotecas gratuitas;
+- Suporta muitos tipos de Análises;
+- Conhecimento "cumulativo" e transferível a outros contextos.
+
+### Outras alternativas se você não quiser programar.
+- Excel(?);
+- Alteryx;
+- Microsoft Azure;
+- Tableu para Análises visuais mais simples;
+
+
+### Que tipo de pessoa usa o R?
+- R Developer: "Um desenvolvedor R usa suas habilidades de programamação para manipular dados e construir ferramentas para para análise de Dados."
+- Data Scientist: "Um cientista de dados combina técnicas estatísticas e de machine learning com programação em R para analisar e interpretar dados complexos".
+- Data Analyst: Um Data Analyst traduz números em português claro. Um analista de dados interpreta dados das empresas e o usa para tomar melhores decisões.
+- Analista Quantitativo: Na área financeira, uma analista quantitativo garante que portfolios de investimento estão balenceados e encontra novas oportunidades de trading, e avalia preços de ativos usando modelos matemáticos.
+Fonte: http://datacamp.com
+
+### Exemplo - MoneyBall
+Este exemplo usa dados relacionados ao filme "Moneyball" para apresentar a técnica de regressão linear com o R.
+Este exercício e a ideia de usar o exemplo do Moneyball é baseda em uma aula do MIT, da plataforma Edx: https://courses.edx.org/courses/course-v1:MITx+15.071x_3+1T2016/
+
+### Moneyball e o Oakland A's
+- Moneyball é o livro que conta a história sobre como o Data Analytics mudou a indústria do baseball;
+- Oakland A's: Um dos times mais pobres do baseball. Foi vendido e teve seu orçamento cortado;
+- Em 2002 o time perdeu três jogadores principais (é desse ponto que o filme começa);
+
+### Qual é a meta de um time de Baseball?
+- Ir para as Playoffs!
+- Quantos jogos um time precisa ganhar para chegar às playoffs?
+- Paul DePodesta calculou que um time precisa de 95 vitórias para chegar às Playoffs.
+
+
+### Como se vence 95 jogos?
+- Fazendo mais "Runs" do que o oponente.
+- Quantos "Runs" a mais?
+- Eles calcularam que precisariam fazer 135 Runs a mais do receberam para ganhar 95 jogos. Como calcular isso?
+
+### Lendo Dados em CSV com read.csv()
+Normalmente lemos dados no formato .csv no R para realizar as análises. É possível também ler dados em outros formatos. Obtenha [aqui o arquivo baseball](/post/2018-10-10-moneyball-r/baseball.csv).
+
+```{r}
+# Lendo Dados em CSV
+baseball <- read.csv("2018-10-10-moneyball-r/baseball.csv")
+```
+
+
+### Conhecendo os Dados com str()
+Antes de rodar qualquer análise precisamos conhecer a estrutura dos dados.
+Os dados contém uma linha para cada time e ano de 1962 a 2012 para todas as temporadas.
+Dados incluem Runs Scored (RS), Runs Allowed (RA) e Vitórias (W).
+```{r}
+# Podemos fazer isso usando a função str() (que mostra a estrutura)
+str(baseball)
+```
+
+### Resumindo com o summary()
+Também podemos ter uma ideia dos dados usando o summary. Ele nos retorna médias, quartis, valores mínimos e máximos.
+
+```{r}
+summary(baseball)
+```
+
+### Acessando variáveis específicas de um DataFrame
+Podemos acessar variáveis específicas de um Data Frame usando algumas notações possíveis.
+
+```{r}
+head(baseball$Year)
+```
+
+### Selecionando Linhas Específicas do DF
+Vamos selecionar apenas dados até o ano de 2002 (que foram os dados que eles possuíam em 2002)
+
+```{r}
+# Considerando apenas anos exibidos pelo moneyball
+moneyball = subset(baseball, Year < 2002)
+str(moneyball)
+```
+
+### Relembrando nosso objetivo
+- Objetivo: Saber como chegar às playoffs.
+- Em outras Palavras: Saber quantos Runs um time deve fazer a mais do que "leva" para ter mais do que 95 vitórias.
+- Como: Usando uma Regressão Linear para predizer Vitórias em função do Run Differences.
+
+### Calculando a RUN Difference
+Criando uma nova variável para calcular a "Run Difference"
+```{r}
+# Calculando a Run Difference
+moneyball$RD = moneyball$RS - moneyball$RA
+str(moneyball)
+```
+
+### Existe uma Relação entre Run Difference e Vitórias?
+Só faz sentido usar uma regressão linear se é plausível a existência de uma relação linear entre as variáveis.
+```{r}
+plot(moneyball$RD, moneyball$W, main = "Vitórias vs Runs Diff.", xlab = "Run. Diff.", ylab = "Vitórias")
+```
+
+
+### Realizando um teste de Correlação
+
+Existe uma correlação alta entre estas duas variáveis?
+
+```{r}
+cor(x = moneyball$RD, y = moneyball$W, method=c("pearson", "kendall", "spearman"))
+
+cor.test(x = moneyball$RD, y = moneyball$W, method=c("pearson", "kendall", "spearman"))
+```
+
+
+### Visualizando a Correlação entre as duas variáveis
+
+Também podemos visualizar que existe uma correlação alta entre estas duas variáveis utilizando gráficos da biblioteca ggpubr.
+
+```{r ,fig.width=7, fig.height=7, fig.show='hold', fig.align='center'}
+
+ggpubr::ggscatter(moneyball, x = "RD", y = "W",
+          add = "reg.line", conf.int = TRUE,
+          cor.coef = TRUE, cor.method = "pearson",
+          xlab = "Run Diff.", ylab = "Vitórias")
+
+```
+
+
+### Ok, como predizer o número de vitórias com base em Run Differences?
+Usando uma Regressão Linear!
+
+$$ y = \beta_0 + \beta_1 * x + e$$
+
+Ou,  em outras palavras...
+
+$$ Vitorias = \beta_0 + \beta_1 * RunDiffs + e$$
+Como fazer isso no R?
+
+```{r}
+modelo_vitorias = lm(W ~ RD, data=moneyball)
+```
+
+### Analisando o Modelo para Predizer Vitórias
+- O que isso significa: Podemos predizer o número de vitórias que um time terá a partir de um número de Home Runs.
+$$ Vitorias = 80.88 + 0.1057 RunDiffs$$
+```{r}
+summary(modelo_vitorias)
+```
+
+### Será que é são necessários 135 Runs a mais para chegar à Playoffs?
+A partir da regressão linear nós estimamos que $ Vitorias = 80.88 + 0.1057 RunDiffs$ e também sabemos que $Vitorias >= 95$.
+
+Então...
+
+$$ 80.88 + 0.1057 RunDiffs >= 95$$
+
+E...
+
+$$RunDiffs >= \frac{95 - 80.8814}{0.1058} >= 133,446$$
+
+Ou, já que estamos no R...
+
+```{r}
+RD_min = (95 - 80.8814)/0.1058
+RD_min
+```
+
+OU seja, sabemos que se um time quer ir para as playoffs ele precisa fazer **133,4** Runs a mais do que seus oponentes.
+
+### O que temos até Agora
+- Para ir para as playoffs o time precisa de 95 vitórias ou mais.
+- Para ter 95 vitórias, o time precisa de 133 ~ 135 Runs a mais do que os oponentes.
+- Para isso, o time precisa:
+-- Fazer mais Runs.
+-- Levar menos Runs.
+
+### Como Avaliar um Jogador?
+- Percentual de Rebatidas? (Batting Average - BA)
+- Percentual de tempo que o Jogador passa na Base? (incluindo walks) (On-Base Percentage);
+- Slugging Percentage (SLG). O quão longe um jogador chega na sua vez de rebater;
+- Quais destas estatísticas são mais importantes para considerar quando é necessário **comprar um jogador**?
+
+### Recorrendo à Regressão Linear Novamente!
+- Na nossa base de dados estas estatísticas estão indicadas nas variáveis RS (Runs Scored), On-Base Percentage (OBP), Slugging Percentage (SLG) e Batting Average (BA).
+
+```{r}
+str(moneyball)
+```
+
+### Predizendo o Número de Runs - Modelo Completo
+- Quanto menos Batting Average, mais Runs?!
+```{r}
+modeloruns = lm(formula = RS ~ OBP + SLG + BA, data=moneyball)
+summary(modeloruns)
+```
+
+### Predizendo o Número de Runs - Sem Batting Average
+- O modelo mais simples tem menos variáveis e ainda tem um R ao quadrado alto.
+
+$$ Runs = -804.3 + 2737.77 * OBP + 1584.91 * SLG$$
+```{r, size = 'Tiny'}
+modeloruns_sBA = lm(formula = RS ~ OBP + SLG, data=moneyball)
+summary(modeloruns_sBA)
+```
+
+### Predizendo o Número de Runs Allowed
+Com essa regressão, podemos estimar as Runs Permitidas com a equação:
+$$ Runs Permitidas = -837 + 2913.6 * OOBP + 1514.29 * OSLG$$
+```{r, size = 'Tiny'}
+modelorunsallowed = lm(formula = RA ~ OOBP + OSLG, data=moneyball)
+summary(modelorunsallowed)
+```
+
+### Agora vem a parte legal
+- Com os nossos modelos, agora é possível tentar predizer quantos jogos o Oakland A's vai ganhar em um determinado ano.
+- Estamos tentando predizer quantos jogos o time vai ganhar **antes** da temporada começar, com o objetivo de suportar a decisão sobre **quais jogadores** queremos comprar.
+- Pressuposto # 1: Performance passada dos jogadores do time que estamos montando tem correlação com a performance futura.
+- Pressuposto # 2: A análise assume que haverão poucas lesões.
+- Pressuposto # 3: Podemos estimar estatísticas para 2002 usando estatísticas dos jogadores coletadas em 2001.
+
+### Estimando Runs para 2002
+- Com base na temporada de 2001, com o grupo que tivemos sabemos que a média do OBP é 0.339, e do SLG é 0.430.
+- Nossa Regressão para Runs foi $ Runs = -804.3 + 2737.77 * OBP + 1584.91 * SLG$.
+- Então a Estimativa de Runs é..
+```{r}
+Runs = -804.3 + 2737.77 * 0.339 + 1584.91 *  0.430
+Runs
+```
+### Estimando Runs Allowed para 2002
+- Com base na temporada de 2001, com o grupo que tivemos sabemos que a média do OOBP é 0.307, e do OSLG é 0.373.
+- Nossa Regressão para Runs foi $ Runs Permitidas = -837 + 2913.6 * OOBP + 1514.29 * OSLG$.
+- Podemos fazer o mesmo para Runs Allowed
+```{r}
+RunsAllowed = -837 + 2913.6 * 0.307 + 1514.29 * 0.373
+RunsAllowed
+```
+
+### Quantos Jogos Esperamos Ganhar com esse Time?
+- Nosso modelo de vitórias diz que $ Vitorias = 80.88 + 0.1057 RunDiffs$. Então..
+
+```{r}
+Vitorias = 80.88 + 0.1057 * (Runs - RunsAllowed)
+if (Vitorias >= 95) {
+  paste("Esse time deve chegar nas Playoffs com ", Vitorias, " vitórias.")
+} else {
+  paste("Compre outros Jogadores, este time não chega nas playoffs com apenas ", Vitorias, " vitórias!")
+}
+```
+- A abordagem de Paul foi parecida com essa.
+
+### A hora da verdade
+
+- Nosso modelo serve para alguma coisa?
+
+|Variável|Nosso Modelo | Modelo do Paul | Realizado |
+|--------------|-------------------|-----------------------|---------------|
+|Runs | 805 | 800 - 820 | 800 |
+|Runs Allowed | 622 | 650 - 670 | 653 |
+| Vitórias | 100 | 93 - 97 | 103 |
+
+
+```{r, eval= F, table2, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+tabl <- "
+|Variável|Nosso Modelo | Modelo do Paul | Realizado |
+|--------------|-------------------|-----------------------|---------------|
+|Runs | 805 | 800 - 820 | 800 |
+|Runs Allowed | 622 | 650 - 670 | 653 |
+| Vitórias | 100 | 93 - 97 | 103 |
+"
+cat(tabl) # output the table in a format good for HTML/PDF/docx conversion
+```
+- O Oakland A's ganhou 20 jogos em sequência nesse ano, mas não ganhou o campeonato;
+- O Oakland A's conseguiu ir para as Playoffs mais uma vez!
+
+### Como Aprender Mais?
+- github.com;
+- datacamp.com;
+- stackoverflow.com;
+- udacity.com;
+- edx.org;
+- coursera.org;

@@ -115,7 +115,7 @@ autoplot(beer) + ylab(&quot;Venda de Cerveja&quot;)</code></pre>
 <div id="criando-objetos-ts-para-series-temporais-a-partir-de-dados-reais" class="section level2">
 <h2>Criando Objetos ‘ts’ para Séries Temporais a partir de dados reais</h2>
 <p>Para manipular séries temporais no R, é interessante criar objetos do tipo ‘ts’. Podemos criar objetos a partir de arquivos do excel, csv, bases de dados, ou mesmo APIs públicas.</p>
-<p>Podemos utilizar a biblioteca ‘readxl’ para ler arquivos do excel:</p>
+<p>Podemos utilizar a biblioteca ‘readxl’ para ler arquivos do excel. Obtenha <a href="/post/2018-10-10-previsao-serie-temporais/VendasCarros.xlsx">aqui o arquivo de dados VendasCarros.xlsx</a>.</p>
 <pre class="r"><code>library(readxl)
 dados_excel = readxl::read_xlsx(path = &quot;2018-10-10-previsao-serie-temporais/VendasCarros.xlsx&quot;, sheet = &quot;Dados&quot;)
 head(dados_excel)</code></pre>

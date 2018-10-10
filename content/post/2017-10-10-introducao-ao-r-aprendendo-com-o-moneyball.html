@@ -1,0 +1,506 @@
+---
+title: Introdução ao R - Aprendendo com o Moneyball
+author: Pedro Nascimento de Lima
+date: '2017-10-10'
+slug: introducao-ao-r-aprendendo-com-o-moneyball
+categories:
+  - R
+tags: []
+header:
+  caption: ''
+  image: ''
+---
+
+
+
+<p>Este post corresponde aos slides do Mini-Curso “Introdução ao R - Aprendendo com o Moneyball”, realizado em 2017 no SIGEPRO. Cada um dos títulos neste post correspondia a um slide.</p>
+<div id="o-que-veremos-neste-mini-curso" class="section level3">
+<h3>O que Veremos neste Mini-Curso?</h3>
+<ul>
+<li>O que é Data Analytics?</li>
+<li>Exemplo Moneyball.</li>
+<li><em>Como continuar aprendendo.</em></li>
+</ul>
+</div>
+<div id="porque-usar-o-r" class="section level3">
+<h3>Porque usar o R ?</h3>
+<ul>
+<li>Open Source e Gratuito;</li>
+<li>Mais de 10 k bibliotecas gratuitas;</li>
+<li>Suporta muitos tipos de Análises;</li>
+<li>Conhecimento “cumulativo” e transferível a outros contextos.</li>
+</ul>
+</div>
+<div id="outras-alternativas-se-voce-nao-quiser-programar." class="section level3">
+<h3>Outras alternativas se você não quiser programar.</h3>
+<ul>
+<li>Excel(?);</li>
+<li>Alteryx;</li>
+<li>Microsoft Azure;</li>
+<li>Tableu para Análises visuais mais simples;</li>
+</ul>
+</div>
+<div id="que-tipo-de-pessoa-usa-o-r" class="section level3">
+<h3>Que tipo de pessoa usa o R?</h3>
+<ul>
+<li>R Developer: “Um desenvolvedor R usa suas habilidades de programamação para manipular dados e construir ferramentas para para análise de Dados.”</li>
+<li>Data Scientist: “Um cientista de dados combina técnicas estatísticas e de machine learning com programação em R para analisar e interpretar dados complexos”.</li>
+<li>Data Analyst: Um Data Analyst traduz números em português claro. Um analista de dados interpreta dados das empresas e o usa para tomar melhores decisões.</li>
+<li>Analista Quantitativo: Na área financeira, uma analista quantitativo garante que portfolios de investimento estão balenceados e encontra novas oportunidades de trading, e avalia preços de ativos usando modelos matemáticos. Fonte: <a href="http://datacamp.com" class="uri">http://datacamp.com</a></li>
+</ul>
+</div>
+<div id="exemplo---moneyball" class="section level3">
+<h3>Exemplo - MoneyBall</h3>
+<p>Este exemplo usa dados relacionados ao filme “Moneyball” para apresentar a técnica de regressão linear com o R. Este exercício e a ideia de usar o exemplo do Moneyball é baseda em uma aula do MIT, da plataforma Edx: <a href="https://courses.edx.org/courses/course-v1:MITx+15.071x_3+1T2016/" class="uri">https://courses.edx.org/courses/course-v1:MITx+15.071x_3+1T2016/</a></p>
+</div>
+<div id="moneyball-e-o-oakland-as" class="section level3">
+<h3>Moneyball e o Oakland A’s</h3>
+<ul>
+<li>Moneyball é o livro que conta a história sobre como o Data Analytics mudou a indústria do baseball;</li>
+<li>Oakland A’s: Um dos times mais pobres do baseball. Foi vendido e teve seu orçamento cortado;</li>
+<li>Em 2002 o time perdeu três jogadores principais (é desse ponto que o filme começa);</li>
+</ul>
+</div>
+<div id="qual-e-a-meta-de-um-time-de-baseball" class="section level3">
+<h3>Qual é a meta de um time de Baseball?</h3>
+<ul>
+<li>Ir para as Playoffs!</li>
+<li>Quantos jogos um time precisa ganhar para chegar às playoffs?</li>
+<li>Paul DePodesta calculou que um time precisa de 95 vitórias para chegar às Playoffs.</li>
+</ul>
+</div>
+<div id="como-se-vence-95-jogos" class="section level3">
+<h3>Como se vence 95 jogos?</h3>
+<ul>
+<li>Fazendo mais “Runs” do que o oponente.</li>
+<li>Quantos “Runs” a mais?</li>
+<li>Eles calcularam que precisariam fazer 135 Runs a mais do receberam para ganhar 95 jogos. Como calcular isso?</li>
+</ul>
+</div>
+<div id="lendo-dados-em-csv-com-read.csv" class="section level3">
+<h3>Lendo Dados em CSV com read.csv()</h3>
+<p>Normalmente lemos dados no formato .csv no R para realizar as análises. É possível também ler dados em outros formatos. Obtenha <a href="/post/2018-10-10-moneyball-r/baseball.csv">aqui o arquivo baseball</a>.</p>
+<pre class="r"><code># Lendo Dados em CSV
+baseball &lt;- read.csv(&quot;2018-10-10-moneyball-r/baseball.csv&quot;)</code></pre>
+</div>
+<div id="conhecendo-os-dados-com-str" class="section level3">
+<h3>Conhecendo os Dados com str()</h3>
+<p>Antes de rodar qualquer análise precisamos conhecer a estrutura dos dados. Os dados contém uma linha para cada time e ano de 1962 a 2012 para todas as temporadas. Dados incluem Runs Scored (RS), Runs Allowed (RA) e Vitórias (W).</p>
+<pre class="r"><code># Podemos fazer isso usando a função str() (que mostra a estrutura)
+str(baseball)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    1232 obs. of  15 variables:
+##  $ Team        : Factor w/ 39 levels &quot;ANA&quot;,&quot;ARI&quot;,&quot;ATL&quot;,..: 2 3 4 5 7 8 9 10 11 12 ...
+##  $ League      : Factor w/ 2 levels &quot;AL&quot;,&quot;NL&quot;: 2 2 1 1 2 1 2 1 2 1 ...
+##  $ Year        : int  2012 2012 2012 2012 2012 2012 2012 2012 2012 2012 ...
+##  $ RS          : int  734 700 712 734 613 748 669 667 758 726 ...
+##  $ RA          : int  688 600 705 806 759 676 588 845 890 670 ...
+##  $ W           : int  81 94 93 69 61 85 97 68 64 88 ...
+##  $ OBP         : num  0.328 0.32 0.311 0.315 0.302 0.318 0.315 0.324 0.33 0.335 ...
+##  $ SLG         : num  0.418 0.389 0.417 0.415 0.378 0.422 0.411 0.381 0.436 0.422 ...
+##  $ BA          : num  0.259 0.247 0.247 0.26 0.24 0.255 0.251 0.251 0.274 0.268 ...
+##  $ Playoffs    : int  0 1 1 0 0 0 1 0 0 1 ...
+##  $ RankSeason  : int  NA 4 5 NA NA NA 2 NA NA 6 ...
+##  $ RankPlayoffs: int  NA 5 4 NA NA NA 4 NA NA 2 ...
+##  $ G           : int  162 162 162 162 162 162 162 162 162 162 ...
+##  $ OOBP        : num  0.317 0.306 0.315 0.331 0.335 0.319 0.305 0.336 0.357 0.314 ...
+##  $ OSLG        : num  0.415 0.378 0.403 0.428 0.424 0.405 0.39 0.43 0.47 0.402 ...</code></pre>
+</div>
+<div id="resumindo-com-o-summary" class="section level3">
+<h3>Resumindo com o summary()</h3>
+<p>Também podemos ter uma ideia dos dados usando o summary. Ele nos retorna médias, quartis, valores mínimos e máximos.</p>
+<pre class="r"><code>summary(baseball)</code></pre>
+<pre><code>##       Team     League        Year            RS               RA        
+##  BAL    : 47   AL:616   Min.   :1962   Min.   : 463.0   Min.   : 472.0  
+##  BOS    : 47   NL:616   1st Qu.:1977   1st Qu.: 652.0   1st Qu.: 649.8  
+##  CHC    : 47            Median :1989   Median : 711.0   Median : 709.0  
+##  CHW    : 47            Mean   :1989   Mean   : 715.1   Mean   : 715.1  
+##  CIN    : 47            3rd Qu.:2002   3rd Qu.: 775.0   3rd Qu.: 774.2  
+##  CLE    : 47            Max.   :2012   Max.   :1009.0   Max.   :1103.0  
+##  (Other):950                                                            
+##        W              OBP              SLG               BA        
+##  Min.   : 40.0   Min.   :0.2770   Min.   :0.3010   Min.   :0.2140  
+##  1st Qu.: 73.0   1st Qu.:0.3170   1st Qu.:0.3750   1st Qu.:0.2510  
+##  Median : 81.0   Median :0.3260   Median :0.3960   Median :0.2600  
+##  Mean   : 80.9   Mean   :0.3263   Mean   :0.3973   Mean   :0.2593  
+##  3rd Qu.: 89.0   3rd Qu.:0.3370   3rd Qu.:0.4210   3rd Qu.:0.2680  
+##  Max.   :116.0   Max.   :0.3730   Max.   :0.4910   Max.   :0.2940  
+##                                                                    
+##     Playoffs        RankSeason     RankPlayoffs         G        
+##  Min.   :0.0000   Min.   :1.000   Min.   :1.000   Min.   :158.0  
+##  1st Qu.:0.0000   1st Qu.:2.000   1st Qu.:2.000   1st Qu.:162.0  
+##  Median :0.0000   Median :3.000   Median :3.000   Median :162.0  
+##  Mean   :0.1981   Mean   :3.123   Mean   :2.717   Mean   :161.9  
+##  3rd Qu.:0.0000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:162.0  
+##  Max.   :1.0000   Max.   :8.000   Max.   :5.000   Max.   :165.0  
+##                   NA&#39;s   :988     NA&#39;s   :988                    
+##       OOBP             OSLG       
+##  Min.   :0.2940   Min.   :0.3460  
+##  1st Qu.:0.3210   1st Qu.:0.4010  
+##  Median :0.3310   Median :0.4190  
+##  Mean   :0.3323   Mean   :0.4197  
+##  3rd Qu.:0.3430   3rd Qu.:0.4380  
+##  Max.   :0.3840   Max.   :0.4990  
+##  NA&#39;s   :812      NA&#39;s   :812</code></pre>
+</div>
+<div id="acessando-variaveis-especificas-de-um-dataframe" class="section level3">
+<h3>Acessando variáveis específicas de um DataFrame</h3>
+<p>Podemos acessar variáveis específicas de um Data Frame usando algumas notações possíveis.</p>
+<pre class="r"><code>head(baseball$Year)</code></pre>
+<pre><code>## [1] 2012 2012 2012 2012 2012 2012</code></pre>
+</div>
+<div id="selecionando-linhas-especificas-do-df" class="section level3">
+<h3>Selecionando Linhas Específicas do DF</h3>
+<p>Vamos selecionar apenas dados até o ano de 2002 (que foram os dados que eles possuíam em 2002)</p>
+<pre class="r"><code># Considerando apenas anos exibidos pelo moneyball
+moneyball = subset(baseball, Year &lt; 2002)
+str(moneyball)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    902 obs. of  15 variables:
+##  $ Team        : Factor w/ 39 levels &quot;ANA&quot;,&quot;ARI&quot;,&quot;ATL&quot;,..: 1 2 3 4 5 7 8 9 10 11 ...
+##  $ League      : Factor w/ 2 levels &quot;AL&quot;,&quot;NL&quot;: 1 2 2 1 1 2 1 2 1 2 ...
+##  $ Year        : int  2001 2001 2001 2001 2001 2001 2001 2001 2001 2001 ...
+##  $ RS          : int  691 818 729 687 772 777 798 735 897 923 ...
+##  $ RA          : int  730 677 643 829 745 701 795 850 821 906 ...
+##  $ W           : int  75 92 88 63 82 88 83 66 91 73 ...
+##  $ OBP         : num  0.327 0.341 0.324 0.319 0.334 0.336 0.334 0.324 0.35 0.354 ...
+##  $ SLG         : num  0.405 0.442 0.412 0.38 0.439 0.43 0.451 0.419 0.458 0.483 ...
+##  $ BA          : num  0.261 0.267 0.26 0.248 0.266 0.261 0.268 0.262 0.278 0.292 ...
+##  $ Playoffs    : int  0 1 1 0 0 0 0 0 1 0 ...
+##  $ RankSeason  : int  NA 5 7 NA NA NA NA NA 6 NA ...
+##  $ RankPlayoffs: int  NA 1 3 NA NA NA NA NA 4 NA ...
+##  $ G           : int  162 162 162 162 161 162 162 162 162 162 ...
+##  $ OOBP        : num  0.331 0.311 0.314 0.337 0.329 0.321 0.334 0.341 0.341 0.35 ...
+##  $ OSLG        : num  0.412 0.404 0.384 0.439 0.393 0.398 0.427 0.455 0.417 0.48 ...</code></pre>
+</div>
+<div id="relembrando-nosso-objetivo" class="section level3">
+<h3>Relembrando nosso objetivo</h3>
+<ul>
+<li>Objetivo: Saber como chegar às playoffs.</li>
+<li>Em outras Palavras: Saber quantos Runs um time deve fazer a mais do que “leva” para ter mais do que 95 vitórias.</li>
+<li>Como: Usando uma Regressão Linear para predizer Vitórias em função do Run Differences.</li>
+</ul>
+</div>
+<div id="calculando-a-run-difference" class="section level3">
+<h3>Calculando a RUN Difference</h3>
+<p>Criando uma nova variável para calcular a “Run Difference”</p>
+<pre class="r"><code># Calculando a Run Difference
+moneyball$RD = moneyball$RS - moneyball$RA
+str(moneyball)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    902 obs. of  16 variables:
+##  $ Team        : Factor w/ 39 levels &quot;ANA&quot;,&quot;ARI&quot;,&quot;ATL&quot;,..: 1 2 3 4 5 7 8 9 10 11 ...
+##  $ League      : Factor w/ 2 levels &quot;AL&quot;,&quot;NL&quot;: 1 2 2 1 1 2 1 2 1 2 ...
+##  $ Year        : int  2001 2001 2001 2001 2001 2001 2001 2001 2001 2001 ...
+##  $ RS          : int  691 818 729 687 772 777 798 735 897 923 ...
+##  $ RA          : int  730 677 643 829 745 701 795 850 821 906 ...
+##  $ W           : int  75 92 88 63 82 88 83 66 91 73 ...
+##  $ OBP         : num  0.327 0.341 0.324 0.319 0.334 0.336 0.334 0.324 0.35 0.354 ...
+##  $ SLG         : num  0.405 0.442 0.412 0.38 0.439 0.43 0.451 0.419 0.458 0.483 ...
+##  $ BA          : num  0.261 0.267 0.26 0.248 0.266 0.261 0.268 0.262 0.278 0.292 ...
+##  $ Playoffs    : int  0 1 1 0 0 0 0 0 1 0 ...
+##  $ RankSeason  : int  NA 5 7 NA NA NA NA NA 6 NA ...
+##  $ RankPlayoffs: int  NA 1 3 NA NA NA NA NA 4 NA ...
+##  $ G           : int  162 162 162 162 161 162 162 162 162 162 ...
+##  $ OOBP        : num  0.331 0.311 0.314 0.337 0.329 0.321 0.334 0.341 0.341 0.35 ...
+##  $ OSLG        : num  0.412 0.404 0.384 0.439 0.393 0.398 0.427 0.455 0.417 0.48 ...
+##  $ RD          : int  -39 141 86 -142 27 76 3 -115 76 17 ...</code></pre>
+</div>
+<div id="existe-uma-relacao-entre-run-difference-e-vitorias" class="section level3">
+<h3>Existe uma Relação entre Run Difference e Vitórias?</h3>
+<p>Só faz sentido usar uma regressão linear se é plausível a existência de uma relação linear entre as variáveis.</p>
+<pre class="r"><code>plot(moneyball$RD, moneyball$W, main = &quot;Vitórias vs Runs Diff.&quot;, xlab = &quot;Run. Diff.&quot;, ylab = &quot;Vitórias&quot;)</code></pre>
+<p><img src="/post/2017-10-10-introducao-ao-r-aprendendo-com-o-moneyball_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+</div>
+<div id="realizando-um-teste-de-correlacao" class="section level3">
+<h3>Realizando um teste de Correlação</h3>
+<p>Existe uma correlação alta entre estas duas variáveis?</p>
+<pre class="r"><code>cor(x = moneyball$RD, y = moneyball$W, method=c(&quot;pearson&quot;, &quot;kendall&quot;, &quot;spearman&quot;))</code></pre>
+<pre><code>## [1] 0.938515</code></pre>
+<pre class="r"><code>cor.test(x = moneyball$RD, y = moneyball$W, method=c(&quot;pearson&quot;, &quot;kendall&quot;, &quot;spearman&quot;))</code></pre>
+<pre><code>## 
+##  Pearson&#39;s product-moment correlation
+## 
+## data:  moneyball$RD and moneyball$W
+## t = 81.554, df = 900, p-value &lt; 2.2e-16
+## alternative hypothesis: true correlation is not equal to 0
+## 95 percent confidence interval:
+##  0.9302271 0.9458460
+## sample estimates:
+##      cor 
+## 0.938515</code></pre>
+</div>
+<div id="visualizando-a-correlacao-entre-as-duas-variaveis" class="section level3">
+<h3>Visualizando a Correlação entre as duas variáveis</h3>
+<p>Também podemos visualizar que existe uma correlação alta entre estas duas variáveis utilizando gráficos da biblioteca ggpubr.</p>
+<pre class="r"><code>ggpubr::ggscatter(moneyball, x = &quot;RD&quot;, y = &quot;W&quot;,
+          add = &quot;reg.line&quot;, conf.int = TRUE,
+          cor.coef = TRUE, cor.method = &quot;pearson&quot;,
+          xlab = &quot;Run Diff.&quot;, ylab = &quot;Vitórias&quot;)</code></pre>
+<p><img src="/post/2017-10-10-introducao-ao-r-aprendendo-com-o-moneyball_files/figure-html/unnamed-chunk-9-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="ok-como-predizer-o-numero-de-vitorias-com-base-em-run-differences" class="section level3">
+<h3>Ok, como predizer o número de vitórias com base em Run Differences?</h3>
+<p>Usando uma Regressão Linear!</p>
+<p><span class="math display">\[ y = \beta_0 + \beta_1 * x + e\]</span></p>
+<p>Ou, em outras palavras…</p>
+<p><span class="math display">\[ Vitorias = \beta_0 + \beta_1 * RunDiffs + e\]</span> Como fazer isso no R?</p>
+<pre class="r"><code>modelo_vitorias = lm(W ~ RD, data=moneyball)</code></pre>
+</div>
+<div id="analisando-o-modelo-para-predizer-vitorias" class="section level3">
+<h3>Analisando o Modelo para Predizer Vitórias</h3>
+<ul>
+<li>O que isso significa: Podemos predizer o número de vitórias que um time terá a partir de um número de Home Runs. <span class="math display">\[ Vitorias = 80.88 + 0.1057 RunDiffs\]</span></li>
+</ul>
+<pre class="r"><code>summary(modelo_vitorias)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = W ~ RD, data = moneyball)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -14.2662  -2.6509   0.1234   2.9364  11.6570 
+## 
+## Coefficients:
+##              Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) 80.881375   0.131157  616.67   &lt;2e-16 ***
+## RD           0.105766   0.001297   81.55   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 3.939 on 900 degrees of freedom
+## Multiple R-squared:  0.8808, Adjusted R-squared:  0.8807 
+## F-statistic:  6651 on 1 and 900 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div id="sera-que-e-sao-necessarios-135-runs-a-mais-para-chegar-a-playoffs" class="section level3">
+<h3>Será que é são necessários 135 Runs a mais para chegar à Playoffs?</h3>
+<p>A partir da regressão linear nós estimamos que $ Vitorias = 80.88 + 0.1057 RunDiffs$ e também sabemos que <span class="math inline">\(Vitorias &gt;= 95\)</span>.</p>
+<p>Então…</p>
+<p><span class="math display">\[ 80.88 + 0.1057 RunDiffs &gt;= 95\]</span></p>
+<p>E…</p>
+<p><span class="math display">\[RunDiffs &gt;= \frac{95 - 80.8814}{0.1058} &gt;= 133,446\]</span></p>
+<p>Ou, já que estamos no R…</p>
+<pre class="r"><code>RD_min = (95 - 80.8814)/0.1058
+RD_min</code></pre>
+<pre><code>## [1] 133.4461</code></pre>
+<p>OU seja, sabemos que se um time quer ir para as playoffs ele precisa fazer <strong>133,4</strong> Runs a mais do que seus oponentes.</p>
+</div>
+<div id="o-que-temos-ate-agora" class="section level3">
+<h3>O que temos até Agora</h3>
+<ul>
+<li>Para ir para as playoffs o time precisa de 95 vitórias ou mais.</li>
+<li>Para ter 95 vitórias, o time precisa de 133 ~ 135 Runs a mais do que os oponentes.</li>
+<li>Para isso, o time precisa: – Fazer mais Runs. – Levar menos Runs.</li>
+</ul>
+</div>
+<div id="como-avaliar-um-jogador" class="section level3">
+<h3>Como Avaliar um Jogador?</h3>
+<ul>
+<li>Percentual de Rebatidas? (Batting Average - BA)</li>
+<li>Percentual de tempo que o Jogador passa na Base? (incluindo walks) (On-Base Percentage);</li>
+<li>Slugging Percentage (SLG). O quão longe um jogador chega na sua vez de rebater;</li>
+<li>Quais destas estatísticas são mais importantes para considerar quando é necessário <strong>comprar um jogador</strong>?</li>
+</ul>
+</div>
+<div id="recorrendo-a-regressao-linear-novamente" class="section level3">
+<h3>Recorrendo à Regressão Linear Novamente!</h3>
+<ul>
+<li>Na nossa base de dados estas estatísticas estão indicadas nas variáveis RS (Runs Scored), On-Base Percentage (OBP), Slugging Percentage (SLG) e Batting Average (BA).</li>
+</ul>
+<pre class="r"><code>str(moneyball)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    902 obs. of  16 variables:
+##  $ Team        : Factor w/ 39 levels &quot;ANA&quot;,&quot;ARI&quot;,&quot;ATL&quot;,..: 1 2 3 4 5 7 8 9 10 11 ...
+##  $ League      : Factor w/ 2 levels &quot;AL&quot;,&quot;NL&quot;: 1 2 2 1 1 2 1 2 1 2 ...
+##  $ Year        : int  2001 2001 2001 2001 2001 2001 2001 2001 2001 2001 ...
+##  $ RS          : int  691 818 729 687 772 777 798 735 897 923 ...
+##  $ RA          : int  730 677 643 829 745 701 795 850 821 906 ...
+##  $ W           : int  75 92 88 63 82 88 83 66 91 73 ...
+##  $ OBP         : num  0.327 0.341 0.324 0.319 0.334 0.336 0.334 0.324 0.35 0.354 ...
+##  $ SLG         : num  0.405 0.442 0.412 0.38 0.439 0.43 0.451 0.419 0.458 0.483 ...
+##  $ BA          : num  0.261 0.267 0.26 0.248 0.266 0.261 0.268 0.262 0.278 0.292 ...
+##  $ Playoffs    : int  0 1 1 0 0 0 0 0 1 0 ...
+##  $ RankSeason  : int  NA 5 7 NA NA NA NA NA 6 NA ...
+##  $ RankPlayoffs: int  NA 1 3 NA NA NA NA NA 4 NA ...
+##  $ G           : int  162 162 162 162 161 162 162 162 162 162 ...
+##  $ OOBP        : num  0.331 0.311 0.314 0.337 0.329 0.321 0.334 0.341 0.341 0.35 ...
+##  $ OSLG        : num  0.412 0.404 0.384 0.439 0.393 0.398 0.427 0.455 0.417 0.48 ...
+##  $ RD          : int  -39 141 86 -142 27 76 3 -115 76 17 ...</code></pre>
+</div>
+<div id="predizendo-o-numero-de-runs---modelo-completo" class="section level3">
+<h3>Predizendo o Número de Runs - Modelo Completo</h3>
+<ul>
+<li>Quanto menos Batting Average, mais Runs?!</li>
+</ul>
+<pre class="r"><code>modeloruns = lm(formula = RS ~ OBP + SLG + BA, data=moneyball)
+summary(modeloruns)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = RS ~ OBP + SLG + BA, data = moneyball)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -70.941 -17.247  -0.621  16.754  90.998 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  -788.46      19.70 -40.029  &lt; 2e-16 ***
+## OBP          2917.42     110.47  26.410  &lt; 2e-16 ***
+## SLG          1637.93      45.99  35.612  &lt; 2e-16 ***
+## BA           -368.97     130.58  -2.826  0.00482 ** 
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 24.69 on 898 degrees of freedom
+## Multiple R-squared:  0.9302, Adjusted R-squared:   0.93 
+## F-statistic:  3989 on 3 and 898 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div id="predizendo-o-numero-de-runs---sem-batting-average" class="section level3">
+<h3>Predizendo o Número de Runs - Sem Batting Average</h3>
+<ul>
+<li>O modelo mais simples tem menos variáveis e ainda tem um R ao quadrado alto.</li>
+</ul>
+<p><span class="math display">\[ Runs = -804.3 + 2737.77 * OBP + 1584.91 * SLG\]</span></p>
+<pre class="r"><code>modeloruns_sBA = lm(formula = RS ~ OBP + SLG, data=moneyball)
+summary(modeloruns_sBA)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = RS ~ OBP + SLG, data = moneyball)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -70.838 -17.174  -1.108  16.770  90.036 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  -804.63      18.92  -42.53   &lt;2e-16 ***
+## OBP          2737.77      90.68   30.19   &lt;2e-16 ***
+## SLG          1584.91      42.16   37.60   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 24.79 on 899 degrees of freedom
+## Multiple R-squared:  0.9296, Adjusted R-squared:  0.9294 
+## F-statistic:  5934 on 2 and 899 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div id="predizendo-o-numero-de-runs-allowed" class="section level3">
+<h3>Predizendo o Número de Runs Allowed</h3>
+<p>Com essa regressão, podemos estimar as Runs Permitidas com a equação: <span class="math display">\[ Runs Permitidas = -837 + 2913.6 * OOBP + 1514.29 * OSLG\]</span></p>
+<pre class="r"><code>modelorunsallowed = lm(formula = RA ~ OOBP + OSLG, data=moneyball)
+summary(modelorunsallowed)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = RA ~ OOBP + OSLG, data = moneyball)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -82.397 -15.178  -0.129  17.679  60.955 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  -837.38      60.26 -13.897  &lt; 2e-16 ***
+## OOBP         2913.60     291.97   9.979 4.46e-16 ***
+## OSLG         1514.29     175.43   8.632 2.55e-13 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 25.67 on 87 degrees of freedom
+##   (812 observations deleted due to missingness)
+## Multiple R-squared:  0.9073, Adjusted R-squared:  0.9052 
+## F-statistic: 425.8 on 2 and 87 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div id="agora-vem-a-parte-legal" class="section level3">
+<h3>Agora vem a parte legal</h3>
+<ul>
+<li>Com os nossos modelos, agora é possível tentar predizer quantos jogos o Oakland A’s vai ganhar em um determinado ano.</li>
+<li>Estamos tentando predizer quantos jogos o time vai ganhar <strong>antes</strong> da temporada começar, com o objetivo de suportar a decisão sobre <strong>quais jogadores</strong> queremos comprar.</li>
+<li>Pressuposto # 1: Performance passada dos jogadores do time que estamos montando tem correlação com a performance futura.</li>
+<li>Pressuposto # 2: A análise assume que haverão poucas lesões.</li>
+<li>Pressuposto # 3: Podemos estimar estatísticas para 2002 usando estatísticas dos jogadores coletadas em 2001.</li>
+</ul>
+</div>
+<div id="estimando-runs-para-2002" class="section level3">
+<h3>Estimando Runs para 2002</h3>
+<ul>
+<li>Com base na temporada de 2001, com o grupo que tivemos sabemos que a média do OBP é 0.339, e do SLG é 0.430.</li>
+<li>Nossa Regressão para Runs foi $ Runs = -804.3 + 2737.77 * OBP + 1584.91 * SLG$.</li>
+<li>Então a Estimativa de Runs é..</li>
+</ul>
+<pre class="r"><code>Runs = -804.3 + 2737.77 * 0.339 + 1584.91 *  0.430
+Runs</code></pre>
+<pre><code>## [1] 805.3153</code></pre>
+</div>
+<div id="estimando-runs-allowed-para-2002" class="section level3">
+<h3>Estimando Runs Allowed para 2002</h3>
+<ul>
+<li>Com base na temporada de 2001, com o grupo que tivemos sabemos que a média do OOBP é 0.307, e do OSLG é 0.373.</li>
+<li>Nossa Regressão para Runs foi $ Runs Permitidas = -837 + 2913.6 * OOBP + 1514.29 * OSLG$.</li>
+<li>Podemos fazer o mesmo para Runs Allowed</li>
+</ul>
+<pre class="r"><code>RunsAllowed = -837 + 2913.6 * 0.307 + 1514.29 * 0.373
+RunsAllowed</code></pre>
+<pre><code>## [1] 622.3054</code></pre>
+</div>
+<div id="quantos-jogos-esperamos-ganhar-com-esse-time" class="section level3">
+<h3>Quantos Jogos Esperamos Ganhar com esse Time?</h3>
+<ul>
+<li>Nosso modelo de vitórias diz que $ Vitorias = 80.88 + 0.1057 RunDiffs$. Então..</li>
+</ul>
+<pre class="r"><code>Vitorias = 80.88 + 0.1057 * (Runs - RunsAllowed)
+if (Vitorias &gt;= 95) {
+  paste(&quot;Esse time deve chegar nas Playoffs com &quot;, Vitorias, &quot; vitórias.&quot;)
+} else {
+  paste(&quot;Compre outros Jogadores, este time não chega nas playoffs com apenas &quot;, Vitorias, &quot; vitórias!&quot;)
+}</code></pre>
+<pre><code>## [1] &quot;Esse time deve chegar nas Playoffs com  100.224152772  vitórias.&quot;</code></pre>
+<ul>
+<li>A abordagem de Paul foi parecida com essa.</li>
+</ul>
+</div>
+<div id="a-hora-da-verdade" class="section level3">
+<h3>A hora da verdade</h3>
+<ul>
+<li>Nosso modelo serve para alguma coisa?</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Variável</th>
+<th>Nosso Modelo</th>
+<th>Modelo do Paul</th>
+<th>Realizado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Runs</td>
+<td>805</td>
+<td>800 - 820</td>
+<td>800</td>
+</tr>
+<tr class="even">
+<td>Runs Allowed</td>
+<td>622</td>
+<td>650 - 670</td>
+<td>653</td>
+</tr>
+<tr class="odd">
+<td>Vitórias</td>
+<td>100</td>
+<td>93 - 97</td>
+<td>103</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>O Oakland A’s ganhou 20 jogos em sequência nesse ano, mas não ganhou o campeonato;</li>
+<li>O Oakland A’s conseguiu ir para as Playoffs mais uma vez!</li>
+</ul>
+</div>
+<div id="como-aprender-mais" class="section level3">
+<h3>Como Aprender Mais?</h3>
+<ul>
+<li>github.com;</li>
+<li>datacamp.com;</li>
+<li>stackoverflow.com;</li>
+<li>udacity.com;</li>
+<li>edx.org;</li>
+<li>coursera.org;</li>
+</ul>
+</div>
