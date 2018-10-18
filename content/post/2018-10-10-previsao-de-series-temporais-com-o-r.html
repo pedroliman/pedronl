@@ -16,7 +16,7 @@ header:
 
 
 
-<p>Este arquivo foi utilizado como arquivo de apoio à aulas ministradas sobre previsão de demanda utilizando o R. Para um tramento mais aprofundado sobre o tema, recorrer ao livro <a href="https://otexts.org/fpp2/">Forecating: Principles and Practice</a>.</p>
+<p>Este arquivo foi utilizado como arquivo de apoio à aulas ministradas sobre previsão de demanda utilizando o R. Para um tramento mais aprofundado sobre o tema, recorrer ao excelente livro <a href="https://otexts.org/fpp2/">Forecating: Principles and Practice</a>.</p>
 <div id="sobre-o-r" class="section level2">
 <h2>Sobre o R</h2>
 <ul>
@@ -326,6 +326,14 @@ autoplot(a10) + ylab(&quot;Demanda de Remédios&quot;) +
 </ul>
 </div>
 </div>
+<div id="arima" class="section level1">
+<h1>ARIMA</h1>
+<p>O modelo ARIMA não será coberto nesta aula, porém a biblioteca forecast possui uma função para estimar modelos Arima de modo automático.</p>
+<pre class="r"><code>modelo_arima = forecast::auto.arima(a10)
+
+autoplot(forecast(modelo_arima, PI = F))</code></pre>
+<p><img src="/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-23-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
 <div id="mais-aspectos-tecnicos" class="section level1" data-background="imgs/background-1.jpg" data-background-size="cover">
 <h1>Mais Aspectos Técnicos</h1>
 <div id="o-modelo-naive" class="section level2">
@@ -338,7 +346,7 @@ autoplot(oil, series=&quot;Dados&quot;) +
   xlab(&quot;Ano&quot;) +
   autolayer(fitted(previsao), series = &quot;Previsao&quot;) + 
   ggtitle(&quot;Produção de Petróleo na Arábia Saudita&quot;)</code></pre>
-<p><img src="/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-23-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-24-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="observando-os-erros" class="section level2">
 <h2>Observando os Erros</h2>
@@ -346,7 +354,7 @@ autoplot(oil, series=&quot;Dados&quot;) +
 <li>Os erros também podem ser plotados. Espera-se que os erros sejam “white noise”. Se isso é verdade, é provável que o modelo tenha captado toda a informação disponível nos dados.</li>
 </ul>
 <pre class="r"><code>autoplot(residuals(previsao))</code></pre>
-<p><img src="/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-24-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-25-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="pressupostos-sobre-os-erros" class="section level2">
 <h2>Pressupostos sobre os Erros</h2>
@@ -363,7 +371,7 @@ autoplot(oil, series=&quot;Dados&quot;) +
 <li>A função ‘checkresiduals’ verifica os pressupostos indicados anteriormente. Espera-se que o resultado do p-valor do Ljung-box seja acima de 0.05, indicando que os erros não são correlacionados.</li>
 </ul>
 <pre class="r"><code>checkresiduals(previsao)</code></pre>
-<p><img src="/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-25-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-26-1.png" width="672" style="display: block; margin: auto;" /></p>
 <pre><code>## 
 ##  Ljung-Box test
 ## 
@@ -408,7 +416,7 @@ previsao = naive(treinamento,h = 10) # h = Número de períodos a prever
 autoplot(previsao) + 
   ylab(&quot;Vendade Petróleo&quot;) + 
   autolayer(teste, series = &quot;Dados de Teste&quot;)</code></pre>
-<p><img src="/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-26-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-27-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="o-comando-accuracy" class="section level2">
 <h2>O Comando Accuracy</h2>

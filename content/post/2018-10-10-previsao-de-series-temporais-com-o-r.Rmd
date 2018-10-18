@@ -286,6 +286,17 @@ autoplot(a10) + ylab("Demanda de Remédios") +
 - Proponha um modelo de previsão novo;
 - Compare a acurácia do novo modelo em relação ao que existe atualmente na empresa.
 
+# ARIMA
+
+O modelo ARIMA não será coberto nesta aula, porém a biblioteca forecast possui uma função para estimar modelos Arima de modo automático.
+
+```{r}
+modelo_arima = forecast::auto.arima(a10)
+
+autoplot(forecast(modelo_arima))
+
+```
+
 
 # Mais Aspectos Técnicos {data-background=imgs/background-1.jpg data-background-size=cover}
 
