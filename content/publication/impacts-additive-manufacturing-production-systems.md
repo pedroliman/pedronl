@@ -22,7 +22,7 @@ publication = "In *New Global Perspectives on Industrial Engineering and Managem
 # publication_short = "In *ICMEW*"
 
 # Abstract and optional shortened version.
-abstract = "Additive Manufacturing adoption has been growing in adoption in the last decades, holding the potential to fundamentally transform traditional production systems. Yet, its prospected impact on Production Systems and Operations Strategy is controversial. This article contributes to this debate by examining and summarizing the prospected impact of Additive Manufacturing on Production Systems, in the light of the Competitive Dimensions through a Systematic Literature Review. In particular, this paper organises this debate by highlighting the specific impacts prospected by the literature for each competitive dimension."
+abstract = "Additive Manufacturing has been growing in adoption in the last decades, holding the potential to fundamentally transform traditional production systems. Yet, its prospected impact on Production Systems and Operations Strategy is controversial. This article contributes to this debate by examining and summarizing the prospected impact of Additive Manufacturing on Production Systems, in the light of the Competitive Dimensions through a Systematic Literature Review. In particular, this paper organises this debate by highlighting the specific impacts prospected by the literature for each competitive dimension."
 abstract_short = "In this chapter, we analyzed the prospected impact of Additive Manufacturing adoption across Production Systems' Competitive Fators through a systematic literature review."
 
 # Featured image thumbnail (optional)

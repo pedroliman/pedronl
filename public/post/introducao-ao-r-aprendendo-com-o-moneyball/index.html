@@ -392,12 +392,14 @@ O que Veremos neste Mini-Curso?O que é Data Analytics?Exemplo Moneyball.Com
 <li>R Developer: “Um desenvolvedor R usa suas habilidades de programamação para manipular dados e construir ferramentas para para análise de Dados.”</li>
 <li>Data Scientist: “Um cientista de dados combina técnicas estatísticas e de machine learning com programação em R para analisar e interpretar dados complexos”.</li>
 <li>Data Analyst: Um Data Analyst traduz números em português claro. Um analista de dados interpreta dados das empresas e o usa para tomar melhores decisões.</li>
-<li>Analista Quantitativo: Na área financeira, uma analista quantitativo garante que portfolios de investimento estão balenceados e encontra novas oportunidades de trading, e avalia preços de ativos usando modelos matemáticos. Fonte: <a href="http://datacamp.com" class="uri">http://datacamp.com</a></li>
+<li>Analista Quantitativo: Na área financeira, uma analista quantitativo garante que portfolios de investimento estão balenceados e encontra novas oportunidades de trading, e avalia preços de ativos usando modelos matemáticos.
+Fonte: <a href="http://datacamp.com" class="uri">http://datacamp.com</a></li>
 </ul>
 </div>
 <div id="exemplo---moneyball" class="section level3">
 <h3>Exemplo - MoneyBall</h3>
-<p>Este exemplo usa dados relacionados ao filme “Moneyball” para apresentar a técnica de regressão linear com o R. Este exercício e a ideia de usar o exemplo do Moneyball é baseda em uma aula do MIT, da plataforma Edx: <a href="https://courses.edx.org/courses/course-v1:MITx+15.071x_3+1T2016/" class="uri">https://courses.edx.org/courses/course-v1:MITx+15.071x_3+1T2016/</a></p>
+<p>Este exemplo usa dados relacionados ao filme “Moneyball” para apresentar a técnica de regressão linear com o R.
+Este exercício e a ideia de usar o exemplo do Moneyball é baseda em uma aula do MIT, da plataforma Edx: <a href="https://courses.edx.org/courses/course-v1:MITx+15.071x_3+1T2016/" class="uri">https://courses.edx.org/courses/course-v1:MITx+15.071x_3+1T2016/</a></p>
 </div>
 <div id="moneyball-e-o-oakland-as" class="section level3">
 <h3>Moneyball e o Oakland A’s</h3>
@@ -431,7 +433,9 @@ baseball &lt;- read.csv(&quot;2018-10-10-moneyball-r/baseball.csv&quot;)</code><
 </div>
 <div id="conhecendo-os-dados-com-str" class="section level3">
 <h3>Conhecendo os Dados com str()</h3>
-<p>Antes de rodar qualquer análise precisamos conhecer a estrutura dos dados. Os dados contém uma linha para cada time e ano de 1962 a 2012 para todas as temporadas. Dados incluem Runs Scored (RS), Runs Allowed (RA) e Vitórias (W).</p>
+<p>Antes de rodar qualquer análise precisamos conhecer a estrutura dos dados.
+Os dados contém uma linha para cada time e ano de 1962 a 2012 para todas as temporadas.
+Dados incluem Runs Scored (RS), Runs Allowed (RA) e Vitórias (W).</p>
 <pre class="r"><code># Podemos fazer isso usando a função str() (que mostra a estrutura)
 str(baseball)</code></pre>
 <pre><code>## &#39;data.frame&#39;:    1232 obs. of  15 variables:
@@ -587,13 +591,15 @@ str(moneyball)</code></pre>
 <p>Usando uma Regressão Linear!</p>
 <p><span class="math display">\[ y = \beta_0 + \beta_1 * x + e\]</span></p>
 <p>Ou, em outras palavras…</p>
-<p><span class="math display">\[ Vitorias = \beta_0 + \beta_1 * RunDiffs + e\]</span> Como fazer isso no R?</p>
+<p><span class="math display">\[ Vitorias = \beta_0 + \beta_1 * RunDiffs + e\]</span>
+Como fazer isso no R?</p>
 <pre class="r"><code>modelo_vitorias = lm(W ~ RD, data=moneyball)</code></pre>
 </div>
 <div id="analisando-o-modelo-para-predizer-vitorias" class="section level3">
 <h3>Analisando o Modelo para Predizer Vitórias</h3>
 <ul>
-<li>O que isso significa: Podemos predizer o número de vitórias que um time terá a partir de um número de Home Runs. <span class="math display">\[ Vitorias = 80.88 + 0.1057 RunDiffs\]</span></li>
+<li>O que isso significa: Podemos predizer o número de vitórias que um time terá a partir de um número de Home Runs.
+<span class="math display">\[ Vitorias = 80.88 + 0.1057 RunDiffs\]</span></li>
 </ul>
 <pre class="r"><code>summary(modelo_vitorias)</code></pre>
 <pre><code>## 
@@ -633,7 +639,9 @@ RD_min</code></pre>
 <ul>
 <li>Para ir para as playoffs o time precisa de 95 vitórias ou mais.</li>
 <li>Para ter 95 vitórias, o time precisa de 133 ~ 135 Runs a mais do que os oponentes.</li>
-<li>Para isso, o time precisa: – Fazer mais Runs. – Levar menos Runs.</li>
+<li>Para isso, o time precisa:
+– Fazer mais Runs.
+– Levar menos Runs.</li>
 </ul>
 </div>
 <div id="como-avaliar-um-jogador" class="section level3">
@@ -727,7 +735,8 @@ summary(modeloruns_sBA)</code></pre>
 </div>
 <div id="predizendo-o-numero-de-runs-allowed" class="section level3">
 <h3>Predizendo o Número de Runs Allowed</h3>
-<p>Com essa regressão, podemos estimar as Runs Permitidas com a equação: <span class="math display">\[ Runs Permitidas = -837 + 2913.6 * OOBP + 1514.29 * OSLG\]</span></p>
+<p>Com essa regressão, podemos estimar as Runs Permitidas com a equação:
+<span class="math display">\[ Runs Permitidas = -837 + 2913.6 * OOBP + 1514.29 * OSLG\]</span></p>
 <pre class="r"><code>modelorunsallowed = lm(formula = RA ~ OOBP + OSLG, data=moneyball)
 summary(modelorunsallowed)</code></pre>
 <pre><code>## 

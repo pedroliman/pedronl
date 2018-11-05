@@ -4,8 +4,16 @@
     
     <url>
     
+      <loc>/3d-printing-rdm-analysis-2018-dmdu-meeting/</loc>
+      <lastmod>2018-11-05T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>/post/previsao-de-series-temporais-com-o-r/</loc>
-      <lastmod>2018-10-10T18:30:35-03:00</lastmod>
+      <lastmod>2018-10-18T16:45:39-03:00</lastmod>
     </url>
     
   
@@ -111,6 +119,15 @@
     
     <url>
     
+      <loc>/categories/conference/</loc>
+      <lastmod>2018-11-05T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>/tags/discrete-event-simulation/</loc>
       <lastmod>2018-10-10T16:38:29-03:00</lastmod>
       <priority>0</priority>
@@ -130,7 +147,7 @@
     <url>
     
       <loc>/tags/previs%C3%A3o-de-demanda/</loc>
-      <lastmod>2018-10-10T18:30:35-03:00</lastmod>
+      <lastmod>2018-10-18T16:45:39-03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -157,7 +174,7 @@
     <url>
     
       <loc>/categories/r/</loc>
-      <lastmod>2018-10-10T18:30:35-03:00</lastmod>
+      <lastmod>2018-10-18T16:45:39-03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -167,6 +184,15 @@
     
       <loc>/tags/r-package/</loc>
       <lastmod>2018-10-10T16:38:29-03:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/simulation/</loc>
+      <lastmod>2018-11-05T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -184,7 +210,7 @@
     <url>
     
       <loc>/tags/suaviza%C3%A7%C3%A3o-exponencial/</loc>
-      <lastmod>2018-10-10T18:30:35-03:00</lastmod>
+      <lastmod>2018-10-18T16:45:39-03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -193,7 +219,7 @@
     <url>
     
       <loc>/tags/s%C3%A9ries-temporais/</loc>
-      <lastmod>2018-10-10T18:30:35-03:00</lastmod>
+      <lastmod>2018-10-18T16:45:39-03:00</lastmod>
       <priority>0</priority>
     </url>
     

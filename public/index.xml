@@ -169,6 +169,16 @@
     </item>
     
     <item>
+      <title>Strategic Decision Making in the 3D Printing Industry - DMDU 2018 Annual Meeting Materials</title>
+      <link>/3d-printing-rdm-analysis-2018-dmdu-meeting/</link>
+      <pubDate>Mon, 05 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/3d-printing-rdm-analysis-2018-dmdu-meeting/</guid>
+      <description>&lt;p&gt;This is the page where I will post additional materials about the presentation given at the 2018 DMDU Annual Meeting.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Previsão de Séries Temporais com o R</title>
       <link>/post/previsao-de-series-temporais-com-o-r/</link>
       <pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
@@ -315,11 +325,16 @@ ts_vendas&lt;/code&gt;&lt;/pre&gt;
 &lt;/ul&gt;
 &lt;p&gt;Notação da Previsão: &lt;span class=&#34;math inline&#34;&gt;\(\hat{y}_{t+h|t}\)&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Previsão para a demanda &lt;span class=&#34;math inline&#34;&gt;\(y_{t+h}\)&lt;/span&gt;, considerando dados disponiveis até &lt;span class=&#34;math inline&#34;&gt;\(y_{t}\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Equação da Previsão: &lt;span class=&#34;math display&#34;&gt;\[\hat{y}_{t+h|t} = \alpha y_{t} + \alpha(1-\alpha)y_{t-1} + \alpha(1-\alpha)^2y_{t-2} + ... \ para \  0 \leq \alpha \leq 1\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Equação da Previsão:
+&lt;span class=&#34;math display&#34;&gt;\[\hat{y}_{t+h|t} = \alpha y_{t} + \alpha(1-\alpha)y_{t-1} + \alpha(1-\alpha)^2y_{t-2} + ... \ para \  0 \leq \alpha \leq 1\]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;modelo-de-suavizacao-exponencial-simples&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Modelo de Suavização Exponencial Simples&lt;/h2&gt;
-&lt;p&gt;Previsão: &lt;span class=&#34;math display&#34;&gt;\[\hat{y}_{t+h|t} = l_t\]&lt;/span&gt; Nível: &lt;span class=&#34;math display&#34;&gt;\[l_t = \alpha y_t + (1-\alpha)l_{t-1}\]&lt;/span&gt; O valor &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; é obtido minimizando os erros ao rodar o modelo em um set de teste.&lt;/p&gt;
+&lt;p&gt;Previsão:
+&lt;span class=&#34;math display&#34;&gt;\[\hat{y}_{t+h|t} = l_t\]&lt;/span&gt;
+Nível:
+&lt;span class=&#34;math display&#34;&gt;\[l_t = \alpha y_t + (1-\alpha)l_{t-1}\]&lt;/span&gt;
+O valor &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; é obtido minimizando os erros ao rodar o modelo em um set de teste.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;estimando-o-modelo-com-o-r&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Estimando o Modelo com o R&lt;/h2&gt;
@@ -370,7 +385,12 @@ summary(previsao_petroleo)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;modelo-de-suavizacao-exponencial-com-tendencia-linear---holt&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Modelo de Suavização Exponencial com Tendência Linear - Holt&lt;/h2&gt;
-&lt;p&gt;Previsão: &lt;span class=&#34;math display&#34;&gt;\[\hat{y}_{t+h|t} = l_t + h b_t\]&lt;/span&gt; Nível: &lt;span class=&#34;math display&#34;&gt;\[l_t = \alpha y_t + (1-\alpha)(l_{t-1}+b_{t-1})\]&lt;/span&gt; Tendência: &lt;span class=&#34;math display&#34;&gt;\[b_t = \beta *(l_t-l_{t-1}) + (1-\beta)b_{t-1}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Previsão:
+&lt;span class=&#34;math display&#34;&gt;\[\hat{y}_{t+h|t} = l_t + h b_t\]&lt;/span&gt;
+Nível:
+&lt;span class=&#34;math display&#34;&gt;\[l_t = \alpha y_t + (1-\alpha)(l_{t-1}+b_{t-1})\]&lt;/span&gt;
+Tendência:
+&lt;span class=&#34;math display&#34;&gt;\[b_t = \beta *(l_t-l_{t-1}) + (1-\beta)b_{t-1}\]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;estimando-o-modelo-com-o-r-1&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Estimando o Modelo com o R&lt;/h2&gt;
@@ -425,9 +445,13 @@ autoplot(previsao_petroleo_holt)&lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;Podemos utilizar o modelo Holt com “Damp”, pressupondo que o crescimento não será linear no longo prazo.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Previsão: &lt;span class=&#34;math display&#34;&gt;\[\hat{y}_{t+h|t} = l_t + (\phi+\phi^2+...+\phi^h) b_t\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Nível: &lt;span class=&#34;math display&#34;&gt;\[l_t = \alpha y_t + (1-\alpha)(l_{t-1}+\phi b_{t-1})\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Tendência: &lt;span class=&#34;math display&#34;&gt;\[b_t = \beta *(l_t-l_{t-1}) + (1-\beta) \phi b_{t-1}\]&lt;/span&gt; O parâmetro &lt;span class=&#34;math inline&#34;&gt;\(\phi\)&lt;/span&gt; é entre 0 e 1. Se o parâmetro for igual a 1, o crescimento será linear.&lt;/p&gt;
+&lt;p&gt;Previsão:
+&lt;span class=&#34;math display&#34;&gt;\[\hat{y}_{t+h|t} = l_t + (\phi+\phi^2+...+\phi^h) b_t\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Nível:
+&lt;span class=&#34;math display&#34;&gt;\[l_t = \alpha y_t + (1-\alpha)(l_{t-1}+\phi b_{t-1})\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Tendência:
+&lt;span class=&#34;math display&#34;&gt;\[b_t = \beta *(l_t-l_{t-1}) + (1-\beta) \phi b_{t-1}\]&lt;/span&gt;
+O parâmetro &lt;span class=&#34;math inline&#34;&gt;\(\phi\)&lt;/span&gt; é entre 0 e 1. Se o parâmetro for igual a 1, o crescimento será linear.&lt;/p&gt;
 &lt;p&gt;Utilizando o Modelo de Holt com “Damp”:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;previsao_petroleo_holt = holt(dados_petroleo, h = 15, PI = F)
 previsao_petroleo_holt_damp = holt(dados_petroleo, h = 15, damped = T, PI = F) # Previsao para os próximos 5 anos
@@ -445,17 +469,31 @@ autoplot(dados_petroleo) +
 &lt;/div&gt;
 &lt;div id=&#34;modelo-holt-winters-aditivo&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Modelo Holt-Winters Aditivo&lt;/h2&gt;
-&lt;p&gt;Previsão: &lt;span class=&#34;math display&#34;&gt;\[\hat{y}_{t+h|t} = l_t + hb_t + s_{t-m+h_m^+}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Nível: &lt;span class=&#34;math display&#34;&gt;\[l_t = \alpha (y_t-s_{t-m}) + (1-\alpha)(l_{t-1}+b_{t-1})\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Tendência: &lt;span class=&#34;math display&#34;&gt;\[b_t = \beta *(l_t-l_{t-1}) + (1-\beta) b_{t-1}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Sazonalidade: &lt;span class=&#34;math display&#34;&gt;\[b_t = \gamma(y_t - l_{t-1 - b_{t-1}}) + (1-\gamma)s_{t-m} \]&lt;/span&gt; &lt;span class=&#34;math inline&#34;&gt;\(s_{t-m+h_m^+}\)&lt;/span&gt;: componente de sazonalidade do último ano de dados disponíveis. &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt;: Período de sazonalidade. A média do componente de sazonalidade tende a zero.&lt;/p&gt;
+&lt;p&gt;Previsão:
+&lt;span class=&#34;math display&#34;&gt;\[\hat{y}_{t+h|t} = l_t + hb_t + s_{t-m+h_m^+}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Nível:
+&lt;span class=&#34;math display&#34;&gt;\[l_t = \alpha (y_t-s_{t-m}) + (1-\alpha)(l_{t-1}+b_{t-1})\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Tendência:
+&lt;span class=&#34;math display&#34;&gt;\[b_t = \beta *(l_t-l_{t-1}) + (1-\beta) b_{t-1}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Sazonalidade:
+&lt;span class=&#34;math display&#34;&gt;\[b_t = \gamma(y_t - l_{t-1 - b_{t-1}}) + (1-\gamma)s_{t-m} \]&lt;/span&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(s_{t-m+h_m^+}\)&lt;/span&gt;: componente de sazonalidade do último ano de dados disponíveis.
+&lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt;: Período de sazonalidade.
+A média do componente de sazonalidade tende a zero.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;modelo-holt-winters-multiplicatio&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Modelo Holt-Winters Multiplicatio&lt;/h2&gt;
-&lt;p&gt;Previsão: &lt;span class=&#34;math display&#34;&gt;\[\hat{y}_{t+h|t} = (l_t + hb_t) s_{t-m+h_m^+}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Nível: &lt;span class=&#34;math display&#34;&gt;\[l_t = \alpha \frac{y_t}{s_{t-m}} + (1-\alpha)(l_{t-1}+b_{t-1})\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Tendência: &lt;span class=&#34;math display&#34;&gt;\[b_t = \beta *(l_t-l_{t-1}) + (1-\beta) b_{t-1}\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Sazonalidade: &lt;span class=&#34;math display&#34;&gt;\[b_t = \gamma  \frac{y_t}{l_{t-1} + b_{t-1}} + (1-\gamma)s_{t-m} \]&lt;/span&gt; &lt;span class=&#34;math inline&#34;&gt;\(s_{t-m+h_m^+}\)&lt;/span&gt;: componente de sazonalidade do último ano de dados disponíveis. &lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt;: Período de sazonalidade. A média do componente de sazonalidade tende a 1.&lt;/p&gt;
+&lt;p&gt;Previsão:
+&lt;span class=&#34;math display&#34;&gt;\[\hat{y}_{t+h|t} = (l_t + hb_t) s_{t-m+h_m^+}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Nível:
+&lt;span class=&#34;math display&#34;&gt;\[l_t = \alpha \frac{y_t}{s_{t-m}} + (1-\alpha)(l_{t-1}+b_{t-1})\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Tendência:
+&lt;span class=&#34;math display&#34;&gt;\[b_t = \beta *(l_t-l_{t-1}) + (1-\beta) b_{t-1}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Sazonalidade:
+&lt;span class=&#34;math display&#34;&gt;\[b_t = \gamma  \frac{y_t}{l_{t-1} + b_{t-1}} + (1-\gamma)s_{t-m} \]&lt;/span&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(s_{t-m+h_m^+}\)&lt;/span&gt;: componente de sazonalidade do último ano de dados disponíveis.
+&lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt;: Período de sazonalidade.
+A média do componente de sazonalidade tende a 1.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;exemplo---holt-winters-aditivo&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Exemplo - Holt-Winters Aditivo&lt;/h2&gt;
@@ -489,7 +527,7 @@ autoplot(a10) + ylab(&amp;quot;Demanda de Remédios&amp;quot;) +
 &lt;p&gt;O modelo ARIMA não será coberto nesta aula, porém a biblioteca forecast possui uma função para estimar modelos Arima de modo automático.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;modelo_arima = forecast::auto.arima(a10)
 
-autoplot(forecast(modelo_arima, PI = F))&lt;/code&gt;&lt;/pre&gt;
+autoplot(forecast(modelo_arima))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-23-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;mais-aspectos-tecnicos&#34; class=&#34;section level1&#34; data-background=&#34;imgs/background-1.jpg&#34; data-background-size=&#34;cover&#34;&gt;
@@ -518,7 +556,8 @@ autoplot(oil, series=&amp;quot;Dados&amp;quot;) +
 &lt;h2&gt;Pressupostos sobre os Erros&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Os erros deveriam ser não-correlacionados;&lt;/li&gt;
-&lt;li&gt;Os erros devem ter média zero; Propriedades úteis:&lt;/li&gt;
+&lt;li&gt;Os erros devem ter média zero;
+Propriedades úteis:&lt;/li&gt;
 &lt;li&gt;Variância Constante;&lt;/li&gt;
 &lt;li&gt;São normalmente distribuídos.&lt;/li&gt;
 &lt;/ul&gt;
@@ -866,12 +905,14 @@ knitr::kable(head(statistics_summary[,1:6]))&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;R Developer: “Um desenvolvedor R usa suas habilidades de programamação para manipular dados e construir ferramentas para para análise de Dados.”&lt;/li&gt;
 &lt;li&gt;Data Scientist: “Um cientista de dados combina técnicas estatísticas e de machine learning com programação em R para analisar e interpretar dados complexos”.&lt;/li&gt;
 &lt;li&gt;Data Analyst: Um Data Analyst traduz números em português claro. Um analista de dados interpreta dados das empresas e o usa para tomar melhores decisões.&lt;/li&gt;
-&lt;li&gt;Analista Quantitativo: Na área financeira, uma analista quantitativo garante que portfolios de investimento estão balenceados e encontra novas oportunidades de trading, e avalia preços de ativos usando modelos matemáticos. Fonte: &lt;a href=&#34;http://datacamp.com&#34; class=&#34;uri&#34;&gt;http://datacamp.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Analista Quantitativo: Na área financeira, uma analista quantitativo garante que portfolios de investimento estão balenceados e encontra novas oportunidades de trading, e avalia preços de ativos usando modelos matemáticos.
+Fonte: &lt;a href=&#34;http://datacamp.com&#34; class=&#34;uri&#34;&gt;http://datacamp.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;exemplo---moneyball&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Exemplo - MoneyBall&lt;/h3&gt;
-&lt;p&gt;Este exemplo usa dados relacionados ao filme “Moneyball” para apresentar a técnica de regressão linear com o R. Este exercício e a ideia de usar o exemplo do Moneyball é baseda em uma aula do MIT, da plataforma Edx: &lt;a href=&#34;https://courses.edx.org/courses/course-v1:MITx+15.071x_3+1T2016/&#34; class=&#34;uri&#34;&gt;https://courses.edx.org/courses/course-v1:MITx+15.071x_3+1T2016/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Este exemplo usa dados relacionados ao filme “Moneyball” para apresentar a técnica de regressão linear com o R.
+Este exercício e a ideia de usar o exemplo do Moneyball é baseda em uma aula do MIT, da plataforma Edx: &lt;a href=&#34;https://courses.edx.org/courses/course-v1:MITx+15.071x_3+1T2016/&#34; class=&#34;uri&#34;&gt;https://courses.edx.org/courses/course-v1:MITx+15.071x_3+1T2016/&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;moneyball-e-o-oakland-as&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Moneyball e o Oakland A’s&lt;/h3&gt;
@@ -905,7 +946,9 @@ baseball &amp;lt;- read.csv(&amp;quot;2018-10-10-moneyball-r/baseball.csv&amp;qu
 &lt;/div&gt;
 &lt;div id=&#34;conhecendo-os-dados-com-str&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Conhecendo os Dados com str()&lt;/h3&gt;
-&lt;p&gt;Antes de rodar qualquer análise precisamos conhecer a estrutura dos dados. Os dados contém uma linha para cada time e ano de 1962 a 2012 para todas as temporadas. Dados incluem Runs Scored (RS), Runs Allowed (RA) e Vitórias (W).&lt;/p&gt;
+&lt;p&gt;Antes de rodar qualquer análise precisamos conhecer a estrutura dos dados.
+Os dados contém uma linha para cada time e ano de 1962 a 2012 para todas as temporadas.
+Dados incluem Runs Scored (RS), Runs Allowed (RA) e Vitórias (W).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Podemos fazer isso usando a função str() (que mostra a estrutura)
 str(baseball)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## &amp;#39;data.frame&amp;#39;:    1232 obs. of  15 variables:
@@ -1061,13 +1104,15 @@ str(moneyball)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Usando uma Regressão Linear!&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[ y = \beta_0 + \beta_1 * x + e\]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Ou, em outras palavras…&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[ Vitorias = \beta_0 + \beta_1 * RunDiffs + e\]&lt;/span&gt; Como fazer isso no R?&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[ Vitorias = \beta_0 + \beta_1 * RunDiffs + e\]&lt;/span&gt;
+Como fazer isso no R?&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;modelo_vitorias = lm(W ~ RD, data=moneyball)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;analisando-o-modelo-para-predizer-vitorias&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Analisando o Modelo para Predizer Vitórias&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;O que isso significa: Podemos predizer o número de vitórias que um time terá a partir de um número de Home Runs. &lt;span class=&#34;math display&#34;&gt;\[ Vitorias = 80.88 + 0.1057 RunDiffs\]&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;O que isso significa: Podemos predizer o número de vitórias que um time terá a partir de um número de Home Runs.
+&lt;span class=&#34;math display&#34;&gt;\[ Vitorias = 80.88 + 0.1057 RunDiffs\]&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(modelo_vitorias)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## 
@@ -1107,7 +1152,9 @@ RD_min&lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;Para ir para as playoffs o time precisa de 95 vitórias ou mais.&lt;/li&gt;
 &lt;li&gt;Para ter 95 vitórias, o time precisa de 133 ~ 135 Runs a mais do que os oponentes.&lt;/li&gt;
-&lt;li&gt;Para isso, o time precisa: – Fazer mais Runs. – Levar menos Runs.&lt;/li&gt;
+&lt;li&gt;Para isso, o time precisa:
+– Fazer mais Runs.
+– Levar menos Runs.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;como-avaliar-um-jogador&#34; class=&#34;section level3&#34;&gt;
@@ -1201,7 +1248,8 @@ summary(modeloruns_sBA)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;predizendo-o-numero-de-runs-allowed&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Predizendo o Número de Runs Allowed&lt;/h3&gt;
-&lt;p&gt;Com essa regressão, podemos estimar as Runs Permitidas com a equação: &lt;span class=&#34;math display&#34;&gt;\[ Runs Permitidas = -837 + 2913.6 * OOBP + 1514.29 * OSLG\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Com essa regressão, podemos estimar as Runs Permitidas com a equação:
+&lt;span class=&#34;math display&#34;&gt;\[ Runs Permitidas = -837 + 2913.6 * OOBP + 1514.29 * OSLG\]&lt;/span&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;modelorunsallowed = lm(formula = RA ~ OOBP + OSLG, data=moneyball)
 summary(modelorunsallowed)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## 

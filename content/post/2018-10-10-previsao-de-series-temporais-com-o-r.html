@@ -157,11 +157,16 @@ ts_vendas</code></pre>
 </ul>
 <p>Notação da Previsão: <span class="math inline">\(\hat{y}_{t+h|t}\)</span></p>
 <p>Previsão para a demanda <span class="math inline">\(y_{t+h}\)</span>, considerando dados disponiveis até <span class="math inline">\(y_{t}\)</span></p>
-<p>Equação da Previsão: <span class="math display">\[\hat{y}_{t+h|t} = \alpha y_{t} + \alpha(1-\alpha)y_{t-1} + \alpha(1-\alpha)^2y_{t-2} + ... \ para \  0 \leq \alpha \leq 1\]</span></p>
+<p>Equação da Previsão:
+<span class="math display">\[\hat{y}_{t+h|t} = \alpha y_{t} + \alpha(1-\alpha)y_{t-1} + \alpha(1-\alpha)^2y_{t-2} + ... \ para \  0 \leq \alpha \leq 1\]</span></p>
 </div>
 <div id="modelo-de-suavizacao-exponencial-simples" class="section level2">
 <h2>Modelo de Suavização Exponencial Simples</h2>
-<p>Previsão: <span class="math display">\[\hat{y}_{t+h|t} = l_t\]</span> Nível: <span class="math display">\[l_t = \alpha y_t + (1-\alpha)l_{t-1}\]</span> O valor <span class="math inline">\(\alpha\)</span> é obtido minimizando os erros ao rodar o modelo em um set de teste.</p>
+<p>Previsão:
+<span class="math display">\[\hat{y}_{t+h|t} = l_t\]</span>
+Nível:
+<span class="math display">\[l_t = \alpha y_t + (1-\alpha)l_{t-1}\]</span>
+O valor <span class="math inline">\(\alpha\)</span> é obtido minimizando os erros ao rodar o modelo em um set de teste.</p>
 </div>
 <div id="estimando-o-modelo-com-o-r" class="section level2">
 <h2>Estimando o Modelo com o R</h2>
@@ -212,7 +217,12 @@ summary(previsao_petroleo)</code></pre>
 </div>
 <div id="modelo-de-suavizacao-exponencial-com-tendencia-linear---holt" class="section level2">
 <h2>Modelo de Suavização Exponencial com Tendência Linear - Holt</h2>
-<p>Previsão: <span class="math display">\[\hat{y}_{t+h|t} = l_t + h b_t\]</span> Nível: <span class="math display">\[l_t = \alpha y_t + (1-\alpha)(l_{t-1}+b_{t-1})\]</span> Tendência: <span class="math display">\[b_t = \beta *(l_t-l_{t-1}) + (1-\beta)b_{t-1}\]</span></p>
+<p>Previsão:
+<span class="math display">\[\hat{y}_{t+h|t} = l_t + h b_t\]</span>
+Nível:
+<span class="math display">\[l_t = \alpha y_t + (1-\alpha)(l_{t-1}+b_{t-1})\]</span>
+Tendência:
+<span class="math display">\[b_t = \beta *(l_t-l_{t-1}) + (1-\beta)b_{t-1}\]</span></p>
 </div>
 <div id="estimando-o-modelo-com-o-r-1" class="section level2">
 <h2>Estimando o Modelo com o R</h2>
@@ -267,9 +277,13 @@ autoplot(previsao_petroleo_holt)</code></pre>
 <ul>
 <li>Podemos utilizar o modelo Holt com “Damp”, pressupondo que o crescimento não será linear no longo prazo.</li>
 </ul>
-<p>Previsão: <span class="math display">\[\hat{y}_{t+h|t} = l_t + (\phi+\phi^2+...+\phi^h) b_t\]</span></p>
-<p>Nível: <span class="math display">\[l_t = \alpha y_t + (1-\alpha)(l_{t-1}+\phi b_{t-1})\]</span></p>
-<p>Tendência: <span class="math display">\[b_t = \beta *(l_t-l_{t-1}) + (1-\beta) \phi b_{t-1}\]</span> O parâmetro <span class="math inline">\(\phi\)</span> é entre 0 e 1. Se o parâmetro for igual a 1, o crescimento será linear.</p>
+<p>Previsão:
+<span class="math display">\[\hat{y}_{t+h|t} = l_t + (\phi+\phi^2+...+\phi^h) b_t\]</span></p>
+<p>Nível:
+<span class="math display">\[l_t = \alpha y_t + (1-\alpha)(l_{t-1}+\phi b_{t-1})\]</span></p>
+<p>Tendência:
+<span class="math display">\[b_t = \beta *(l_t-l_{t-1}) + (1-\beta) \phi b_{t-1}\]</span>
+O parâmetro <span class="math inline">\(\phi\)</span> é entre 0 e 1. Se o parâmetro for igual a 1, o crescimento será linear.</p>
 <p>Utilizando o Modelo de Holt com “Damp”:</p>
 <pre class="r"><code>previsao_petroleo_holt = holt(dados_petroleo, h = 15, PI = F)
 previsao_petroleo_holt_damp = holt(dados_petroleo, h = 15, damped = T, PI = F) # Previsao para os próximos 5 anos
@@ -287,17 +301,31 @@ autoplot(dados_petroleo) +
 </div>
 <div id="modelo-holt-winters-aditivo" class="section level2">
 <h2>Modelo Holt-Winters Aditivo</h2>
-<p>Previsão: <span class="math display">\[\hat{y}_{t+h|t} = l_t + hb_t + s_{t-m+h_m^+}\]</span></p>
-<p>Nível: <span class="math display">\[l_t = \alpha (y_t-s_{t-m}) + (1-\alpha)(l_{t-1}+b_{t-1})\]</span></p>
-<p>Tendência: <span class="math display">\[b_t = \beta *(l_t-l_{t-1}) + (1-\beta) b_{t-1}\]</span></p>
-<p>Sazonalidade: <span class="math display">\[b_t = \gamma(y_t - l_{t-1 - b_{t-1}}) + (1-\gamma)s_{t-m} \]</span> <span class="math inline">\(s_{t-m+h_m^+}\)</span>: componente de sazonalidade do último ano de dados disponíveis. <span class="math inline">\(m\)</span>: Período de sazonalidade. A média do componente de sazonalidade tende a zero.</p>
+<p>Previsão:
+<span class="math display">\[\hat{y}_{t+h|t} = l_t + hb_t + s_{t-m+h_m^+}\]</span></p>
+<p>Nível:
+<span class="math display">\[l_t = \alpha (y_t-s_{t-m}) + (1-\alpha)(l_{t-1}+b_{t-1})\]</span></p>
+<p>Tendência:
+<span class="math display">\[b_t = \beta *(l_t-l_{t-1}) + (1-\beta) b_{t-1}\]</span></p>
+<p>Sazonalidade:
+<span class="math display">\[b_t = \gamma(y_t - l_{t-1 - b_{t-1}}) + (1-\gamma)s_{t-m} \]</span>
+<span class="math inline">\(s_{t-m+h_m^+}\)</span>: componente de sazonalidade do último ano de dados disponíveis.
+<span class="math inline">\(m\)</span>: Período de sazonalidade.
+A média do componente de sazonalidade tende a zero.</p>
 </div>
 <div id="modelo-holt-winters-multiplicatio" class="section level2">
 <h2>Modelo Holt-Winters Multiplicatio</h2>
-<p>Previsão: <span class="math display">\[\hat{y}_{t+h|t} = (l_t + hb_t) s_{t-m+h_m^+}\]</span></p>
-<p>Nível: <span class="math display">\[l_t = \alpha \frac{y_t}{s_{t-m}} + (1-\alpha)(l_{t-1}+b_{t-1})\]</span></p>
-<p>Tendência: <span class="math display">\[b_t = \beta *(l_t-l_{t-1}) + (1-\beta) b_{t-1}\]</span></p>
-<p>Sazonalidade: <span class="math display">\[b_t = \gamma  \frac{y_t}{l_{t-1} + b_{t-1}} + (1-\gamma)s_{t-m} \]</span> <span class="math inline">\(s_{t-m+h_m^+}\)</span>: componente de sazonalidade do último ano de dados disponíveis. <span class="math inline">\(m\)</span>: Período de sazonalidade. A média do componente de sazonalidade tende a 1.</p>
+<p>Previsão:
+<span class="math display">\[\hat{y}_{t+h|t} = (l_t + hb_t) s_{t-m+h_m^+}\]</span></p>
+<p>Nível:
+<span class="math display">\[l_t = \alpha \frac{y_t}{s_{t-m}} + (1-\alpha)(l_{t-1}+b_{t-1})\]</span></p>
+<p>Tendência:
+<span class="math display">\[b_t = \beta *(l_t-l_{t-1}) + (1-\beta) b_{t-1}\]</span></p>
+<p>Sazonalidade:
+<span class="math display">\[b_t = \gamma  \frac{y_t}{l_{t-1} + b_{t-1}} + (1-\gamma)s_{t-m} \]</span>
+<span class="math inline">\(s_{t-m+h_m^+}\)</span>: componente de sazonalidade do último ano de dados disponíveis.
+<span class="math inline">\(m\)</span>: Período de sazonalidade.
+A média do componente de sazonalidade tende a 1.</p>
 </div>
 <div id="exemplo---holt-winters-aditivo" class="section level2">
 <h2>Exemplo - Holt-Winters Aditivo</h2>
@@ -331,7 +359,7 @@ autoplot(a10) + ylab(&quot;Demanda de Remédios&quot;) +
 <p>O modelo ARIMA não será coberto nesta aula, porém a biblioteca forecast possui uma função para estimar modelos Arima de modo automático.</p>
 <pre class="r"><code>modelo_arima = forecast::auto.arima(a10)
 
-autoplot(forecast(modelo_arima, PI = F))</code></pre>
+autoplot(forecast(modelo_arima))</code></pre>
 <p><img src="/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-23-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="mais-aspectos-tecnicos" class="section level1" data-background="imgs/background-1.jpg" data-background-size="cover">
@@ -360,7 +388,8 @@ autoplot(oil, series=&quot;Dados&quot;) +
 <h2>Pressupostos sobre os Erros</h2>
 <ul>
 <li>Os erros deveriam ser não-correlacionados;</li>
-<li>Os erros devem ter média zero; Propriedades úteis:</li>
+<li>Os erros devem ter média zero;
+Propriedades úteis:</li>
 <li>Variância Constante;</li>
 <li>São normalmente distribuídos.</li>
 </ul>
