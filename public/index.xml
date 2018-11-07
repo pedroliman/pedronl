@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pedro Nascimento de Lima</title>
+    <title>Pedro N. de Lima</title>
     <link>/</link>
-    <description>Recent content on Pedro Nascimento de Lima</description>
+    <description>Recent content on Pedro N. de Lima</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
@@ -169,15 +169,17 @@
     </item>
     
     <item>
-      <title>Strategic Decision Making in the 3D Printing Industry - 2018 DMDU Annual Meeting</title>
+      <title>Strategic Decision Making in the 3D Printing Industry - 2018 DMDU Annual Meeting Materials</title>
       <link>/post/3d-printing-rdm-analysis-2018-dmdu-meeting/</link>
       <pubDate>Mon, 05 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/3d-printing-rdm-analysis-2018-dmdu-meeting/</guid>
-      <description>&lt;p&gt;This post contains additional materials related to the the presentation given at the &lt;a href=&#34;http://www.deepuncertainty.org/annual-meetings/2018-annual-meeting/&#34;&gt;2018 DMDU Annual Meeting&lt;/a&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;This post contains materials related to the the presentation given at the &lt;a href=&#34;http://www.deepuncertainty.org/annual-meetings/2018-annual-meeting/&#34;&gt;2018 DMDU Annual Meeting&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Full Master’s Thesis:&lt;/strong&gt; &lt;a href=&#34;/../files/Pedro-Lima-MS-Dissertation-RDM-AM.pdf&#34;&gt;Donwload Here.&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Poster:&lt;/strong&gt; &lt;a href=&#34;/../files/PosterPedroLimaDMDU2018.pdf&#34;&gt;Donwload Here.&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Slides:&lt;/strong&gt; (Not Available yet).&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;embed src=&#34;/../files/PosterPedroLimaDMDU2018.pdf&#34; width=&#34;100%&#34; height=&#34;800&#34; type=&#34;application/pdf&#34; /&gt;
+&lt;p&gt;&lt;strong&gt;Slides:&lt;/strong&gt; Coming soon.&lt;/p&gt;
 </description>
     </item>
     

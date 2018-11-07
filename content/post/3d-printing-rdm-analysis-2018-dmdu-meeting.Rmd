@@ -1,5 +1,5 @@
 ---
-title: 'Strategic Decision Making in the 3D Printing Industry - 2018 DMDU Annual Meeting'
+title: 'Strategic Decision Making in the 3D Printing Industry - 2018 DMDU Annual Meeting Materials'
 author: Pedro Nascimento de Lima
 date: '2018-11-05'
 slug: 3d-printing-rdm-analysis-2018-dmdu-meeting
@@ -12,10 +12,26 @@ header:
   image: ''
 ---
 
-This post contains additional materials related to the the presentation given at the [2018 DMDU Annual Meeting](http://www.deepuncertainty.org/annual-meetings/2018-annual-meeting/).
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+```
+
+This post contains materials related to the the presentation given at the [2018 DMDU Annual Meeting](http://www.deepuncertainty.org/annual-meetings/2018-annual-meeting/).
 
 **Full Master's Thesis:** [Donwload Here.](/../files/Pedro-Lima-MS-Dissertation-RDM-AM.pdf)
 
 **Poster:** [Donwload Here.](/../files/PosterPedroLimaDMDU2018.pdf)
 
-**Slides:** (Not Available yet).
+<!--more-->
+
+```{r poster, echo=FALSE,out.width="100%",out.height=800}
+
+knitr::include_graphics("/../files/PosterPedroLimaDMDU2018.pdf")
+
+```
+
+**Slides:** Coming soon.
+
+
+
+
