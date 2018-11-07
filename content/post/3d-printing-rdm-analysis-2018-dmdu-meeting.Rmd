@@ -14,8 +14,8 @@ header:
 
 This post contains additional materials related to the the presentation given at the [2018 DMDU Annual Meeting](http://www.deepuncertainty.org/annual-meetings/2018-annual-meeting/).
 
-**Full Dissertation:** [Donwload Here.](files/Pedro-Lima-MS-Dissertation-RDM-AM.pdf)
+**Full Master's Thesis:** [Donwload Here.](/../files/Pedro-Lima-MS-Dissertation-RDM-AM.pdf)
 
-**Poster:** (Not Available yet).
+**Poster:** [Donwload Here.](/../files/PosterPedroLimaDMDU2018.pdf)
 
 **Slides:** (Not Available yet).
