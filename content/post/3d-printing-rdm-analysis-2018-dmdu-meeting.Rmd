@@ -20,9 +20,9 @@ This post contains materials related to the the presentation given at the [2018 
 
 **Full Master's Thesis:** [Donwload Here.](/../files/Pedro-Lima-MS-Dissertation-RDM-AM.pdf)
 
-**Poster:** [Donwload Here.](/../files/PosterPedroLimaDMDU2018.pdf)
+**Slides:** [Donwload Here.](/../files/dmdu2018-rdm-pedro-lima.pdf)
 
-<!--more-->
+**Poster:** [Donwload Here.](/../files/PosterPedroLimaDMDU2018.pdf)
 
 ```{r poster, echo=FALSE,out.width="100%",out.height=800}
 
@@ -30,7 +30,7 @@ knitr::include_graphics("/../files/PosterPedroLimaDMDU2018.pdf")
 
 ```
 
-**Slides:** Coming soon.
+
 
 
 
