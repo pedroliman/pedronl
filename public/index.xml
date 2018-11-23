@@ -50,9 +50,9 @@
 
 &lt;h1 id=&#34;biography&#34;&gt;Biography&lt;/h1&gt;
 
-&lt;p&gt;I am a Lecturer at &lt;a href=&#34;http://www.unisinos.br/global/en/&#34; target=&#34;_blank&#34;&gt;UNISINOS University&lt;/a&gt;, southern Brazil, where I teach Operational Research and Simulation Modeling to undergraduate courses. I am also a member of the &lt;a href=&#34;http://gmap.unisinos.br&#34; target=&#34;_blank&#34;&gt;GMAP Research Group&lt;/a&gt;, where I work building decision support tools.&lt;/p&gt;
+&lt;p&gt;I am a Lecturer at &lt;a href=&#34;http://www.unisinos.br/global/en/&#34; target=&#34;_blank&#34;&gt;UNISINOS University&lt;/a&gt;, southern Brazil, where I teach Operational Research and Simulation Modeling on undergraduate courses. I am also a member of the &lt;a href=&#34;http://gmap.unisinos.br&#34; target=&#34;_blank&#34;&gt;GMAP Research Group&lt;/a&gt;, where I work building decision support tools.&lt;/p&gt;
 
-&lt;p&gt;My academic interests often gravitate towards the intersection between OR, Programming and Management of Wicked Problems. My &lt;a href=&#34;files/Pedro-Lima-Undergrad-Dissertation-PSMs.pdf&#34; target=&#34;_blank&#34;&gt;undergraduate&lt;/a&gt; and &lt;a href=&#34;files/Pedro-Lima-MS-Dissertation-RDM-AM.pdf&#34; target=&#34;_blank&#34;&gt;master&amp;rsquo;s&lt;/a&gt; dissertations focused on wicked problems and decision under deep uncertainty, have received the Best Brazilian Dissertation in Production Engineering Prize from ABEPRO, in &lt;a href=&#34;http://www.unisinos.br/fique-sabendo/escola-politecnica/engenharia-de-producao/aluno-e-premiado-pela-abepro-2016/&#34; target=&#34;_blank&#34;&gt;2016&lt;/a&gt; and &lt;a href=&#34;http://www.unisinos.br/noticias/universidade/gmap-unisinos-em-destaque&#34; target=&#34;_blank&#34;&gt;2018&lt;/a&gt;, respectively.&lt;/p&gt;
+&lt;p&gt;My academic interests often gravitate towards the intersection between OR, Programming, and Management of Wicked Problems. My &lt;a href=&#34;files/Pedro-Lima-Undergrad-Dissertation-PSMs.pdf&#34; target=&#34;_blank&#34;&gt;undergraduate&lt;/a&gt; and &lt;a href=&#34;files/Pedro-Lima-MS-Dissertation-RDM-AM.pdf&#34; target=&#34;_blank&#34;&gt;master&amp;rsquo;s&lt;/a&gt; dissertations focused on wicked problems and decision under deep uncertainty, have received the Best Brazilian Dissertation in Production Engineering Prize from ABEPRO, in &lt;a href=&#34;http://www.unisinos.br/fique-sabendo/escola-politecnica/engenharia-de-producao/aluno-e-premiado-pela-abepro-2016/&#34; target=&#34;_blank&#34;&gt;2016&lt;/a&gt; and &lt;a href=&#34;http://www.unisinos.br/noticias/universidade/gmap-unisinos-em-destaque&#34; target=&#34;_blank&#34;&gt;2018&lt;/a&gt;, respectively.&lt;/p&gt;
 </description>
     </item>
     
@@ -189,6 +189,7 @@
       
       <guid>/post/previsao-de-series-temporais-com-o-r/</guid>
       <description>&lt;p&gt;Este arquivo foi utilizado como arquivo de apoio à aulas ministradas sobre previsão de demanda utilizando o R. Para um tramento mais aprofundado sobre o tema, recorrer ao excelente livro &lt;a href=&#34;https://otexts.org/fpp2/&#34;&gt;Forecating: Principles and Practice&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Este post possui uma apresentação relacionada &lt;a href=&#34;/files/slides/previsao-r/&#34;&gt;neste link&lt;/a&gt;.&lt;/p&gt;
 &lt;div id=&#34;sobre-o-r&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Sobre o R&lt;/h2&gt;
 &lt;ul&gt;
