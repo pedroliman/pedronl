@@ -675,9 +675,8 @@ autoplot(ts_bovespa)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;If you’re not an R user, fear not! Arena2R comes with an app you can use to explore your Arena Simulation data. All you’ll have to do is to Install R and R Studio, and run two commands in your R console.&lt;/p&gt;
 &lt;div id=&#34;installation&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Installation&lt;/h2&gt;
-&lt;p&gt;You can install arena2r from github in R with:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# install.packages(&amp;quot;devtools&amp;quot;)
-devtools::install_github(&amp;quot;pedroliman/arena2r&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can install arena2r from CRAN with:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(&amp;quot;arena2r&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Then, load the package:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(arena2r)
 ## Warning: package &amp;#39;arena2r&amp;#39; was built under R version 3.5.2

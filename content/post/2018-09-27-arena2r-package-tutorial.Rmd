@@ -5,7 +5,7 @@ date: '2018-09-27'
 slug: arena2r-package-tutorial
 categories:
   - R
-  - R-Blog
+  - R Blogs
 tags:
   - Arena Simualtion
   - Discrete Event Simulation
@@ -28,11 +28,10 @@ knitr::opts_chunk$set(collapse = TRUE)
 
 ## Installation
 
-You can install arena2r from github in R with:
+You can install arena2r from CRAN with:
 
 ```{r arena2r-installation, eval = FALSE}
-# install.packages("devtools")
-devtools::install_github("pedroliman/arena2r")
+install.packages("arena2r")
 ```
 
 Then, load the package:

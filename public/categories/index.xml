@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Pedro N. de Lima</title>
+    <title>Categories by Pedro N. de Lima</title>
     <link>/categories/</link>
     <description>Recent content in Categories on Pedro N. de Lima</description>
     <generator>Hugo -- gohugo.io</generator>
@@ -30,11 +30,11 @@
     </item>
     
     <item>
-      <title>R-Blog</title>
-      <link>/categories/r-blog/</link>
+      <title>R Blogs</title>
+      <link>/categories/r-blogs/</link>
       <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/r-blog/</guid>
+      <guid>/categories/r-blogs/</guid>
       <description></description>
     </item>
     
