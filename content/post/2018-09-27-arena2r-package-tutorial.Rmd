@@ -5,6 +5,7 @@ date: '2018-09-27'
 slug: arena2r-package-tutorial
 categories:
   - R
+  - R-Blog
 tags:
   - Arena Simualtion
   - Discrete Event Simulation
@@ -14,7 +15,7 @@ header:
   image: ''
 ---
 
-[Arena Simulation](https://arenasimulation.com) is a well-known Discrete Event Simulation Software. However, if you're a heavy user you might want to extend your analysis beyond what Arena's Process Analyzer offers. In this tutorial, I'll guide you through the main functions of Arena2R package.
+[Arena Simulation](https://arenasimulation.com) is a well-known Discrete Event Simulation Software. However, if you are a power user you might want to extend your analysis beyond what Arena's Process Analyzer offers. In this tutorial, I'll guide you through the main functions of Arena2R package.
 
 If you're not an R user, fear not! Arena2R comes with an app you can use to explore your Arena Simulation data. All you'll have to do is to Install R and R Studio, and run two commands in your R console.
 

@@ -1,0 +1,30 @@
+# Theme metadata
+name = "OceanPedroRAND"
+
+# Is theme light or dark?
+light = true
+
+# Primary
+# Originals
+# primary = "#3f51b5"
+# primary_light = "#757de8"
+#primary_dark = "#002984"
+
+primary = "#4b197c"
+primary_light = "#639"
+primary_dark = "#460d7d"
+
+# Menu
+#menu_primary = "#3f51b5" # 500
+#menu_text = "#fff"
+#menu_text_active = "#8c9eff" # A100
+#menu_title = "#fff"
+
+menu_primary = "#4b197c" # 500
+menu_text = "#fff"
+menu_text_active = "#639" # A100
+menu_title = "#fff"
+
+# Home sections
+home_section_odd = "rgb(255, 255, 255)"
+home_section_even = "rgb(247, 247, 247)"

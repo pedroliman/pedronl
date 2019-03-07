@@ -99,11 +99,11 @@ enableGitInfo = true
 
   # Color theme.
   #   Choose from `default`, `ocean`, `forest`, `coffee`, `dark`, or `1950s`.
-  color_theme = "ocean"
+  color_theme = "ocean_pedrorand"
 
   # Font style.
   #   Choose from `default`, `classic`, or `playfair`.
-  font = "playfair"
+  font = "playfair_pedro"
 
   # Description for social sharing and search engines. If undefined, author role is used in place.
   description = "Welcome to Pedro Nascimento de Lima personal website."
