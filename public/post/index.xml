@@ -13,6 +13,17 @@
     
     
     <item>
+      <title>Making Sense of Simulation Models with Metamodels Part 1 - Low-Order Polynomials with Arena and R</title>
+      <link>/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/</guid>
+      <description>This is part 1 of a series of posts in which I will explore the utility of using metamodels to make sense of (and possibly optimizing) simulation models.
+If you used simulation modeling on a real project, you might be familiar with this fictional story:
+You spent long hours building and refining your simulation model (eg.: a Discrete Event Model). Hopefully, you are confident that it can yield reliable results.</description>
+    </item>
+    
+    <item>
       <title>Strategic Decision Making in the 3D Printing Industry - 2018 DMDU Annual Meeting Materials</title>
       <link>/post/3d-printing-rdm-analysis-2018-dmdu-meeting/</link>
       <pubDate>Mon, 05 Nov 2018 00:00:00 +0000</pubDate>

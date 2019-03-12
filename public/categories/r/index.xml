@@ -7,10 +7,132 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Wed, 10 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 09 Mar 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Making Sense of Simulation Models with Metamodels Part 1 - Low-Order Polynomials with Arena and R</title>
+      <link>/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/</guid>
+      <description>&lt;p&gt;This is part 1 of a series of posts in which I will explore the utility of using metamodels to make sense of (and possibly optimizing) simulation models.&lt;/p&gt;
+&lt;p&gt;If you used simulation modeling on a real project, you might be familiar with this fictional story:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You spent long hours building and refining your simulation model (eg.: a Discrete Event Model). Hopefully, you are confident that it can yield reliable results. Now it’s time to use the model and draw recommendations. At this point, you are probably out of time, the project was delayed by successive rounds of data collection and validation. After running a few scenarios the night before the final presentation, you reach the conclusion that it is going to be hard to explain to your client that the results are highly non-linear and maybe counter-intuitive.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div id=&#34;making-sense-and-possibly-optimizing-models-with-metamodels&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Making Sense (and possibly optimizing) Models with Metamodels&lt;/h2&gt;
+&lt;p&gt;The idea of building a simple model as a surrogate of a more complicated model might seem analytical overkill. However, long ago, scholars have recognized the utility of using more explicit models to synthesize simulation results, and to find optimal parameters for models with long run time. Refer to &lt;span class=&#34;citation&#34;&gt;(Kleijnen &lt;a href=&#34;#ref-Kleijnen2017&#34;&gt;2017&lt;/a&gt;)&lt;/span&gt; and &lt;span class=&#34;citation&#34;&gt;(Barton and Meckesheimer &lt;a href=&#34;#ref-Barton2006&#34;&gt;2006&lt;/a&gt;)&lt;/span&gt; for comprehensive reviews on Metamodeling for optimization.&lt;/p&gt;
+&lt;p&gt;In this post, I will show you how to analyze an Arena Discrete Event Model in R using Low-Order Polynomials.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;an-example-with-arena-and-r&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;An Example with Arena and R&lt;/h2&gt;
+&lt;p&gt;In this example, the goal is to find an “ideal” batch size, so that our expected output is maximized. Setting the Batch Size “too low”, causes the production system to lose too much time in setups (a setup is required for every batch). Setting the batch size “too high” can cause starvation in other job stations. What “too low” or “too high” means is dependent on various factors, such as cycle times, setup times and other model parameters. Also, improvements in the system may cause the “ideal” batch size to change, but we can’t figure this out without a model.&lt;/p&gt;
+&lt;p&gt;Although this example is simple, the underlying idea can be generalized to any case in which a response variable is concave (e.g., Total Costs, Revenue, Throughput) in respect to a decision variable, and your goal is to figure out what this relationship looks like to better manage the system.&lt;/p&gt;
+&lt;p&gt;After this introduction, we are going to focus on how to create a metamodel after simulating a few scenarios with Arena.&lt;/p&gt;
+&lt;div id=&#34;data-wrangling&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data Wrangling&lt;/h3&gt;
+&lt;p&gt;The first step is obtaining a data.frame where individual observations are simulation replications, and we have one column as the dependent variable &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt; and another column as the independent variable &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;, so that we can find a function &lt;span class=&#34;math inline&#34;&gt;\(y = f_{meta}(x)\)&lt;/span&gt; that will provide an aproximation of our model results. This aproximation should be usefull to explain the relationship between &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;First, I simulated all scenarios and saved their results as separate csv files. You can download the files &lt;a href=&#34;/post/2019-03-metamodeling/batchsizefiles.zip&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;As you can see opening these files, Arena’s output files need work to become a useful tidy dataframe. By using the package &lt;a href=&#34;arena2r.pedronl.com&#34;&gt;Arena2R&lt;/a&gt;, I can obtain my dataframe easily with the function ‘get_simulation_results’, which will read all csv files in a given path and provide a tidy data.frame with all simulation results.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(arena2r)
+library(dplyr)
+library(ggplot2)
+library(readr)
+
+# Obtaining a dataframe compiling all simulation results stored at the &amp;quot;source&amp;quot; folder.
+sim_results = arena2r::get_simulation_results(source = &amp;quot;2019-03-metamodeling/&amp;quot;)
+
+head(sim_results)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##       Scenario                   Statistic Replication    Value
+## 1 BatchSize200 Colagem.Queue.NumberInQueue           1 9.476321
+## 2 BatchSize200 Colagem.Queue.NumberInQueue           2 7.313429
+## 3 BatchSize200 Colagem.Queue.NumberInQueue           3 8.647507
+## 4 BatchSize200 Colagem.Queue.NumberInQueue           4 7.966887
+## 5 BatchSize200 Colagem.Queue.NumberInQueue           5 9.214783
+## 6 BatchSize200 Colagem.Queue.NumberInQueue           6 8.143359&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Although this dataframe is a good starting point, it does not contain our independent variable (the Batch Size) as a numeric value. I coded my output files so that they will always correspond to BatchSizeXXX, wherein XXX will be a number. After some data wrangling we will be good to continue our metamodeling.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Creating a Column For The Dependent Variable, assigning it to the number in the file name:
+sim_results$BatchSize = readr::parse_number(as.character(sim_results$Scenario))
+
+# Filter only the Outcome Variable of Interest
+
+sim_results = subset(sim_results, Statistic == &amp;quot;Entity 1.NumberOut&amp;quot;)
+
+# Now Let&amp;#39;s view the relationship between BatchSize and Throughput:
+
+ggplot(sim_results, mapping = aes(x = BatchSize, y = Value, color = Value)) + 
+  geom_point() +
+  labs(y = &amp;quot;Output&amp;quot;, color = &amp;quot;Output&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-03-09-making-sense-of-models-with-metamodels-low-order-polynomials-with-arena-and-r_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;This plot shows us important lessons about &lt;em&gt;non-linearity&lt;/em&gt;. Clearly, the output variable has a non-linear relationship with Batch Size. The tricky implication is that if you decided to sample only values of BatchSize &amp;gt; 300, you might reach the conclusion that increasing Batch Size has little impact on Output, and this impact is likely negative. Conversely, if you sample only BatchSize &amp;lt; 300, you would reach the opposite conclusion.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;drawing-curves-revealing-non-linear-patterns&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Drawing Curves, Revealing Non-Linear Patterns&lt;/h2&gt;
+&lt;p&gt;If you could draw a curve explaining the relationship between BatchSize and the Output Variable, what would this curve look like? That’s where polynomial metamodels in.&lt;/p&gt;
+&lt;p&gt;You can find documentation about polynomial regression in R &lt;a href=&#34;https://www.r-bloggers.com/fitting-polynomial-regression-in-r/&#34;&gt;here&lt;/a&gt;, &lt;a href=&#34;https://medium.com/wwblog/polynomial-regression-in-r-c377f18d6efa&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;https://www.theanalysisfactor.com/r-tutorial-4/&#34;&gt;here&lt;/a&gt;. Put simply, regression modeling can be seen as drawing lines (or maybe curves) with the purpose of revealing the existence of relationships between variables. In our case, we will first use a polynomial function in the form $y = a + bx + cx^2 $ that will be useful to picture the non-linear relationship between BatchSize and the Output Variable.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(sim_results, mapping = aes(x = BatchSize, y = Value)) + 
+  geom_point() + 
+  stat_smooth(method = &amp;quot;lm&amp;quot;, formula = y ~ x + I(x^2), size = 1) + 
+  labs(y = &amp;quot;Output&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-03-09-making-sense-of-models-with-metamodels-low-order-polynomials-with-arena-and-r_files/figure-html/second-order-polynomial-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div id=&#34;optimizing-with-a-quadratic-metamodel&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;“Optimizing” with a Quadratic Metamodel&lt;/h3&gt;
+&lt;p&gt;Since our model is quadratic, we can do some calculus to find the point in which the output peaks:&lt;/p&gt;
+&lt;p&gt;Since our function is clearly concave down, we can use simple calculus to find the BatchSize Value that maximizes the Output:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[x_{opt} = \arg\max \ \  ax^2 + bx + c \]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;We can find the optimal point by taking the first derivative:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[y&amp;#39; = 2ax + b\]&lt;/span&gt;
+Since we know our model is concave down, we know that when the first derivative reaches 0, we will be at its maximum value.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[0 = 2ax_{opt} + b\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[x_{opt} = -b / 2a\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Now that we have a formula, let’s calculate the optimum batch size (based on our metamodel):&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;quadratic_model = lm(formula = Value ~ BatchSize + I(BatchSize^2), data = sim_results)
+
+## Since our Model is Quadratic, we can derive a formula for the maximum, based on our results
+
+Optimum_BatchSize = - quadratic_model$coefficients[2] / (2 * quadratic_model$coefficients[3])
+
+Optimum_BatchSize&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## BatchSize 
+##  342.8003&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Does it make sense?&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(sim_results, mapping = aes(x = BatchSize, y = Value)) + 
+  geom_point() + 
+  stat_smooth(method = &amp;quot;lm&amp;quot;, formula = y ~ x + I(x^2), size = 1) +
+  geom_vline(xintercept = Optimum_BatchSize) + 
+  geom_text(aes(x=Optimum_BatchSize, label=&amp;quot;\nOptimum Batch Size&amp;quot;, y=9700), angle=90, text=element_text(size=11)) + 
+  labs(y = &amp;quot;Output&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-03-09-making-sense-of-models-with-metamodels-low-order-polynomials-with-arena-and-r_files/figure-html/second-order-polynomial-with-optimum-value-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;caveats&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Caveats&lt;/h3&gt;
+&lt;p&gt;There are a few caveats you should be aware of when using polynomial metamodels, and I’m citing only two of them here:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Use only low-order polynomials.&lt;/strong&gt; First, if you try a higher order polynomial (for instance, one that includes &lt;span class=&#34;math inline&#34;&gt;\(x^5\)&lt;/span&gt;), you will likely end up with an overfitted model. Try that and see that for yourself.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. Avoid using them “Globally”&lt;/strong&gt;: You should avoid using low-order polynomials globally simply because they will become inacurate as you expand the sampling space. Look at the figure above. When Batch Size = 350, the quadratic model over-estimates the Output. There’s a workaround this called “Splines” which will be explored on another post, and there are better options (such as Kriging / Gaussian processes, Neural Nets, etc.).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;conclusion&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;Using low-order polynomials is a relatively straightforward option you can use to explore and visualize non-linear relationships between decision variables and outcome variables. However, simple polynomial models are limited, and more advanced techniques are available (including Splines, Gaussian Processes, and Neural Nets). The good news is that you can easily find documentation about these techniques in R. Once you have the data, putting together a metamodel in R is usually only a few keystrokes away. In future posts, I will continue to explore increasingly complex metamodels, but keep in mind that the goal should not be to add complexity to the analysis “just because we can”, but to add interpretability and meaning to our results.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level1 unnumbered&#34;&gt;
+&lt;h1&gt;References&lt;/h1&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-Barton2006&#34;&gt;
+&lt;p&gt;Barton, Russell R, and Martin Meckesheimer. 2006. “Metamodel-Based Simulation Optimization” 13 (06). &lt;a href=&#34;https://doi.org/10.1016/S0927-0507(06)13018-2&#34;&gt;https://doi.org/10.1016/S0927-0507(06)13018-2&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-Kleijnen2017&#34;&gt;
+&lt;p&gt;Kleijnen, Jack P C. 2017. “Regression and Kriging metamodels with their experimental designs in simulation : A review.” &lt;em&gt;European Journal of Operational Research&lt;/em&gt; 256 (1). Elsevier B.V.: 1–16. &lt;a href=&#34;https://doi.org/10.1016/j.ejor.2016.06.041&#34;&gt;https://doi.org/10.1016/j.ejor.2016.06.041&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Previsão de Séries Temporais com o R</title>
