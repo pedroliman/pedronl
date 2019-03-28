@@ -169,6 +169,22 @@
     </item>
     
     <item>
+      <title>Resources</title>
+      <link>/resources/</link>
+      <pubDate>Sun, 28 Apr 2019 00:00:00 -0300</pubDate>
+      
+      <guid>/resources/</guid>
+      <description>&lt;p&gt;This is a non-exaustive list of resources that I find useful for learning.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.r-bloggers.com/&#34; target=&#34;_blank&#34;&gt;R-Bloggers&lt;/a&gt;: Subscribe to the R-bloggers website to get updates from thousands of R bloggers.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.datacamp.com&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;: My favourite resource for learning R and python.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://waterprogramming.wordpress.com&#34; target=&#34;_blank&#34;&gt;Water Programming Blog&lt;/a&gt;: Great resource for python and R tutorials (even if you do not work on the Water Resources Management field).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Making Sense of Simulation Models with Metamodels Part 1 - Low-Order Polynomials with Arena and R</title>
       <link>/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>

@@ -4,8 +4,16 @@
     
     <url>
     
+      <loc>/resources/</loc>
+      <lastmod>2019-04-28T00:00:00-03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/</loc>
-      <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+      <lastmod>2019-03-12T13:08:57-03:00</lastmod>
     </url>
     
   
@@ -136,7 +144,7 @@
     <url>
     
       <loc>/tags/arena-simualtion/</loc>
-      <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+      <lastmod>2019-03-12T13:08:57-03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -145,7 +153,7 @@
     <url>
     
       <loc>/tags/arena2r/</loc>
-      <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+      <lastmod>2019-03-12T13:08:57-03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -171,7 +179,7 @@
     <url>
     
       <loc>/tags/discrete-event-simulation/</loc>
-      <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+      <lastmod>2019-03-12T13:08:57-03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -180,7 +188,7 @@
     <url>
     
       <loc>/tags/metamodeling/</loc>
-      <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+      <lastmod>2019-03-12T13:08:57-03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -224,8 +232,8 @@
     
     <url>
     
-      <loc>/tags/r/</loc>
-      <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+      <loc>/categories/r/</loc>
+      <lastmod>2019-03-12T13:08:57-03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -233,8 +241,8 @@
     
     <url>
     
-      <loc>/categories/r/</loc>
-      <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+      <loc>/tags/r/</loc>
+      <lastmod>2019-03-12T13:08:57-03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -243,7 +251,7 @@
     <url>
     
       <loc>/categories/r-blogs/</loc>
-      <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+      <lastmod>2019-03-12T13:08:57-03:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -261,7 +269,7 @@
     <url>
     
       <loc>/tags/simulation/</loc>
-      <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+      <lastmod>2019-03-12T13:08:57-03:00</lastmod>
       <priority>0</priority>
     </url>
     
