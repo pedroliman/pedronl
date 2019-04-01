@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sat, 09 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/arena-simualtion/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Making Sense of Simulation Models with Metamodels Part 2 - Splines with Arena and R</title>
+      <link>/post/making-sense-of-simulation-models-with-metamodels-part-2-splines-with-arena-and-r/</link>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/making-sense-of-simulation-models-with-metamodels-part-2-splines-with-arena-and-r/</guid>
+      <description>Trying SplinesOur quadtratic model might be “good enough” to this application
+I simulated all scenarios and saved their results as separate csv files. You can download the files here.
+library(arena2r)## Warning: package &amp;#39;arena2r&amp;#39; was built under R version 3.5.2library(dplyr)## Warning: package &amp;#39;dplyr&amp;#39; was built under R version 3.5.3## ## Attaching package: &amp;#39;dplyr&amp;#39;## The following objects are masked from &amp;#39;package:stats&amp;#39;:## ## filter, lag## The following objects are masked from &amp;#39;package:base&amp;#39;:## ## intersect, setdiff, setequal, unionlibrary(ggplot2)library(readr)## Warning: package &amp;#39;readr&amp;#39; was built under R version 3.</description>
+    </item>
     
     <item>
       <title>Making Sense of Simulation Models with Metamodels Part 1 - Low-Order Polynomials with Arena and R</title>

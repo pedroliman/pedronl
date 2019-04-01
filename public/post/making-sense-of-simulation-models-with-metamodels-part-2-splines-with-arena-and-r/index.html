@@ -15,13 +15,12 @@
   
     
   
-  <meta name="description" content="This is a non-exaustive list of resources that I find useful for learning.
-R-Bloggers: Subscribe to the R-bloggers website to get updates from thousands of R bloggers.
-Data Camp: My favourite resource for learning R and python.
-Water Programming Blog: Great resource for python and R tutorials (even if you do not work on the Water Resources Management field).">
+  <meta name="description" content="Trying SplinesOur quadtratic model might be “good enough” to this application
+I simulated all scenarios and saved their results as separate csv files. You can download the files here.
+library(arena2r)## Warning: package &#39;arena2r&#39; was built under R version 3.5.2library(dplyr)## Warning: package &#39;dplyr&#39; was built under R version 3.5.3## ## Attaching package: &#39;dplyr&#39;## The following objects are masked from &#39;package:stats&#39;:## ## filter, lag## The following objects are masked from &#39;package:base&#39;:## ## intersect, setdiff, setequal, unionlibrary(ggplot2)library(readr)## Warning: package &#39;readr&#39; was built under R version 3.">
 
   
-  <link rel="alternate" hreflang="en-us" href="/resources/">
+  <link rel="alternate" hreflang="en-us" href="/post/making-sense-of-simulation-models-with-metamodels-part-2-splines-with-arena-and-r/">
 
   
 
@@ -99,33 +98,32 @@ Water Programming Blog: Great resource for python and R tutorials (even if you d
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/resources/">
+  <link rel="canonical" href="/post/making-sense-of-simulation-models-with-metamodels-part-2-splines-with-arena-and-r/">
 
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="Pedro N. de Lima">
-  <meta property="og:url" content="/resources/">
-  <meta property="og:title" content="Resources | Pedro N. de Lima">
-  <meta property="og:description" content="This is a non-exaustive list of resources that I find useful for learning.
-R-Bloggers: Subscribe to the R-bloggers website to get updates from thousands of R bloggers.
-Data Camp: My favourite resource for learning R and python.
-Water Programming Blog: Great resource for python and R tutorials (even if you do not work on the Water Resources Management field).">
+  <meta property="og:url" content="/post/making-sense-of-simulation-models-with-metamodels-part-2-splines-with-arena-and-r/">
+  <meta property="og:title" content="Making Sense of Simulation Models with Metamodels Part 2 - Splines with Arena and R | Pedro N. de Lima">
+  <meta property="og:description" content="Trying SplinesOur quadtratic model might be “good enough” to this application
+I simulated all scenarios and saved their results as separate csv files. You can download the files here.
+library(arena2r)## Warning: package &#39;arena2r&#39; was built under R version 3.5.2library(dplyr)## Warning: package &#39;dplyr&#39; was built under R version 3.5.3## ## Attaching package: &#39;dplyr&#39;## The following objects are masked from &#39;package:stats&#39;:## ## filter, lag## The following objects are masked from &#39;package:base&#39;:## ## intersect, setdiff, setequal, unionlibrary(ggplot2)library(readr)## Warning: package &#39;readr&#39; was built under R version 3.">
   
   
     
   <meta property="og:image" content="/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-04-28T00:00:00-03:00">
+  <meta property="article:published_time" content="2019-04-01T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-03-28T11:23:13-03:00">
-  
-
+  <meta property="article:modified_time" content="2019-04-01T00:00:00&#43;00:00">
   
 
   
 
-  <title>Resources | Pedro N. de Lima</title>
+  
+
+  <title>Making Sense of Simulation Models with Metamodels Part 2 - Splines with Arena and R | Pedro N. de Lima</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -263,7 +261,7 @@ Water Programming Blog: Great resource for python and R tutorials (even if you d
 
 
   <div class="article-container">
-    <h1 itemprop="name">Resources</h1>
+    <h1 itemprop="name">Making Sense of Simulation Models with Metamodels Part 2 - Splines with Arena and R</h1>
 
     
 
@@ -278,11 +276,9 @@ Water Programming Blog: Great resource for python and R tutorials (even if you d
 
   <span class="article-date">
     
-        Last updated on
-    
-    <meta content="2019-04-28 00:00:00 -0300 -03" itemprop="datePublished">
-    <time datetime="2019-03-28 11:23:13 -0300 -03" itemprop="dateModified">
-      Mar 28, 2019
+    <meta content="2019-04-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+    <time datetime="2019-04-01 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+      Apr 1, 2019
     </time>
   </span>
   <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
@@ -292,13 +288,26 @@ Water Programming Blog: Great resource for python and R tutorials (even if you d
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    1 min read
+    2 min read
   </span>
   
 
   
   
 
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder"></i>
+    
+    <a href="/categories/r-blogs/">R Blogs</a>, 
+    
+    <a href="/categories/r/">R</a>
+    
+  </span>
+  
   
 
   
@@ -307,35 +316,35 @@ Water Programming Blog: Great resource for python and R tutorials (even if you d
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Resources&amp;url=%2fresources%2f"
+         href="https://twitter.com/intent/tweet?text=Making%20Sense%20of%20Simulation%20Models%20with%20Metamodels%20Part%202%20-%20Splines%20with%20Arena%20and%20R&amp;url=%2fpost%2fmaking-sense-of-simulation-models-with-metamodels-part-2-splines-with-arena-and-r%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=%2fresources%2f"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2fmaking-sense-of-simulation-models-with-metamodels-part-2-splines-with-arena-and-r%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-facebook-f"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fresources%2f&amp;title=Resources"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fmaking-sense-of-simulation-models-with-metamodels-part-2-splines-with-arena-and-r%2f&amp;title=Making%20Sense%20of%20Simulation%20Models%20with%20Metamodels%20Part%202%20-%20Splines%20with%20Arena%20and%20R"
          target="_blank" rel="noopener">
         <i class="fab fa-linkedin-in"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=%2fresources%2f&amp;title=Resources"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2fmaking-sense-of-simulation-models-with-metamodels-part-2-splines-with-arena-and-r%2f&amp;title=Making%20Sense%20of%20Simulation%20Models%20with%20Metamodels%20Part%202%20-%20Splines%20with%20Arena%20and%20R"
          target="_blank" rel="noopener">
         <i class="fab fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Resources&amp;body=%2fresources%2f">
+         href="mailto:?subject=Making%20Sense%20of%20Simulation%20Models%20with%20Metamodels%20Part%202%20-%20Splines%20with%20Arena%20and%20R&amp;body=%2fpost%2fmaking-sense-of-simulation-models-with-metamodels-part-2-splines-with-arena-and-r%2f">
         <i class="fas fa-envelope"></i>
       </a>
     </li>
@@ -349,20 +358,126 @@ Water Programming Blog: Great resource for python and R tutorials (even if you d
 
 
     <div class="article-style" itemprop="articleBody">
-      <p>This is a non-exaustive list of resources that I find useful for learning.</p>
+      <div id="trying-splines" class="section level3">
+<h3>Trying Splines</h3>
+<p>Our quadtratic model might be “good enough” to this application</p>
+<p>I simulated all scenarios and saved their results as separate csv files. You can download the files <a href="/post/2019-03-metamodeling/batchsizefiles.zip">here</a>.</p>
+<pre class="r"><code>library(arena2r)</code></pre>
+<pre><code>## Warning: package &#39;arena2r&#39; was built under R version 3.5.2</code></pre>
+<pre class="r"><code>library(dplyr)</code></pre>
+<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 3.5.3</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<pre class="r"><code>library(ggplot2)
+library(readr)</code></pre>
+<pre><code>## Warning: package &#39;readr&#39; was built under R version 3.5.2</code></pre>
+<pre class="r"><code># Obtaining a dataframe compiling all simulation results stored at the &quot;source&quot; folder.
+sim_results = arena2r::get_simulation_results(source = &quot;2019-03-metamodeling/&quot;)
 
-<p><a href="https://www.r-bloggers.com/" target="_blank">R-Bloggers</a>: Subscribe to the R-bloggers website to get updates from thousands of R bloggers.</p>
 
-<p><a href="https://www.datacamp.com" target="_blank">Data Camp</a>: My favourite resource for learning R and python.</p>
+# Creating a Column For The Dependent Variable, assigning it to the number in the file name:
+sim_results$BatchSize = readr::parse_number(as.character(sim_results$Scenario))
 
-<p><a href="https://waterprogramming.wordpress.com" target="_blank">Water Programming Blog</a>: Great resource for python and R tutorials (even if you do not work on the Water Resources Management field).</p>
+# Filter only the Outcome Variable of Interest
+
+sim_results = subset(sim_results, Statistic == &quot;Entity 1.NumberOut&quot;)
+
+## Now using Splines:
+
+library(splines)
+
+
+## Defining the limits
+batchlims &lt;- range(sim_results$BatchSize)
+
+# Generating Test Data
+batch.grid&lt;-seq(from=batchlims[1], to = batchlims[2])
+
+# Building a Spline Model:
+spline_model &lt;-lm(Value ~ bs(BatchSize),data = sim_results)
+
+summary(spline_model)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = Value ~ bs(BatchSize), data = sim_results)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -221.646  -30.896    1.011   46.969  268.354 
+## 
+## Coefficients:
+##                Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)     9256.49      30.15  306.99  &lt; 2e-16 ***
+## bs(BatchSize)1  1312.17     102.27   12.83  &lt; 2e-16 ***
+## bs(BatchSize)2  1042.28      88.29   11.80 1.61e-15 ***
+## bs(BatchSize)3   961.00      42.95   22.38  &lt; 2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 96.04 on 46 degrees of freedom
+## Multiple R-squared:  0.9465, Adjusted R-squared:  0.943 
+## F-statistic: 271.1 on 3 and 46 DF,  p-value: &lt; 2.2e-16</code></pre>
+<pre class="r"><code>plot(sim_results$BatchSize, sim_results$Value,col=&quot;grey&quot;,xlab=&quot;Batch Size&quot;,ylab=&quot;Production&quot;)</code></pre>
+<p><img src="/post/2019-04-01-making-sense-of-simulation-models-with-metamodels-part-2-splines-with-arena-and-r_files/figure-html/splines-1.png" width="672" /></p>
+<pre class="r"><code>spline_data = data.frame(BatchSize = batch.grid, 
+                         Value = predict(spline_model,
+                                         newdata = list(BatchSize=batch.grid))
+                         )
+
+# points(batch.grid,predict(fit,newdata = # list(BatchSize=batch.grid)),col=&quot;darkgreen&quot;,lwd=2,type=&quot;l&quot;)
+
+
+lote_opt &lt;- spline_data$BatchSize[ which.max(spline_data$Value) ]
+
+
+ggplot(sim_results, mapping = aes(x = BatchSize, y = Value)) + 
+  geom_point() + 
+  geom_line(mapping = aes(x = BatchSize, y = Value), data = spline_data, size = 1) + 
+  stat_smooth(method = &quot;lm&quot;, formula = y ~ x + I(x^2), size = 1)</code></pre>
+<p><img src="/post/2019-04-01-making-sense-of-simulation-models-with-metamodels-part-2-splines-with-arena-and-r_files/figure-html/splines-2.png" width="672" /></p>
+</div>
 
     </div>
 
     
 
 
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/arena-simualtion/">Arena Simualtion</a>
+  
+  <a class="badge badge-light" href="/tags/arena2r/">Arena2R</a>
+  
+  <a class="badge badge-light" href="/tags/discrete-event-simulation/">Discrete Event Simulation</a>
+  
+  <a class="badge badge-light" href="/tags/metamodeling/">Metamodeling</a>
+  
+  <a class="badge badge-light" href="/tags/r/">R</a>
+  
+</div>
+
+
+
+
     
+    
+    <div class="article-widget">
+      <div class="hr-light"></div>
+      <h3>Related</h3>
+      <ul>
+        
+        <li><a href="/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/">Making Sense of Simulation Models with Metamodels Part 1 - Low-Order Polynomials with Arena and R</a></li>
+        
+        <li><a href="/post/arena2r-package-tutorial/">Arena2R - An R Package for Arena Simulation Users</a></li>
+        
+      </ul>
+    </div>
     
 
     

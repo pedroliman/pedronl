@@ -7,10 +7,103 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sat, 09 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Apr 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/categories/r-blogs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Making Sense of Simulation Models with Metamodels Part 2 - Splines with Arena and R</title>
+      <link>/post/making-sense-of-simulation-models-with-metamodels-part-2-splines-with-arena-and-r/</link>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/making-sense-of-simulation-models-with-metamodels-part-2-splines-with-arena-and-r/</guid>
+      <description>&lt;div id=&#34;trying-splines&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Trying Splines&lt;/h3&gt;
+&lt;p&gt;Our quadtratic model might be “good enough” to this application&lt;/p&gt;
+&lt;p&gt;I simulated all scenarios and saved their results as separate csv files. You can download the files &lt;a href=&#34;/post/2019-03-metamodeling/batchsizefiles.zip&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(arena2r)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;arena2r&amp;#39; was built under R version 3.5.2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;dplyr&amp;#39; was built under R version 3.5.3&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Attaching package: &amp;#39;dplyr&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## The following objects are masked from &amp;#39;package:stats&amp;#39;:
+## 
+##     filter, lag&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## The following objects are masked from &amp;#39;package:base&amp;#39;:
+## 
+##     intersect, setdiff, setequal, union&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
+library(readr)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;readr&amp;#39; was built under R version 3.5.2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Obtaining a dataframe compiling all simulation results stored at the &amp;quot;source&amp;quot; folder.
+sim_results = arena2r::get_simulation_results(source = &amp;quot;2019-03-metamodeling/&amp;quot;)
+
+
+# Creating a Column For The Dependent Variable, assigning it to the number in the file name:
+sim_results$BatchSize = readr::parse_number(as.character(sim_results$Scenario))
+
+# Filter only the Outcome Variable of Interest
+
+sim_results = subset(sim_results, Statistic == &amp;quot;Entity 1.NumberOut&amp;quot;)
+
+## Now using Splines:
+
+library(splines)
+
+
+## Defining the limits
+batchlims &amp;lt;- range(sim_results$BatchSize)
+
+# Generating Test Data
+batch.grid&amp;lt;-seq(from=batchlims[1], to = batchlims[2])
+
+# Building a Spline Model:
+spline_model &amp;lt;-lm(Value ~ bs(BatchSize),data = sim_results)
+
+summary(spline_model)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Call:
+## lm(formula = Value ~ bs(BatchSize), data = sim_results)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -221.646  -30.896    1.011   46.969  268.354 
+## 
+## Coefficients:
+##                Estimate Std. Error t value Pr(&amp;gt;|t|)    
+## (Intercept)     9256.49      30.15  306.99  &amp;lt; 2e-16 ***
+## bs(BatchSize)1  1312.17     102.27   12.83  &amp;lt; 2e-16 ***
+## bs(BatchSize)2  1042.28      88.29   11.80 1.61e-15 ***
+## bs(BatchSize)3   961.00      42.95   22.38  &amp;lt; 2e-16 ***
+## ---
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1
+## 
+## Residual standard error: 96.04 on 46 degrees of freedom
+## Multiple R-squared:  0.9465, Adjusted R-squared:  0.943 
+## F-statistic: 271.1 on 3 and 46 DF,  p-value: &amp;lt; 2.2e-16&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(sim_results$BatchSize, sim_results$Value,col=&amp;quot;grey&amp;quot;,xlab=&amp;quot;Batch Size&amp;quot;,ylab=&amp;quot;Production&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-04-01-making-sense-of-simulation-models-with-metamodels-part-2-splines-with-arena-and-r_files/figure-html/splines-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;spline_data = data.frame(BatchSize = batch.grid, 
+                         Value = predict(spline_model,
+                                         newdata = list(BatchSize=batch.grid))
+                         )
+
+# points(batch.grid,predict(fit,newdata = # list(BatchSize=batch.grid)),col=&amp;quot;darkgreen&amp;quot;,lwd=2,type=&amp;quot;l&amp;quot;)
+
+
+lote_opt &amp;lt;- spline_data$BatchSize[ which.max(spline_data$Value) ]
+
+
+ggplot(sim_results, mapping = aes(x = BatchSize, y = Value)) + 
+  geom_point() + 
+  geom_line(mapping = aes(x = BatchSize, y = Value), data = spline_data, size = 1) + 
+  stat_smooth(method = &amp;quot;lm&amp;quot;, formula = y ~ x + I(x^2), size = 1)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-04-01-making-sense-of-simulation-models-with-metamodels-part-2-splines-with-arena-and-r_files/figure-html/splines-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Making Sense of Simulation Models with Metamodels Part 1 - Low-Order Polynomials with Arena and R</title>

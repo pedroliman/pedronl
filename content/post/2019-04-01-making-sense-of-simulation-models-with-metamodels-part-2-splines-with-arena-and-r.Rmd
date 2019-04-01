@@ -1,0 +1,83 @@
+---
+title: Making Sense of Simulation Models with Metamodels Part 2 - Splines with Arena
+  and R
+author: Pedro N. de Lima
+date: '2019-04-01'
+slug: making-sense-of-simulation-models-with-metamodels-part-2-splines-with-arena-and-r
+categories:
+  - R Blogs
+  - R
+tags:
+  - Arena Simualtion
+  - Arena2R
+  - Discrete Event Simulation
+  - Metamodeling
+  - R
+header:
+  caption: ''
+  image: ''
+---
+
+### Trying Splines
+
+Our quadtratic model might be "good enough" to this application
+
+I simulated all scenarios and saved their results as separate csv files. You can download the files [here](/post/2019-03-metamodeling/batchsizefiles.zip).
+
+
+```{r splines}
+
+library(arena2r)
+library(dplyr)
+library(ggplot2)
+library(readr)
+
+# Obtaining a dataframe compiling all simulation results stored at the "source" folder.
+sim_results = arena2r::get_simulation_results(source = "2019-03-metamodeling/")
+
+
+# Creating a Column For The Dependent Variable, assigning it to the number in the file name:
+sim_results$BatchSize = readr::parse_number(as.character(sim_results$Scenario))
+
+# Filter only the Outcome Variable of Interest
+
+sim_results = subset(sim_results, Statistic == "Entity 1.NumberOut")
+
+## Now using Splines:
+
+library(splines)
+
+
+## Defining the limits
+batchlims <- range(sim_results$BatchSize)
+
+# Generating Test Data
+batch.grid<-seq(from=batchlims[1], to = batchlims[2])
+
+# Building a Spline Model:
+spline_model <-lm(Value ~ bs(BatchSize),data = sim_results)
+
+summary(spline_model)
+
+plot(sim_results$BatchSize, sim_results$Value,col="grey",xlab="Batch Size",ylab="Production")
+
+spline_data = data.frame(BatchSize = batch.grid, 
+                         Value = predict(spline_model,
+                                         newdata = list(BatchSize=batch.grid))
+                         )
+
+# points(batch.grid,predict(fit,newdata = # list(BatchSize=batch.grid)),col="darkgreen",lwd=2,type="l")
+
+
+lote_opt <- spline_data$BatchSize[ which.max(spline_data$Value) ]
+
+
+ggplot(sim_results, mapping = aes(x = BatchSize, y = Value)) + 
+  geom_point() + 
+  geom_line(mapping = aes(x = BatchSize, y = Value), data = spline_data, size = 1) + 
+  stat_smooth(method = "lm", formula = y ~ x + I(x^2), size = 1)
+
+
+
+```
+

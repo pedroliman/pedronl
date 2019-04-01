@@ -1,0 +1,106 @@
+---
+title: Making Sense of Simulation Models with Metamodels Part 2 - Splines with Arena
+  and R
+author: Pedro N. de Lima
+date: '2019-04-01'
+slug: making-sense-of-simulation-models-with-metamodels-part-2-splines-with-arena-and-r
+categories:
+  - R Blogs
+  - R
+tags:
+  - Arena Simualtion
+  - Arena2R
+  - Discrete Event Simulation
+  - Metamodeling
+  - R
+header:
+  caption: ''
+  image: ''
+---
+
+
+
+<div id="trying-splines" class="section level3">
+<h3>Trying Splines</h3>
+<p>Our quadtratic model might be “good enough” to this application</p>
+<p>I simulated all scenarios and saved their results as separate csv files. You can download the files <a href="/post/2019-03-metamodeling/batchsizefiles.zip">here</a>.</p>
+<pre class="r"><code>library(arena2r)</code></pre>
+<pre><code>## Warning: package &#39;arena2r&#39; was built under R version 3.5.2</code></pre>
+<pre class="r"><code>library(dplyr)</code></pre>
+<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 3.5.3</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<pre class="r"><code>library(ggplot2)
+library(readr)</code></pre>
+<pre><code>## Warning: package &#39;readr&#39; was built under R version 3.5.2</code></pre>
+<pre class="r"><code># Obtaining a dataframe compiling all simulation results stored at the &quot;source&quot; folder.
+sim_results = arena2r::get_simulation_results(source = &quot;2019-03-metamodeling/&quot;)
+
+
+# Creating a Column For The Dependent Variable, assigning it to the number in the file name:
+sim_results$BatchSize = readr::parse_number(as.character(sim_results$Scenario))
+
+# Filter only the Outcome Variable of Interest
+
+sim_results = subset(sim_results, Statistic == &quot;Entity 1.NumberOut&quot;)
+
+## Now using Splines:
+
+library(splines)
+
+
+## Defining the limits
+batchlims &lt;- range(sim_results$BatchSize)
+
+# Generating Test Data
+batch.grid&lt;-seq(from=batchlims[1], to = batchlims[2])
+
+# Building a Spline Model:
+spline_model &lt;-lm(Value ~ bs(BatchSize),data = sim_results)
+
+summary(spline_model)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = Value ~ bs(BatchSize), data = sim_results)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -221.646  -30.896    1.011   46.969  268.354 
+## 
+## Coefficients:
+##                Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)     9256.49      30.15  306.99  &lt; 2e-16 ***
+## bs(BatchSize)1  1312.17     102.27   12.83  &lt; 2e-16 ***
+## bs(BatchSize)2  1042.28      88.29   11.80 1.61e-15 ***
+## bs(BatchSize)3   961.00      42.95   22.38  &lt; 2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 96.04 on 46 degrees of freedom
+## Multiple R-squared:  0.9465, Adjusted R-squared:  0.943 
+## F-statistic: 271.1 on 3 and 46 DF,  p-value: &lt; 2.2e-16</code></pre>
+<pre class="r"><code>plot(sim_results$BatchSize, sim_results$Value,col=&quot;grey&quot;,xlab=&quot;Batch Size&quot;,ylab=&quot;Production&quot;)</code></pre>
+<p><img src="/post/2019-04-01-making-sense-of-simulation-models-with-metamodels-part-2-splines-with-arena-and-r_files/figure-html/splines-1.png" width="672" /></p>
+<pre class="r"><code>spline_data = data.frame(BatchSize = batch.grid, 
+                         Value = predict(spline_model,
+                                         newdata = list(BatchSize=batch.grid))
+                         )
+
+# points(batch.grid,predict(fit,newdata = # list(BatchSize=batch.grid)),col=&quot;darkgreen&quot;,lwd=2,type=&quot;l&quot;)
+
+
+lote_opt &lt;- spline_data$BatchSize[ which.max(spline_data$Value) ]
+
+
+ggplot(sim_results, mapping = aes(x = BatchSize, y = Value)) + 
+  geom_point() + 
+  geom_line(mapping = aes(x = BatchSize, y = Value), data = spline_data, size = 1) + 
+  stat_smooth(method = &quot;lm&quot;, formula = y ~ x + I(x^2), size = 1)</code></pre>
+<p><img src="/post/2019-04-01-making-sense-of-simulation-models-with-metamodels-part-2-splines-with-arena-and-r_files/figure-html/splines-2.png" width="672" /></p>
+</div>
