@@ -19,7 +19,7 @@
       
       <guid>/post/making-sense-of-simulation-models-with-metamodels-part-2-splines-with-arena-and-r/</guid>
       <description>In my last post, I used low-order polynomial regression to make sense of non-linear simulation model results. In this post, I’ll demonstrate how you can use splines to summarise results from an Arena simulation model.
-Why Splines?In the previous post, I briefly described the motivation for using metamodels to approximate simulation models results. Splines are among the useful techinques for metamodeling because: (i) they are relatively simple (they are piecewise-defined polynomials); (ii) Unlike low-order polynomials, you can generally use them with a global sampling strategy [@Barton2006].</description>
+Why Splines?In the previous post, I briefly described the motivation for using metamodels to approximate simulation models results. Splines are among the useful techinques for metamodeling because: (i) they are relatively simple (they are piecewise-defined polynomials); (ii) Unlike low-order polynomials, you can generally use them with a global sampling strategy (Barton and Meckesheimer 2006).</description>
     </item>
     
     <item>

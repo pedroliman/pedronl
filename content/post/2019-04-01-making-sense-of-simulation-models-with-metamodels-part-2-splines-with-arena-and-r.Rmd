@@ -16,6 +16,8 @@ tags:
 header:
   caption: ''
   image: ''
+bibliography: [references/references-metamodeling.bib]
+link-citations: true
 ---
 
 In my [last post](post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/), I used low-order [polynomial regression](https://en.wikipedia.org/wiki/Polynomial_regression) to make sense of non-linear simulation model results. In this post, I'll demonstrate how you can use [splines](https://en.wikipedia.org/wiki/Spline_(mathematics)) to summarise results from an [Arena](https://www.arenasimulation.com/) simulation model. 
@@ -96,7 +98,9 @@ spline_data = data.frame(BatchSize = batch.grid,
 # What is the Batch Size which "optimizes" the Output?
 Optimum_BatchSize <- spline_data$BatchSize[which.max(spline_data$Value)]
 
-Output_Value = spline_data$Value[which.max(spline_data$Value)]
+Output_Value <- spline_data$Value[which.max(spline_data$Value)]
+
+Optimum_BatchSize
 
 
 ```

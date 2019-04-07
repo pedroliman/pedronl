@@ -16,7 +16,7 @@
     
   
   <meta name="description" content="In my last post, I used low-order polynomial regression to make sense of non-linear simulation model results. In this post, I’ll demonstrate how you can use splines to summarise results from an Arena simulation model.
-Why Splines?In the previous post, I briefly described the motivation for using metamodels to approximate simulation models results. Splines are among the useful techinques for metamodeling because: (i) they are relatively simple (they are piecewise-defined polynomials); (ii) Unlike low-order polynomials, you can generally use them with a global sampling strategy [@Barton2006].">
+Why Splines?In the previous post, I briefly described the motivation for using metamodels to approximate simulation models results. Splines are among the useful techinques for metamodeling because: (i) they are relatively simple (they are piecewise-defined polynomials); (ii) Unlike low-order polynomials, you can generally use them with a global sampling strategy (Barton and Meckesheimer 2006).">
 
   
   <link rel="alternate" hreflang="en-us" href="/post/making-sense-of-simulation-models-with-metamodels-part-2-splines-with-arena-and-r/">
@@ -105,7 +105,7 @@ Why Splines?In the previous post, I briefly described the motivation for using 
   <meta property="og:url" content="/post/making-sense-of-simulation-models-with-metamodels-part-2-splines-with-arena-and-r/">
   <meta property="og:title" content="Making Sense of Simulation Models with Metamodels Part 2 - Splines with Arena and R | Pedro N. de Lima">
   <meta property="og:description" content="In my last post, I used low-order polynomial regression to make sense of non-linear simulation model results. In this post, I’ll demonstrate how you can use splines to summarise results from an Arena simulation model.
-Why Splines?In the previous post, I briefly described the motivation for using metamodels to approximate simulation models results. Splines are among the useful techinques for metamodeling because: (i) they are relatively simple (they are piecewise-defined polynomials); (ii) Unlike low-order polynomials, you can generally use them with a global sampling strategy [@Barton2006].">
+Why Splines?In the previous post, I briefly described the motivation for using metamodels to approximate simulation models results. Splines are among the useful techinques for metamodeling because: (i) they are relatively simple (they are piecewise-defined polynomials); (ii) Unlike low-order polynomials, you can generally use them with a global sampling strategy (Barton and Meckesheimer 2006).">
   
   
     
@@ -114,7 +114,7 @@ Why Splines?In the previous post, I briefly described the motivation for using 
   
   <meta property="article:published_time" content="2019-04-01T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-04-01T12:49:46-03:00">
+  <meta property="article:modified_time" content="2019-04-07T16:29:14-03:00">
   
 
   
@@ -277,8 +277,8 @@ Why Splines?In the previous post, I briefly described the motivation for using 
         Last updated on
     
     <meta content="2019-04-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-    <time datetime="2019-04-01 12:49:46 -0300 -03" itemprop="dateModified">
-      Apr 1, 2019
+    <time datetime="2019-04-07 16:29:14 -0300 -03" itemprop="dateModified">
+      Apr 7, 2019
     </time>
   </span>
   <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
@@ -361,7 +361,7 @@ Why Splines?In the previous post, I briefly described the motivation for using 
       <p>In my <a href="post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/">last post</a>, I used low-order <a href="https://en.wikipedia.org/wiki/Polynomial_regression">polynomial regression</a> to make sense of non-linear simulation model results. In this post, I’ll demonstrate how you can use <a href="https://en.wikipedia.org/wiki/Spline_(mathematics)">splines</a> to summarise results from an <a href="https://www.arenasimulation.com/">Arena</a> simulation model.</p>
 <div id="why-splines" class="section level3">
 <h3>Why Splines?</h3>
-<p>In the <a href="post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/">previous post</a>, I briefly described the motivation for using metamodels to approximate simulation models results. Splines are among the useful techinques for metamodeling because: (i) they are relatively simple (they are piecewise-defined polynomials); (ii) Unlike low-order polynomials, you can generally use them with a global sampling strategy <span class="citation">[@Barton2006]</span>.</p>
+<p>In the <a href="post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/">previous post</a>, I briefly described the motivation for using metamodels to approximate simulation models results. Splines are among the useful techinques for metamodeling because: (i) they are relatively simple (they are piecewise-defined polynomials); (ii) Unlike low-order polynomials, you can generally use them with a global sampling strategy <span class="citation">(Barton and Meckesheimer <a href="#ref-Barton2006">2006</a>)</span>.</p>
 </div>
 <div id="data-wrangling" class="section level3">
 <h3>Data Wrangling</h3>
@@ -454,7 +454,10 @@ spline_data = data.frame(BatchSize = batch.grid,
 # What is the Batch Size which &quot;optimizes&quot; the Output?
 Optimum_BatchSize &lt;- spline_data$BatchSize[which.max(spline_data$Value)]
 
-Output_Value = spline_data$Value[which.max(spline_data$Value)]</code></pre>
+Output_Value &lt;- spline_data$Value[which.max(spline_data$Value)]
+
+Optimum_BatchSize</code></pre>
+<pre><code>## [1] 331</code></pre>
 <p>Does it make sense?</p>
 <pre class="r"><code># Let&#39;s plot again with the optimum batch size:
 ggplot(sim_results, mapping = aes(x = BatchSize, y = Value)) + 
@@ -467,8 +470,13 @@ ggplot(sim_results, mapping = aes(x = BatchSize, y = Value)) +
 <p><img src="/post/2019-04-01-making-sense-of-simulation-models-with-metamodels-part-2-splines-with-arena-and-r_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <p>In this post, I covered how to apply splines to summarise results from a discrete event simulation model. Splines are a straightforward option to interpolate results from a simulation model, but there are other options out there. Future posts might explore other alternatives such as kriging metamodels and neural nets.</p>
 </div>
-<div id="references" class="section level1">
+<div id="references" class="section level1 unnumbered">
 <h1>References</h1>
+<div id="refs" class="references">
+<div id="ref-Barton2006">
+<p>Barton, Russell R, and Martin Meckesheimer. 2006. “Metamodel-Based Simulation Optimization” 13 (06). <a href="https://doi.org/10.1016/S0927-0507(06)13018-2">https://doi.org/10.1016/S0927-0507(06)13018-2</a>.</p>
+</div>
+</div>
 </div>
 
     </div>
