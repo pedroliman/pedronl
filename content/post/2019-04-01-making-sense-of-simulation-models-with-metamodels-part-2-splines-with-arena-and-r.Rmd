@@ -18,66 +18,107 @@ header:
   image: ''
 ---
 
-### Trying Splines
+In my [last post](post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/), I used low-order [polynomial regression](https://en.wikipedia.org/wiki/Polynomial_regression) to make sense of non-linear simulation model results. In this post, I'll demonstrate how you can use [splines](https://en.wikipedia.org/wiki/Spline_(mathematics)) to summarise results from an [Arena](https://www.arenasimulation.com/) simulation model. 
 
-Our quadtratic model might be "good enough" to this application
+### Why Splines?
 
-I simulated all scenarios and saved their results as separate csv files. You can download the files [here](/post/2019-03-metamodeling/batchsizefiles.zip).
+In the [previous post](post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/), I briefly described the motivation for using metamodels to approximate simulation models results. Splines are among the useful techinques for metamodeling because: (i) they are relatively simple (they are piecewise-defined polynomials); (ii) Unlike low-order polynomials, you can generally use them with a global sampling strategy [@Barton2006].
 
+### Data Wrangling
 
-```{r splines}
+Before developing our metamodel, let's first load the simulation data and do some data wrangling. For the details on this step, please refer to my [previous post](post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/).
 
+```{r}
 library(arena2r)
 library(dplyr)
 library(ggplot2)
 library(readr)
 
-# Obtaining a dataframe compiling all simulation results stored at the "source" folder.
 sim_results = arena2r::get_simulation_results(source = "2019-03-metamodeling/")
 
-
-# Creating a Column For The Dependent Variable, assigning it to the number in the file name:
 sim_results$BatchSize = readr::parse_number(as.character(sim_results$Scenario))
-
-# Filter only the Outcome Variable of Interest
 
 sim_results = subset(sim_results, Statistic == "Entity 1.NumberOut")
 
+head(sim_results)
+
+```
+
+
+### Trying Splines
+
+The function bs from the splines package can be used for creating a b-spline term in our regression model.
+
+
+```{r splines}
 ## Now using Splines:
 
 library(splines)
 
+# Building a Spline Model:
 
-## Defining the limits
+spline_model <-lm(Value ~ bs(BatchSize),data = sim_results)
+
+summary(spline_model)
+
+```
+
+Does it make sense?
+
+```{r}
+# Does it make sense ?
+
+ggplot(sim_results, mapping = aes(x = BatchSize, y = Value)) + 
+  geom_point() + 
+  stat_smooth(method = lm, formula = y ~ splines::bs(x))
+
+```
+
+
+### "Optimizing" with Splines
+
+Now that we found a curve that can approximate our model results, we will use this model to find an "optimal" Batch Size which maximizes our Output Variable.
+
+
+```{r}
+## Defining limits:
 batchlims <- range(sim_results$BatchSize)
 
 # Generating Test Data
 batch.grid<-seq(from=batchlims[1], to = batchlims[2])
 
-# Building a Spline Model:
-spline_model <-lm(Value ~ bs(BatchSize),data = sim_results)
-
-summary(spline_model)
-
-plot(sim_results$BatchSize, sim_results$Value,col="grey",xlab="Batch Size",ylab="Production")
-
+# Using the metamodel:
 spline_data = data.frame(BatchSize = batch.grid, 
                          Value = predict(spline_model,
                                          newdata = list(BatchSize=batch.grid))
                          )
 
-# points(batch.grid,predict(fit,newdata = # list(BatchSize=batch.grid)),col="darkgreen",lwd=2,type="l")
+# What is the Batch Size which "optimizes" the Output?
+Optimum_BatchSize <- spline_data$BatchSize[which.max(spline_data$Value)]
 
-
-lote_opt <- spline_data$BatchSize[ which.max(spline_data$Value) ]
-
-
-ggplot(sim_results, mapping = aes(x = BatchSize, y = Value)) + 
-  geom_point() + 
-  geom_line(mapping = aes(x = BatchSize, y = Value), data = spline_data, size = 1) + 
-  stat_smooth(method = "lm", formula = y ~ x + I(x^2), size = 1)
-
+Output_Value = spline_data$Value[which.max(spline_data$Value)]
 
 
 ```
+
+Does it make sense?
+
+```{r}
+
+# Let's plot again with the optimum batch size:
+ggplot(sim_results, mapping = aes(x = BatchSize, y = Value)) + 
+  geom_point() + 
+  stat_smooth(method = lm, formula = y ~ splines::bs(x)) +
+  geom_vline(xintercept = Optimum_BatchSize) + 
+  geom_text(aes(x=Optimum_BatchSize, label="\nOptimum Batch Size", y=9700), angle=90, text=element_text(size=11)) + 
+  labs(y = "Output")
+
+
+```
+
+In this post, I covered how to apply splines to summarise results from a discrete event simulation model. Splines are a straightforward option to interpolate results from a simulation model, but there are other options out there. Future posts might explore other alternatives such as kriging metamodels and neural nets.
+
+
+# References
+
 
