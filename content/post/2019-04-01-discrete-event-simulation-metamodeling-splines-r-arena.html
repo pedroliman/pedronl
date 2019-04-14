@@ -52,7 +52,7 @@ head(sim_results)</code></pre>
 </div>
 <div id="trying-splines" class="section level3">
 <h3>Trying Splines</h3>
-<p>You can build a spline model with the same linear model <code>lm</code> function. Instead of using the standard <code>Y ~ X</code> formula, we just have to use the <code>bs()</code> function from the <code>splines</code> package. Thus, our formula for our spline metamodel will be <code>Y ~ bs(X)</code>.</p>
+<p>You can build a spline model with the R’s standard linear model <code>lm</code> function. Instead of using the standard <code>Y ~ X</code> formula, we just have to use the <code>bs()</code> function from the <code>splines</code> package. Thus, our formula for our spline metamodel will be <code>Y ~ bs(X)</code>.</p>
 <pre class="r"><code>## Now using Splines:
 
 library(splines)
@@ -82,6 +82,11 @@ summary(spline_model)</code></pre>
 ## Residual standard error: 96.04 on 46 degrees of freedom
 ## Multiple R-squared:  0.9465, Adjusted R-squared:  0.943 
 ## F-statistic: 271.1 on 3 and 46 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>Once you have your <code>spline_model</code>, you can use the <code>predict</code> function to estimate the expected value of the response variable. Estimating what will be the Expected value of the Output variable with a Batch Size of 200 units is easy as:</p>
+<pre class="r"><code>predict(spline_model, 
+        newdata = data.frame(BatchSize = 200))</code></pre>
+<pre><code>##        1 
+## 9256.489</code></pre>
 </div>
 <div id="optimizing-with-splines" class="section level3">
 <h3>“Optimizing” with Splines</h3>
@@ -117,7 +122,7 @@ ggplot(sim_results, mapping = aes(x = BatchSize, y = Value)) +
                 text=element_text(size=11)
             ) + 
   labs(y = &quot;Output&quot;)</code></pre>
-<p><img src="/post/2019-04-01-discrete-event-simulation-metamodeling-splines-r-arena_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><img src="/post/2019-04-01-discrete-event-simulation-metamodeling-splines-r-arena_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <p>Yes, definitely this is a good estimate! This plot encourages one to avoid going below 300 units, and suggests that going 350 and above is not a good idea either. The interesting pattern that the spline curve suggests is that increasing Batchsize not always increases Output, and that the output loss is not symetric.</p>
 <p>Acknowledging these non-linear relationships is one of the outcomes I value at the end of a simulation project, and I hope that metamodeling will be an useful tool to you as well. Splines are a straightforward option to interpolate results from a simulation model, but there are other options out there. Future posts might explore other alternatives such as kriging metamodels, neural nets, and other techniques.</p>
 </div>

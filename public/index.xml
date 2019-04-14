@@ -221,7 +221,7 @@ head(sim_results)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;trying-splines&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Trying Splines&lt;/h3&gt;
-&lt;p&gt;You can build a spline model with the same linear model &lt;code&gt;lm&lt;/code&gt; function. Instead of using the standard &lt;code&gt;Y ~ X&lt;/code&gt; formula, we just have to use the &lt;code&gt;bs()&lt;/code&gt; function from the &lt;code&gt;splines&lt;/code&gt; package. Thus, our formula for our spline metamodel will be &lt;code&gt;Y ~ bs(X)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You can build a spline model with the R’s standard linear model &lt;code&gt;lm&lt;/code&gt; function. Instead of using the standard &lt;code&gt;Y ~ X&lt;/code&gt; formula, we just have to use the &lt;code&gt;bs()&lt;/code&gt; function from the &lt;code&gt;splines&lt;/code&gt; package. Thus, our formula for our spline metamodel will be &lt;code&gt;Y ~ bs(X)&lt;/code&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## Now using Splines:
 
 library(splines)
@@ -251,6 +251,11 @@ summary(spline_model)&lt;/code&gt;&lt;/pre&gt;
 ## Residual standard error: 96.04 on 46 degrees of freedom
 ## Multiple R-squared:  0.9465, Adjusted R-squared:  0.943 
 ## F-statistic: 271.1 on 3 and 46 DF,  p-value: &amp;lt; 2.2e-16&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Once you have your &lt;code&gt;spline_model&lt;/code&gt;, you can use the &lt;code&gt;predict&lt;/code&gt; function to estimate the expected value of the response variable. Estimating what will be the Expected value of the Output variable with a Batch Size of 200 units is easy as:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;predict(spline_model, 
+        newdata = data.frame(BatchSize = 200))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##        1 
+## 9256.489&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;optimizing-with-splines&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;“Optimizing” with Splines&lt;/h3&gt;
@@ -286,7 +291,7 @@ ggplot(sim_results, mapping = aes(x = BatchSize, y = Value)) +
                 text=element_text(size=11)
             ) + 
   labs(y = &amp;quot;Output&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-04-01-discrete-event-simulation-metamodeling-splines-r-arena_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-04-01-discrete-event-simulation-metamodeling-splines-r-arena_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Yes, definitely this is a good estimate! This plot encourages one to avoid going below 300 units, and suggests that going 350 and above is not a good idea either. The interesting pattern that the spline curve suggests is that increasing Batchsize not always increases Output, and that the output loss is not symetric.&lt;/p&gt;
 &lt;p&gt;Acknowledging these non-linear relationships is one of the outcomes I value at the end of a simulation project, and I hope that metamodeling will be an useful tool to you as well. Splines are a straightforward option to interpolate results from a simulation model, but there are other options out there. Future posts might explore other alternatives such as kriging metamodels, neural nets, and other techniques.&lt;/p&gt;
 &lt;/div&gt;

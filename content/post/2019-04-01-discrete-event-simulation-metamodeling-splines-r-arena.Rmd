@@ -56,7 +56,7 @@ head(sim_results)
 
 ### Trying Splines
 
-You can build a spline model with the same linear model `lm` function. Instead of using the standard `Y ~ X` formula, we just have to use the `bs()` function from the `splines` package. Thus, our formula for our spline metamodel will be `Y ~ bs(X)`.
+You can build a spline model with the R's standard linear model `lm` function. Instead of using the standard `Y ~ X` formula, we just have to use the `bs()` function from the `splines` package. Thus, our formula for our spline metamodel will be `Y ~ bs(X)`.
 
 ```{r splines}
 ## Now using Splines:
@@ -71,11 +71,16 @@ summary(spline_model)
 
 ```
 
+Once you have your `spline_model`, you can use the `predict` function to estimate the expected value of the response variable. Estimating what will be the Expected value of the Output variable with a Batch Size of 200 units is easy as:
+
+```{r}
+predict(spline_model, 
+        newdata = data.frame(BatchSize = 200))
+```
 
 ### "Optimizing" with Splines
 
 Now that we have a spline model that can approximate our model results, we will use this model to find an "optimal" Batch Size which maximizes our Output Variable.
-
 
 ```{r}
 ## Defining limits:
