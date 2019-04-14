@@ -13,6 +13,16 @@
     
     
     <item>
+      <title>Discrete Event Simulation Metamodeling - Splines with R and Arena</title>
+      <link>/post/discrete-event-simulation-metamodeling-splines-r-arena/</link>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/discrete-event-simulation-metamodeling-splines-r-arena/</guid>
+      <description>Simulation Metamodeling - building and using surrogate models that can approximate results from more complicated simulation models - is an interesting approach to analyze results from complicated, computationally expensive simulation models. Metamodels are useful because they can yield good approximations of the original simulation model response variables using less computational resources. For an introduction to Metamodeling, refer to (Barton 2015).
+To my knowledge, no Discrete-Event Simulation (DES) software provides metamodeling capabilities, and guidance on how to actually execute metamodeling is scarce.</description>
+    </item>
+    
+    <item>
       <title>Making Sense of Simulation Models with Metamodels Part 1 - Low-Order Polynomials with Arena and R</title>
       <link>/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>

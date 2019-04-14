@@ -1,0 +1,2 @@
+# Metamodeling with Symbolic Regression in R and Arena
+http://blog.ephorie.de/symbolic-regression-genetic-programming-or-if-kepler-had-r

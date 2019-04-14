@@ -7,10 +7,135 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sat, 09 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Apr 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Discrete Event Simulation Metamodeling - Splines with R and Arena</title>
+      <link>/post/discrete-event-simulation-metamodeling-splines-r-arena/</link>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/discrete-event-simulation-metamodeling-splines-r-arena/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://link.springer.com/referenceworkentry/10.1007%2F978-1-4419-1153-7_957&#34;&gt;Simulation Metamodeling&lt;/a&gt; - building and using surrogate models that can approximate results from more complicated simulation models - is an interesting approach to analyze results from complicated, computationally expensive simulation models. Metamodels are useful because they can yield good approximations of the original simulation model response variables using less computational resources. For an introduction to Metamodeling, refer to &lt;span class=&#34;citation&#34;&gt;(Barton &lt;a href=&#34;#ref-Barton2015&#34;&gt;2015&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;To my knowledge, no Discrete-Event Simulation (DES) software provides metamodeling capabilities, and guidance on how to actually execute metamodeling &lt;a href=&#34;https://www.google.com/search?q=discrete+event+simulation+metamodeling&amp;amp;oq=discrete+event+simulation+metamodeling&#34;&gt;is scarce&lt;/a&gt;. In this post, I’ll build a &lt;a href=&#34;https://en.wikipedia.org/wiki/Spline_(mathematics)&#34;&gt;Spline&lt;/a&gt;-based simulation metamodel. This tutorial should be useful to advanced users of &lt;a href=&#34;https://www.arenasimulation.com&#34;&gt;Arena Simulation&lt;/a&gt; who would be willing to give metamodeling a try.&lt;/p&gt;
+&lt;div id=&#34;why-splines&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Why Splines?&lt;/h3&gt;
+&lt;p&gt;In my &lt;a href=&#34;post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/&#34;&gt;previous post&lt;/a&gt;, I briefly described the motivation for using metamodels to approximate simulation models results. Splines are among the useful techniques for metamodeling because: (i) they are relatively simple (they are piecewise-defined polynomials), and (ii) Unlike low-order polynomials, you can generally use them with a global sampling strategy &lt;span class=&#34;citation&#34;&gt;(Barton and Meckesheimer &lt;a href=&#34;#ref-Barton2006&#34;&gt;2006&lt;/a&gt;)&lt;/span&gt;, meaning you can just sample a wide range of input values of your control variable and your model will still have a decent fit.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-wrangling&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data Wrangling&lt;/h3&gt;
+&lt;p&gt;Before developing our metamodel, let’s first load the simulation data and do some data wrangling. For the details on this step, please refer to my &lt;a href=&#34;post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/&#34;&gt;previous post&lt;/a&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(arena2r)
+library(dplyr)
+library(ggplot2)
+library(readr)
+
+sim_results = arena2r::get_simulation_results(source = &amp;quot;2019-03-metamodeling/&amp;quot;)
+
+sim_results$BatchSize = readr::parse_number(as.character(sim_results$Scenario))
+
+sim_results = subset(sim_results, Statistic == &amp;quot;Entity 1.NumberOut&amp;quot;)
+
+head(sim_results)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##        Scenario          Statistic Replication Value BatchSize
+## 51 BatchSize200 Entity 1.NumberOut           1  9200       200
+## 52 BatchSize200 Entity 1.NumberOut           2  9368       200
+## 53 BatchSize200 Entity 1.NumberOut           3  9322       200
+## 54 BatchSize200 Entity 1.NumberOut           4  9039       200
+## 55 BatchSize200 Entity 1.NumberOut           5  9255       200
+## 56 BatchSize200 Entity 1.NumberOut           6  9400       200&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;trying-splines&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Trying Splines&lt;/h3&gt;
+&lt;p&gt;You can build a spline model with the R’s standard linear model &lt;code&gt;lm&lt;/code&gt; function. Instead of using the standard &lt;code&gt;Y ~ X&lt;/code&gt; formula, we just have to use the &lt;code&gt;bs()&lt;/code&gt; function from the &lt;code&gt;splines&lt;/code&gt; package. Thus, our formula for our spline metamodel will be &lt;code&gt;Y ~ bs(X)&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## Now using Splines:
+
+library(splines)
+
+# Building a Spline Model:
+
+spline_model &amp;lt;-lm(Value ~ bs(BatchSize),data = sim_results)
+
+summary(spline_model)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Call:
+## lm(formula = Value ~ bs(BatchSize), data = sim_results)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -221.646  -30.896    1.011   46.969  268.354 
+## 
+## Coefficients:
+##                Estimate Std. Error t value Pr(&amp;gt;|t|)    
+## (Intercept)     9256.49      30.15  306.99  &amp;lt; 2e-16 ***
+## bs(BatchSize)1  1312.17     102.27   12.83  &amp;lt; 2e-16 ***
+## bs(BatchSize)2  1042.28      88.29   11.80 1.61e-15 ***
+## bs(BatchSize)3   961.00      42.95   22.38  &amp;lt; 2e-16 ***
+## ---
+## Signif. codes:  0 &amp;#39;***&amp;#39; 0.001 &amp;#39;**&amp;#39; 0.01 &amp;#39;*&amp;#39; 0.05 &amp;#39;.&amp;#39; 0.1 &amp;#39; &amp;#39; 1
+## 
+## Residual standard error: 96.04 on 46 degrees of freedom
+## Multiple R-squared:  0.9465, Adjusted R-squared:  0.943 
+## F-statistic: 271.1 on 3 and 46 DF,  p-value: &amp;lt; 2.2e-16&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Once you have your &lt;code&gt;spline_model&lt;/code&gt;, you can use the &lt;code&gt;predict&lt;/code&gt; function to estimate the expected value of the response variable. Estimating what will be the Expected value of the Output variable with a Batch Size of 200 units is easy as:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;predict(spline_model, 
+        newdata = data.frame(BatchSize = 200))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##        1 
+## 9256.489&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;optimizing-with-splines&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;“Optimizing” with Splines&lt;/h3&gt;
+&lt;p&gt;Now that we have a spline model that can approximate our model results, we will use this model to find an “optimal” Batch Size which maximizes our Output Variable.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## Defining limits:
+batchlims &amp;lt;- range(sim_results$BatchSize)
+
+# Generating Test Data
+batch.grid&amp;lt;-seq(from=batchlims[1], to = batchlims[2])
+
+# Using the metamodel:
+spline_data = data.frame(BatchSize = batch.grid, 
+                         Value = predict(spline_model,
+                                         newdata = list(BatchSize=batch.grid))
+                         )
+
+# What is the Batch Size which &amp;quot;optimizes&amp;quot; the Output?
+Optimum_BatchSize &amp;lt;- spline_data$BatchSize[which.max(spline_data$Value)]
+
+Output_Value &amp;lt;- spline_data$Value[which.max(spline_data$Value)]
+
+Optimum_BatchSize&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 331&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The suggested batch size is 331. Is this a reasonable guess, based our simulation runs? Let’s figure this out by plotting the simulation data, the spline function and the optimum value found.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Let&amp;#39;s plot again with the optimum batch size:
+ggplot(sim_results, mapping = aes(x = BatchSize, y = Value)) + 
+  geom_point() + 
+  stat_smooth(method = lm, formula = y ~ splines::bs(x)) +
+  geom_vline(xintercept = Optimum_BatchSize) + 
+  geom_text(aes(x=Optimum_BatchSize, 
+                label=&amp;quot;\nOptimum Batch Size&amp;quot;, y=9700), 
+                angle=90, 
+                text=element_text(size=11)
+            ) + 
+  labs(y = &amp;quot;Output&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-04-01-discrete-event-simulation-metamodeling-splines-r-arena_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Yes, definitely this is a good estimate! This plot encourages one to avoid going below 300 units, and suggests that going 350 and above is not a good idea either. The interesting pattern that the spline curve suggests is that increasing Batchsize not always increases Output, and that the output loss is not symetric.&lt;/p&gt;
+&lt;p&gt;Acknowledging these non-linear relationships is one of the outcomes I value at the end of a simulation project, and I hope that metamodeling will be an useful tool to you as well. Splines are a straightforward option to interpolate results from a simulation model, but there are other options out there. Future posts might explore other alternatives such as kriging metamodels, neural nets, and other techniques.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level1 unnumbered&#34;&gt;
+&lt;h1&gt;References&lt;/h1&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-Barton2006&#34;&gt;
+&lt;p&gt;Barton, Russell R, and Martin Meckesheimer. 2006. “Metamodel-Based Simulation Optimization” 13 (06). &lt;a href=&#34;https://doi.org/10.1016/S0927-0507(06)13018-2&#34;&gt;https://doi.org/10.1016/S0927-0507(06)13018-2&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-Barton2015&#34;&gt;
+&lt;p&gt;Barton, Russel R. 2015. “Tutorial: Simulation Metamodeling.” In &lt;em&gt;Proceedings of the 2015 Winter Simulation Conference&lt;/em&gt;, 1765–79.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Making Sense of Simulation Models with Metamodels Part 1 - Low-Order Polynomials with Arena and R</title>
