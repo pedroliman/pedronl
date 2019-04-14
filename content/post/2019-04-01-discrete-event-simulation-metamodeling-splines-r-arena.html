@@ -1,0 +1,134 @@
+---
+title: Discrete Event Simulation Metamodeling - Splines with R and Arena
+author: Pedro N. de Lima
+date: '2019-04-01'
+slug: discrete-event-simulation-metamodeling-splines-r-arena
+categories:
+  - R Blogs
+  - R
+tags:
+  - Arena Simualtion
+  - Arena2R
+  - Discrete Event Simulation
+  - Metamodeling
+  - R
+header:
+  caption: 'Learn how to use R to build Spline Metamodels of Arena Simulation Models.'
+  image: ''
+bibliography: [references/references-metamodeling.bib]
+link-citations: true
+---
+
+
+
+<p><a href="https://link.springer.com/referenceworkentry/10.1007%2F978-1-4419-1153-7_957">Simulation Metamodeling</a> - building and using surrogate models that can approximate results from more complicated simulation models - is an interesting approach to analyze results from complicated, computationally expensive simulation models. Metamodels are useful because they can yield good approximations of the original simulation model response variables using less computational resources. For an introduction to Metamodeling, refer to <span class="citation">(Barton <a href="#ref-Barton2015">2015</a>)</span>.</p>
+<p>To my knowledge, no Discrete-Event Simulation (DES) software provides metamodeling capabilities, and guidance on how to actually execute metamodeling <a href="https://www.google.com/search?q=discrete+event+simulation+metamodeling&amp;oq=discrete+event+simulation+metamodeling">is scarce</a>. In this post, I’ll build a <a href="https://en.wikipedia.org/wiki/Spline_(mathematics)">Spline</a>-based simulation metamodel. This tutorial should be useful to advanced users of <a href="https://www.arenasimulation.com">Arena Simulation</a> who would be willing to give metamodeling a try.</p>
+<div id="why-splines" class="section level3">
+<h3>Why Splines?</h3>
+<p>In my <a href="post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/">previous post</a>, I briefly described the motivation for using metamodels to approximate simulation models results. Splines are among the useful techniques for metamodeling because: (i) they are relatively simple (they are piecewise-defined polynomials), and (ii) Unlike low-order polynomials, you can generally use them with a global sampling strategy <span class="citation">(Barton and Meckesheimer <a href="#ref-Barton2006">2006</a>)</span>, meaning you can just sample a wide range of input values of your control variable and your model will still have a decent fit.</p>
+</div>
+<div id="data-wrangling" class="section level3">
+<h3>Data Wrangling</h3>
+<p>Before developing our metamodel, let’s first load the simulation data and do some data wrangling. For the details on this step, please refer to my <a href="post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/">previous post</a>.</p>
+<pre class="r"><code>library(arena2r)
+library(dplyr)
+library(ggplot2)
+library(readr)
+
+sim_results = arena2r::get_simulation_results(source = &quot;2019-03-metamodeling/&quot;)
+
+sim_results$BatchSize = readr::parse_number(as.character(sim_results$Scenario))
+
+sim_results = subset(sim_results, Statistic == &quot;Entity 1.NumberOut&quot;)
+
+head(sim_results)</code></pre>
+<pre><code>##        Scenario          Statistic Replication Value BatchSize
+## 51 BatchSize200 Entity 1.NumberOut           1  9200       200
+## 52 BatchSize200 Entity 1.NumberOut           2  9368       200
+## 53 BatchSize200 Entity 1.NumberOut           3  9322       200
+## 54 BatchSize200 Entity 1.NumberOut           4  9039       200
+## 55 BatchSize200 Entity 1.NumberOut           5  9255       200
+## 56 BatchSize200 Entity 1.NumberOut           6  9400       200</code></pre>
+</div>
+<div id="trying-splines" class="section level3">
+<h3>Trying Splines</h3>
+<p>You can build a spline model with the same linear model <code>lm</code> function. Instead of using the standard <code>Y ~ X</code> formula, we just have to use the <code>bs()</code> function from the <code>splines</code> package. Thus, our formula for our spline metamodel will be <code>Y ~ bs(X)</code>.</p>
+<pre class="r"><code>## Now using Splines:
+
+library(splines)
+
+# Building a Spline Model:
+
+spline_model &lt;-lm(Value ~ bs(BatchSize),data = sim_results)
+
+summary(spline_model)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = Value ~ bs(BatchSize), data = sim_results)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -221.646  -30.896    1.011   46.969  268.354 
+## 
+## Coefficients:
+##                Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)     9256.49      30.15  306.99  &lt; 2e-16 ***
+## bs(BatchSize)1  1312.17     102.27   12.83  &lt; 2e-16 ***
+## bs(BatchSize)2  1042.28      88.29   11.80 1.61e-15 ***
+## bs(BatchSize)3   961.00      42.95   22.38  &lt; 2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 96.04 on 46 degrees of freedom
+## Multiple R-squared:  0.9465, Adjusted R-squared:  0.943 
+## F-statistic: 271.1 on 3 and 46 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div id="optimizing-with-splines" class="section level3">
+<h3>“Optimizing” with Splines</h3>
+<p>Now that we have a spline model that can approximate our model results, we will use this model to find an “optimal” Batch Size which maximizes our Output Variable.</p>
+<pre class="r"><code>## Defining limits:
+batchlims &lt;- range(sim_results$BatchSize)
+
+# Generating Test Data
+batch.grid&lt;-seq(from=batchlims[1], to = batchlims[2])
+
+# Using the metamodel:
+spline_data = data.frame(BatchSize = batch.grid, 
+                         Value = predict(spline_model,
+                                         newdata = list(BatchSize=batch.grid))
+                         )
+
+# What is the Batch Size which &quot;optimizes&quot; the Output?
+Optimum_BatchSize &lt;- spline_data$BatchSize[which.max(spline_data$Value)]
+
+Output_Value &lt;- spline_data$Value[which.max(spline_data$Value)]
+
+Optimum_BatchSize</code></pre>
+<pre><code>## [1] 331</code></pre>
+<p>The suggested batch size is 331. Is this a reasonable guess, based our simulation runs? Let’s figure this out by plotting the simulation data, the spline function and the optimum value found.</p>
+<pre class="r"><code># Let&#39;s plot again with the optimum batch size:
+ggplot(sim_results, mapping = aes(x = BatchSize, y = Value)) + 
+  geom_point() + 
+  stat_smooth(method = lm, formula = y ~ splines::bs(x)) +
+  geom_vline(xintercept = Optimum_BatchSize) + 
+  geom_text(aes(x=Optimum_BatchSize, 
+                label=&quot;\nOptimum Batch Size&quot;, y=9700), 
+                angle=90, 
+                text=element_text(size=11)
+            ) + 
+  labs(y = &quot;Output&quot;)</code></pre>
+<p><img src="/post/2019-04-01-discrete-event-simulation-metamodeling-splines-r-arena_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>Yes, definitely this is a good estimate! This plot encourages one to avoid going below 300 units, and suggests that going 350 and above is not a good idea either. The interesting pattern that the spline curve suggests is that increasing Batchsize not always increases Output, and that the output loss is not symetric.</p>
+<p>Acknowledging these non-linear relationships is one of the outcomes I value at the end of a simulation project, and I hope that metamodeling will be an useful tool to you as well. Splines are a straightforward option to interpolate results from a simulation model, but there are other options out there. Future posts might explore other alternatives such as kriging metamodels, neural nets, and other techniques.</p>
+</div>
+<div id="references" class="section level1 unnumbered">
+<h1>References</h1>
+<div id="refs" class="references">
+<div id="ref-Barton2006">
+<p>Barton, Russell R, and Martin Meckesheimer. 2006. “Metamodel-Based Simulation Optimization” 13 (06). <a href="https://doi.org/10.1016/S0927-0507(06)13018-2">https://doi.org/10.1016/S0927-0507(06)13018-2</a>.</p>
+</div>
+<div id="ref-Barton2015">
+<p>Barton, Russel R. 2015. “Tutorial: Simulation Metamodeling.” In <em>Proceedings of the 2015 Winter Simulation Conference</em>, 1765–79.</p>
+</div>
+</div>
+</div>
