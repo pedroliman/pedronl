@@ -1,8 +1,8 @@
 ---
-title: Discrete Event Simulation Metamodeling - Splines with R and Arena
+title: Discrete Event Simulation (DES) Metamodeling - Splines with R and Arena
 author: Pedro N. de Lima
-date: '2019-04-01'
-slug: discrete-event-simulation-metamodeling-splines-r-arena
+date: '2019-04-14'
+slug: des-metamodeling-splines-r-arena
 categories:
   - R Blogs
   - R
