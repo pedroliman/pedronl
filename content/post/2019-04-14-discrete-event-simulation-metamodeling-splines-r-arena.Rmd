@@ -31,11 +31,11 @@ To my knowledge, no Discrete-Event Simulation (DES) software provides metamodeli
 
 ### Why Splines?
 
-In my [previous post](post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/), I briefly described the motivation for using metamodels to approximate simulation models results. Splines are among the useful techniques for metamodeling because: (i) they are relatively simple (they are piecewise-defined polynomials), and (ii) Unlike low-order polynomials, you can generally use them with a global sampling strategy [@Barton2006], meaning you can just sample a wide range of input values of your control variable and your model will still have a decent fit.
+In my [previous post](/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/), I briefly described the motivation for using metamodels to approximate simulation models results. Splines are among the useful techniques for metamodeling because: (i) they are relatively simple (they are piecewise-defined polynomials), and (ii) Unlike low-order polynomials, you can generally use them with a global sampling strategy [@Barton2006], meaning you can just sample a wide range of input values of your control variable and your model will still have a decent fit.
 
 ### Data Wrangling
 
-Before developing our metamodel, let's first load the simulation data and do some data wrangling. For the details on this step, please refer to my [previous post](post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/).
+Before developing our metamodel, let's first load the simulation data and do some data wrangling. For the details on this step, please refer to my [previous post](/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/).
 
 ```{r}
 library(arena2r)
@@ -104,7 +104,7 @@ Optimum_BatchSize
 
 ```
 
-The suggested batch size is `r Optimum_BatchSize`. Is this a reasonable guess, based our simulation runs? Let's figure this out by plotting the simulation data, the spline function and the optimum value found.
+The suggested batch size is `r Optimum_BatchSize`. Is this a reasonable guess, based on our simulation runs? Let's figure this out by plotting the simulation data, the spline function and the optimum value found.
 
 ```{r}
 

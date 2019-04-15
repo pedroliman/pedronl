@@ -25,11 +25,11 @@ link-citations: true
 <p>To my knowledge, no Discrete-Event Simulation (DES) software provides metamodeling capabilities, and guidance on how to actually execute metamodeling <a href="https://www.google.com/search?q=discrete+event+simulation+metamodeling&amp;oq=discrete+event+simulation+metamodeling">is scarce</a>. In this post, I’ll build a <a href="https://en.wikipedia.org/wiki/Spline_(mathematics)">Spline</a>-based simulation metamodel. This tutorial should be useful to advanced users of <a href="https://www.arenasimulation.com">Arena Simulation</a> who would be willing to give metamodeling a try.</p>
 <div id="why-splines" class="section level3">
 <h3>Why Splines?</h3>
-<p>In my <a href="post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/">previous post</a>, I briefly described the motivation for using metamodels to approximate simulation models results. Splines are among the useful techniques for metamodeling because: (i) they are relatively simple (they are piecewise-defined polynomials), and (ii) Unlike low-order polynomials, you can generally use them with a global sampling strategy <span class="citation">(Barton and Meckesheimer <a href="#ref-Barton2006">2006</a>)</span>, meaning you can just sample a wide range of input values of your control variable and your model will still have a decent fit.</p>
+<p>In my <a href="/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/">previous post</a>, I briefly described the motivation for using metamodels to approximate simulation models results. Splines are among the useful techniques for metamodeling because: (i) they are relatively simple (they are piecewise-defined polynomials), and (ii) Unlike low-order polynomials, you can generally use them with a global sampling strategy <span class="citation">(Barton and Meckesheimer <a href="#ref-Barton2006">2006</a>)</span>, meaning you can just sample a wide range of input values of your control variable and your model will still have a decent fit.</p>
 </div>
 <div id="data-wrangling" class="section level3">
 <h3>Data Wrangling</h3>
-<p>Before developing our metamodel, let’s first load the simulation data and do some data wrangling. For the details on this step, please refer to my <a href="post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/">previous post</a>.</p>
+<p>Before developing our metamodel, let’s first load the simulation data and do some data wrangling. For the details on this step, please refer to my <a href="/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/">previous post</a>.</p>
 <pre class="r"><code>library(arena2r)
 library(dplyr)
 library(ggplot2)
@@ -110,7 +110,7 @@ Output_Value &lt;- spline_data$Value[which.max(spline_data$Value)]
 
 Optimum_BatchSize</code></pre>
 <pre><code>## [1] 331</code></pre>
-<p>The suggested batch size is 331. Is this a reasonable guess, based our simulation runs? Let’s figure this out by plotting the simulation data, the spline function and the optimum value found.</p>
+<p>The suggested batch size is 331. Is this a reasonable guess, based on our simulation runs? Let’s figure this out by plotting the simulation data, the spline function and the optimum value found.</p>
 <pre class="r"><code># Let&#39;s plot again with the optimum batch size:
 ggplot(sim_results, mapping = aes(x = BatchSize, y = Value)) + 
   geom_point() + 
