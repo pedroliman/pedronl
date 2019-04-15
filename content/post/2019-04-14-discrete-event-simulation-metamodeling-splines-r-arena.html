@@ -1,8 +1,8 @@
 ---
-title: Discrete Event Simulation Metamodeling - Splines with R and Arena
+title: Discrete Event Simulation (DES) Metamodeling - Splines with R and Arena
 author: Pedro N. de Lima
-date: '2019-04-01'
-slug: discrete-event-simulation-metamodeling-splines-r-arena
+date: '2019-04-14'
+slug: des-metamodeling-splines-r-arena
 categories:
   - R Blogs
   - R
@@ -122,7 +122,7 @@ ggplot(sim_results, mapping = aes(x = BatchSize, y = Value)) +
                 text=element_text(size=11)
             ) + 
   labs(y = &quot;Output&quot;)</code></pre>
-<p><img src="/post/2019-04-01-discrete-event-simulation-metamodeling-splines-r-arena_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="/post/2019-04-14-discrete-event-simulation-metamodeling-splines-r-arena_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <p>Yes, definitely this is a good estimate! This plot encourages one to avoid going below 300 units, and suggests that going 350 and above is not a good idea either. The interesting pattern that the spline curve suggests is that increasing Batchsize not always increases Output, and that the output loss is not symetric.</p>
 <p>Acknowledging these non-linear relationships is one of the outcomes I value at the end of a simulation project, and I hope that metamodeling will be an useful tool to you as well. Splines are a straightforward option to interpolate results from a simulation model, but there are other options out there. Future posts might explore other alternatives such as kriging metamodels, neural nets, and other techniques.</p>
 </div>

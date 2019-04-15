@@ -7,17 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Mon, 01 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/arena2r/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Discrete Event Simulation Metamodeling - Splines with R and Arena</title>
-      <link>/post/discrete-event-simulation-metamodeling-splines-r-arena/</link>
-      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
+      <title>Discrete Event Simulation (DES) Metamodeling - Splines with R and Arena</title>
+      <link>/post/des-metamodeling-splines-r-arena/</link>
+      <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/discrete-event-simulation-metamodeling-splines-r-arena/</guid>
+      <guid>/post/des-metamodeling-splines-r-arena/</guid>
       <description>Simulation Metamodeling - building and using surrogate models that can approximate results from more complicated simulation models - is an interesting approach to analyze results from complicated, computationally expensive simulation models. Metamodels are useful because they can yield good approximations of the original simulation model response variables using less computational resources. For an introduction to Metamodeling, refer to (Barton 2015).
 To my knowledge, no Discrete-Event Simulation (DES) software provides metamodeling capabilities, and guidance on how to actually execute metamodeling is scarce.</description>
     </item>
