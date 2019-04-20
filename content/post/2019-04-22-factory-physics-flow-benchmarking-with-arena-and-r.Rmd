@@ -1,0 +1,132 @@
+---
+title: Factory Physics Flow Benchmarking in R
+author: Pedro N. de Lima
+date: '2019-04-22'
+slug: factory-physics-flow-benchmarking-in-r
+categories:
+  - R Blogs
+  - R
+tags:
+  - R
+  - Simulation
+header:
+  caption: ''
+  image: ''
+bibliography: [references/references-metamodeling.bib]
+link-citations: true
+---
+
+[Factory Physics (FP) Flow Benchmarking](https://factoryphysics.com/flow-benchmarking) is a technique useful to perform absolute benchmark of a system's throughput and cycle time, given the Work in Process (wip) the system is allowed to have. These techniques are introduced in [@pound2014factory] and [@hopp2008factory], and repeating this discussion is beyond the scope of this post.
+
+As a simulation pratictioneer and lecturer, as I read these books, I naturally started creating models and spreadsheet formulas to verify if the theory holds (and, of course, it does). After reading the book, I found my self wondering: "How do I teach these things? If I were to teach my students to perform Flow Benchmarking, what would this class require?"
+
+This post offers my answer to this question using [R](https://www.r-project.org/). Naturally, this post will be usefull to those willing to use their Simulation models to perform flow benchmarking as prescribed in [@pound2014factory].
+
+## Defining FP Laws
+
+The FP book defines a set of equations which serve as absolute benchmarks for any manufacturing systems [@hopp2008factory]. These equations define the maximum Throughput and minimum Cycle Times a manufacturing system can have, given its work in process (wip), bottleneck rate (rb) and the sum of the mean processing times of all stations (t0), assuming that the system is using a CONWIP system [@Spearman1990]. 
+
+First, then, I'll create these equations as R functions, which will be useful later.
+
+```{r FP_Laws}
+
+calc_w0 = function(rb, t0) {rb * t0}
+
+ct_best = function(t0, w, w0, rb) {ifelse(w<=w0,t0,w/rb)}
+
+th_best = function(t0, w, w0, rb) {ifelse(w<=w0,w/t0,rb)}
+
+ct_worst = function(w,t0){w*t0}
+
+th_worst = function(t0){1/t0}
+
+ct_marginal = function(t0,w,rb){t0+(w-1)/rb}
+
+th_marginal = function(w0,w,rb){rb*w/(w0+w-1)}
+
+```
+
+A
+
+```{r}
+
+## Defining Cycle time and Throughput functions
+
+benchmark_flow = function(rb, t0, step = 1, wip_mult = 5) {
+  
+  # First, calculate wip_crit
+  w0 = calc_w0(rb = rb, t0 = t0)
+  
+  # Then, define WIP Range to consider:
+  
+  wip = seq.int(from = 1, to = w0 * wip_mult, by = step)
+  
+  # Then, calculate The Best Case Variables
+  Best_Cycle_Time = ct_best(t0 = t0, w = wip, w0 = w0, rb = rb)
+  Best_ThroughPut = th_best(t0 = t0, w = wip, w0 = w0, rb = rb)
+  
+  best_data = data.frame(WIP = wip,
+                    ThroughPut = Best_ThroughPut,
+                    CycleTime = Best_Cycle_Time,
+                    Scenario = "Best")
+  
+  # Calculate the Marginal Cases:
+  Marginal_Cycle_Time = ct_marginal(t0=t0,w=wip,rb=rb)
+  Marginal_ThroughPut = th_marginal(w0=w0,w=wip,rb=rb)
+  
+  marginal_data = data.frame(WIP = wip,
+                    ThroughPut = Marginal_ThroughPut,
+                    CycleTime = Marginal_Cycle_Time,
+                    Scenario = "Marginal")
+
+  # Output A DataFrame with results:
+  rbind(best_data, marginal_data)
+  
+}
+
+# Perform a BenchMarch of the First Penny Fab:
+data_benchmark = benchmark_flow(rb = 0.5, t0 = 8)
+
+data_benchmark
+```
+
+
+Then let's plot!
+
+```{r}
+library(tidyr)
+library(ggplot2)
+
+# Lets define a wrapper function to our plot:
+
+plot_benchmarking = function(data) {
+  data %>%
+    gather(-WIP, -Scenario, key = "var", value = "Value") %>%
+  ggplot(aes(x = WIP, y = Value, color = Scenario)) +
+    geom_line() +
+    facet_wrap(~ var, scales = "free") +
+    labs(title = "FP Flow Benchmarking Plot") +
+    theme_bw()
+}
+
+# Then let's just benchmark and plot!
+
+plot_benchmarking(data = benchmark_flow(rb = 0.5, t0 = 8, wip_mult = 10))
+  
+
+```
+
+
+After plotting the benchmark curves, one can have productive discussion about what kinds of improvements are likely to produce good results.
+
+
+Now its your turn. Copy and paste the R code, and insert the rb parameter (bottleneck rate), and t0 ()
+
+The beauty of this analysis is that now you can pin point where any manufacturing system is in terms of WIP, Cycle Time and Throughput, and have a productive discussion about how to improve it.
+
+
+
+# References
+
+
+
