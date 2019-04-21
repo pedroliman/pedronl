@@ -1,7 +1,7 @@
 ---
 title: Factory Physics' Flow Benchmarking in R
 author: Pedro N. de Lima
-date: '2019-04-22'
+date: '2019-04-20'
 slug: factory-physics-flow-benchmarking-in-r
 categories:
   - R Blogs

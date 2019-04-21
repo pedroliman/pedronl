@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Mon, 22 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 20 Apr 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Factory Physics&#39; Flow Benchmarking in R</title>
       <link>/post/factory-physics-flow-benchmarking-in-r/</link>
-      <pubDate>Mon, 22 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/factory-physics-flow-benchmarking-in-r/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://factoryphysics.com/flow-benchmarking&#34;&gt;Flow Benchmarking&lt;/a&gt; is an absolute benchmarking technique that allows one to visualize the performance limits of a manufacturing system in terms of Work in Process, Throughput and Cycle Time. This technique has been introduced in the award-winning &lt;em&gt;Factory Physics&lt;/em&gt; (FP) Book &lt;span class=&#34;citation&#34;&gt;(Hopp and Spearman &lt;a href=&#34;#ref-hopp2008factory&#34;&gt;2008&lt;/a&gt;)&lt;/span&gt;, and is a key component of the science-based manufacturing management approach described in &lt;span class=&#34;citation&#34;&gt;(Pound, Bell, and Spearman &lt;a href=&#34;#ref-pound2014factory&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;. This post will use &lt;a href=&#34;https://www.r-project.org/&#34;&gt;R&lt;/a&gt; to allow one to quickly run this analysis using the Basic Factory Dynamics equations found in the original FP books.&lt;/p&gt;
@@ -156,7 +156,7 @@ plot_benchmarking = function(data) {
 # Then let&amp;#39;s just benchmark and plot!
 
 plot_benchmarking(data = benchmark_flow(rb = 0.5, t0 = 8, wip_mult = 5))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-04-22-factory-physics-flow-benchmarking-with-arena-and-r_files/figure-html/factory-physics-flow-benchmarking-cycletime-wip-throughput-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-04-20-factory-physics-flow-benchmarking-with-arena-and-r_files/figure-html/factory-physics-flow-benchmarking-cycletime-wip-throughput-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;After plotting the benchmarking curves, compare the curves with the system’s actual condition (mark an “x” indicating the system’s actual WIP, Cycle Time and Throughput), and have a productive discussion about how to improve it. Again, I suggest you to read the &lt;span class=&#34;citation&#34;&gt;(Pound, Bell, and Spearman &lt;a href=&#34;#ref-pound2014factory&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt; book to understand the many uses of this plot.&lt;/p&gt;
 &lt;p&gt;If you would like to perform a more detailed analysis of a complex system, it’s possible to use a Simulation Model of the actual system, and plot the results from Simulation Runs (you would see a another line on these plots). Doing this would allow you to gain predictive insight of where the system &lt;strong&gt;will be&lt;/strong&gt; if you add WIP or make improvements.&lt;/p&gt;
 &lt;/div&gt;
