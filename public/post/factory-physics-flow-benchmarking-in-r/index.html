@@ -15,8 +15,7 @@
   
     
   
-  <meta name="description" content="Factory Physics (FP) Flow Benchmarking is a technique useful to perform absolute benchmark of a system’s throughput and cycle time, given the Work in Process (wip) the system is allowed to have. These techniques are introduced in (Pound, Bell, and Spearman 2014) and (Hopp and Spearman 2008), and repeating this discussion is beyond the scope of this post.
-As a simulation pratictioneer and lecturer, as I read these books, I naturally started creating models and spreadsheet formulas to verify if the theory holds (and, of course, it does).">
+  <meta name="description" content="Flow Benchmarking is an absolute benchmarking technique that allows one to visualize the performance limits of a manufacturing system in terms of Work in Process, Throughput and Cycle Time. This technique has been introduced in the award-winning Factory Physics (FP) Book (Hopp and Spearman 2008), and is a key component of the science-based manufacturing management approach described in (Pound, Bell, and Spearman 2014). This post will use R to allow one to quickly run this analysis using the Basic Factory Dynamics equations found in the original FP books.">
 
   
   <link rel="alternate" hreflang="en-us" href="/post/factory-physics-flow-benchmarking-in-r/">
@@ -103,9 +102,8 @@ As a simulation pratictioneer and lecturer, as I read these books, I naturally s
   
   <meta property="og:site_name" content="Pedro N. de Lima">
   <meta property="og:url" content="/post/factory-physics-flow-benchmarking-in-r/">
-  <meta property="og:title" content="Factory Physics Flow Benchmarking in R | Pedro N. de Lima">
-  <meta property="og:description" content="Factory Physics (FP) Flow Benchmarking is a technique useful to perform absolute benchmark of a system’s throughput and cycle time, given the Work in Process (wip) the system is allowed to have. These techniques are introduced in (Pound, Bell, and Spearman 2014) and (Hopp and Spearman 2008), and repeating this discussion is beyond the scope of this post.
-As a simulation pratictioneer and lecturer, as I read these books, I naturally started creating models and spreadsheet formulas to verify if the theory holds (and, of course, it does).">
+  <meta property="og:title" content="Factory Physics&#39; Flow Benchmarking in R | Pedro N. de Lima">
+  <meta property="og:description" content="Flow Benchmarking is an absolute benchmarking technique that allows one to visualize the performance limits of a manufacturing system in terms of Work in Process, Throughput and Cycle Time. This technique has been introduced in the award-winning Factory Physics (FP) Book (Hopp and Spearman 2008), and is a key component of the science-based manufacturing management approach described in (Pound, Bell, and Spearman 2014). This post will use R to allow one to quickly run this analysis using the Basic Factory Dynamics equations found in the original FP books.">
   
   
     
@@ -114,14 +112,14 @@ As a simulation pratictioneer and lecturer, as I read these books, I naturally s
   
   <meta property="article:published_time" content="2019-04-22T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-04-22T00:00:00&#43;00:00">
+  <meta property="article:modified_time" content="2019-04-20T19:00:00-03:00">
   
 
   
 
   
 
-  <title>Factory Physics Flow Benchmarking in R | Pedro N. de Lima</title>
+  <title>Factory Physics&#39; Flow Benchmarking in R | Pedro N. de Lima</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -259,7 +257,7 @@ As a simulation pratictioneer and lecturer, as I read these books, I naturally s
 
 
   <div class="article-container">
-    <h1 itemprop="name">Factory Physics Flow Benchmarking in R</h1>
+    <h1 itemprop="name">Factory Physics&#39; Flow Benchmarking in R</h1>
 
     
 
@@ -274,9 +272,11 @@ As a simulation pratictioneer and lecturer, as I read these books, I naturally s
 
   <span class="article-date">
     
+        Last updated on
+    
     <meta content="2019-04-22 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-    <time datetime="2019-04-22 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-      Apr 22, 2019
+    <time datetime="2019-04-20 19:00:00 -0300 -03" itemprop="dateModified">
+      Apr 20, 2019
     </time>
   </span>
   <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
@@ -314,7 +314,7 @@ As a simulation pratictioneer and lecturer, as I read these books, I naturally s
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Factory%20Physics%20Flow%20Benchmarking%20in%20R&amp;url=%2fpost%2ffactory-physics-flow-benchmarking-in-r%2f"
+         href="https://twitter.com/intent/tweet?text=Factory%20Physics%27%20Flow%20Benchmarking%20in%20R&amp;url=%2fpost%2ffactory-physics-flow-benchmarking-in-r%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-twitter"></i>
       </a>
@@ -328,21 +328,21 @@ As a simulation pratictioneer and lecturer, as I read these books, I naturally s
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2ffactory-physics-flow-benchmarking-in-r%2f&amp;title=Factory%20Physics%20Flow%20Benchmarking%20in%20R"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2ffactory-physics-flow-benchmarking-in-r%2f&amp;title=Factory%20Physics%27%20Flow%20Benchmarking%20in%20R"
          target="_blank" rel="noopener">
         <i class="fab fa-linkedin-in"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=%2fpost%2ffactory-physics-flow-benchmarking-in-r%2f&amp;title=Factory%20Physics%20Flow%20Benchmarking%20in%20R"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2ffactory-physics-flow-benchmarking-in-r%2f&amp;title=Factory%20Physics%27%20Flow%20Benchmarking%20in%20R"
          target="_blank" rel="noopener">
         <i class="fab fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Factory%20Physics%20Flow%20Benchmarking%20in%20R&amp;body=%2fpost%2ffactory-physics-flow-benchmarking-in-r%2f">
+         href="mailto:?subject=Factory%20Physics%27%20Flow%20Benchmarking%20in%20R&amp;body=%2fpost%2ffactory-physics-flow-benchmarking-in-r%2f">
         <i class="fas fa-envelope"></i>
       </a>
     </li>
@@ -356,13 +356,11 @@ As a simulation pratictioneer and lecturer, as I read these books, I naturally s
 
 
     <div class="article-style" itemprop="articleBody">
-      <p><a href="https://factoryphysics.com/flow-benchmarking">Factory Physics (FP) Flow Benchmarking</a> is a technique useful to perform absolute benchmark of a system’s throughput and cycle time, given the Work in Process (wip) the system is allowed to have. These techniques are introduced in <span class="citation">(Pound, Bell, and Spearman <a href="#ref-pound2014factory">2014</a>)</span> and <span class="citation">(Hopp and Spearman <a href="#ref-hopp2008factory">2008</a>)</span>, and repeating this discussion is beyond the scope of this post.</p>
-<p>As a simulation pratictioneer and lecturer, as I read these books, I naturally started creating models and spreadsheet formulas to verify if the theory holds (and, of course, it does). After reading the book, I found my self wondering: “How do I teach these things? If I were to teach my students to perform Flow Benchmarking, what would this class require?”</p>
-<p>This post offers my answer to this question using <a href="https://www.r-project.org/">R</a>. Naturally, this post will be usefull to those willing to use their Simulation models to perform flow benchmarking as prescribed in <span class="citation">(Pound, Bell, and Spearman <a href="#ref-pound2014factory">2014</a>)</span>.</p>
+      <p><a href="https://factoryphysics.com/flow-benchmarking">Flow Benchmarking</a> is an absolute benchmarking technique that allows one to visualize the performance limits of a manufacturing system in terms of Work in Process, Throughput and Cycle Time. This technique has been introduced in the award-winning <em>Factory Physics</em> (FP) Book <span class="citation">(Hopp and Spearman <a href="#ref-hopp2008factory">2008</a>)</span>, and is a key component of the science-based manufacturing management approach described in <span class="citation">(Pound, Bell, and Spearman <a href="#ref-pound2014factory">2014</a>)</span>. This post will use <a href="https://www.r-project.org/">R</a> to allow one to quickly run this analysis using the Basic Factory Dynamics equations found in the original FP books.</p>
 <div id="defining-fp-laws" class="section level2">
 <h2>Defining FP Laws</h2>
-<p>The FP book defines a set of equations which serve as absolute benchmarks for any manufacturing systems <span class="citation">(Hopp and Spearman <a href="#ref-hopp2008factory">2008</a>)</span>. These equations define the maximum Throughput and minimum Cycle Times a manufacturing system can have, given its work in process (wip), bottleneck rate (rb) and the sum of the mean processing times of all stations (t0), assuming that the system is using a CONWIP system <span class="citation">(SPEARMAN, WOODRUFF, and HOPP <a href="#ref-Spearman1990">1990</a>)</span>.</p>
-<p>First, then, I’ll create these equations as R functions, which will be useful later.</p>
+<p>The Flow Benchmarking analysis is grounded on Little’s Law (WIP = TH * CT), and utilizes three general cases as absolute benchmarks for any real manufacturing system: The <strong>Best Case</strong>, the <strong>Worst Case</strong> and the <strong>Practical Worst Case</strong> .Please refer to <span class="citation">(Hopp and Spearman <a href="#ref-hopp2008factory">2008</a>)</span> and <span class="citation">(Pound, Bell, and Spearman <a href="#ref-pound2014factory">2014</a>)</span> for the rationale for these laws and equations.</p>
+<p>I’ll define these equations as R functions:</p>
 <pre class="r"><code>calc_w0 = function(rb, t0) {rb * t0}
 
 ct_best = function(t0, w, w0, rb) {ifelse(w&lt;=w0,t0,w/rb)}
@@ -376,7 +374,11 @@ th_worst = function(t0){1/t0}
 ct_marginal = function(t0,w,rb){t0+(w-1)/rb}
 
 th_marginal = function(w0,w,rb){rb*w/(w0+w-1)}</code></pre>
-<p>A</p>
+<p>In summary, these equations provide a starting point to discuss how well a manufacturing system is doing in terms of converting inventory to Throughput. The initial analysis requires two inputs. The first input is the <strong>Bottleneck rate (rb)</strong>, which is the production rate (parts, orders / time) of the bottleneck (defined as the process center with the highest long-term utilization). The second parameter is the <strong>Total Raw Processing Time (t0)</strong>, which is the sum of the long-term average process times of each processing center. Based on these two parameters, its possible to draw benchmarking curves for the System’s Throughput and Cycle Time as a function of its Work in Process, assuming a CONWIP control system <span class="citation">(SPEARMAN, WOODRUFF, and HOPP <a href="#ref-Spearman1990">1990</a>)</span>.</p>
+</div>
+<div id="drawing-benchmarking-curves" class="section level2">
+<h2>Drawing Benchmarking Curves</h2>
+<p>Once I have the basic laws of manufacturing dynamics as R functions, I’ll create a <code>benchmarck_flow</code> function to execute the analysis. This function accepts the <code>rb</code> and <code>t0</code> parameters and will calculate the system’s Throughput and Cycle time as a function of the wip under different scenarios for benchmarking purposes.</p>
 <pre class="r"><code>## Defining Cycle time and Throughput functions
 
 benchmark_flow = function(rb, t0, step = 1, wip_mult = 5) {
@@ -385,100 +387,116 @@ benchmark_flow = function(rb, t0, step = 1, wip_mult = 5) {
   w0 = calc_w0(rb = rb, t0 = t0)
   
   # Then, define WIP Range to consider:
-  
   wip = seq.int(from = 1, to = w0 * wip_mult, by = step)
   
   # Then, calculate The Best Case Variables
   Best_Cycle_Time = ct_best(t0 = t0, w = wip, w0 = w0, rb = rb)
-  Best_ThroughPut = th_best(t0 = t0, w = wip, w0 = w0, rb = rb)
+  Best_Throughput = th_best(t0 = t0, w = wip, w0 = w0, rb = rb)
   
   best_data = data.frame(WIP = wip,
-                    ThroughPut = Best_ThroughPut,
+                    Throughput = Best_Throughput,
                     CycleTime = Best_Cycle_Time,
-                    Scenario = &quot;Best&quot;)
+                    Scenario = &quot;Best Case&quot;)
   
   # Calculate the Marginal Cases:
   Marginal_Cycle_Time = ct_marginal(t0=t0,w=wip,rb=rb)
-  Marginal_ThroughPut = th_marginal(w0=w0,w=wip,rb=rb)
+  Marginal_Throughput = th_marginal(w0=w0,w=wip,rb=rb)
   
   marginal_data = data.frame(WIP = wip,
-                    ThroughPut = Marginal_ThroughPut,
+                    Throughput = Marginal_Throughput,
                     CycleTime = Marginal_Cycle_Time,
                     Scenario = &quot;Marginal&quot;)
+  
+  # Calculate Worst Case
+  worst_data = data.frame(
+    WIP = wip,
+    Throughput = th_worst(t0 = t0),
+    CycleTime = ct_worst(w = wip, t0 = t0),
+    Scenario = &quot;Worst Case&quot;
+  )
 
   # Output A DataFrame with results:
-  rbind(best_data, marginal_data)
+  # I&#39;m not including the Worst Case because it&#39;s unrealistic (and messes up my cycle time plot).
+  rbind(best_data, marginal_data, worst_data)
   
 }
 
-# Perform a BenchMarch of the First Penny Fab:
+# The First Penny Fab Example:
 data_benchmark = benchmark_flow(rb = 0.5, t0 = 8)
 
-data_benchmark</code></pre>
-<pre><code>##    WIP ThroughPut CycleTime Scenario
-## 1    1  0.1250000         8     Best
-## 2    2  0.2500000         8     Best
-## 3    3  0.3750000         8     Best
-## 4    4  0.5000000         8     Best
-## 5    5  0.5000000        10     Best
-## 6    6  0.5000000        12     Best
-## 7    7  0.5000000        14     Best
-## 8    8  0.5000000        16     Best
-## 9    9  0.5000000        18     Best
-## 10  10  0.5000000        20     Best
-## 11  11  0.5000000        22     Best
-## 12  12  0.5000000        24     Best
-## 13  13  0.5000000        26     Best
-## 14  14  0.5000000        28     Best
-## 15  15  0.5000000        30     Best
-## 16  16  0.5000000        32     Best
-## 17  17  0.5000000        34     Best
-## 18  18  0.5000000        36     Best
-## 19  19  0.5000000        38     Best
-## 20  20  0.5000000        40     Best
-## 21   1  0.1250000         8 Marginal
-## 22   2  0.2000000        10 Marginal
-## 23   3  0.2500000        12 Marginal
-## 24   4  0.2857143        14 Marginal
-## 25   5  0.3125000        16 Marginal
-## 26   6  0.3333333        18 Marginal
-## 27   7  0.3500000        20 Marginal
-## 28   8  0.3636364        22 Marginal
-## 29   9  0.3750000        24 Marginal
-## 30  10  0.3846154        26 Marginal
-## 31  11  0.3928571        28 Marginal
-## 32  12  0.4000000        30 Marginal
-## 33  13  0.4062500        32 Marginal
-## 34  14  0.4117647        34 Marginal
-## 35  15  0.4166667        36 Marginal
-## 36  16  0.4210526        38 Marginal
-## 37  17  0.4250000        40 Marginal
-## 38  18  0.4285714        42 Marginal
-## 39  19  0.4318182        44 Marginal
-## 40  20  0.4347826        46 Marginal</code></pre>
-<p>Then let’s plot!</p>
+knitr::kable(head(data_benchmark))</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">WIP</th>
+<th align="right">Throughput</th>
+<th align="right">CycleTime</th>
+<th align="left">Scenario</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">0.125</td>
+<td align="right">8</td>
+<td align="left">Best Case</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="right">0.250</td>
+<td align="right">8</td>
+<td align="left">Best Case</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="right">0.375</td>
+<td align="right">8</td>
+<td align="left">Best Case</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="right">0.500</td>
+<td align="right">8</td>
+<td align="left">Best Case</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="right">0.500</td>
+<td align="right">10</td>
+<td align="left">Best Case</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="right">0.500</td>
+<td align="right">12</td>
+<td align="left">Best Case</td>
+</tr>
+</tbody>
+</table>
+<p>Ok, now I have a table with all the benchmarking results, let’s plot it!</p>
 <pre class="r"><code>library(tidyr)
 library(ggplot2)
-
-# Lets define a wrapper function to our plot:
+library(viridis)</code></pre>
+<pre><code>## Carregando pacotes exigidos: viridisLite</code></pre>
+<pre class="r"><code># Lets define a wrapper function for our plot:
 
 plot_benchmarking = function(data) {
   data %&gt;%
     gather(-WIP, -Scenario, key = &quot;var&quot;, value = &quot;Value&quot;) %&gt;%
   ggplot(aes(x = WIP, y = Value, color = Scenario)) +
-    geom_line() +
-    facet_wrap(~ var, scales = &quot;free&quot;) +
-    labs(title = &quot;FP Flow Benchmarking Plot&quot;) +
+    geom_line(size = 1) +
+    facet_wrap(~ var, scales = &quot;free&quot;, nrow = 2, ncol = 1) +
+    labs(title = &quot;Flow Benchmarking Plot&quot;) +
+    scale_color_viridis(discrete = TRUE, option = &quot;D&quot;) + 
     theme_bw()
 }
 
 # Then let&#39;s just benchmark and plot!
 
-plot_benchmarking(data = benchmark_flow(rb = 0.5, t0 = 8, wip_mult = 10))</code></pre>
-<p><img src="/post/2019-04-22-factory-physics-flow-benchmarking-with-arena-and-r_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-<p>After plotting the benchmark curves, one can have productive discussion about what kinds of improvements are likely to produce good results.</p>
-<p>Now its your turn. Copy and paste the R code, and insert the rb parameter (bottleneck rate), and t0 ()</p>
-<p>The beauty of this analysis is that now you can pin point where any manufacturing system is in terms of WIP, Cycle Time and Throughput, and have a productive discussion about how to improve it.</p>
+plot_benchmarking(data = benchmark_flow(rb = 0.5, t0 = 8, wip_mult = 5))</code></pre>
+<p><img src="/post/2019-04-22-factory-physics-flow-benchmarking-with-arena-and-r_files/figure-html/factory-physics-flow-benchmarking-cycletime-wip-throughput-plot-1.png" width="672" /></p>
+<p>After plotting the benchmarking curves, compare the curves with the system’s actual condition (mark an “x” indicating the system’s actual WIP, Cycle Time and Throughput), and have a productive discussion about how to improve it. Again, I suggest you to read the <span class="citation">(Pound, Bell, and Spearman <a href="#ref-pound2014factory">2014</a>)</span> book to understand the many uses of this plot.</p>
+<p>If you would like to perform a more detailed analysis of a complex system, it’s possible to use a Simulation Model of the actual system, and plot the results from Simulation Runs (you would see a another line on these plots). Doing this would allow you to gain predictive insight of where the system <strong>will be</strong> if you add WIP or make improvements.</p>
 </div>
 <div id="references" class="section level1 unnumbered">
 <h1>References</h1>

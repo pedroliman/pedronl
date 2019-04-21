@@ -13,13 +13,12 @@
     
     
     <item>
-      <title>Factory Physics Flow Benchmarking in R</title>
+      <title>Factory Physics&#39; Flow Benchmarking in R</title>
       <link>/post/factory-physics-flow-benchmarking-in-r/</link>
       <pubDate>Mon, 22 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/factory-physics-flow-benchmarking-in-r/</guid>
-      <description>Factory Physics (FP) Flow Benchmarking is a technique useful to perform absolute benchmark of a system’s throughput and cycle time, given the Work in Process (wip) the system is allowed to have. These techniques are introduced in (Pound, Bell, and Spearman 2014) and (Hopp and Spearman 2008), and repeating this discussion is beyond the scope of this post.
-As a simulation pratictioneer and lecturer, as I read these books, I naturally started creating models and spreadsheet formulas to verify if the theory holds (and, of course, it does).</description>
+      <description>Flow Benchmarking is an absolute benchmarking technique that allows one to visualize the performance limits of a manufacturing system in terms of Work in Process, Throughput and Cycle Time. This technique has been introduced in the award-winning Factory Physics (FP) Book (Hopp and Spearman 2008), and is a key component of the science-based manufacturing management approach described in (Pound, Bell, and Spearman 2014). This post will use R to allow one to quickly run this analysis using the Basic Factory Dynamics equations found in the original FP books.</description>
     </item>
     
     <item>
