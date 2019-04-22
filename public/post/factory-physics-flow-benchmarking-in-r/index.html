@@ -15,7 +15,7 @@
   
     
   
-  <meta name="description" content="Flow Benchmarking is an absolute benchmarking technique that allows one to visualize the performance limits of a manufacturing system in terms of Work in Process, Throughput and Cycle Time. This technique has been introduced in the award-winning Factory Physics (FP) Book (Hopp and Spearman 2008), and is a key component of the science-based manufacturing management approach described in (Pound, Bell, and Spearman 2014). This post will use R to allow one to quickly run this analysis using the Basic Factory Dynamics equations found in the original FP books.">
+  <meta name="description" content="Flow Benchmarking is an absolute benchmarking technique that allows one to compare the current performance of a manufacturing system against its performance limits in terms of Work in Process, Throughput and Cycle Time. The technique has been introduced in the award-winning Factory Physics (FP) Book (Hopp and Spearman 2008), and is a key component of the science-based manufacturing management approach described in (Pound, Bell, and Spearman 2014). This post will use R to allow one to quickly run this analysis using the Basic Factory Dynamics equations found in the original FP books.">
 
   
   <link rel="alternate" hreflang="en-us" href="/post/factory-physics-flow-benchmarking-in-r/">
@@ -102,8 +102,8 @@
   
   <meta property="og:site_name" content="Pedro N. de Lima">
   <meta property="og:url" content="/post/factory-physics-flow-benchmarking-in-r/">
-  <meta property="og:title" content="Factory Physics&#39; Flow Benchmarking in R | Pedro N. de Lima">
-  <meta property="og:description" content="Flow Benchmarking is an absolute benchmarking technique that allows one to visualize the performance limits of a manufacturing system in terms of Work in Process, Throughput and Cycle Time. This technique has been introduced in the award-winning Factory Physics (FP) Book (Hopp and Spearman 2008), and is a key component of the science-based manufacturing management approach described in (Pound, Bell, and Spearman 2014). This post will use R to allow one to quickly run this analysis using the Basic Factory Dynamics equations found in the original FP books.">
+  <meta property="og:title" content="Factory Physics&#39; Flow Benchmarking in R (with Metamodeling) | Pedro N. de Lima">
+  <meta property="og:description" content="Flow Benchmarking is an absolute benchmarking technique that allows one to compare the current performance of a manufacturing system against its performance limits in terms of Work in Process, Throughput and Cycle Time. The technique has been introduced in the award-winning Factory Physics (FP) Book (Hopp and Spearman 2008), and is a key component of the science-based manufacturing management approach described in (Pound, Bell, and Spearman 2014). This post will use R to allow one to quickly run this analysis using the Basic Factory Dynamics equations found in the original FP books.">
   
   
     
@@ -112,14 +112,14 @@
   
   <meta property="article:published_time" content="2019-04-20T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-04-20T22:33:36-03:00">
+  <meta property="article:modified_time" content="2019-04-20T00:00:00&#43;00:00">
   
 
   
 
   
 
-  <title>Factory Physics&#39; Flow Benchmarking in R | Pedro N. de Lima</title>
+  <title>Factory Physics&#39; Flow Benchmarking in R (with Metamodeling) | Pedro N. de Lima</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -257,7 +257,7 @@
 
 
   <div class="article-container">
-    <h1 itemprop="name">Factory Physics&#39; Flow Benchmarking in R</h1>
+    <h1 itemprop="name">Factory Physics&#39; Flow Benchmarking in R (with Metamodeling)</h1>
 
     
 
@@ -272,10 +272,8 @@
 
   <span class="article-date">
     
-        Last updated on
-    
     <meta content="2019-04-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-    <time datetime="2019-04-20 22:33:36 -0300 -03" itemprop="dateModified">
+    <time datetime="2019-04-20 00:00:00 &#43;0000 UTC" itemprop="dateModified">
       Apr 20, 2019
     </time>
   </span>
@@ -286,7 +284,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    5 min read
+    6 min read
   </span>
   
 
@@ -314,7 +312,7 @@
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Factory%20Physics%27%20Flow%20Benchmarking%20in%20R&amp;url=%2fpost%2ffactory-physics-flow-benchmarking-in-r%2f"
+         href="https://twitter.com/intent/tweet?text=Factory%20Physics%27%20Flow%20Benchmarking%20in%20R%20%28with%20Metamodeling%29&amp;url=%2fpost%2ffactory-physics-flow-benchmarking-in-r%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-twitter"></i>
       </a>
@@ -328,21 +326,21 @@
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2ffactory-physics-flow-benchmarking-in-r%2f&amp;title=Factory%20Physics%27%20Flow%20Benchmarking%20in%20R"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2ffactory-physics-flow-benchmarking-in-r%2f&amp;title=Factory%20Physics%27%20Flow%20Benchmarking%20in%20R%20%28with%20Metamodeling%29"
          target="_blank" rel="noopener">
         <i class="fab fa-linkedin-in"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=%2fpost%2ffactory-physics-flow-benchmarking-in-r%2f&amp;title=Factory%20Physics%27%20Flow%20Benchmarking%20in%20R"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2ffactory-physics-flow-benchmarking-in-r%2f&amp;title=Factory%20Physics%27%20Flow%20Benchmarking%20in%20R%20%28with%20Metamodeling%29"
          target="_blank" rel="noopener">
         <i class="fab fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Factory%20Physics%27%20Flow%20Benchmarking%20in%20R&amp;body=%2fpost%2ffactory-physics-flow-benchmarking-in-r%2f">
+         href="mailto:?subject=Factory%20Physics%27%20Flow%20Benchmarking%20in%20R%20%28with%20Metamodeling%29&amp;body=%2fpost%2ffactory-physics-flow-benchmarking-in-r%2f">
         <i class="fas fa-envelope"></i>
       </a>
     </li>
@@ -356,9 +354,9 @@
 
 
     <div class="article-style" itemprop="articleBody">
-      <p><a href="https://factoryphysics.com/flow-benchmarking">Flow Benchmarking</a> is an absolute benchmarking technique that allows one to visualize the performance limits of a manufacturing system in terms of Work in Process, Throughput and Cycle Time. This technique has been introduced in the award-winning <em>Factory Physics</em> (FP) Book <span class="citation">(Hopp and Spearman <a href="#ref-hopp2008factory">2008</a>)</span>, and is a key component of the science-based manufacturing management approach described in <span class="citation">(Pound, Bell, and Spearman <a href="#ref-pound2014factory">2014</a>)</span>. This post will use <a href="https://www.r-project.org/">R</a> to allow one to quickly run this analysis using the Basic Factory Dynamics equations found in the original FP books.</p>
-<div id="defining-fp-laws" class="section level2">
-<h2>Defining FP Laws</h2>
+      <p><a href="https://factoryphysics.com/flow-benchmarking">Flow Benchmarking</a> is an absolute benchmarking technique that allows one to compare the current performance of a manufacturing system against its performance limits in terms of Work in Process, Throughput and Cycle Time. The technique has been introduced in the award-winning <em>Factory Physics</em> (FP) Book <span class="citation">(Hopp and Spearman <a href="#ref-hopp2008factory">2008</a>)</span>, and is a key component of the science-based manufacturing management approach described in <span class="citation">(Pound, Bell, and Spearman <a href="#ref-pound2014factory">2014</a>)</span>. This post will use <a href="https://www.r-project.org/">R</a> to allow one to quickly run this analysis using the Basic Factory Dynamics equations found in the original FP books. I’ll also build on <a href="/post/des-metamodeling-splines-r-arena/">my previous posts on metamodeling</a> to illustrate how they can be used to support a factory physics approach to flow benchmarking.</p>
+<div id="defining-factory-physics-laws" class="section level2">
+<h2>Defining Factory Physics Laws</h2>
 <p>The Flow Benchmarking analysis is grounded on Little’s Law (WIP = TH * CT), and utilizes three general cases as absolute benchmarks for any real manufacturing system: The <strong>Best Case</strong>, the <strong>Worst Case</strong> and the <strong>Practical Worst Case</strong> .Please refer to <span class="citation">(Hopp and Spearman <a href="#ref-hopp2008factory">2008</a>)</span> and <span class="citation">(Pound, Bell, and Spearman <a href="#ref-pound2014factory">2014</a>)</span> for the rationale for these laws and equations.</p>
 <p>I’ll define these equations as R functions:</p>
 <pre class="r"><code>calc_w0 = function(rb, t0) {rb * t0}
@@ -473,7 +471,51 @@ knitr::kable(head(data_benchmark))</code></pre>
 </tr>
 </tbody>
 </table>
-<p>Ok, now I have a table with all the benchmarking results, let’s plot it!</p>
+</div>
+<div id="how-would-the-actual-system-behave-simulation-metamodeling-comes-in" class="section level1">
+<h1>How would the Actual System Behave? Simulation Metamodeling comes in</h1>
+<p>Ok, now I have a table with all the basic benchmarking results. What if I have a better model of the system? (e.g., a Discrete Event Model or a better queueing model). We can accomplish this by building a discrete event simulation model of the actual system, and using a <a href="/post/post/des-metamodeling-splines-r-arena/">spline metamodel</a> of this model approximate its results.</p>
+<pre class="r"><code>library(arena2r)</code></pre>
+<pre><code>## Warning: package &#39;arena2r&#39; was built under R version 3.5.2</code></pre>
+<pre class="r"><code>library(tidyr)
+arena_data = arena2r::get_simulation_results(&quot;2019-data/penny-fab&quot;)
+
+# Filtering only Statistics of our Interest:
+
+filtered_data = subset(arena_data, Statistic %in% c(&quot;w&quot;, &quot;LeadTime&quot;, &quot;Throughput&quot;))
+
+# Spreading and Data Wrangling
+
+final_data = filtered_data %&gt;% 
+  tidyr::spread(Statistic, Value) %&gt;%
+  dplyr::select(LeadTime, Throughput, w)
+
+colnames(final_data) = c(&quot;CycleTime&quot;, &quot;Throughput&quot;, &quot;WIP&quot;)
+
+# Now, build a spline metamodel for CycleTime and Throughput as a function of WIP.
+
+th_model = lm(Throughput ~ splines::bs(WIP), data = final_data)
+
+ct_model = lm(CycleTime ~ WIP, data = final_data)
+
+# Put Together a Final DataFrame like the Benchmarking:
+
+model_data = data.frame(
+  WIP = unique(data_benchmark$WIP),
+  Throughput = predict(th_model, subset(data_benchmark, Scenario == &quot;Best Case&quot;)),
+  CycleTime = predict(ct_model, subset(data_benchmark, Scenario == &quot;Best Case&quot;)),
+  Scenario = &quot;DES Model&quot;
+)</code></pre>
+<pre><code>## Warning in splines::bs(WIP, degree = 3L, knots = numeric(0), Boundary.knots
+## = c(1, : some &#39;x&#39; values beyond boundary knots may cause ill-conditioned
+## bases</code></pre>
+<pre class="r"><code># Adding our Model&#39;s Data to the DataFrame:
+
+data_benchmark = rbind(
+  data_benchmark,
+  model_data
+)</code></pre>
+<p>Now, let’s plot it!</p>
 <pre class="r"><code>library(tidyr)
 library(ggplot2)
 library(viridis)</code></pre>
@@ -493,10 +535,14 @@ plot_benchmarking = function(data) {
 
 # Then let&#39;s just benchmark and plot!
 
-plot_benchmarking(data = benchmark_flow(rb = 0.5, t0 = 8, wip_mult = 5))</code></pre>
-<p><img src="/post/2019-04-20-factory-physics-flow-benchmarking-with-arena-and-r_files/figure-html/factory-physics-flow-benchmarking-cycletime-wip-throughput-plot-1.png" width="672" /></p>
+plot_benchmarking(data = data_benchmark)</code></pre>
+<p><img src="/post/2019-04-20-factory-physics-flow-benchmarking-with-r_files/figure-html/factory-physics-flow-benchmarking-cycletime-wip-throughput-plot-1.png" width="672" /></p>
+<p>Cool! My simulation model is quite equivalent to the marginal case.</p>
+<div id="final-thoughts" class="section level2">
+<h2>Final Thoughts</h2>
 <p>After plotting the benchmarking curves, compare the curves with the system’s actual condition (mark an “x” indicating the system’s actual WIP, Cycle Time and Throughput), and have a productive discussion about how to improve it. Again, I suggest you to read the <span class="citation">(Pound, Bell, and Spearman <a href="#ref-pound2014factory">2014</a>)</span> book to understand the many uses of this plot.</p>
-<p>If you would like to perform a more detailed analysis of a complex system, it’s possible to use a Simulation Model of the actual system, and plot the results from Simulation Runs (you would see a another line on these plots). Doing this would allow you to gain predictive insight of where the system <strong>will be</strong> if you add WIP or make improvements.</p>
+<p>As I demonstrated, using a metamodel is interesting because you can have more confidence that the system will behave as expected <em>if</em> you decide to reduce or increase WIP, for instance. In this particular case, the model behavior roughly maches the Marginal Case behavior, but this may not be the case in the real system. In case the system currently performs worse than the Marginal Case, the model can be used to simulate different improvement scenarios, and how they push the system towards the benchmark curves. Doing this would allow you to gain predictive insight of where the system <strong>will be</strong> if you add WIP or make improvements.</p>
+</div>
 </div>
 <div id="references" class="section level1 unnumbered">
 <h1>References</h1>
@@ -523,6 +569,10 @@ plot_benchmarking(data = benchmark_flow(rb = 0.5, t0 = 8, wip_mult = 5))</code><
   <a class="badge badge-light" href="/tags/r/">R</a>
   
   <a class="badge badge-light" href="/tags/simulation/">Simulation</a>
+  
+  <a class="badge badge-light" href="/tags/arena/">Arena</a>
+  
+  <a class="badge badge-light" href="/tags/arena2r/">Arena2r</a>
   
 </div>
 

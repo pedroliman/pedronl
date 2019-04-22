@@ -185,14 +185,14 @@
     </item>
     
     <item>
-      <title>Factory Physics&#39; Flow Benchmarking in R</title>
+      <title>Factory Physics&#39; Flow Benchmarking in R (with Metamodeling)</title>
       <link>/post/factory-physics-flow-benchmarking-in-r/</link>
       <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/factory-physics-flow-benchmarking-in-r/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://factoryphysics.com/flow-benchmarking&#34;&gt;Flow Benchmarking&lt;/a&gt; is an absolute benchmarking technique that allows one to visualize the performance limits of a manufacturing system in terms of Work in Process, Throughput and Cycle Time. This technique has been introduced in the award-winning &lt;em&gt;Factory Physics&lt;/em&gt; (FP) Book &lt;span class=&#34;citation&#34;&gt;(Hopp and Spearman &lt;a href=&#34;#ref-hopp2008factory&#34;&gt;2008&lt;/a&gt;)&lt;/span&gt;, and is a key component of the science-based manufacturing management approach described in &lt;span class=&#34;citation&#34;&gt;(Pound, Bell, and Spearman &lt;a href=&#34;#ref-pound2014factory&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;. This post will use &lt;a href=&#34;https://www.r-project.org/&#34;&gt;R&lt;/a&gt; to allow one to quickly run this analysis using the Basic Factory Dynamics equations found in the original FP books.&lt;/p&gt;
-&lt;div id=&#34;defining-fp-laws&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Defining FP Laws&lt;/h2&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://factoryphysics.com/flow-benchmarking&#34;&gt;Flow Benchmarking&lt;/a&gt; is an absolute benchmarking technique that allows one to compare the current performance of a manufacturing system against its performance limits in terms of Work in Process, Throughput and Cycle Time. The technique has been introduced in the award-winning &lt;em&gt;Factory Physics&lt;/em&gt; (FP) Book &lt;span class=&#34;citation&#34;&gt;(Hopp and Spearman &lt;a href=&#34;#ref-hopp2008factory&#34;&gt;2008&lt;/a&gt;)&lt;/span&gt;, and is a key component of the science-based manufacturing management approach described in &lt;span class=&#34;citation&#34;&gt;(Pound, Bell, and Spearman &lt;a href=&#34;#ref-pound2014factory&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;. This post will use &lt;a href=&#34;https://www.r-project.org/&#34;&gt;R&lt;/a&gt; to allow one to quickly run this analysis using the Basic Factory Dynamics equations found in the original FP books. I’ll also build on &lt;a href=&#34;/post/des-metamodeling-splines-r-arena/&#34;&gt;my previous posts on metamodeling&lt;/a&gt; to illustrate how they can be used to support a factory physics approach to flow benchmarking.&lt;/p&gt;
+&lt;div id=&#34;defining-factory-physics-laws&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Defining Factory Physics Laws&lt;/h2&gt;
 &lt;p&gt;The Flow Benchmarking analysis is grounded on Little’s Law (WIP = TH * CT), and utilizes three general cases as absolute benchmarks for any real manufacturing system: The &lt;strong&gt;Best Case&lt;/strong&gt;, the &lt;strong&gt;Worst Case&lt;/strong&gt; and the &lt;strong&gt;Practical Worst Case&lt;/strong&gt; .Please refer to &lt;span class=&#34;citation&#34;&gt;(Hopp and Spearman &lt;a href=&#34;#ref-hopp2008factory&#34;&gt;2008&lt;/a&gt;)&lt;/span&gt; and &lt;span class=&#34;citation&#34;&gt;(Pound, Bell, and Spearman &lt;a href=&#34;#ref-pound2014factory&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt; for the rationale for these laws and equations.&lt;/p&gt;
 &lt;p&gt;I’ll define these equations as R functions:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;calc_w0 = function(rb, t0) {rb * t0}
@@ -307,7 +307,51 @@ knitr::kable(head(data_benchmark))&lt;/code&gt;&lt;/pre&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;Ok, now I have a table with all the benchmarking results, let’s plot it!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;how-would-the-actual-system-behave-simulation-metamodeling-comes-in&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;How would the Actual System Behave? Simulation Metamodeling comes in&lt;/h1&gt;
+&lt;p&gt;Ok, now I have a table with all the basic benchmarking results. What if I have a better model of the system? (e.g., a Discrete Event Model or a better queueing model). We can accomplish this by building a discrete event simulation model of the actual system, and using a &lt;a href=&#34;/post/post/des-metamodeling-splines-r-arena/&#34;&gt;spline metamodel&lt;/a&gt; of this model approximate its results.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(arena2r)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;arena2r&amp;#39; was built under R version 3.5.2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyr)
+arena_data = arena2r::get_simulation_results(&amp;quot;2019-data/penny-fab&amp;quot;)
+
+# Filtering only Statistics of our Interest:
+
+filtered_data = subset(arena_data, Statistic %in% c(&amp;quot;w&amp;quot;, &amp;quot;LeadTime&amp;quot;, &amp;quot;Throughput&amp;quot;))
+
+# Spreading and Data Wrangling
+
+final_data = filtered_data %&amp;gt;% 
+  tidyr::spread(Statistic, Value) %&amp;gt;%
+  dplyr::select(LeadTime, Throughput, w)
+
+colnames(final_data) = c(&amp;quot;CycleTime&amp;quot;, &amp;quot;Throughput&amp;quot;, &amp;quot;WIP&amp;quot;)
+
+# Now, build a spline metamodel for CycleTime and Throughput as a function of WIP.
+
+th_model = lm(Throughput ~ splines::bs(WIP), data = final_data)
+
+ct_model = lm(CycleTime ~ WIP, data = final_data)
+
+# Put Together a Final DataFrame like the Benchmarking:
+
+model_data = data.frame(
+  WIP = unique(data_benchmark$WIP),
+  Throughput = predict(th_model, subset(data_benchmark, Scenario == &amp;quot;Best Case&amp;quot;)),
+  CycleTime = predict(ct_model, subset(data_benchmark, Scenario == &amp;quot;Best Case&amp;quot;)),
+  Scenario = &amp;quot;DES Model&amp;quot;
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning in splines::bs(WIP, degree = 3L, knots = numeric(0), Boundary.knots
+## = c(1, : some &amp;#39;x&amp;#39; values beyond boundary knots may cause ill-conditioned
+## bases&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Adding our Model&amp;#39;s Data to the DataFrame:
+
+data_benchmark = rbind(
+  data_benchmark,
+  model_data
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, let’s plot it!&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyr)
 library(ggplot2)
 library(viridis)&lt;/code&gt;&lt;/pre&gt;
@@ -327,10 +371,14 @@ plot_benchmarking = function(data) {
 
 # Then let&amp;#39;s just benchmark and plot!
 
-plot_benchmarking(data = benchmark_flow(rb = 0.5, t0 = 8, wip_mult = 5))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-04-20-factory-physics-flow-benchmarking-with-arena-and-r_files/figure-html/factory-physics-flow-benchmarking-cycletime-wip-throughput-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+plot_benchmarking(data = data_benchmark)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-04-20-factory-physics-flow-benchmarking-with-r_files/figure-html/factory-physics-flow-benchmarking-cycletime-wip-throughput-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Cool! My simulation model is quite equivalent to the marginal case.&lt;/p&gt;
+&lt;div id=&#34;final-thoughts&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Final Thoughts&lt;/h2&gt;
 &lt;p&gt;After plotting the benchmarking curves, compare the curves with the system’s actual condition (mark an “x” indicating the system’s actual WIP, Cycle Time and Throughput), and have a productive discussion about how to improve it. Again, I suggest you to read the &lt;span class=&#34;citation&#34;&gt;(Pound, Bell, and Spearman &lt;a href=&#34;#ref-pound2014factory&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt; book to understand the many uses of this plot.&lt;/p&gt;
-&lt;p&gt;If you would like to perform a more detailed analysis of a complex system, it’s possible to use a Simulation Model of the actual system, and plot the results from Simulation Runs (you would see a another line on these plots). Doing this would allow you to gain predictive insight of where the system &lt;strong&gt;will be&lt;/strong&gt; if you add WIP or make improvements.&lt;/p&gt;
+&lt;p&gt;As I demonstrated, using a metamodel is interesting because you can have more confidence that the system will behave as expected &lt;em&gt;if&lt;/em&gt; you decide to reduce or increase WIP, for instance. In this particular case, the model behavior roughly maches the Marginal Case behavior, but this may not be the case in the real system. In case the system currently performs worse than the Marginal Case, the model can be used to simulate different improvement scenarios, and how they push the system towards the benchmark curves. Doing this would allow you to gain predictive insight of where the system &lt;strong&gt;will be&lt;/strong&gt; if you add WIP or make improvements.&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level1 unnumbered&#34;&gt;
 &lt;h1&gt;References&lt;/h1&gt;

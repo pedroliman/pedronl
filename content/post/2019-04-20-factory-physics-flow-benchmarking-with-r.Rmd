@@ -1,5 +1,5 @@
 ---
-title: Factory Physics' Flow Benchmarking in R
+title: Factory Physics' Flow Benchmarking in R (with Metamodeling)
 author: Pedro N. de Lima
 date: '2019-04-20'
 slug: factory-physics-flow-benchmarking-in-r
@@ -9,6 +9,8 @@ categories:
 tags:
   - R
   - Simulation
+  - Arena
+  - Arena2r
 header:
   caption: ''
   image: ''
@@ -16,9 +18,9 @@ bibliography: [references/references-metamodeling.bib]
 link-citations: true
 ---
 
-[Flow Benchmarking](https://factoryphysics.com/flow-benchmarking) is an absolute benchmarking technique that allows one to visualize the performance limits of a manufacturing system in terms of Work in Process, Throughput and Cycle Time. This technique has been introduced in the award-winning *Factory Physics* (FP) Book [@hopp2008factory], and is a key component of the science-based manufacturing management approach described in [@pound2014factory]. This post will use [R](https://www.r-project.org/) to allow one to quickly run this analysis using the Basic Factory Dynamics equations found in the original FP books.
+[Flow Benchmarking](https://factoryphysics.com/flow-benchmarking) is an absolute benchmarking technique that allows one to compare the current performance of a manufacturing system against its performance limits in terms of Work in Process, Throughput and Cycle Time. The technique has been introduced in the award-winning *Factory Physics* (FP) Book [@hopp2008factory], and is a key component of the science-based manufacturing management approach described in [@pound2014factory]. This post will use [R](https://www.r-project.org/) to allow one to quickly run this analysis using the Basic Factory Dynamics equations found in the original FP books. I'll also build on [my previous posts on metamodeling](/post/des-metamodeling-splines-r-arena/) to illustrate how they can be used to support a factory physics approach to flow benchmarking.
 
-## Defining FP Laws
+## Defining Factory Physics Laws
 
 The Flow Benchmarking analysis is grounded on Little's Law (WIP = TH * CT), and utilizes three general cases as absolute benchmarks for any real manufacturing system: The **Best Case**, the **Worst Case** and the **Practical Worst Case** .Please refer to [@hopp2008factory] and [@pound2014factory] for the rationale for these laws and equations. 
 
@@ -98,7 +100,55 @@ data_benchmark = benchmark_flow(rb = 0.5, t0 = 8)
 knitr::kable(head(data_benchmark))
 ```
 
-Ok, now I have a table with all the benchmarking results, let's plot it!
+
+# How would the Actual System Behave? Simulation Metamodeling comes in
+Ok, now I have a table with all the basic benchmarking results. What if I have a better model of the system? (e.g., a Discrete Event Model or a better queueing model). We can accomplish this by building a discrete event simulation model of the actual system, and using a [spline metamodel](/post/post/des-metamodeling-splines-r-arena/) of this model approximate its results.
+
+```{r simulation-model}
+
+
+library(arena2r)
+library(tidyr)
+arena_data = arena2r::get_simulation_results("2019-data/penny-fab")
+
+# Filtering only Statistics of our Interest:
+
+filtered_data = subset(arena_data, Statistic %in% c("w", "LeadTime", "Throughput"))
+
+# Spreading and Data Wrangling
+
+final_data = filtered_data %>% 
+  tidyr::spread(Statistic, Value) %>%
+  dplyr::select(LeadTime, Throughput, w)
+
+colnames(final_data) = c("CycleTime", "Throughput", "WIP")
+
+# Now, build a spline metamodel for CycleTime and Throughput as a function of WIP.
+
+th_model = lm(Throughput ~ splines::bs(WIP), data = final_data)
+
+ct_model = lm(CycleTime ~ WIP, data = final_data)
+
+# Put Together a Final DataFrame like the Benchmarking:
+
+model_data = data.frame(
+  WIP = unique(data_benchmark$WIP),
+  Throughput = predict(th_model, subset(data_benchmark, Scenario == "Best Case")),
+  CycleTime = predict(ct_model, subset(data_benchmark, Scenario == "Best Case")),
+  Scenario = "DES Model"
+)
+
+# Adding our Model's Data to the DataFrame:
+
+data_benchmark = rbind(
+  data_benchmark,
+  model_data
+)
+
+
+```
+
+Now, let's plot it!
 
 ```{r factory-physics-flow-benchmarking-cycletime-wip-throughput-plot}
 library(tidyr)
@@ -120,14 +170,20 @@ plot_benchmarking = function(data) {
 
 # Then let's just benchmark and plot!
 
-plot_benchmarking(data = benchmark_flow(rb = 0.5, t0 = 8, wip_mult = 5))
+plot_benchmarking(data = data_benchmark)
   
 
 ```
 
+Cool! My simulation model is quite equivalent to the marginal case.
+
+## Final Thoughts
+
 After plotting the benchmarking curves, compare the curves with the system's actual condition (mark an "x" indicating the system's actual WIP, Cycle Time and Throughput), and have a productive discussion about how to improve it. Again, I suggest you to read the [@pound2014factory] book to understand the many uses of this plot.
 
-If you would like to perform a more detailed analysis of a complex system, it's possible to use a Simulation Model of the actual system, and plot the results from Simulation Runs (you would see a another line on these plots). Doing this would allow you to gain predictive insight of where the system **will be** if you add WIP or make improvements.
+As I demonstrated, using a metamodel is interesting because you can have more confidence that the system will behave as expected *if* you decide to reduce or increase WIP, for instance. In this particular case, the model behavior roughly maches the Marginal Case behavior, but this may not be the case in the real system. In case the system currently performs worse than the Marginal Case, the model can be used to simulate different improvement scenarios, and how they push the system towards the benchmark curves. Doing this would allow you to gain predictive insight of where the system **will be** if you add WIP or make improvements.
+
+
 
 # References
 
