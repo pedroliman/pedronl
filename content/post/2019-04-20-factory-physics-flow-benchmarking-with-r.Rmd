@@ -105,10 +105,10 @@ knitr::kable(head(data_benchmark))
 Ok, now I have a table with all the basic benchmarking results. What if I have a better model of the system? (e.g., a Discrete Event Model or a better queueing model). We can accomplish this by building a discrete event simulation model of the actual system, and using a [spline metamodel](/post/post/des-metamodeling-splines-r-arena/) of this model approximate its results.
 
 ```{r simulation-model}
-
-
 library(arena2r)
 library(tidyr)
+library(splines)
+
 arena_data = arena2r::get_simulation_results("2019-data/penny-fab")
 
 # Filtering only Statistics of our Interest:
@@ -175,7 +175,28 @@ plot_benchmarking(data = data_benchmark)
 
 ```
 
-Cool! My simulation model is quite equivalent to the marginal case.
+Cool! My simulation metamodel is quite equivalent to the marginal case.
+
+## Tradeoff Frontiers
+
+If we plot Throughput vs Leadtime, we obtain tradeoff limits that bounds the system's possible performance.
+
+```{r tradeoff-frontier}
+
+plot_tradeoff = function(data) {
+    # Worst case is too pessimistic!
+    subset(data[,2:4], Scenario != "Worst Case") %>%
+    # gather(-Scenario, key = "var", value = "Value") %>%
+  ggplot(aes(x = Throughput,y = CycleTime, color = Scenario)) +
+    geom_line(size = 1) +
+    labs(title = "Tradeoff Frontier Plot") +
+    scale_color_viridis(discrete = TRUE, option = "D") + 
+    theme_bw()
+}
+
+plot_tradeoff(data = data_benchmark)
+
+```
 
 ## Final Thoughts
 
