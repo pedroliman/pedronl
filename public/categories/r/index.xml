@@ -18,7 +18,13 @@
       <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/factory-physics-flow-benchmarking-in-r/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://factoryphysics.com/flow-benchmarking&#34;&gt;Flow Benchmarking&lt;/a&gt; is an absolute benchmarking technique that allows one to compare the current performance of a manufacturing system against its performance limits in terms of Work in Process, Throughput and Cycle Time. The technique has been introduced in the award-winning &lt;em&gt;Factory Physics&lt;/em&gt; (FP) Book &lt;span class=&#34;citation&#34;&gt;(Hopp and Spearman &lt;a href=&#34;#ref-hopp2008factory&#34;&gt;2008&lt;/a&gt;)&lt;/span&gt;, and is a key component of the science-based manufacturing management approach described in &lt;span class=&#34;citation&#34;&gt;(Pound, Bell, and Spearman &lt;a href=&#34;#ref-pound2014factory&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;. This post will use &lt;a href=&#34;https://www.r-project.org/&#34;&gt;R&lt;/a&gt; to allow one to quickly run this analysis using the Basic Factory Dynamics equations found in the original FP books. I’ll also build on &lt;a href=&#34;/post/des-metamodeling-splines-r-arena/&#34;&gt;my previous posts on metamodeling&lt;/a&gt; to illustrate how they can be used to support a factory physics approach to flow benchmarking.&lt;/p&gt;
+      <description>&lt;p&gt;Teaching MBA / MBE classes to seasoned managers is not easy, specially to young lecturers like me. At the same time, it’s necessary to bring new thoughts to the table, and to provide a fundamental basis for experienced people with diverse backgrounds. One of the strategies I found to overcome these obstacles this week was to use a new analysis framework (in my case, Factory Physics concepts) and use that to challenge their views about existing frames they already master (in my case, Lean Manufacturing and Theory of Constraints). Also, using some advanced analytics and lively visuals (like the many-objective parallel plot below) helped to get the course going.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-data/many-objective-inventory-tradeoffs.gif&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Turns out, this really worked well! This post shares some of the &lt;a href=&#34;https://www.r-project.org/&#34;&gt;R&lt;/a&gt; code I developed while putting together course materials and is an illustration of how to use &lt;a href=&#34;/post/des-metamodeling-splines-r-arena/&#34;&gt;simulation metamodeling&lt;/a&gt; and Arena to Run Factory Physics’ Flow Benchmarking.&lt;/p&gt;
+&lt;div id=&#34;flow-benchmarking&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Flow Benchmarking&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://factoryphysics.com/flow-benchmarking&#34;&gt;Flow Benchmarking&lt;/a&gt; is an absolute benchmarking technique useful to determine how close a production flow is to its best possible performance. The technique has been introduced in the award-winning &lt;em&gt;Factory Physics&lt;/em&gt; (FP) Book &lt;span class=&#34;citation&#34;&gt;(Hopp and Spearman &lt;a href=&#34;#ref-hopp2008factory&#34;&gt;2008&lt;/a&gt;)&lt;/span&gt;, and is a key component of the science-based manufacturing management approach described in &lt;span class=&#34;citation&#34;&gt;(Pound, Bell, and Spearman &lt;a href=&#34;#ref-pound2014factory&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div id=&#34;defining-factory-physics-laws&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Defining Factory Physics Laws&lt;/h2&gt;
 &lt;p&gt;The Flow Benchmarking analysis is grounded on Little’s Law (WIP = TH * CT), and utilizes three general cases as absolute benchmarks for any real manufacturing system: The &lt;strong&gt;Best Case&lt;/strong&gt;, the &lt;strong&gt;Worst Case&lt;/strong&gt; and the &lt;strong&gt;Practical Worst Case&lt;/strong&gt; .Please refer to &lt;span class=&#34;citation&#34;&gt;(Hopp and Spearman &lt;a href=&#34;#ref-hopp2008factory&#34;&gt;2008&lt;/a&gt;)&lt;/span&gt; and &lt;span class=&#34;citation&#34;&gt;(Pound, Bell, and Spearman &lt;a href=&#34;#ref-pound2014factory&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt; for the rationale for these laws and equations.&lt;/p&gt;
@@ -36,10 +42,10 @@ th_worst = function(t0){1/t0}
 ct_marginal = function(t0,w,rb){t0+(w-1)/rb}
 
 th_marginal = function(w0,w,rb){rb*w/(w0+w-1)}&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;In summary, these equations provide a starting point to discuss how well a manufacturing system is doing in terms of converting inventory to Throughput. The initial analysis requires two inputs. The first input is the &lt;strong&gt;Bottleneck rate (rb)&lt;/strong&gt;, which is the production rate (parts, orders / time) of the bottleneck (defined as the process center with the highest long-term utilization). The second parameter is the &lt;strong&gt;Total Raw Processing Time (t0)&lt;/strong&gt;, which is the sum of the long-term average process times of each processing center. Based on these two parameters, its possible to draw benchmarking curves for the System’s Throughput and Cycle Time as a function of its Work in Process, assuming a CONWIP control system &lt;span class=&#34;citation&#34;&gt;(SPEARMAN, WOODRUFF, and HOPP &lt;a href=&#34;#ref-Spearman1990&#34;&gt;1990&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;In summary, these equations provide a starting point to discuss how well a manufacturing system is doing in terms of converting inventory to Throughput. The initial analysis requires two inputs. The first input is the &lt;strong&gt;Bottleneck rate (rb)&lt;/strong&gt;, which is the production rate (parts, orders / time) of the bottleneck (defined as the process center with the highest long-term utilization). The second parameter is the &lt;strong&gt;Total Raw Processing Time (t0)&lt;/strong&gt;, which is the sum of the long-term average process times of each processing center. Based on these two parameters, it’s possible to draw benchmarking curves for the System’s Throughput and Cycle Time as a function of its Work in Process, assuming a CONWIP control system &lt;span class=&#34;citation&#34;&gt;(SPEARMAN, WOODRUFF, and HOPP &lt;a href=&#34;#ref-Spearman1990&#34;&gt;1990&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;drawing-benchmarking-curves&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Drawing Benchmarking Curves&lt;/h2&gt;
+&lt;div id=&#34;drawing-absolute-benchmarking-curves&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Drawing Absolute Benchmarking Curves&lt;/h2&gt;
 &lt;p&gt;Once I have the basic laws of manufacturing dynamics as R functions, I’ll create a &lt;code&gt;benchmarck_flow&lt;/code&gt; function to execute the analysis. This function accepts the &lt;code&gt;rb&lt;/code&gt; and &lt;code&gt;t0&lt;/code&gt; parameters and will calculate the system’s Throughput and Cycle time as a function of the wip under different scenarios for benchmarking purposes.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## Defining Cycle time and Throughput functions
 
@@ -136,12 +142,14 @@ knitr::kable(head(data_benchmark))&lt;/code&gt;&lt;/pre&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-&lt;div id=&#34;how-would-the-actual-system-behave-simulation-metamodeling-comes-in&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;How would the Actual System Behave? Simulation Metamodeling comes in&lt;/h1&gt;
-&lt;p&gt;Ok, now I have a table with all the basic benchmarking results. What if I have a better model of the system? (e.g., a Discrete Event Model or a better queueing model). We can accomplish this by building a discrete event simulation model of the actual system, and using a &lt;a href=&#34;/post/post/des-metamodeling-splines-r-arena/&#34;&gt;spline metamodel&lt;/a&gt; of this model approximate its results.&lt;/p&gt;
+&lt;div id=&#34;how-would-the-actual-system-behave&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;How would the Actual System Behave?&lt;/h1&gt;
+&lt;p&gt;Ok, now I have a table with all the basic benchmarking results. What if I have a better model of the system? We can accomplish this by building a discrete event simulation model of the actual system, and using a &lt;a href=&#34;/post/post/des-metamodeling-splines-r-arena/&#34;&gt;metamodel&lt;/a&gt; of this model approximate its results. During my course, I used several different &lt;a href=&#34;https://www.arenasimulation.com&#34;&gt;Arena Simulation&lt;/a&gt; Models to illustrate that adding variability to the system always degrades performance (as the theory predicts!). Doing so allowed the students to build confidence into the model and the theory, which was great! (regret not doing so previously in simulation projects!).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(arena2r)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;arena2r&amp;#39; was built under R version 3.5.2&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyr)
+library(splines)
+
 arena_data = arena2r::get_simulation_results(&amp;quot;2019-data/penny-fab&amp;quot;)
 
 # Filtering only Statistics of our Interest:
@@ -179,7 +187,7 @@ data_benchmark = rbind(
   data_benchmark,
   model_data
 )&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now, let’s plot it!&lt;/p&gt;
+&lt;p&gt;Ok, so Now, let’s plot it!&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyr)
 library(ggplot2)
 library(viridis)&lt;/code&gt;&lt;/pre&gt;
@@ -201,10 +209,21 @@ plot_benchmarking = function(data) {
 
 plot_benchmarking(data = data_benchmark)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/2019-04-20-factory-physics-flow-benchmarking-with-r_files/figure-html/factory-physics-flow-benchmarking-cycletime-wip-throughput-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Cool! My simulation model is quite equivalent to the marginal case.&lt;/p&gt;
+&lt;p&gt;Cool! My simulation metamodel is still quite equivalent to the marginal case.&lt;/p&gt;
+&lt;p&gt;However, it has one advantage. I can now build a model that can simulate arbitrarily complex scenarios (e,g.: I can include different product routings, change product mix, include non-stationary demand, simulate setup time reduction, even maybe use a multi-method model, etc.) and I can still use my model will be likely a better approximation of the actual system than any simple queueing network model.&lt;/p&gt;
+&lt;div id=&#34;wrapping-up-with-tradeoffs-and-many-objective-visuals&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Wrapping up with Tradeoffs and Many-Objective Visuals&lt;/h2&gt;
+&lt;p&gt;I also used simulation models to illustrate the impacts of not optimizing inventory systems, or optimizing them with an arbitrary service level definition. Unfortunetly, trying to use R to this task wasn’t productive. I ended up using &lt;a href=&#34;https://www.decisionvis.com/ddv/&#34;&gt;DiscoveryDV&lt;/a&gt;, which is a great tool for many-objective visualization.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/post/2019-data/many-objective-inventory-tradeoffs.gif&#34; alt=&#34;Tradeoffs in Inventory Management&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Tradeoffs in Inventory Management&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;div id=&#34;final-thoughts&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Final Thoughts&lt;/h2&gt;
-&lt;p&gt;After plotting the benchmarking curves, compare the curves with the system’s actual condition (mark an “x” indicating the system’s actual WIP, Cycle Time and Throughput), and have a productive discussion about how to improve it. Again, I suggest you to read the &lt;span class=&#34;citation&#34;&gt;(Pound, Bell, and Spearman &lt;a href=&#34;#ref-pound2014factory&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt; book to understand the many uses of this plot.&lt;/p&gt;
+&lt;p&gt;After plotting the benchmarking curves, compare the curves with the system’s actual condition (mark an “x” indicating the system’s actual WIP, Cycle Time and Throughput), and have a productive discussion about how to improve it.&lt;/p&gt;
+&lt;p&gt;This discussion might lead to several questions like these: “What if we change our batch sizes? What if we were able to invest on a more reliable machine? What if…?” These questions may lead to two possible outcomes. One possible direction is finding obvious quick wins. In this case, there’s no need to further discussion or analysis. However, it’s also possible to find high-cost and high-potential ideas. In this case, it might be a good idea to use the tool for the job: simulation! In that case, it might be useful to improve the underlying simulation model allowing it to simulate the potential high-cost improvements.&lt;/p&gt;
+&lt;p&gt;Again, I suggest you to read the &lt;span class=&#34;citation&#34;&gt;(Pound, Bell, and Spearman &lt;a href=&#34;#ref-pound2014factory&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt; book to understand the many uses of this plot.&lt;/p&gt;
 &lt;p&gt;As I demonstrated, using a metamodel is interesting because you can have more confidence that the system will behave as expected &lt;em&gt;if&lt;/em&gt; you decide to reduce or increase WIP, for instance. In this particular case, the model behavior roughly maches the Marginal Case behavior, but this may not be the case in the real system. In case the system currently performs worse than the Marginal Case, the model can be used to simulate different improvement scenarios, and how they push the system towards the benchmark curves. Doing this would allow you to gain predictive insight of where the system &lt;strong&gt;will be&lt;/strong&gt; if you add WIP or make improvements.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
