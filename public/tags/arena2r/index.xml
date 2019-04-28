@@ -1,36 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Arena2R on Pedro N. de Lima</title>
+    <title>Arena2r on Pedro N. de Lima</title>
     <link>/tags/arena2r/</link>
-    <description>Recent content in Arena2R on Pedro N. de Lima</description>
+    <description>Recent content in Arena2r on Pedro N. de Lima</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 14 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 28 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/arena2r/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Discrete Event Simulation (DES) Metamodeling - Splines with R and Arena</title>
-      <link>/post/des-metamodeling-splines-r-arena/</link>
-      <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
+      <title>Teaching Factory Physics Flow Benchmarking with R and Many-Objective Visuals</title>
+      <link>/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/</link>
+      <pubDate>Sun, 28 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/des-metamodeling-splines-r-arena/</guid>
-      <description>Simulation Metamodeling - building and using surrogate models that can approximate results from more complicated simulation models - is an interesting approach to analyze results from complicated, computationally expensive simulation models. Metamodels are useful because they can yield good approximations of the original simulation model response variables using less computational resources. For an introduction to Metamodeling, refer to (Barton 2015).
-To my knowledge, no Discrete-Event Simulation (DES) software provides metamodeling capabilities, and guidance on how to actually execute metamodeling is scarce.</description>
-    </item>
-    
-    <item>
-      <title>Making Sense of Simulation Models with Metamodels Part 1 - Low-Order Polynomials with Arena and R</title>
-      <link>/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/</link>
-      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/</guid>
-      <description>This is part 1 of a series of posts in which I will explore the utility of using metamodels to make sense of (and possibly optimizing) simulation models.
-If you used simulation modeling on a real project, you might be familiar with this fictional story:
-You spent long hours building and refining your simulation model (eg.: a Discrete Event Model). Hopefully, you are confident that it can yield reliable results.</description>
+      <guid>/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/</guid>
+      <description>Teaching to seasoned managers in MBE classes is challenging. While it’s important to bring new thoughts and ideas and not sound repetitive, it is necessary to provide a theoretical basis for experienced people with diverse backgrounds. One of the strategies I found to overcome these obstacles this week was to use a new analysis framework (in my case, Factory Physics concepts) to challenge their views about existing frames they already master.</description>
     </item>
     
   </channel>

@@ -1,0 +1,239 @@
+---
+title: Teaching Factory Physics Flow Benchmarking with R and Many-Objective Visuals
+author: Pedro N. de Lima
+date: '2019-04-28'
+slug: teaching-factory-physics-flow-benchmarking-r-many-objective-visuals
+categories:
+  - R Blogs
+  - R
+tags:
+  - R
+  - Simulation
+  - Arena
+  - Arena2r
+header:
+  caption: ''
+  image: ''
+bibliography: [references/references-metamodeling.bib]
+link-citations: true
+---
+
+
+
+<p>Teaching to seasoned managers in MBE classes is challenging. While it’s important to bring new thoughts and ideas and not sound repetitive, it is necessary to provide a theoretical basis for experienced people with diverse backgrounds. One of the strategies I found to overcome these obstacles this week was to use a new analysis framework (in my case, Factory Physics concepts) to challenge their views about existing frames they already master. Using a combination of concepts, simulation sodels, many-objective tradeoffs visuals (like the gif below) and tasks was great to challenge their intuition about manufacturing systems.</p>
+<p><img src="/post/2019-data/many-objective-inventory-tradeoffs.gif" /></p>
+<p>This post shares some of the <a href="https://www.r-project.org/">R</a> code I developed while putting together course materials. This post is also an example of how to use <a href="/post/des-metamodeling-splines-r-arena/">simulation metamodeling</a> and Arena to Run Factory Physics’ Flow Benchmarking.</p>
+<div id="flow-benchmarking" class="section level2">
+<h2>Flow Benchmarking</h2>
+<p><a href="https://factoryphysics.com/flow-benchmarking">Flow Benchmarking</a> is an absolute benchmarking technique useful to determine how close a production flow is to its best possible performance. The technique has been introduced in the award-winning <em>Factory Physics</em> (FP) Book <span class="citation">(Hopp and Spearman <a href="#ref-hopp2008factory">2008</a>)</span>, and is a key component of the science-based manufacturing management approach described in <span class="citation">(Pound, Bell, and Spearman <a href="#ref-pound2014factory">2014</a>)</span>.</p>
+</div>
+<div id="defining-factory-physics-laws" class="section level2">
+<h2>Defining Factory Physics Laws</h2>
+<p>The Flow Benchmarking analysis is grounded on Little’s Law (WIP = TH * CT), and utilizes three general cases as absolute benchmarks for any real manufacturing system: The <strong>Best Case</strong>, the <strong>Worst Case</strong> and the <strong>Practical Worst Case</strong> .Please refer to <span class="citation">(Hopp and Spearman <a href="#ref-hopp2008factory">2008</a>)</span> and <span class="citation">(Pound, Bell, and Spearman <a href="#ref-pound2014factory">2014</a>)</span> for the rationale for these laws and equations.</p>
+<p>I’ll define these equations as R functions:</p>
+<pre class="r"><code>calc_w0 = function(rb, t0) {rb * t0}
+
+ct_best = function(t0, w, w0, rb) {ifelse(w&lt;=w0,t0,w/rb)}
+
+th_best = function(t0, w, w0, rb) {ifelse(w&lt;=w0,w/t0,rb)}
+
+ct_worst = function(w,t0){w*t0}
+
+th_worst = function(t0){1/t0}
+
+ct_marginal = function(t0,w,rb){t0+(w-1)/rb}
+
+th_marginal = function(w0,w,rb){rb*w/(w0+w-1)}</code></pre>
+<p>In summary, these equations provide a starting point to discuss how well a manufacturing system is doing in terms of converting inventory to Throughput. The initial analysis requires two inputs. The first input is the <strong>Bottleneck rate (rb)</strong>, which is the production rate (parts, orders / time) of the bottleneck (defined as the process center with the highest long-term utilization). The second parameter is the <strong>Total Raw Processing Time (t0)</strong>, which is the sum of the long-term average process times of each processing center. Based on these two parameters, it’s possible to draw benchmarking curves for the System’s Throughput and Cycle Time as a function of its Work in Process, assuming a CONWIP control system <span class="citation">(SPEARMAN, WOODRUFF, and HOPP <a href="#ref-Spearman1990">1990</a>)</span>.</p>
+</div>
+<div id="drawing-absolute-benchmarking-curves" class="section level2">
+<h2>Drawing Absolute Benchmarking Curves</h2>
+<p>Once I have the basic laws of manufacturing dynamics as R functions, I’ll create a <code>benchmarck_flow</code> function to execute the analysis. This function accepts the <code>rb</code> and <code>t0</code> parameters and will calculate the system’s Throughput and Cycle time as a function of the wip under different scenarios for benchmarking purposes.</p>
+<pre class="r"><code>## Defining Cycle time and Throughput functions
+
+benchmark_flow = function(rb, t0, step = 1, wip_mult = 5) {
+  
+  # First, calculate wip_crit
+  w0 = calc_w0(rb = rb, t0 = t0)
+  
+  # Then, define WIP Range to consider:
+  wip = seq.int(from = 1, to = w0 * wip_mult, by = step)
+  
+  # Then, calculate The Best Case Variables
+  Best_Cycle_Time = ct_best(t0 = t0, w = wip, w0 = w0, rb = rb)
+  Best_Throughput = th_best(t0 = t0, w = wip, w0 = w0, rb = rb)
+  
+  best_data = data.frame(WIP = wip,
+                    Throughput = Best_Throughput,
+                    CycleTime = Best_Cycle_Time,
+                    Scenario = &quot;Best Case&quot;)
+  
+  # Calculate the Marginal Cases:
+  Marginal_Cycle_Time = ct_marginal(t0=t0,w=wip,rb=rb)
+  Marginal_Throughput = th_marginal(w0=w0,w=wip,rb=rb)
+  
+  marginal_data = data.frame(WIP = wip,
+                    Throughput = Marginal_Throughput,
+                    CycleTime = Marginal_Cycle_Time,
+                    Scenario = &quot;Marginal&quot;)
+  
+  # Calculate Worst Case
+  worst_data = data.frame(
+    WIP = wip,
+    Throughput = th_worst(t0 = t0),
+    CycleTime = ct_worst(w = wip, t0 = t0),
+    Scenario = &quot;Worst Case&quot;
+  )
+
+  # Output A DataFrame with results:
+  # I&#39;m not including the Worst Case because it&#39;s unrealistic (and messes up my cycle time plot).
+  rbind(best_data, marginal_data, worst_data)
+  
+}
+
+# The First Penny Fab Example:
+data_benchmark = benchmark_flow(rb = 0.5, t0 = 8)
+
+knitr::kable(head(data_benchmark))</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">WIP</th>
+<th align="right">Throughput</th>
+<th align="right">CycleTime</th>
+<th align="left">Scenario</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">0.125</td>
+<td align="right">8</td>
+<td align="left">Best Case</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="right">0.250</td>
+<td align="right">8</td>
+<td align="left">Best Case</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="right">0.375</td>
+<td align="right">8</td>
+<td align="left">Best Case</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="right">0.500</td>
+<td align="right">8</td>
+<td align="left">Best Case</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="right">0.500</td>
+<td align="right">10</td>
+<td align="left">Best Case</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="right">0.500</td>
+<td align="right">12</td>
+<td align="left">Best Case</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="how-would-the-actual-system-behave-if" class="section level2">
+<h2>How would the Actual System Behave if…</h2>
+<p>Ok, now I have a table with all the basic benchmarking results. What if I have a better model of the system? We can accomplish this by building a discrete event simulation model of the actual system, and using a <a href="/post/des-metamodeling-splines-r-arena/">metamodel</a> of this model to approximate its results (you can find the data from my penny fab model <a href="/post/2019-data/penny-fab/penny-fab.rar">here</a>). During my course, I used several <a href="https://www.arenasimulation.com">Arena Simulation</a> models to illustrate that adding variability to the system always degrades performance (as the variability law predicts!). Doing so allowed the students to build confidence into the model and the theory, which was great to see!</p>
+<pre class="r"><code>library(arena2r)</code></pre>
+<pre><code>## Warning: package &#39;arena2r&#39; was built under R version 3.5.2</code></pre>
+<pre class="r"><code>library(tidyr)
+library(splines)
+
+arena_data = arena2r::get_simulation_results(&quot;2019-data/penny-fab&quot;)
+
+# Filtering only Statistics of our Interest:
+
+filtered_data = subset(arena_data, Statistic %in% c(&quot;w&quot;, &quot;LeadTime&quot;, &quot;Throughput&quot;))
+
+# Spreading and Data Wrangling
+
+final_data = filtered_data %&gt;% 
+  tidyr::spread(Statistic, Value) %&gt;%
+  dplyr::select(LeadTime, Throughput, w)
+
+colnames(final_data) = c(&quot;CycleTime&quot;, &quot;Throughput&quot;, &quot;WIP&quot;)
+
+# Now, build a spline metamodel for CycleTime and Throughput as a function of WIP.
+
+th_model = lm(Throughput ~ splines::bs(WIP), data = final_data)
+
+ct_model = lm(CycleTime ~ WIP, data = final_data)
+
+# Put Together a Final DataFrame like the Benchmarking:
+
+model_data = data.frame(
+  WIP = unique(data_benchmark$WIP),
+  Throughput = predict(th_model, subset(data_benchmark, Scenario == &quot;Best Case&quot;)),
+  CycleTime = predict(ct_model, subset(data_benchmark, Scenario == &quot;Best Case&quot;)),
+  Scenario = &quot;DES Model&quot;
+)</code></pre>
+<pre><code>## Warning in splines::bs(WIP, degree = 3L, knots = numeric(0), Boundary.knots
+## = c(1, : some &#39;x&#39; values beyond boundary knots may cause ill-conditioned
+## bases</code></pre>
+<pre class="r"><code># Adding our Model&#39;s Data to the DataFrame:
+
+data_benchmark = rbind(
+  data_benchmark,
+  model_data
+)</code></pre>
+<p>Once we have data from the basic FP laws and from our model, let’s plot it!</p>
+<pre class="r"><code>library(tidyr)
+library(ggplot2)
+library(viridis)</code></pre>
+<pre><code>## Carregando pacotes exigidos: viridisLite</code></pre>
+<pre class="r"><code># Lets define a wrapper function for our plot:
+
+plot_benchmarking = function(data) {
+  data %&gt;%
+    gather(-WIP, -Scenario, key = &quot;var&quot;, value = &quot;Value&quot;) %&gt;%
+  ggplot(aes(x = WIP, y = Value, color = Scenario)) +
+    geom_line(size = 1) +
+    facet_wrap(~ var, scales = &quot;free&quot;, nrow = 2, ncol = 1) +
+    labs(title = &quot;Flow Benchmarking Plot&quot;) +
+    scale_color_viridis(discrete = TRUE, option = &quot;D&quot;) + 
+    theme_bw()
+}
+
+# Then let&#39;s just benchmark and plot!
+
+plot_benchmarking(data = data_benchmark)</code></pre>
+<p><img src="/post/2019-04-28-teaching-factory-physics-flow-benchmarking-with-r_files/figure-html/factory-physics-flow-benchmarking-cycletime-wip-throughput-plot-1.png" width="672" /></p>
+<p>Cool! My simulation metamodel is still quite equivalent to the marginal case.</p>
+<p>However, it has one advantage. I can now build a model that can simulate arbitrarily complex scenarios (e,g.: I can include different product routings, change product mix, include non-stationary demand, simulate setup time reduction, even maybe use a multi-method model, etc.) and my model will actually be a better approximation of the actual system than any simple queueing network model. Also, my model can simulate detailed improvement what-if scenarios, which queueing network models won’t be able to simulate.</p>
+</div>
+<div id="wrapping-up-with-tradeoffs-and-many-objective-visuals" class="section level2">
+<h2>Wrapping up with Tradeoffs and Many-Objective Visuals</h2>
+<p>I also used simulation models to illustrate tradeoffs implied by two simple decisions: How much WIP a manufacturing flow should have and what should be the reorder level of a part. Unfortunetly, trying to use R to this task wasn’t productive. I ended up using <a href="https://www.decisionvis.com/ddv/">DiscoveryDV</a>, which is a great tool for many-objective visualization.</p>
+<p>For instance, plotting WIP, Throughput, Cycle Time and Utilization of the Practical Worse Case yields this:</p>
+<p><img src="/post/2019-data/many-objective-inventory-tradeoffs.gif" /></p>
+<p>And visualizing the tradeoffs implied by different reorder levels in a <a href="https://en.wikipedia.org/wiki/Reorder_point">(Q,r) inventory system</a> yields this:
+<img src="/post/2019-data/inventory-tradeoffs.jpg" /></p>
+<p>At this point, many of the participants were excited to get to grips with models that illuminate tradeoffs they have been facing for years. Hopefully, their intuition was sharpened by these exercises and they will be better equiped to use these frontiers to promote productive and tradeoff-aware discussions.</p>
+</div>
+<div id="references" class="section level1 unnumbered">
+<h1>References</h1>
+<div id="refs" class="references">
+<div id="ref-hopp2008factory">
+<p>Hopp, W.J., and M.L. Spearman. 2008. <em>Factory Physics</em>. Irwin/Mcgraw-Hill Series in Operations and Decision Sciences. McGraw-Hill. <a href="https://books.google.com.br/books?id=tEjkAAAACAAJ">https://books.google.com.br/books?id=tEjkAAAACAAJ</a>.</p>
+</div>
+<div id="ref-pound2014factory">
+<p>Pound, E.S., J.H. Bell, and M.L. Spearman. 2014. <em>Factory Physics for Managers: How Leaders Improve Performance in a Post-Lean Six Sigma World</em>. McGraw-Hill Education. <a href="https://books.google.com.br/books?id=B5sXAwAAQBAJ">https://books.google.com.br/books?id=B5sXAwAAQBAJ</a>.</p>
+</div>
+<div id="ref-Spearman1990">
+<p>SPEARMAN, MARK L., DAVID L. WOODRUFF, and WALLACE J. HOPP. 1990. “CONWIP: A Pull Alternative to Kanban.” <em>International Journal of Production Research</em> 28 (5). Taylor &amp; Francis: 879–94. <a href="https://doi.org/10.1080/00207549008942761">https://doi.org/10.1080/00207549008942761</a>.</p>
+</div>
+</div>
+</div>
