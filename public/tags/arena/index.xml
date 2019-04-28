@@ -7,18 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sat, 20 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 28 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/arena/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Teaching Factory Physics Flow Benchmarking with R and Many-Objective Visuals</title>
-      <link>/post/factory-physics-flow-benchmarking-in-r/</link>
-      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+      <link>/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/</link>
+      <pubDate>Sun, 28 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/factory-physics-flow-benchmarking-in-r/</guid>
-      <description>Teaching MBA / MBE classes to seasoned managers is challenging. It’s important to bring new thoughts to the table, and at the same time to provide a fundamental basis for experienced people with diverse backgrounds. One of the strategies I found to overcome these obstacles this week was to use a new analysis framework (in my case, Factory Physics concepts) and use that to challenge their views about existing frames they already master.</description>
+      <guid>/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/</guid>
+      <description>Teaching to seasoned managers in MBE classes is challenging. While it’s important to bring new thoughts and ideas, it is necessary to provide a fundamental theo basis for experienced people with diverse backgrounds. One of the strategies I found to overcome these obstacles this week was to use a new analysis framework (in my case, Factory Physics concepts) to challenge their views about existing frames they already master. Using a combination of concepts, simulation sodels, many-objective tradeoffs visuals (like the gif below) and tasks was great to challenge their intuition about manufacturing systems.</description>
     </item>
     
   </channel>

@@ -1,8 +1,8 @@
 ---
 title: Teaching Factory Physics Flow Benchmarking with R and Many-Objective Visuals
 author: Pedro N. de Lima
-date: '2019-04-20'
-slug: factory-physics-flow-benchmarking-in-r
+date: '2019-04-28'
+slug: teaching-factory-physics-flow-benchmarking-r-many-objective-visuals
 categories:
   - R Blogs
   - R
@@ -18,11 +18,11 @@ bibliography: [references/references-metamodeling.bib]
 link-citations: true
 ---
 
-Teaching MBA / MBE classes to seasoned managers is challenging. It's important to bring new thoughts to the table, and at the same time to provide a fundamental basis for experienced people with diverse backgrounds. One of the strategies I found to overcome these obstacles this week was to use a new analysis framework (in my case, Factory Physics concepts) and use that to challenge their views about existing frames they already master. In the end, I used a combination of concepts, Simulation Models, many-objective tradeoffs visuals (like the gif below) and tasks to challenge their intuition about manufacturing systems, while teaching the fundamentals of factory dynamics. 
+Teaching to seasoned managers in MBE classes is challenging. While it's important to bring new thoughts and ideas, it is necessary to provide a fundamental theo basis for experienced people with diverse backgrounds. One of the strategies I found to overcome these obstacles this week was to use a new analysis framework (in my case, Factory Physics concepts) to challenge their views about existing frames they already master. Using a combination of concepts, simulation sodels, many-objective tradeoffs visuals (like the gif below) and tasks was great to challenge their intuition about manufacturing systems.
 
 ![](/post/2019-data/many-objective-inventory-tradeoffs.gif) 
 
-This post shares some of the [R](https://www.r-project.org/) code I developed while putting together course materials and is an example of how to use [simulation metamodeling](/post/des-metamodeling-splines-r-arena/) and Arena to Run Factory Physics' Flow Benchmarking.
+This post shares some of the [R](https://www.r-project.org/) code I developed while putting together course materials. This post is also an example of how to use [simulation metamodeling](/post/des-metamodeling-splines-r-arena/) and Arena to Run Factory Physics' Flow Benchmarking.
 
 ## Flow Benchmarking
 
@@ -109,9 +109,9 @@ knitr::kable(head(data_benchmark))
 ```
 
 
-## How would the Actual System Behave?
+## How would the Actual System Behave if...
 
-Ok, now I have a table with all the basic benchmarking results. What if I have a better model of the system? We can accomplish this by building a discrete event simulation model of the actual system, and using a [metamodel](/post/des-metamodeling-splines-r-arena/) of this model to approximate its results (you can find the data from my penny fab model [here](/post/2019-data/penny-fab/penny-fab.rar)). During my course, I used several different [Arena Simulation](https://www.arenasimulation.com) Models to illustrate that adding variability to the system always degrades performance (as the variability law predicts!). Doing so allowed the students to build confidence into the model and the theory, which was great to see!
+Ok, now I have a table with all the basic benchmarking results. What if I have a better model of the system? We can accomplish this by building a discrete event simulation model of the actual system, and using a [metamodel](/post/des-metamodeling-splines-r-arena/) of this model to approximate its results (you can find the data from my penny fab model [here](/post/2019-data/penny-fab/penny-fab.rar)). During my course, I used several [Arena Simulation](https://www.arenasimulation.com) models to illustrate that adding variability to the system always degrades performance (as the variability law predicts!). Doing so allowed the students to build confidence into the model and the theory, which was great to see!
 
 ```{r simulation-model}
 library(arena2r)

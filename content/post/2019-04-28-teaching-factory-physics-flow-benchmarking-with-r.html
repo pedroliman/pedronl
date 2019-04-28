@@ -1,8 +1,8 @@
 ---
 title: Teaching Factory Physics Flow Benchmarking with R and Many-Objective Visuals
 author: Pedro N. de Lima
-date: '2019-04-20'
-slug: factory-physics-flow-benchmarking-in-r
+date: '2019-04-28'
+slug: teaching-factory-physics-flow-benchmarking-r-many-objective-visuals
 categories:
   - R Blogs
   - R
@@ -20,9 +20,9 @@ link-citations: true
 
 
 
-<p>Teaching MBA / MBE classes to seasoned managers is challenging. It’s important to bring new thoughts to the table, and at the same time to provide a fundamental basis for experienced people with diverse backgrounds. One of the strategies I found to overcome these obstacles this week was to use a new analysis framework (in my case, Factory Physics concepts) and use that to challenge their views about existing frames they already master. In the end, I used a combination of concepts, Simulation Models, many-objective tradeoffs visuals (like the gif below) and tasks to challenge their intuition about manufacturing systems, while teaching the fundamentals of factory dynamics.</p>
+<p>Teaching to seasoned managers in MBE classes is challenging. While it’s important to bring new thoughts and ideas, it is necessary to provide a fundamental theo basis for experienced people with diverse backgrounds. One of the strategies I found to overcome these obstacles this week was to use a new analysis framework (in my case, Factory Physics concepts) to challenge their views about existing frames they already master. Using a combination of concepts, simulation sodels, many-objective tradeoffs visuals (like the gif below) and tasks was great to challenge their intuition about manufacturing systems.</p>
 <p><img src="/post/2019-data/many-objective-inventory-tradeoffs.gif" /></p>
-<p>This post shares some of the <a href="https://www.r-project.org/">R</a> code I developed while putting together course materials and is an example of how to use <a href="/post/des-metamodeling-splines-r-arena/">simulation metamodeling</a> and Arena to Run Factory Physics’ Flow Benchmarking.</p>
+<p>This post shares some of the <a href="https://www.r-project.org/">R</a> code I developed while putting together course materials. This post is also an example of how to use <a href="/post/des-metamodeling-splines-r-arena/">simulation metamodeling</a> and Arena to Run Factory Physics’ Flow Benchmarking.</p>
 <div id="flow-benchmarking" class="section level2">
 <h2>Flow Benchmarking</h2>
 <p><a href="https://factoryphysics.com/flow-benchmarking">Flow Benchmarking</a> is an absolute benchmarking technique useful to determine how close a production flow is to its best possible performance. The technique has been introduced in the award-winning <em>Factory Physics</em> (FP) Book <span class="citation">(Hopp and Spearman <a href="#ref-hopp2008factory">2008</a>)</span>, and is a key component of the science-based manufacturing management approach described in <span class="citation">(Pound, Bell, and Spearman <a href="#ref-pound2014factory">2014</a>)</span>.</p>
@@ -144,9 +144,9 @@ knitr::kable(head(data_benchmark))</code></pre>
 </tbody>
 </table>
 </div>
-<div id="how-would-the-actual-system-behave" class="section level2">
-<h2>How would the Actual System Behave?</h2>
-<p>Ok, now I have a table with all the basic benchmarking results. What if I have a better model of the system? We can accomplish this by building a discrete event simulation model of the actual system, and using a <a href="/post/des-metamodeling-splines-r-arena/">metamodel</a> of this model to approximate its results (you can find the data from my penny fab model <a href="/post/2019-data/penny-fab/penny-fab.rar">here</a>). During my course, I used several different <a href="https://www.arenasimulation.com">Arena Simulation</a> Models to illustrate that adding variability to the system always degrades performance (as the variability law predicts!). Doing so allowed the students to build confidence into the model and the theory, which was great to see!</p>
+<div id="how-would-the-actual-system-behave-if" class="section level2">
+<h2>How would the Actual System Behave if…</h2>
+<p>Ok, now I have a table with all the basic benchmarking results. What if I have a better model of the system? We can accomplish this by building a discrete event simulation model of the actual system, and using a <a href="/post/des-metamodeling-splines-r-arena/">metamodel</a> of this model to approximate its results (you can find the data from my penny fab model <a href="/post/2019-data/penny-fab/penny-fab.rar">here</a>). During my course, I used several <a href="https://www.arenasimulation.com">Arena Simulation</a> models to illustrate that adding variability to the system always degrades performance (as the variability law predicts!). Doing so allowed the students to build confidence into the model and the theory, which was great to see!</p>
 <pre class="r"><code>library(arena2r)</code></pre>
 <pre><code>## Warning: package &#39;arena2r&#39; was built under R version 3.5.2</code></pre>
 <pre class="r"><code>library(tidyr)
@@ -210,7 +210,7 @@ plot_benchmarking = function(data) {
 # Then let&#39;s just benchmark and plot!
 
 plot_benchmarking(data = data_benchmark)</code></pre>
-<p><img src="/post/2019-04-20-factory-physics-flow-benchmarking-with-r_files/figure-html/factory-physics-flow-benchmarking-cycletime-wip-throughput-plot-1.png" width="672" /></p>
+<p><img src="/post/2019-04-28-teaching-factory-physics-flow-benchmarking-with-r_files/figure-html/factory-physics-flow-benchmarking-cycletime-wip-throughput-plot-1.png" width="672" /></p>
 <p>Cool! My simulation metamodel is still quite equivalent to the marginal case.</p>
 <p>However, it has one advantage. I can now build a model that can simulate arbitrarily complex scenarios (e,g.: I can include different product routings, change product mix, include non-stationary demand, simulate setup time reduction, even maybe use a multi-method model, etc.) and my model will actually be a better approximation of the actual system than any simple queueing network model. Also, my model can simulate detailed improvement what-if scenarios, which queueing network models won’t be able to simulate.</p>
 </div>

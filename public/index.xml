@@ -186,13 +186,13 @@
     
     <item>
       <title>Teaching Factory Physics Flow Benchmarking with R and Many-Objective Visuals</title>
-      <link>/post/factory-physics-flow-benchmarking-in-r/</link>
-      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+      <link>/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/</link>
+      <pubDate>Sun, 28 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/factory-physics-flow-benchmarking-in-r/</guid>
-      <description>&lt;p&gt;Teaching MBA / MBE classes to seasoned managers is challenging. It’s important to bring new thoughts to the table, and at the same time to provide a fundamental basis for experienced people with diverse backgrounds. One of the strategies I found to overcome these obstacles this week was to use a new analysis framework (in my case, Factory Physics concepts) and use that to challenge their views about existing frames they already master. In the end, I used a combination of concepts, Simulation Models, many-objective tradeoffs visuals (like the gif below) and tasks to challenge their intuition about manufacturing systems, while teaching the fundamentals of factory dynamics.&lt;/p&gt;
+      <guid>/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/</guid>
+      <description>&lt;p&gt;Teaching to seasoned managers in MBE classes is challenging. While it’s important to bring new thoughts and ideas, it is necessary to provide a fundamental theo basis for experienced people with diverse backgrounds. One of the strategies I found to overcome these obstacles this week was to use a new analysis framework (in my case, Factory Physics concepts) to challenge their views about existing frames they already master. Using a combination of concepts, simulation sodels, many-objective tradeoffs visuals (like the gif below) and tasks was great to challenge their intuition about manufacturing systems.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/post/2019-data/many-objective-inventory-tradeoffs.gif&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;This post shares some of the &lt;a href=&#34;https://www.r-project.org/&#34;&gt;R&lt;/a&gt; code I developed while putting together course materials and is an example of how to use &lt;a href=&#34;/post/des-metamodeling-splines-r-arena/&#34;&gt;simulation metamodeling&lt;/a&gt; and Arena to Run Factory Physics’ Flow Benchmarking.&lt;/p&gt;
+&lt;p&gt;This post shares some of the &lt;a href=&#34;https://www.r-project.org/&#34;&gt;R&lt;/a&gt; code I developed while putting together course materials. This post is also an example of how to use &lt;a href=&#34;/post/des-metamodeling-splines-r-arena/&#34;&gt;simulation metamodeling&lt;/a&gt; and Arena to Run Factory Physics’ Flow Benchmarking.&lt;/p&gt;
 &lt;div id=&#34;flow-benchmarking&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Flow Benchmarking&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://factoryphysics.com/flow-benchmarking&#34;&gt;Flow Benchmarking&lt;/a&gt; is an absolute benchmarking technique useful to determine how close a production flow is to its best possible performance. The technique has been introduced in the award-winning &lt;em&gt;Factory Physics&lt;/em&gt; (FP) Book &lt;span class=&#34;citation&#34;&gt;(Hopp and Spearman &lt;a href=&#34;#ref-hopp2008factory&#34;&gt;2008&lt;/a&gt;)&lt;/span&gt;, and is a key component of the science-based manufacturing management approach described in &lt;span class=&#34;citation&#34;&gt;(Pound, Bell, and Spearman &lt;a href=&#34;#ref-pound2014factory&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
@@ -314,9 +314,9 @@ knitr::kable(head(data_benchmark))&lt;/code&gt;&lt;/pre&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-&lt;div id=&#34;how-would-the-actual-system-behave&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;How would the Actual System Behave?&lt;/h2&gt;
-&lt;p&gt;Ok, now I have a table with all the basic benchmarking results. What if I have a better model of the system? We can accomplish this by building a discrete event simulation model of the actual system, and using a &lt;a href=&#34;/post/des-metamodeling-splines-r-arena/&#34;&gt;metamodel&lt;/a&gt; of this model to approximate its results (you can find the data from my penny fab model &lt;a href=&#34;/post/2019-data/penny-fab/penny-fab.rar&#34;&gt;here&lt;/a&gt;). During my course, I used several different &lt;a href=&#34;https://www.arenasimulation.com&#34;&gt;Arena Simulation&lt;/a&gt; Models to illustrate that adding variability to the system always degrades performance (as the variability law predicts!). Doing so allowed the students to build confidence into the model and the theory, which was great to see!&lt;/p&gt;
+&lt;div id=&#34;how-would-the-actual-system-behave-if&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;How would the Actual System Behave if…&lt;/h2&gt;
+&lt;p&gt;Ok, now I have a table with all the basic benchmarking results. What if I have a better model of the system? We can accomplish this by building a discrete event simulation model of the actual system, and using a &lt;a href=&#34;/post/des-metamodeling-splines-r-arena/&#34;&gt;metamodel&lt;/a&gt; of this model to approximate its results (you can find the data from my penny fab model &lt;a href=&#34;/post/2019-data/penny-fab/penny-fab.rar&#34;&gt;here&lt;/a&gt;). During my course, I used several &lt;a href=&#34;https://www.arenasimulation.com&#34;&gt;Arena Simulation&lt;/a&gt; models to illustrate that adding variability to the system always degrades performance (as the variability law predicts!). Doing so allowed the students to build confidence into the model and the theory, which was great to see!&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(arena2r)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;arena2r&amp;#39; was built under R version 3.5.2&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyr)
@@ -380,7 +380,7 @@ plot_benchmarking = function(data) {
 # Then let&amp;#39;s just benchmark and plot!
 
 plot_benchmarking(data = data_benchmark)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-04-20-factory-physics-flow-benchmarking-with-r_files/figure-html/factory-physics-flow-benchmarking-cycletime-wip-throughput-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-04-28-teaching-factory-physics-flow-benchmarking-with-r_files/figure-html/factory-physics-flow-benchmarking-cycletime-wip-throughput-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Cool! My simulation metamodel is still quite equivalent to the marginal case.&lt;/p&gt;
 &lt;p&gt;However, it has one advantage. I can now build a model that can simulate arbitrarily complex scenarios (e,g.: I can include different product routings, change product mix, include non-stationary demand, simulate setup time reduction, even maybe use a multi-method model, etc.) and my model will actually be a better approximation of the actual system than any simple queueing network model. Also, my model can simulate detailed improvement what-if scenarios, which queueing network models won’t be able to simulate.&lt;/p&gt;
 &lt;/div&gt;
