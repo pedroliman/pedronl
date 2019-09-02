@@ -7,19 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Thu, 28 Apr 2016 00:00:00 -0300</lastBuildDate>
+    <lastBuildDate>Sun, 28 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Academic</title>
-      <link>/tags/academic/</link>
-      <pubDate>Thu, 28 Apr 2016 00:00:00 -0300</pubDate>
-      
-      <guid>/tags/academic/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Arena</title>
@@ -31,29 +22,38 @@
     </item>
     
     <item>
+      <title>Arena2R</title>
+      <link>/tags/arena2r/</link>
+      <pubDate>Sun, 28 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/arena2r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>/tags/r/</link>
+      <pubDate>Sun, 28 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Simulation</title>
+      <link>/tags/simulation/</link>
+      <pubDate>Sun, 28 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/simulation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Arena Simualtion</title>
       <link>/tags/arena-simualtion/</link>
       <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/arena-simualtion/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Arena2R</title>
-      <link>/tags/arena2r/</link>
-      <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/arena2r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Arena2r</title>
-      <link>/tags/arena2r/</link>
-      <pubDate>Sun, 28 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/arena2r/</guid>
       <description></description>
     </item>
     
@@ -85,42 +85,6 @@
     </item>
     
     <item>
-      <title>R</title>
-      <link>/tags/r/</link>
-      <pubDate>Sun, 28 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R Package</title>
-      <link>/tags/r-package/</link>
-      <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/r-package/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Simulation</title>
-      <link>/tags/simulation/</link>
-      <pubDate>Sun, 28 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/simulation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Software</title>
-      <link>/tags/software/</link>
-      <pubDate>Thu, 28 Apr 2016 00:00:00 -0300</pubDate>
-      
-      <guid>/tags/software/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Suavização Exponencial</title>
       <link>/tags/suaviza%C3%A7%C3%A3o-exponencial/</link>
       <pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
@@ -135,6 +99,33 @@
       <pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/s%C3%A9ries-temporais/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R Package</title>
+      <link>/tags/r-package/</link>
+      <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/r-package/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Academic</title>
+      <link>/tags/academic/</link>
+      <pubDate>Thu, 28 Apr 2016 00:00:00 -0300</pubDate>
+      
+      <guid>/tags/academic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Software</title>
+      <link>/tags/software/</link>
+      <pubDate>Thu, 28 Apr 2016 00:00:00 -0300</pubDate>
+      
+      <guid>/tags/software/</guid>
       <description></description>
     </item>
     

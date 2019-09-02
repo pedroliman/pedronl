@@ -18,7 +18,7 @@
       <pubDate>Thu, 28 Apr 2016 00:00:00 -0300</pubDate>
       
       <guid>/project/arena2r/</guid>
-      <description>Arena2R is an R package for Arena Simulation users. Arena Simulation is a great discrete event simulation software, but it lacks neat plots and data reporting tools. After spending a considerable ammount of time struggling with arena output files, I&amp;rsquo;ve decided to write a few functions, which evolved into this package. You can use the package either via it&amp;rsquo;s accompanying app, or build your own R script and work from there.</description>
+      <description>An R package for Arena Discrete Event Simulation software.</description>
     </item>
     
     <item>
@@ -27,7 +27,7 @@
       <pubDate>Thu, 28 Apr 2016 00:00:00 -0300</pubDate>
       
       <guid>/project/sigepro/</guid>
-      <description>About Sigepro.</description>
+      <description>The student-led Production Engineering Symposium on Rio Grande do Sul State.</description>
     </item>
     
     <item>
@@ -36,7 +36,7 @@
       <pubDate>Wed, 27 Apr 2016 00:00:00 -0300</pubDate>
       
       <guid>/project/avalia-brasil/</guid>
-      <description></description>
+      <description>An app aiming to measure and track Brazilian public service quality.</description>
     </item>
     
   </channel>

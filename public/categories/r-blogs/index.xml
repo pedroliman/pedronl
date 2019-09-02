@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R Blogs by Pedro N. de Lima</title>
@@ -18,7 +17,10 @@
       <pubDate>Sun, 28 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/</guid>
-      <description>&lt;p&gt;Teaching to seasoned managers in MBE classes is challenging. While it’s important to bring new thoughts and ideas and not sound repetitive, it is necessary to provide a theoretical basis for experienced people with diverse backgrounds. One of the strategies I found to overcome these obstacles this week was to use a new analysis framework (in my case, Factory Physics concepts) to challenge their views about existing frames they already master. Using a combination of concepts, simulation sodels, many-objective tradeoffs visuals (like the gif below) and tasks was great to challenge their intuition about manufacturing systems.&lt;/p&gt;
+      <description>
+
+
+&lt;p&gt;Teaching to seasoned managers in MBE classes is challenging. While it’s important to bring new thoughts and ideas and not sound repetitive, it is necessary to provide a theoretical basis for experienced people with diverse backgrounds. One of the strategies I found to overcome these obstacles this week was to use a new analysis framework (in my case, Factory Physics concepts) to challenge their views about existing frames they already master. Using a combination of concepts, simulation sodels, many-objective tradeoffs visuals (like the gif below) and tasks was great to challenge their intuition about manufacturing systems.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/post/2019-data/many-objective-inventory-tradeoffs.gif&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;This post shares some of the &lt;a href=&#34;https://www.r-project.org/&#34;&gt;R&lt;/a&gt; code I developed while putting together course materials. This post is also an example of how to use &lt;a href=&#34;/post/des-metamodeling-splines-r-arena/&#34;&gt;simulation metamodeling&lt;/a&gt; and Arena to Run Factory Physics’ Flow Benchmarking.&lt;/p&gt;
 &lt;div id=&#34;flow-benchmarking&#34; class=&#34;section level2&#34;&gt;
@@ -244,7 +246,10 @@ plot_benchmarking(data = data_benchmark)&lt;/code&gt;&lt;/pre&gt;
       <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/des-metamodeling-splines-r-arena/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://link.springer.com/referenceworkentry/10.1007%2F978-1-4419-1153-7_957&#34;&gt;Simulation Metamodeling&lt;/a&gt; - building and using surrogate models that can approximate results from more complicated simulation models - is an interesting approach to analyze results from complicated, computationally expensive simulation models. Metamodels are useful because they can yield good approximations of the original simulation model response variables using less computational resources. For an introduction to Metamodeling, refer to &lt;span class=&#34;citation&#34;&gt;(Barton &lt;a href=&#34;#ref-Barton2015&#34;&gt;2015&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+      <description>
+
+
+&lt;p&gt;&lt;a href=&#34;https://link.springer.com/referenceworkentry/10.1007%2F978-1-4419-1153-7_957&#34;&gt;Simulation Metamodeling&lt;/a&gt; - building and using surrogate models that can approximate results from more complicated simulation models - is an interesting approach to analyze results from complicated, computationally expensive simulation models. Metamodels are useful because they can yield good approximations of the original simulation model response variables using less computational resources. For an introduction to Metamodeling, refer to &lt;span class=&#34;citation&#34;&gt;(Barton &lt;a href=&#34;#ref-Barton2015&#34;&gt;2015&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;To my knowledge, no Discrete-Event Simulation (DES) software provides metamodeling capabilities, and guidance on how to actually execute metamodeling &lt;a href=&#34;https://www.google.com/search?q=discrete+event+simulation+metamodeling&amp;amp;oq=discrete+event+simulation+metamodeling&#34;&gt;is scarce&lt;/a&gt;. In this post, I’ll build a &lt;a href=&#34;https://en.wikipedia.org/wiki/Spline_(mathematics)&#34;&gt;Spline&lt;/a&gt;-based simulation metamodel. This tutorial should be useful to advanced users of &lt;a href=&#34;https://www.arenasimulation.com&#34;&gt;Arena Simulation&lt;/a&gt; who would be willing to give metamodeling a try.&lt;/p&gt;
 &lt;div id=&#34;why-splines&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Why Splines?&lt;/h3&gt;
@@ -369,7 +374,10 @@ ggplot(sim_results, mapping = aes(x = BatchSize, y = Value)) +
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/</guid>
-      <description>&lt;p&gt;This is part 1 of a series of posts in which I will explore the utility of using metamodels to make sense of (and possibly optimizing) simulation models.&lt;/p&gt;
+      <description>
+
+
+&lt;p&gt;This is part 1 of a series of posts in which I will explore the utility of using metamodels to make sense of (and possibly optimizing) simulation models.&lt;/p&gt;
 &lt;p&gt;If you used simulation modeling on a real project, you might be familiar with this fictional story:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;You spent long hours building and refining your simulation model (eg.: a Discrete Event Model). Hopefully, you are confident that it can yield reliable results. Now it’s time to use the model and draw recommendations. At this point, you are probably out of time, the project was delayed by successive rounds of data collection and validation. After running a few scenarios the night before the final presentation, you reach the conclusion that it is going to be hard to explain to your client that the results are highly non-linear and maybe counter-intuitive.&lt;/p&gt;
@@ -491,7 +499,10 @@ Optimum_BatchSize&lt;/code&gt;&lt;/pre&gt;
       <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/arena2r-package-tutorial/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://arenasimulation.com&#34;&gt;Arena Simulation&lt;/a&gt; is a well-known Discrete Event Simulation Software. However, if you are a power user you might want to extend your analysis beyond what Arena’s Process Analyzer offers. In this tutorial, I’ll guide you through the main functions of Arena2R package.&lt;/p&gt;
+      <description>
+
+
+&lt;p&gt;&lt;a href=&#34;https://arenasimulation.com&#34;&gt;Arena Simulation&lt;/a&gt; is a well-known Discrete Event Simulation Software. However, if you are a power user you might want to extend your analysis beyond what Arena’s Process Analyzer offers. In this tutorial, I’ll guide you through the main functions of Arena2R package.&lt;/p&gt;
 &lt;p&gt;If you’re not an R user, fear not! Arena2R comes with an app you can use to explore your Arena Simulation data. All you’ll have to do is to Install R and R Studio, and run two commands in your R console.&lt;/p&gt;
 &lt;div id=&#34;installation&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Installation&lt;/h2&gt;
