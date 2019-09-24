@@ -155,7 +155,7 @@ If you’re not an R user, fear not! Arena2R comes with an app you can use to ex
         
 
         <li class="nav-item">
-          <a class="nav-link" href="/#posts">
+          <a class="nav-link" href="/#posts_r">
             
             <span>Posts</span>
             
@@ -369,9 +369,8 @@ If you’re not an R user, fear not! Arena2R comes with an app you can use to ex
 <pre class="r"><code>install.packages(&quot;arena2r&quot;)</code></pre>
 <p>Then, load the package:</p>
 <pre class="r"><code>library(arena2r)
-## Warning: package &#39;arena2r&#39; was built under R version 3.5.2
+## Warning: package &#39;arena2r&#39; was built under R version 3.6.1
 library(dplyr)
-## Warning: package &#39;dplyr&#39; was built under R version 3.5.2
 ## 
 ## Attaching package: &#39;dplyr&#39;
 ## The following objects are masked from &#39;package:stats&#39;:
@@ -478,7 +477,9 @@ knitr::kable(head(results))</code></pre>
 <pre class="r"><code>
 # Plot a Statistic confidence interval across scenarios for a response variable.
 
-arena2r::plot_confint(sim_results = results, response_variable = &quot;Entity 1.NumberOut&quot;)</code></pre>
+arena2r::plot_confint(sim_results = results, response_variable = &quot;Entity 1.NumberOut&quot;)
+## Warning: Computation failed in `stat_summary()`:
+## Hmisc package required for this function</code></pre>
 <p><img src="/post/2018-09-27-arena2r-package-tutorial_files/figure-html/arena2r-confidence-interval-plot-1.png" width="672" /></p>
 <p>Now let’s explore the relationship between two variables, across scenarios and replications:</p>
 <pre class="r"><code>
@@ -581,6 +582,8 @@ knitr::kable(head(statistics_summary[,1:6]))</code></pre>
   <a class="badge badge-light" href="">Discrete Event Simulation</a>
   
   <a class="badge badge-light" href="">R Package</a>
+  
+  <a class="badge badge-light" href="/tags/r/">R</a>
   
 </div>
 

@@ -40,11 +40,11 @@
     </item>
     
     <item>
-      <title>Recent Posts</title>
-      <link>/home/posts/</link>
+      <title>R Posts</title>
+      <link>/home/posts_r/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
       
-      <guid>/home/posts/</guid>
+      <guid>/home/posts_r/</guid>
       <description></description>
     </item>
     
@@ -54,6 +54,15 @@
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
       
       <guid>/home/publications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Other Posts</title>
+      <link>/home/posts/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
+      
+      <guid>/home/posts/</guid>
       <description></description>
     </item>
     
@@ -128,7 +137,7 @@ I am a teaching instructor for the following courses at University X:
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
       
       <guid>/home/about/</guid>
-      <description>About Me I am a doctoral candidate at Pardee RAND Graduate School. Pardee RAND is a Policy Analysis graduate school situated within the RAND Corporation, a non-profit institution with the bold mission of improving policy and decision making through research and analysis. You will be able to find more about my RAND-related work at RAND&amp;rsquo;s website in the future.
+      <description>About Me I am a doctoral candidate at Pardee RAND Graduate School. Pardee RAND is a Policy Analysis graduate school situated inside RAND Corporation, a non-profit institution with the bold mission of improving policy and decision making through research and analysis. You will be able to find more about my RAND-related work at RAND&amp;rsquo;s website in the future.
 Prior to RAND, I was a Lecturer at UNISINOS University, southern Brazil, where I taught Operational Research and Simulation Modeling on undergraduate courses.</description>
     </item>
     

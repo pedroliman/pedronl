@@ -10,6 +10,7 @@ tags:
   - Arena Simualtion
   - Discrete Event Simulation
   - R Package
+  - R
 header:
   caption: 'An R Package for Arena Simulation Users'
   image: ''

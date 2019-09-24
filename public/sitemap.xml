@@ -4,7 +4,7 @@
     <url>
     
       <loc>/tags/arena/</loc>
-      <lastmod>2019-09-03T00:00:00+00:00</lastmod>
+      <lastmod>2019-09-23T22:21:01-07:00</lastmod>
     </url>
     
   
@@ -12,7 +12,7 @@
     <url>
     
       <loc>/tags/arena-simualtion/</loc>
-      <lastmod>2019-09-03T00:00:00+00:00</lastmod>
+      <lastmod>2019-09-23T22:21:01-07:00</lastmod>
     </url>
     
   
@@ -20,7 +20,7 @@
     <url>
     
       <loc>/categories/</loc>
-      <lastmod>2019-09-03T00:00:00+00:00</lastmod>
+      <lastmod>2019-09-23T22:21:01-07:00</lastmod>
     </url>
     
   
@@ -28,7 +28,7 @@
     <url>
     
       <loc>/tags/discrete-event-simulation/</loc>
-      <lastmod>2019-09-03T00:00:00+00:00</lastmod>
+      <lastmod>2019-09-23T22:21:01-07:00</lastmod>
     </url>
     
   
@@ -36,15 +36,7 @@
     <url>
     
       <loc>/</loc>
-      <lastmod>2019-09-03T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/tags/r/</loc>
-      <lastmod>2019-09-03T00:00:00+00:00</lastmod>
+      <lastmod>2019-09-23T22:21:01-07:00</lastmod>
     </url>
     
   
@@ -52,7 +44,7 @@
     <url>
     
       <loc>/categories/slides/</loc>
-      <lastmod>2019-09-03T00:00:00+00:00</lastmod>
+      <lastmod>2019-09-23T22:21:01-07:00</lastmod>
     </url>
     
   
@@ -60,7 +52,7 @@
     <url>
     
       <loc>/post/slides-graduacao-simulacao-sistemas-de-informacaosistemas-produtivos/</loc>
-      <lastmod>2019-09-03T00:00:00+00:00</lastmod>
+      <lastmod>2019-09-23T22:21:01-07:00</lastmod>
     </url>
     
   
@@ -68,7 +60,7 @@
     <url>
     
       <loc>/tags/</loc>
-      <lastmod>2019-09-03T00:00:00+00:00</lastmod>
+      <lastmod>2019-09-23T22:21:01-07:00</lastmod>
     </url>
     
   
@@ -76,7 +68,7 @@
     <url>
     
       <loc>/resources/</loc>
-      <lastmod>2019-03-28T11:23:13-03:00</lastmod>
+      <lastmod>2019-09-23T22:21:01-07:00</lastmod>
     </url>
     
   
@@ -84,6 +76,14 @@
     <url>
     
       <loc>/tags/arena2r/</loc>
+      <lastmod>2019-04-28T16:48:02-03:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/r/</loc>
       <lastmod>2019-04-28T16:48:02-03:00</lastmod>
     </url>
     
@@ -148,7 +148,7 @@
     <url>
     
       <loc>/publication_types/2/</loc>
-      <lastmod>2019-04-20T22:42:00-03:00</lastmod>
+      <lastmod>2019-09-23T22:21:01-07:00</lastmod>
     </url>
     
   
@@ -156,7 +156,7 @@
     <url>
     
       <loc>/publication/socioeconomic-factors-service-quality-servperf/</loc>
-      <lastmod>2018-12-12T14:04:30-02:00</lastmod>
+      <lastmod>2019-09-23T22:21:01-07:00</lastmod>
     </url>
     
   
@@ -172,7 +172,7 @@
     <url>
     
       <loc>/publication_types/</loc>
-      <lastmod>2019-04-20T22:42:00-03:00</lastmod>
+      <lastmod>2019-09-23T22:21:01-07:00</lastmod>
     </url>
     
   
@@ -291,8 +291,32 @@
     
     <url>
     
+      <loc>/project/dmdu-society/</loc>
+      <lastmod>2016-04-28T00:00:00-07:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/project/sigepro/</loc>
+      <lastmod>2019-09-23T22:21:01-07:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/project/avalia-brasil/</loc>
+      <lastmod>2019-09-23T22:21:01-07:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>/project/</loc>
-      <lastmod>2018-09-23T14:08:38-03:00</lastmod>
+      <lastmod>2019-09-23T22:21:01-07:00</lastmod>
     </url>
     
   
@@ -300,7 +324,7 @@
     <url>
     
       <loc>/tags/software/</loc>
-      <lastmod>2018-09-23T14:08:38-03:00</lastmod>
+      <lastmod>2019-09-23T22:21:01-07:00</lastmod>
     </url>
     
   

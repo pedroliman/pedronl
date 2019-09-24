@@ -36,7 +36,7 @@ weight = 100
 
 # About Me
 
-I am a doctoral candidate at [Pardee RAND Graduate School](https://www.prgs.edu/). Pardee RAND is a Policy Analysis graduate school situated within the [RAND Corporation](https://rand.org), a non-profit institution with the bold mission of [improving policy and decision making through research and analysis](https://www.rand.org/about/history.html). You will be able to find more about my RAND-related work at RAND's website in the future.
+I am a doctoral candidate at [Pardee RAND Graduate School](https://www.prgs.edu/). Pardee RAND is a Policy Analysis graduate school situated inside [RAND Corporation](https://rand.org), a non-profit institution with the bold mission of [improving policy and decision making through research and analysis](https://www.rand.org/about/history.html). You will be able to find more about my RAND-related work at RAND's website in the future.
 
 Prior to RAND, I was a Lecturer at [UNISINOS University](http://www.unisinos.br/global/en/), southern Brazil, where I taught Operational Research and Simulation Modeling on undergraduate courses. I was also a member of the [GMAP | UNISINOS Research Group](http://gmap.unisinos.br), where I worked building decision support tools, mostly with R. My interest in R started in 2013 when I was first introduced to it by a professor. Since then, I've been using R for everything, from the most commom statistical/ML applications to building simulation packages, crunching thousands of time-series available from web apis, modeling raiway systems and competition within the 3D printing industry.
 

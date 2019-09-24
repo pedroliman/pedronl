@@ -49,11 +49,11 @@
     </item>
     
     <item>
-      <title>Recent Posts</title>
-      <link>/home/posts/</link>
+      <title>R Posts</title>
+      <link>/home/posts_r/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
       
-      <guid>/home/posts/</guid>
+      <guid>/home/posts_r/</guid>
       <description></description>
     </item>
     
@@ -63,6 +63,15 @@
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
       
       <guid>/home/publications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Other Posts</title>
+      <link>/home/posts/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
+      
+      <guid>/home/posts/</guid>
       <description></description>
     </item>
     
@@ -152,7 +161,7 @@
 
 &lt;h1 id=&#34;about-me&#34;&gt;About Me&lt;/h1&gt;
 
-&lt;p&gt;I am a doctoral candidate at &lt;a href=&#34;https://www.prgs.edu/&#34; target=&#34;_blank&#34;&gt;Pardee RAND Graduate School&lt;/a&gt;. Pardee RAND is a Policy Analysis graduate school situated within the &lt;a href=&#34;https://rand.org&#34; target=&#34;_blank&#34;&gt;RAND Corporation&lt;/a&gt;, a non-profit institution with the bold mission of &lt;a href=&#34;https://www.rand.org/about/history.html&#34; target=&#34;_blank&#34;&gt;improving policy and decision making through research and analysis&lt;/a&gt;. You will be able to find more about my RAND-related work at RAND&amp;rsquo;s website in the future.&lt;/p&gt;
+&lt;p&gt;I am a doctoral candidate at &lt;a href=&#34;https://www.prgs.edu/&#34; target=&#34;_blank&#34;&gt;Pardee RAND Graduate School&lt;/a&gt;. Pardee RAND is a Policy Analysis graduate school situated inside &lt;a href=&#34;https://rand.org&#34; target=&#34;_blank&#34;&gt;RAND Corporation&lt;/a&gt;, a non-profit institution with the bold mission of &lt;a href=&#34;https://www.rand.org/about/history.html&#34; target=&#34;_blank&#34;&gt;improving policy and decision making through research and analysis&lt;/a&gt;. You will be able to find more about my RAND-related work at RAND&amp;rsquo;s website in the future.&lt;/p&gt;
 
 &lt;p&gt;Prior to RAND, I was a Lecturer at &lt;a href=&#34;http://www.unisinos.br/global/en/&#34; target=&#34;_blank&#34;&gt;UNISINOS University&lt;/a&gt;, southern Brazil, where I taught Operational Research and Simulation Modeling on undergraduate courses. I was also a member of the &lt;a href=&#34;http://gmap.unisinos.br&#34; target=&#34;_blank&#34;&gt;GMAP | UNISINOS Research Group&lt;/a&gt;, where I worked building decision support tools, mostly with R. My interest in R started in 2013 when I was first introduced to it by a professor. Since then, I&amp;rsquo;ve been using R for everything, from the most commom statistical/ML applications to building simulation packages, crunching thousands of time-series available from web apis, modeling raiway systems and competition within the 3D printing industry.&lt;/p&gt;
 
@@ -1211,9 +1220,8 @@ autoplot(ts_bovespa)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(&amp;quot;arena2r&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Then, load the package:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(arena2r)
-## Warning: package &amp;#39;arena2r&amp;#39; was built under R version 3.5.2
+## Warning: package &amp;#39;arena2r&amp;#39; was built under R version 3.6.1
 library(dplyr)
-## Warning: package &amp;#39;dplyr&amp;#39; was built under R version 3.5.2
 ## 
 ## Attaching package: &amp;#39;dplyr&amp;#39;
 ## The following objects are masked from &amp;#39;package:stats&amp;#39;:
@@ -1320,7 +1328,9 @@ knitr::kable(head(results))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
 # Plot a Statistic confidence interval across scenarios for a response variable.
 
-arena2r::plot_confint(sim_results = results, response_variable = &amp;quot;Entity 1.NumberOut&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+arena2r::plot_confint(sim_results = results, response_variable = &amp;quot;Entity 1.NumberOut&amp;quot;)
+## Warning: Computation failed in `stat_summary()`:
+## Hmisc package required for this function&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/2018-09-27-arena2r-package-tutorial_files/figure-html/arena2r-confidence-interval-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Now let’s explore the relationship between two variables, across scenarios and replications:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
@@ -1940,6 +1950,36 @@ if (Vitorias &amp;gt;= 95) {
       <pubDate>Thu, 28 Apr 2016 00:00:00 -0700</pubDate>
       
       <guid>/project/arena2r/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://arena2r.pedronl.com&#34; target=&#34;_blank&#34;&gt;Arena2R&lt;/a&gt; is an R package for Arena Simulation users. &lt;a href=&#34;https://arenasimulation.com&#34; target=&#34;_blank&#34;&gt;Arena Simulation&lt;/a&gt; is a great discrete event simulation software, but it lacks neat plots and data reporting tools. After spending a considerable ammount of time struggling with arena output files, I&amp;rsquo;ve decided to write a few functions, which  evolved into this package. You can use the package either via it&amp;rsquo;s accompanying app, or build your own R script and work from there.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Arena2R</title>
+      <link>/project/dmdu-society/</link>
+      <pubDate>Thu, 28 Apr 2016 00:00:00 -0700</pubDate>
+      
+      <guid>/project/dmdu-society/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://arena2r.pedronl.com&#34; target=&#34;_blank&#34;&gt;Arena2R&lt;/a&gt; is an R package for Arena Simulation users. &lt;a href=&#34;https://arenasimulation.com&#34; target=&#34;_blank&#34;&gt;Arena Simulation&lt;/a&gt; is a great discrete event simulation software, but it lacks neat plots and data reporting tools. After spending a considerable ammount of time struggling with arena output files, I&amp;rsquo;ve decided to write a few functions, which  evolved into this package. You can use the package either via it&amp;rsquo;s accompanying app, or build your own R script and work from there.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Arena2R</title>
+      <link>/project/sigepro/</link>
+      <pubDate>Thu, 28 Apr 2016 00:00:00 -0700</pubDate>
+      
+      <guid>/project/sigepro/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://arena2r.pedronl.com&#34; target=&#34;_blank&#34;&gt;Arena2R&lt;/a&gt; is an R package for Arena Simulation users. &lt;a href=&#34;https://arenasimulation.com&#34; target=&#34;_blank&#34;&gt;Arena Simulation&lt;/a&gt; is a great discrete event simulation software, but it lacks neat plots and data reporting tools. After spending a considerable ammount of time struggling with arena output files, I&amp;rsquo;ve decided to write a few functions, which  evolved into this package. You can use the package either via it&amp;rsquo;s accompanying app, or build your own R script and work from there.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Avalia Brasil (2015)</title>
+      <link>/project/avalia-brasil/</link>
+      <pubDate>Thu, 28 Apr 2016 00:00:00 -0700</pubDate>
+      
+      <guid>/project/avalia-brasil/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://arena2r.pedronl.com&#34; target=&#34;_blank&#34;&gt;Arena2R&lt;/a&gt; is an R package for Arena Simulation users. &lt;a href=&#34;https://arenasimulation.com&#34; target=&#34;_blank&#34;&gt;Arena Simulation&lt;/a&gt; is a great discrete event simulation software, but it lacks neat plots and data reporting tools. After spending a considerable ammount of time struggling with arena output files, I&amp;rsquo;ve decided to write a few functions, which  evolved into this package. You can use the package either via it&amp;rsquo;s accompanying app, or build your own R script and work from there.&lt;/p&gt;
 </description>
     </item>

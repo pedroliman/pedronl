@@ -21,5 +21,32 @@
       <description>An R package for Arena Discrete Event Simulation software.</description>
     </item>
     
+    <item>
+      <title>Arena2R</title>
+      <link>/project/dmdu-society/</link>
+      <pubDate>Thu, 28 Apr 2016 00:00:00 -0700</pubDate>
+      
+      <guid>/project/dmdu-society/</guid>
+      <description>An R package for Arena Discrete Event Simulation software.</description>
+    </item>
+    
+    <item>
+      <title>Arena2R</title>
+      <link>/project/sigepro/</link>
+      <pubDate>Thu, 28 Apr 2016 00:00:00 -0700</pubDate>
+      
+      <guid>/project/sigepro/</guid>
+      <description>An R package for Arena Discrete Event Simulation software.</description>
+    </item>
+    
+    <item>
+      <title>Avalia Brasil (2015)</title>
+      <link>/project/avalia-brasil/</link>
+      <pubDate>Thu, 28 Apr 2016 00:00:00 -0700</pubDate>
+      
+      <guid>/project/avalia-brasil/</guid>
+      <description>An Android App aiming to allow the measurement of Brazilian Public Service R package for Arena Discrete Event Simulation software.</description>
+    </item>
+    
   </channel>
 </rss>
