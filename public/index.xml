@@ -1954,35 +1954,5 @@ if (Vitorias &amp;gt;= 95) {
 </description>
     </item>
     
-    <item>
-      <title>Arena2R</title>
-      <link>/project/dmdu-society/</link>
-      <pubDate>Thu, 28 Apr 2016 00:00:00 -0700</pubDate>
-      
-      <guid>/project/dmdu-society/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://arena2r.pedronl.com&#34; target=&#34;_blank&#34;&gt;Arena2R&lt;/a&gt; is an R package for Arena Simulation users. &lt;a href=&#34;https://arenasimulation.com&#34; target=&#34;_blank&#34;&gt;Arena Simulation&lt;/a&gt; is a great discrete event simulation software, but it lacks neat plots and data reporting tools. After spending a considerable ammount of time struggling with arena output files, I&amp;rsquo;ve decided to write a few functions, which  evolved into this package. You can use the package either via it&amp;rsquo;s accompanying app, or build your own R script and work from there.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Arena2R</title>
-      <link>/project/sigepro/</link>
-      <pubDate>Thu, 28 Apr 2016 00:00:00 -0700</pubDate>
-      
-      <guid>/project/sigepro/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://arena2r.pedronl.com&#34; target=&#34;_blank&#34;&gt;Arena2R&lt;/a&gt; is an R package for Arena Simulation users. &lt;a href=&#34;https://arenasimulation.com&#34; target=&#34;_blank&#34;&gt;Arena Simulation&lt;/a&gt; is a great discrete event simulation software, but it lacks neat plots and data reporting tools. After spending a considerable ammount of time struggling with arena output files, I&amp;rsquo;ve decided to write a few functions, which  evolved into this package. You can use the package either via it&amp;rsquo;s accompanying app, or build your own R script and work from there.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Avalia Brasil (2015)</title>
-      <link>/project/avalia-brasil/</link>
-      <pubDate>Thu, 28 Apr 2016 00:00:00 -0700</pubDate>
-      
-      <guid>/project/avalia-brasil/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://arena2r.pedronl.com&#34; target=&#34;_blank&#34;&gt;Arena2R&lt;/a&gt; is an R package for Arena Simulation users. &lt;a href=&#34;https://arenasimulation.com&#34; target=&#34;_blank&#34;&gt;Arena Simulation&lt;/a&gt; is a great discrete event simulation software, but it lacks neat plots and data reporting tools. After spending a considerable ammount of time struggling with arena output files, I&amp;rsquo;ve decided to write a few functions, which  evolved into this package. You can use the package either via it&amp;rsquo;s accompanying app, or build your own R script and work from there.&lt;/p&gt;
-</description>
-    </item>
-    
   </channel>
 </rss>
