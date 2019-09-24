@@ -6,8 +6,8 @@
     <description>Recent content in Software on Pedro N. de Lima</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Thu, 28 Apr 2016 00:00:00 -0300</lastBuildDate>
+    <copyright>&amp;copy; 2019</copyright>
+    <lastBuildDate>Thu, 28 Apr 2016 00:00:00 -0700</lastBuildDate>
     
 	<atom:link href="/tags/software/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Arena2R</title>
       <link>/project/arena2r/</link>
-      <pubDate>Thu, 28 Apr 2016 00:00:00 -0300</pubDate>
+      <pubDate>Thu, 28 Apr 2016 00:00:00 -0700</pubDate>
       
       <guid>/project/arena2r/</guid>
       <description>An R package for Arena Discrete Event Simulation software.</description>

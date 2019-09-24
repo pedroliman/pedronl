@@ -6,8 +6,8 @@
     <description>Recent content in Projects on Pedro N. de Lima</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Thu, 28 Apr 2016 00:00:00 -0300</lastBuildDate>
+    <copyright>&amp;copy; 2019</copyright>
+    <lastBuildDate>Thu, 28 Apr 2016 00:00:00 -0700</lastBuildDate>
     
 	<atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,28 +15,10 @@
     <item>
       <title>Arena2R</title>
       <link>/project/arena2r/</link>
-      <pubDate>Thu, 28 Apr 2016 00:00:00 -0300</pubDate>
+      <pubDate>Thu, 28 Apr 2016 00:00:00 -0700</pubDate>
       
       <guid>/project/arena2r/</guid>
       <description>An R package for Arena Discrete Event Simulation software.</description>
-    </item>
-    
-    <item>
-      <title>SIGEPRO 2016 and 2017</title>
-      <link>/project/sigepro/</link>
-      <pubDate>Thu, 28 Apr 2016 00:00:00 -0300</pubDate>
-      
-      <guid>/project/sigepro/</guid>
-      <description>The student-led Production Engineering Symposium on Rio Grande do Sul State.</description>
-    </item>
-    
-    <item>
-      <title>Avalia Brasil App</title>
-      <link>/project/avalia-brasil/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 -0300</pubDate>
-      
-      <guid>/project/avalia-brasil/</guid>
-      <description>An app aiming to measure and track Brazilian public service quality.</description>
     </item>
     
   </channel>

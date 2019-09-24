@@ -6,8 +6,8 @@
     <description>Recent content in Tags on Pedro N. de Lima</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 28 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <copyright>&amp;copy; 2019</copyright>
+    <lastBuildDate>Tue, 03 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,9 +15,36 @@
     <item>
       <title>Arena</title>
       <link>/tags/arena/</link>
-      <pubDate>Sun, 28 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/arena/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Arena Simualtion</title>
+      <link>/tags/arena-simualtion/</link>
+      <pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/arena-simualtion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Discrete Event Simulation</title>
+      <link>/tags/discrete-event-simulation/</link>
+      <pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/discrete-event-simulation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>/tags/r/</link>
+      <pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/r/</guid>
       <description></description>
     </item>
     
@@ -31,38 +58,11 @@
     </item>
     
     <item>
-      <title>R</title>
-      <link>/tags/r/</link>
-      <pubDate>Sun, 28 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Simulation</title>
       <link>/tags/simulation/</link>
       <pubDate>Sun, 28 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/simulation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Arena Simualtion</title>
-      <link>/tags/arena-simualtion/</link>
-      <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/arena-simualtion/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Discrete Event Simulation</title>
-      <link>/tags/discrete-event-simulation/</link>
-      <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/discrete-event-simulation/</guid>
       <description></description>
     </item>
     
@@ -112,18 +112,9 @@
     </item>
     
     <item>
-      <title>Academic</title>
-      <link>/tags/academic/</link>
-      <pubDate>Thu, 28 Apr 2016 00:00:00 -0300</pubDate>
-      
-      <guid>/tags/academic/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Software</title>
       <link>/tags/software/</link>
-      <pubDate>Thu, 28 Apr 2016 00:00:00 -0300</pubDate>
+      <pubDate>Thu, 28 Apr 2016 00:00:00 -0700</pubDate>
       
       <guid>/tags/software/</guid>
       <description></description>

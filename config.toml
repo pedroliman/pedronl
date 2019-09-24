@@ -13,7 +13,7 @@ title = "Pedro N. de Lima"
 
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
-copyright = "&copy; 2018"
+copyright = "&copy; 2019"
 
 theme = "hugo-academic"
 enableEmoji = true
@@ -52,17 +52,17 @@ enableGitInfo = true
 
   # Your details.
   name = "Pedro Nascimento de Lima"
-  role = "MSc, Lecturer of Production Engineering and Management"
+  role = "Assistant Policy Researcher | Ph.D. Candidate"
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-  organizations = [ { name = "UNISINOS University", url = "" } ]
+  organizations = [ { name = "RAND Corporation", url = "https://rand.org" }, { name = "Pardee RAND Graduate School", url = "https://prgs.edu" }  ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "pedro-nascimento-de-lima.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
   
   # Details for the Contact Widget
-  email = "pedronl@unisinos.br"
+  email = "plima@rand.org"
   address = "R. Aloisio H, São Leopoldo, RS, BR"
   office_hours = "Monday 10:00 to 13:00 or email for appointment"
   phone = "+55 51 99214-0761"
@@ -106,7 +106,7 @@ enableGitInfo = true
   font = "playfair_pedro"
 
   # Description for social sharing and search engines. If undefined, author role is used in place.
-  description = "Welcome to Pedro Nascimento de Lima personal website."
+  description = "Welcome to Pedro Nascimento de Lima personal blog."
   
   # Default image for social sharing and search engines. Place image in `static/img/` folder and specify image name here.
   sharing_image = ""
@@ -284,14 +284,14 @@ enableGitInfo = true
   align_right = true
 
 [[menu.main]]
-  name = "Home"
+  name = "About"
   url = "#about"
-  weight = 1
+  weight = 4
   
   [[menu.main]]
   name = "Posts"
   url = "#posts"
-  weight = 2
+  weight = 1
 
 
 [[menu.main]]
@@ -301,7 +301,7 @@ enableGitInfo = true
 
 
 [[menu.main]]
-  name = "Selected Publications"
+  name = "Publications"
   url = "#publications_selected"
   weight = 3
 
@@ -329,7 +329,7 @@ enableGitInfo = true
 
 # Resources
  [[menu.main]]
-    name = "Resources"
+    name = "Learning Resources"
     url = "/resources"
     weight = 8
 

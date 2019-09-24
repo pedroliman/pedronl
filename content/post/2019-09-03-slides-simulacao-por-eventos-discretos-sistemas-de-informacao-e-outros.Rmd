@@ -1,0 +1,28 @@
+---
+title: Slides - Simulação (por Eventos Discretos), Sistemas de Informação e outros
+author: Pedro N. de Lima
+date: '2019-09-03'
+slug: slides-graduacao-simulacao-sistemas-de-informacao=sistemas-produtivos
+categories:
+  - Slides
+tags:
+  - Arena
+  - Arena Simualtion
+  - Discrete Event Simulation
+  - R
+authors: []
+header:
+  caption: ''
+  image: ''
+  preview: yes
+---
+
+Durante o meu tempo como como professor na UNISINOS no curso de Engenharia de Produção, acumulei uma boa quantidade de slides. Provavelmente não vou utilizar estes slides nos próximos 5 anos, portanto nada mais razoável do que compartilhar!
+
+
+[**Simulação Computacional**](/../files/slides/Simulacao-Computacional-por-Eventos-Discretos.pdf): (por Eventos Discretos, com o Arena): Estes slides contém o conteúdo das aulas de simulação por eventos discretos, utilizando o Arena. Alguma parte deste material foi influenciada pelas aulas dos Profs. Dieter Goldmeyer e Luis Felipe Camargo.
+
+
+[**Sistemas de Informação**](/../files/slides/Slides-Sistemas-de-Informacao.pdf): Esta disciplina englobou uma série de conteúdos interessantes relacionados à Sistemas de Informação para tomada de decisão. O semestre começava com tópicos de Análise de Decisão, e progredia para modelos de machine learning. Na segunda parte do semestre os alunos recebiam a tarefa de excrever o projeto de um sistema de informação relacionado à sua realidade, e recebiam conteúdos relevantes tanto para a gestão de projetos de sistema de informação (ex.: SCRUM, e análise de requisitos), como para a execução prática (ex.: como projetar um banco de dados estruturado e criar um dashboard no Tableau com este banco).
+
+[**Fundamentos de Sistemas Produtivos**](/../files/slides/Fundamentos-Sistemas-Produtivos.pdf) (Administração Industrial, Com "a Ciência da Fábrica"): Estes slides contém conteúdo que ministrei para alunos de graduação e MBA em Administração Industrial, e incluem slides sobre a "Ciência da Fábrica".

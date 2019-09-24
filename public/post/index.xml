@@ -6,11 +6,21 @@
     <description>Recent content in Posts on Pedro N. de Lima</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0300</lastBuildDate>
+    <copyright>&amp;copy; 2019</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0800</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Slides - Simulação (por Eventos Discretos), Sistemas de Informação e outros</title>
+      <link>/post/slides-graduacao-simulacao-sistemas-de-informacaosistemas-produtivos/</link>
+      <pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/slides-graduacao-simulacao-sistemas-de-informacaosistemas-produtivos/</guid>
+      <description>Durante o meu tempo como como professor na UNISINOS no curso de Engenharia de Produção, acumulei uma boa quantidade de slides. Provavelmente não vou utilizar estes slides nos próximos 5 anos, portanto nada mais razoável do que compartilhar!
+Simulação Computacional: (por Eventos Discretos, com o Arena): Estes slides contém o conteúdo das aulas de simulação por eventos discretos, utilizando o Arena. Alguma parte deste material foi influenciada pelas aulas dos Profs.</description>
+    </item>
     
     <item>
       <title>Teaching Factory Physics Flow Benchmarking with R and Many-Objective Visuals</title>

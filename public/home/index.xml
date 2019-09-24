@@ -6,8 +6,8 @@
     <description>Recent content in Homes on Pedro N. de Lima</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Mon, 23 Jul 2018 00:00:00 -0300</lastBuildDate>
+    <copyright>&amp;copy; 2019</copyright>
+    <lastBuildDate>Mon, 23 Jul 2018 00:00:00 -0700</lastBuildDate>
     
 	<atom:link href="/home/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title></title>
       <link>/home/hero_carousel/</link>
-      <pubDate>Sun, 15 Oct 2017 00:00:00 -0300</pubDate>
+      <pubDate>Sun, 15 Oct 2017 00:00:00 -0700</pubDate>
       
       <guid>/home/hero_carousel/</guid>
       <description></description>
@@ -24,26 +24,16 @@
     <item>
       <title>Academic</title>
       <link>/home/hero/</link>
-      <pubDate>Sun, 15 Oct 2017 00:00:00 -0300</pubDate>
+      <pubDate>Sun, 15 Oct 2017 00:00:00 -0700</pubDate>
       
       <guid>/home/hero/</guid>
       <description>The highly flexible website framework for Hugo with an extensible plugin mechanism. Create a beautifully simple site in under 10 minutes 🚀 Latest release   Star</description>
     </item>
     
     <item>
-      <title></title>
-      <link>/home/about/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
-      
-      <guid>/home/about/</guid>
-      <description>Biography Soon I will be a doctoral candidate at Pardee RAND Graduate School. Prior to RAND, I was a Lecturer at UNISINOS University, southern Brazil, where I taught Operational Research and Simulation Modeling on undergraduate courses. I was also a member of the GMAP Research Group, where I worked building decision support tools.
-My academic interests often gravitate towards the intersection between OR, Programming, and Management of Wicked Problems. My undergraduate and master&amp;rsquo;s dissertations focused on wicked problems and decision under deep uncertainty, have received the Best Brazilian Dissertation in Production Engineering Prize from ABEPRO, in 2016 and 2018, respectively.</description>
-    </item>
-    
-    <item>
       <title>Skills</title>
       <link>/home/skills/</link>
-      <pubDate>Wed, 20 Sep 2017 00:00:00 -0300</pubDate>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 -0700</pubDate>
       
       <guid>/home/skills/</guid>
       <description></description>
@@ -52,7 +42,7 @@ My academic interests often gravitate towards the intersection between OR, Progr
     <item>
       <title>Recent Posts</title>
       <link>/home/posts/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
       
       <guid>/home/posts/</guid>
       <description></description>
@@ -61,7 +51,7 @@ My academic interests often gravitate towards the intersection between OR, Progr
     <item>
       <title>Recent Publications</title>
       <link>/home/publications/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
       
       <guid>/home/publications/</guid>
       <description></description>
@@ -70,7 +60,7 @@ My academic interests often gravitate towards the intersection between OR, Progr
     <item>
       <title>Selected Talks</title>
       <link>/home/talks_selected/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
       
       <guid>/home/talks_selected/</guid>
       <description></description>
@@ -79,16 +69,16 @@ My academic interests often gravitate towards the intersection between OR, Progr
     <item>
       <title>Recent &amp; Upcoming Talks</title>
       <link>/home/talks/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
       
       <guid>/home/talks/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Projects &amp; Initiatives</title>
+      <title>Projects</title>
       <link>/home/projects/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
       
       <guid>/home/projects/</guid>
       <description></description>
@@ -97,7 +87,7 @@ My academic interests often gravitate towards the intersection between OR, Progr
     <item>
       <title>Selected Publications</title>
       <link>/home/publications_selected/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
       
       <guid>/home/publications_selected/</guid>
       <description></description>
@@ -106,7 +96,7 @@ My academic interests often gravitate towards the intersection between OR, Progr
     <item>
       <title>Teaching</title>
       <link>/home/teaching/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
       
       <guid>/home/teaching/</guid>
       <description>This is an example of using the custom widget to create your own homepage section.
@@ -117,7 +107,7 @@ I am a teaching instructor for the following courses at University X:
     <item>
       <title>Tags</title>
       <link>/home/tags/</link>
-      <pubDate>Wed, 20 Sep 2017 00:00:00 -0300</pubDate>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 -0700</pubDate>
       
       <guid>/home/tags/</guid>
       <description></description>
@@ -126,16 +116,26 @@ I am a teaching instructor for the following courses at University X:
     <item>
       <title>Contact</title>
       <link>/home/contact/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
       
       <guid>/home/contact/</guid>
       <description></description>
     </item>
     
     <item>
+      <title></title>
+      <link>/home/about/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
+      
+      <guid>/home/about/</guid>
+      <description>About Me I am a doctoral candidate at Pardee RAND Graduate School. Pardee RAND is a Policy Analysis graduate school situated within the RAND Corporation, a non-profit institution with the bold mission of improving policy and decision making through research and analysis. You will be able to find more about my RAND-related work at RAND&amp;rsquo;s website in the future.
+Prior to RAND, I was a Lecturer at UNISINOS University, southern Brazil, where I taught Operational Research and Simulation Modeling on undergraduate courses.</description>
+    </item>
+    
+    <item>
       <title>Search</title>
       <link>/home/search/</link>
-      <pubDate>Mon, 23 Jul 2018 00:00:00 -0300</pubDate>
+      <pubDate>Mon, 23 Jul 2018 00:00:00 -0700</pubDate>
       
       <guid>/home/search/</guid>
       <description></description>

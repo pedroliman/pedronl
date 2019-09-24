@@ -5,8 +5,8 @@
     <description>Recent content on Pedro N. de Lima</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 28 Apr 2019 00:00:00 -0300</lastBuildDate>
+    <copyright>&amp;copy; 2019</copyright>
+    <lastBuildDate>Tue, 03 Sep 2019 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title></title>
       <link>/home/hero_carousel/</link>
-      <pubDate>Sun, 15 Oct 2017 00:00:00 -0300</pubDate>
+      <pubDate>Sun, 15 Oct 2017 00:00:00 -0700</pubDate>
       
       <guid>/home/hero_carousel/</guid>
       <description></description>
@@ -23,7 +23,7 @@
     <item>
       <title>Academic</title>
       <link>/home/hero/</link>
-      <pubDate>Sun, 15 Oct 2017 00:00:00 -0300</pubDate>
+      <pubDate>Sun, 15 Oct 2017 00:00:00 -0700</pubDate>
       
       <guid>/home/hero/</guid>
       <description>&lt;p&gt;The highly flexible website framework for Hugo with an extensible plugin mechanism. Create a beautifully simple site in under 10 minutes 🚀
@@ -40,25 +40,9 @@
     </item>
     
     <item>
-      <title></title>
-      <link>/home/about/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
-      
-      <guid>/home/about/</guid>
-      <description>
-
-&lt;h1 id=&#34;biography&#34;&gt;Biography&lt;/h1&gt;
-
-&lt;p&gt;Soon I will be a doctoral candidate at &lt;a href=&#34;https://www.prgs.edu/&#34; target=&#34;_blank&#34;&gt;Pardee RAND Graduate School&lt;/a&gt;. Prior to RAND, I was a Lecturer at &lt;a href=&#34;http://www.unisinos.br/global/en/&#34; target=&#34;_blank&#34;&gt;UNISINOS University&lt;/a&gt;, southern Brazil, where I taught Operational Research and Simulation Modeling on undergraduate courses.  I was also a member of the &lt;a href=&#34;http://gmap.unisinos.br&#34; target=&#34;_blank&#34;&gt;GMAP Research Group&lt;/a&gt;, where I worked building decision support tools.&lt;/p&gt;
-
-&lt;p&gt;My academic interests often gravitate towards the intersection between OR, Programming, and Management of Wicked Problems. My &lt;a href=&#34;files/Pedro-Lima-Undergrad-Dissertation-PSMs.pdf&#34; target=&#34;_blank&#34;&gt;undergraduate&lt;/a&gt; and &lt;a href=&#34;files/Pedro-Lima-MS-Dissertation-RDM-AM.pdf&#34; target=&#34;_blank&#34;&gt;master&amp;rsquo;s&lt;/a&gt; dissertations focused on wicked problems and decision under deep uncertainty, have received the Best Brazilian Dissertation in Production Engineering Prize from ABEPRO, in &lt;a href=&#34;http://www.unisinos.br/fique-sabendo/escola-politecnica/engenharia-de-producao/aluno-e-premiado-pela-abepro-2016/&#34; target=&#34;_blank&#34;&gt;2016&lt;/a&gt; and &lt;a href=&#34;http://www.unisinos.br/noticias/universidade/gmap-unisinos-em-destaque&#34; target=&#34;_blank&#34;&gt;2018&lt;/a&gt;, respectively.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Skills</title>
       <link>/home/skills/</link>
-      <pubDate>Wed, 20 Sep 2017 00:00:00 -0300</pubDate>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 -0700</pubDate>
       
       <guid>/home/skills/</guid>
       <description></description>
@@ -67,7 +51,7 @@
     <item>
       <title>Recent Posts</title>
       <link>/home/posts/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
       
       <guid>/home/posts/</guid>
       <description></description>
@@ -76,7 +60,7 @@
     <item>
       <title>Recent Publications</title>
       <link>/home/publications/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
       
       <guid>/home/publications/</guid>
       <description></description>
@@ -85,7 +69,7 @@
     <item>
       <title>Selected Talks</title>
       <link>/home/talks_selected/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
       
       <guid>/home/talks_selected/</guid>
       <description></description>
@@ -94,16 +78,16 @@
     <item>
       <title>Recent &amp; Upcoming Talks</title>
       <link>/home/talks/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
       
       <guid>/home/talks/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Projects &amp; Initiatives</title>
+      <title>Projects</title>
       <link>/home/projects/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
       
       <guid>/home/projects/</guid>
       <description></description>
@@ -112,7 +96,7 @@
     <item>
       <title>Selected Publications</title>
       <link>/home/publications_selected/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
       
       <guid>/home/publications_selected/</guid>
       <description></description>
@@ -121,7 +105,7 @@
     <item>
       <title>Teaching</title>
       <link>/home/teaching/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
       
       <guid>/home/teaching/</guid>
       <description>&lt;p&gt;This is an example of using the &lt;em&gt;custom&lt;/em&gt; widget to create your own homepage section.&lt;/p&gt;
@@ -143,7 +127,7 @@
     <item>
       <title>Tags</title>
       <link>/home/tags/</link>
-      <pubDate>Wed, 20 Sep 2017 00:00:00 -0300</pubDate>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 -0700</pubDate>
       
       <guid>/home/tags/</guid>
       <description></description>
@@ -152,34 +136,76 @@
     <item>
       <title>Contact</title>
       <link>/home/contact/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0300</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
       
       <guid>/home/contact/</guid>
       <description></description>
     </item>
     
     <item>
+      <title></title>
+      <link>/home/about/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
+      
+      <guid>/home/about/</guid>
+      <description>
+
+&lt;h1 id=&#34;about-me&#34;&gt;About Me&lt;/h1&gt;
+
+&lt;p&gt;I am a doctoral candidate at &lt;a href=&#34;https://www.prgs.edu/&#34; target=&#34;_blank&#34;&gt;Pardee RAND Graduate School&lt;/a&gt;. Pardee RAND is a Policy Analysis graduate school situated within the &lt;a href=&#34;https://rand.org&#34; target=&#34;_blank&#34;&gt;RAND Corporation&lt;/a&gt;, a non-profit institution with the bold mission of &lt;a href=&#34;https://www.rand.org/about/history.html&#34; target=&#34;_blank&#34;&gt;improving policy and decision making through research and analysis&lt;/a&gt;. You will be able to find more about my RAND-related work at RAND&amp;rsquo;s website in the future.&lt;/p&gt;
+
+&lt;p&gt;Prior to RAND, I was a Lecturer at &lt;a href=&#34;http://www.unisinos.br/global/en/&#34; target=&#34;_blank&#34;&gt;UNISINOS University&lt;/a&gt;, southern Brazil, where I taught Operational Research and Simulation Modeling on undergraduate courses. I was also a member of the &lt;a href=&#34;http://gmap.unisinos.br&#34; target=&#34;_blank&#34;&gt;GMAP | UNISINOS Research Group&lt;/a&gt;, where I worked building decision support tools, mostly with R. My interest in R started in 2013 when I was first introduced to it by a professor. Since then, I&amp;rsquo;ve been using R for everything, from the most commom statistical/ML applications to building simulation packages, crunching thousands of time-series available from web apis, modeling raiway systems and competition within the 3D printing industry.&lt;/p&gt;
+
+&lt;!---
+
+My academic interests often gravitate tow1ards the intersection between OR, Programming, and Management of Wicked Problems. My [undergraduate](files/Pedro-Lima-Undergrad-Dissertation-PSMs.pdf) and [master&#39;s](files/Pedro-Lima-MS-Dissertation-RDM-AM.pdf) dissertations focused on wicked problems and decision under deep uncertainty, have received the Best Brazilian Dissertation in Production Engineering Prize from ABEPRO, in [2016](http://www.unisinos.br/fique-sabendo/escola-politecnica/engenharia-de-producao/aluno-e-premiado-pela-abepro-2016/) and [2018](http://www.unisinos.br/noticias/universidade/gmap-unisinos-em-destaque), respectively.
+
+---&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Search</title>
       <link>/home/search/</link>
-      <pubDate>Mon, 23 Jul 2018 00:00:00 -0300</pubDate>
+      <pubDate>Mon, 23 Jul 2018 00:00:00 -0700</pubDate>
       
       <guid>/home/search/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Resources</title>
+      <title>Slides - Simulação (por Eventos Discretos), Sistemas de Informação e outros</title>
+      <link>/post/slides-graduacao-simulacao-sistemas-de-informacaosistemas-produtivos/</link>
+      <pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/slides-graduacao-simulacao-sistemas-de-informacaosistemas-produtivos/</guid>
+      <description>
+
+
+&lt;p&gt;Durante o meu tempo como como professor na UNISINOS no curso de Engenharia de Produção, acumulei uma boa quantidade de slides. Provavelmente não vou utilizar estes slides nos próximos 5 anos, portanto nada mais razoável do que compartilhar!&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/../files/slides/Simulacao-Computacional-por-Eventos-Discretos.pdf&#34;&gt;&lt;strong&gt;Simulação Computacional&lt;/strong&gt;&lt;/a&gt;: (por Eventos Discretos, com o Arena): Estes slides contém o conteúdo das aulas de simulação por eventos discretos, utilizando o Arena. Alguma parte deste material foi influenciada pelas aulas dos Profs. Dieter Goldmeyer e Luis Felipe Camargo.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/../files/slides/Slides-Sistemas-de-Informacao.pdf&#34;&gt;&lt;strong&gt;Sistemas de Informação&lt;/strong&gt;&lt;/a&gt;: Esta disciplina englobou uma série de conteúdos interessantes relacionados à Sistemas de Informação para tomada de decisão. O semestre começava com tópicos de Análise de Decisão, e progredia para modelos de machine learning. Na segunda parte do semestre os alunos recebiam a tarefa de excrever o projeto de um sistema de informação relacionado à sua realidade, e recebiam conteúdos relevantes tanto para a gestão de projetos de sistema de informação (ex.: SCRUM, e análise de requisitos), como para a execução prática (ex.: como projetar um banco de dados estruturado e criar um dashboard no Tableau com este banco).&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/../files/slides/Fundamentos-Sistemas-Produtivos.pdf&#34;&gt;&lt;strong&gt;Fundamentos de Sistemas Produtivos&lt;/strong&gt;&lt;/a&gt; (Administração Industrial, Com “a Ciência da Fábrica”): Estes slides contém conteúdo que ministrei para alunos de graduação e MBA em Administração Industrial, e incluem slides sobre a “Ciência da Fábrica”.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Learning Resources</title>
       <link>/resources/</link>
-      <pubDate>Sun, 28 Apr 2019 00:00:00 -0300</pubDate>
+      <pubDate>Sun, 28 Apr 2019 00:00:00 -0700</pubDate>
       
       <guid>/resources/</guid>
       <description>&lt;p&gt;This is a non-exaustive list of resources that I find useful for learning.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://www.r-bloggers.com/&#34; target=&#34;_blank&#34;&gt;R-Bloggers&lt;/a&gt;: Subscribe to the R-bloggers website to get updates from thousands of R bloggers.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.r-bloggers.com/&#34; target=&#34;_blank&#34;&gt;R-Bloggers&lt;/a&gt;: Subscribe to the R-bloggers website to get updates from thousands of R blogs like this.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://rweekly.org/&#34; target=&#34;_blank&#34;&gt;R Weekly&lt;/a&gt;: Another R mailing list.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://www.datacamp.com&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;: My favourite resource for learning R and python.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://waterprogramming.wordpress.com&#34; target=&#34;_blank&#34;&gt;Water Programming Blog&lt;/a&gt;: Great resource for python and R tutorials (even if you do not work on the Water Resources Management field).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://deepuncertainty.org&#34; target=&#34;_blank&#34;&gt;DMDU Society&lt;/a&gt;: The Society for Decision Making Under Deep Uncertainty is a great resource for those interested in simulation-based decision making. Check out the materials from previous meetings!&lt;/p&gt;
 </description>
     </item>
     
@@ -666,9 +692,9 @@ Optimum_BatchSize&lt;/code&gt;&lt;/pre&gt;
     </item>
     
     <item>
-      <title>Do Socioeconomic Contextual Factors Influence SMEs Service Quality? A cross-sector and cross-city SERVPERF Analysis (Forthcoming)</title>
+      <title>Do Socioeconomic Contextual Factors Influence SMEs Service Quality? A cross-sector and cross-city SERVPERF Analysis</title>
       <link>/publication/socioeconomic-factors-service-quality-servperf/</link>
-      <pubDate>Sat, 01 Dec 2018 00:00:00 -0300</pubDate>
+      <pubDate>Sat, 01 Dec 2018 00:00:00 -0800</pubDate>
       
       <guid>/publication/socioeconomic-factors-service-quality-servperf/</guid>
       <description></description>
@@ -677,7 +703,7 @@ Optimum_BatchSize&lt;/code&gt;&lt;/pre&gt;
     <item>
       <title>Inducing Brazilian manufacturing SMEs productivity with Lean tools</title>
       <link>/publication/inducing-brazilian-smes-productivity-lean-manufacturing/</link>
-      <pubDate>Sat, 01 Dec 2018 00:00:00 -0300</pubDate>
+      <pubDate>Sat, 01 Dec 2018 00:00:00 -0800</pubDate>
       
       <guid>/publication/inducing-brazilian-smes-productivity-lean-manufacturing/</guid>
       <description></description>
@@ -1390,7 +1416,7 @@ knitr::kable(head(statistics_summary[,1:6]))&lt;/code&gt;&lt;/pre&gt;
     <item>
       <title>The Impacts of Additive Manufacturing on Production Systems</title>
       <link>/publication/impacts-additive-manufacturing-production-systems/</link>
-      <pubDate>Sat, 01 Sep 2018 00:00:00 -0300</pubDate>
+      <pubDate>Sat, 01 Sep 2018 00:00:00 -0700</pubDate>
       
       <guid>/publication/impacts-additive-manufacturing-production-systems/</guid>
       <description></description>
@@ -1911,30 +1937,11 @@ if (Vitorias &amp;gt;= 95) {
     <item>
       <title>Arena2R</title>
       <link>/project/arena2r/</link>
-      <pubDate>Thu, 28 Apr 2016 00:00:00 -0300</pubDate>
+      <pubDate>Thu, 28 Apr 2016 00:00:00 -0700</pubDate>
       
       <guid>/project/arena2r/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://arena2r.pedronl.com&#34; target=&#34;_blank&#34;&gt;Arena2R&lt;/a&gt; is an R package for Arena Simulation users. &lt;a href=&#34;https://arenasimulation.com&#34; target=&#34;_blank&#34;&gt;Arena Simulation&lt;/a&gt; is a great discrete event simulation software, but it lacks neat plots and data reporting tools. After spending a considerable ammount of time struggling with arena output files, I&amp;rsquo;ve decided to write a few functions, which  evolved into this package. You can use the package either via it&amp;rsquo;s accompanying app, or build your own R script and work from there.&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>SIGEPRO 2016 and 2017</title>
-      <link>/project/sigepro/</link>
-      <pubDate>Thu, 28 Apr 2016 00:00:00 -0300</pubDate>
-      
-      <guid>/project/sigepro/</guid>
-      <description>&lt;p&gt;About Sigepro.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Avalia Brasil App</title>
-      <link>/project/avalia-brasil/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 -0300</pubDate>
-      
-      <guid>/project/avalia-brasil/</guid>
-      <description></description>
     </item>
     
   </channel>

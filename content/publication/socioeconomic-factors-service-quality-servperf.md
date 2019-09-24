@@ -1,5 +1,5 @@
 +++
-title = "Do Socioeconomic Contextual Factors Influence SMEs Service Quality? A cross-sector and cross-city SERVPERF Analysis (Forthcoming)"
+title = "Do Socioeconomic Contextual Factors Influence SMEs Service Quality? A cross-sector and cross-city SERVPERF Analysis"
 date = 2018-12-01T00:00:00
 draft = false
 
@@ -18,13 +18,13 @@ authors = ["PN Lima", "A Dresch", "DP Lacerda"]
 publication_types = ["2"]
 
 # Publication name and optional abbreviated version.
-publication = "Forthcoming In *International Journal of Business Performance Management*"
-publication_short = "Forthcoming In *IJBPM*"
+publication = "*International Journal of Business Performance Management*"
+publication_short = "*IJBPM*"
 
 # Abstract and optional shortened version.
 abstract = "There is an increasing body of knowledge on service quality relationship with many contextual factors, including culture, firm size, and public vs. private settings. However, local socioeconomic factors influence towards SMEs Service Quality is still unknown. We conducted statistical analyzes to observe the relationship between contextual socioeconomic factors of an SMEs city and its services quality performance using a SERVPERF survey database of more than 3,000 Brazilian SMEs. While Service Performance did not linearly correlate with the analyzed socioeconomic factors, a closer look at the data shows significant differences in Service Performance among groups of SMEs on highly developed and underdeveloped cities from the other cities. The paper discusses theoretical and managerial implications derived from these findings and proposes new research questions to generate data-backed knowledge to support SMEs service quality improvement."
 
-# abstract_short = "In this chapter, we analyzed the prospected impact of Additive Manufacturing adoption across Production Systems' Competitive Fators through a systematic literature review."
+# abstract_short = ""
 
 # Featured image thumbnail (optional)
 image_preview = ""
@@ -59,7 +59,7 @@ tags = []
 # url_custom = [{name = "Custom Link", url = "http://example.org"}]
 
 # Digital Object Identifier (DOI)
-# doi = "10.1007/978-3-319-93488-4_21"
+doi = "10.1504/IJBPM.2019.101998"
 
 # Does this page contain LaTeX math? (true/false)
 math = true
