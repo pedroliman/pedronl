@@ -159,11 +159,11 @@
       <guid>/home/about/</guid>
       <description>
 
-&lt;h1 id=&#34;about-me&#34;&gt;About Me&lt;/h1&gt;
+&lt;h1 id=&#34;about&#34;&gt;About&lt;/h1&gt;
 
-&lt;p&gt;I am a doctoral candidate at &lt;a href=&#34;https://www.prgs.edu/&#34; target=&#34;_blank&#34;&gt;Pardee RAND Graduate School&lt;/a&gt;. Pardee RAND is a Policy Analysis graduate school situated inside &lt;a href=&#34;https://rand.org&#34; target=&#34;_blank&#34;&gt;RAND Corporation&lt;/a&gt;, a non-profit institution with the bold mission of &lt;a href=&#34;https://www.rand.org/about/history.html&#34; target=&#34;_blank&#34;&gt;improving policy and decision making through research and analysis&lt;/a&gt;. You will be able to find more about my RAND-related work at RAND&amp;rsquo;s website in the future.&lt;/p&gt;
+&lt;p&gt;Hi! Welcome to my R blog! Im an Assistant Policy Researcher at &lt;a href=&#34;https://rand.org&#34; target=&#34;_blank&#34;&gt;RAND&lt;/a&gt; and a Ph.D. candidate at &lt;a href=&#34;https://www.prgs.edu/&#34; target=&#34;_blank&#34;&gt;Pardee RAND Graduate School&lt;/a&gt;. You can find more information about my RAND-related work at my &lt;a href=&#34;https://www.rand.org/about/people/l/lima_pedro.html&#34; target=&#34;_blank&#34;&gt;RAND profile&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Prior to RAND, I was a Lecturer at &lt;a href=&#34;http://www.unisinos.br/global/en/&#34; target=&#34;_blank&#34;&gt;UNISINOS University&lt;/a&gt;, southern Brazil, where I taught Operational Research and Simulation Modeling on undergraduate courses. I was also a member of the &lt;a href=&#34;http://gmap.unisinos.br&#34; target=&#34;_blank&#34;&gt;GMAP | UNISINOS Research Group&lt;/a&gt;, where I worked building decision support tools, mostly with R. My interest in R started in 2013 when I was first introduced to it by a professor. Since then, I&amp;rsquo;ve been using R for everything, from the most commom statistical/ML applications to building simulation packages, crunching thousands of time-series available from web apis, modeling raiway systems and competition within the 3D printing industry.&lt;/p&gt;
+&lt;p&gt;My interest in R started in 2013 when I was first introduced to it by a professor. Since then, I&amp;rsquo;ve been using R for everything, from the most commom statistical/ML applications to building simulation packages (e.g.: &lt;a href=&#34;/post/arena2r-package-tutorial/&#34;&gt;Arena2R&lt;/a&gt;), crunching thousands of time-series available from web apis, modeling raiway systems, and modeling &lt;a href=&#34;/post/3d-printing-rdm-analysis-2018-dmdu-meeting/&#34;&gt;competition within the 3D printing industry&lt;/a&gt;.&lt;/p&gt;
 
 &lt;!---
 

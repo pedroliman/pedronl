@@ -34,11 +34,11 @@ weight = 100
 
 +++
 
-# About Me
+# About
 
-I am a doctoral candidate at [Pardee RAND Graduate School](https://www.prgs.edu/). Pardee RAND is a Policy Analysis graduate school situated inside [RAND Corporation](https://rand.org), a non-profit institution with the bold mission of [improving policy and decision making through research and analysis](https://www.rand.org/about/history.html). You will be able to find more about my RAND-related work at RAND's website in the future.
+Hi! Welcome to my R blog! Im an Assistant Policy Researcher at [RAND](https://rand.org) and a Ph.D. candidate at [Pardee RAND Graduate School](https://www.prgs.edu/). You can find more information about my RAND-related work at my [RAND profile](https://www.rand.org/about/people/l/lima_pedro.html).
 
-Prior to RAND, I was a Lecturer at [UNISINOS University](http://www.unisinos.br/global/en/), southern Brazil, where I taught Operational Research and Simulation Modeling on undergraduate courses. I was also a member of the [GMAP | UNISINOS Research Group](http://gmap.unisinos.br), where I worked building decision support tools, mostly with R. My interest in R started in 2013 when I was first introduced to it by a professor. Since then, I've been using R for everything, from the most commom statistical/ML applications to building simulation packages, crunching thousands of time-series available from web apis, modeling raiway systems and competition within the 3D printing industry.
+My interest in R started in 2013 when I was first introduced to it by a professor. Since then, I've been using R for everything, from the most commom statistical/ML applications to building simulation packages (e.g.: [Arena2R](/post/arena2r-package-tutorial/)), crunching thousands of time-series available from web apis, modeling raiway systems, and modeling [competition within the 3D printing industry](/post/3d-printing-rdm-analysis-2018-dmdu-meeting/).
 
 <!---
 
