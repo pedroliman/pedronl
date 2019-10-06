@@ -17,7 +17,7 @@ tags:
   - Arena2R
 header:
   caption: ''
-  image: ''
+  image: '/thumbnails/making-sense-of-simulation-models.png'
 ---
 
 ```{r setup, include=FALSE}

@@ -36,9 +36,7 @@ weight = 100
 
 # About
 
-Hi! Welcome to my R blog! Im an Assistant Policy Researcher at [RAND](https://rand.org) and a Ph.D. candidate at [Pardee RAND Graduate School](https://www.prgs.edu/). You can find more information about my RAND-related work at my [RAND profile](https://www.rand.org/about/people/l/lima_pedro.html).
-
-My interest in R started in 2013 when I was first introduced to it by a professor. Since then, I've been using R for everything, from the most commom statistical/ML applications to building simulation packages (e.g.: [Arena2R](/post/arena2r-package-tutorial/)), crunching thousands of time-series available from web apis, modeling raiway systems, and modeling [competition within the 3D printing industry](/post/3d-printing-rdm-analysis-2018-dmdu-meeting/).
+Hi! Welcome to my blog! I’m an Assistant Policy Researcher at [RAND](https://rand.org) and a Ph.D. candidate at [Pardee RAND Graduate School](https://www.prgs.edu/). You will find updated information about my professional background and my RAND-related work at my RAND profile. My interest in R started in 2013 when I was first introduced to it by a professor. Since then, I’ve been using R for virtually everything. From statistical/ML applications to simulation packages (e.g., [Arena2R](/post/arena2r-package-tutorial/)), to modeling [competition within the 3D printing industry](/post/3d-printing-rdm-analysis-2018-dmdu-meeting/), R has been my go-to language. In this blog, you will find some R code and tech/R/analytics-related posts that I would like to share with the R community and are not appropriate for a paper. If you find any of this helpful and would like to [connect](https://www.linkedin.com/in/pedro-nascimento-de-lima/), [let me know](mailto:pedrolima.n@gmail.com)!
 
 <!---
 

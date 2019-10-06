@@ -13,7 +13,7 @@ tags:
   - Arena2r
 header:
   caption: ''
-  image: ''
+  image: '/thumbnails/teaching-fp-many-objective-visuals.png'
 bibliography: [references/references-metamodeling.bib]
 link-citations: true
 ---
@@ -148,7 +148,7 @@ knitr::kable(head(data_benchmark))</code></pre>
 <h2>How would the Actual System Behave if…</h2>
 <p>Ok, now I have a table with all the basic benchmarking results. What if I have a better model of the system? We can accomplish this by building a discrete event simulation model of the actual system, and using a <a href="/post/des-metamodeling-splines-r-arena/">metamodel</a> of this model to approximate its results (you can find the data from my penny fab model <a href="/post/2019-data/penny-fab/penny-fab.rar">here</a>). During my course, I used several <a href="https://www.arenasimulation.com">Arena Simulation</a> models to illustrate that adding variability to the system always degrades performance (as the variability law predicts!). Doing so allowed the students to build confidence into the model and the theory, which was great to see!</p>
 <pre class="r"><code>library(arena2r)</code></pre>
-<pre><code>## Warning: package &#39;arena2r&#39; was built under R version 3.5.2</code></pre>
+<pre><code>## Warning: package &#39;arena2r&#39; was built under R version 3.6.1</code></pre>
 <pre class="r"><code>library(tidyr)
 library(splines)
 
@@ -233,7 +233,7 @@ plot_benchmarking(data = data_benchmark)</code></pre>
 <p>Pound, E.S., J.H. Bell, and M.L. Spearman. 2014. <em>Factory Physics for Managers: How Leaders Improve Performance in a Post-Lean Six Sigma World</em>. McGraw-Hill Education. <a href="https://books.google.com.br/books?id=B5sXAwAAQBAJ">https://books.google.com.br/books?id=B5sXAwAAQBAJ</a>.</p>
 </div>
 <div id="ref-Spearman1990">
-<p>SPEARMAN, MARK L., DAVID L. WOODRUFF, and WALLACE J. HOPP. 1990. “CONWIP: A Pull Alternative to Kanban.” <em>International Journal of Production Research</em> 28 (5). Taylor &amp; Francis: 879–94. <a href="https://doi.org/10.1080/00207549008942761">https://doi.org/10.1080/00207549008942761</a>.</p>
+<p>SPEARMAN, MARK L., DAVID L. WOODRUFF, and WALLACE J. HOPP. 1990. “CONWIP: A Pull Alternative to Kanban.” <em>International Journal of Production Research</em> 28 (5): 879–94. <a href="https://doi.org/10.1080/00207549008942761">https://doi.org/10.1080/00207549008942761</a>.</p>
 </div>
 </div>
 </div>

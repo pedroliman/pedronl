@@ -74,7 +74,7 @@
     <script>
       window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
       ga('create', 'UA-88356256-3', 'auto');
-      
+      ga('set', 'anonymizeIp', true);
       ga('require', 'eventTracker');
       ga('require', 'outboundLinkTracker');
       ga('require', 'urlChangeTracker');
@@ -107,15 +107,41 @@
   
   
     
-  <meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:image" content="/img/thumbnails/teaching-fp-many-objective-visuals.png">
   <meta property="og:locale" content="en-us">
   
   <meta property="article:published_time" content="2019-04-28T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2019-04-28T16:48:02-03:00">
+  <meta property="article:modified_time" content="2019-04-28T00:00:00&#43;00:00">
   
 
   
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+  window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#3f51b5",
+          "text": "#fff"
+        },
+        "button": {
+          "background": "#fff",
+          "text": "#3f51b5"
+        }
+      },
+      "theme": "classic",
+      "content": {
+        "message": "This website uses cookies to ensure you get the best experience on our website.",
+        "dismiss": "Got it!",
+        "link": "Learn more",
+        "href": "https://cookies.insites.com"
+      }
+    })});
+</script>
+
 
   
 
@@ -254,6 +280,15 @@
 <article class="article" itemscope itemtype="http://schema.org/Article">
 
   
+<div class="article-header">
+  
+  
+    <img src="/img/thumbnails/teaching-fp-many-objective-visuals.png" class="article-banner" itemprop="image">
+  
+
+  
+</div>
+
 
 
   <div class="article-container">
@@ -272,10 +307,8 @@
 
   <span class="article-date">
     
-        Last updated on
-    
     <meta content="2019-04-28 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-    <time datetime="2019-04-28 16:48:02 -0300 -0300" itemprop="dateModified">
+    <time datetime="2019-04-28 00:00:00 &#43;0000 UTC" itemprop="dateModified">
       Apr 28, 2019
     </time>
   </span>
@@ -487,7 +520,7 @@ knitr::kable(head(data_benchmark))</code></pre>
 <h2>How would the Actual System Behave if…</h2>
 <p>Ok, now I have a table with all the basic benchmarking results. What if I have a better model of the system? We can accomplish this by building a discrete event simulation model of the actual system, and using a <a href="/post/des-metamodeling-splines-r-arena/">metamodel</a> of this model to approximate its results (you can find the data from my penny fab model <a href="/post/2019-data/penny-fab/penny-fab.rar">here</a>). During my course, I used several <a href="https://www.arenasimulation.com">Arena Simulation</a> models to illustrate that adding variability to the system always degrades performance (as the variability law predicts!). Doing so allowed the students to build confidence into the model and the theory, which was great to see!</p>
 <pre class="r"><code>library(arena2r)</code></pre>
-<pre><code>## Warning: package &#39;arena2r&#39; was built under R version 3.5.2</code></pre>
+<pre><code>## Warning: package &#39;arena2r&#39; was built under R version 3.6.1</code></pre>
 <pre class="r"><code>library(tidyr)
 library(splines)
 
@@ -572,7 +605,7 @@ plot_benchmarking(data = data_benchmark)</code></pre>
 <p>Pound, E.S., J.H. Bell, and M.L. Spearman. 2014. <em>Factory Physics for Managers: How Leaders Improve Performance in a Post-Lean Six Sigma World</em>. McGraw-Hill Education. <a href="https://books.google.com.br/books?id=B5sXAwAAQBAJ">https://books.google.com.br/books?id=B5sXAwAAQBAJ</a>.</p>
 </div>
 <div id="ref-Spearman1990">
-<p>SPEARMAN, MARK L., DAVID L. WOODRUFF, and WALLACE J. HOPP. 1990. “CONWIP: A Pull Alternative to Kanban.” <em>International Journal of Production Research</em> 28 (5). Taylor &amp; Francis: 879–94. <a href="https://doi.org/10.1080/00207549008942761">https://doi.org/10.1080/00207549008942761</a>.</p>
+<p>SPEARMAN, MARK L., DAVID L. WOODRUFF, and WALLACE J. HOPP. 1990. “CONWIP: A Pull Alternative to Kanban.” <em>International Journal of Production Research</em> 28 (5): 879–94. <a href="https://doi.org/10.1080/00207549008942761">https://doi.org/10.1080/00207549008942761</a>.</p>
 </div>
 </div>
 </div>

@@ -13,7 +13,7 @@ tags:
   - Arena2r
 header:
   caption: ''
-  image: ''
+  image: '/thumbnails/teaching-fp-many-objective-visuals.png'
 bibliography: [references/references-metamodeling.bib]
 link-citations: true
 ---

@@ -13,7 +13,7 @@ tags:
   - R
 header:
   caption: 'An R Package for Arena Simulation Users'
-  image: ''
+  image: '/thumbnails/arena2r-post.png'
 ---
 
 [Arena Simulation](https://arenasimulation.com) is a well-known Discrete Event Simulation Software. However, if you are a power user you might want to extend your analysis beyond what Arena's Process Analyzer offers. In this tutorial, I'll guide you through the main functions of Arena2R package.

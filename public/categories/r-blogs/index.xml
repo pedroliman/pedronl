@@ -148,7 +148,7 @@ knitr::kable(head(data_benchmark))&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;How would the Actual System Behave if…&lt;/h2&gt;
 &lt;p&gt;Ok, now I have a table with all the basic benchmarking results. What if I have a better model of the system? We can accomplish this by building a discrete event simulation model of the actual system, and using a &lt;a href=&#34;/post/des-metamodeling-splines-r-arena/&#34;&gt;metamodel&lt;/a&gt; of this model to approximate its results (you can find the data from my penny fab model &lt;a href=&#34;/post/2019-data/penny-fab/penny-fab.rar&#34;&gt;here&lt;/a&gt;). During my course, I used several &lt;a href=&#34;https://www.arenasimulation.com&#34;&gt;Arena Simulation&lt;/a&gt; models to illustrate that adding variability to the system always degrades performance (as the variability law predicts!). Doing so allowed the students to build confidence into the model and the theory, which was great to see!&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(arena2r)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;arena2r&amp;#39; was built under R version 3.5.2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;arena2r&amp;#39; was built under R version 3.6.1&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyr)
 library(splines)
 
@@ -233,7 +233,7 @@ plot_benchmarking(data = data_benchmark)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Pound, E.S., J.H. Bell, and M.L. Spearman. 2014. &lt;em&gt;Factory Physics for Managers: How Leaders Improve Performance in a Post-Lean Six Sigma World&lt;/em&gt;. McGraw-Hill Education. &lt;a href=&#34;https://books.google.com.br/books?id=B5sXAwAAQBAJ&#34;&gt;https://books.google.com.br/books?id=B5sXAwAAQBAJ&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-Spearman1990&#34;&gt;
-&lt;p&gt;SPEARMAN, MARK L., DAVID L. WOODRUFF, and WALLACE J. HOPP. 1990. “CONWIP: A Pull Alternative to Kanban.” &lt;em&gt;International Journal of Production Research&lt;/em&gt; 28 (5). Taylor &amp;amp; Francis: 879–94. &lt;a href=&#34;https://doi.org/10.1080/00207549008942761&#34;&gt;https://doi.org/10.1080/00207549008942761&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;SPEARMAN, MARK L., DAVID L. WOODRUFF, and WALLACE J. HOPP. 1990. “CONWIP: A Pull Alternative to Kanban.” &lt;em&gt;International Journal of Production Research&lt;/em&gt; 28 (5): 879–94. &lt;a href=&#34;https://doi.org/10.1080/00207549008942761&#34;&gt;https://doi.org/10.1080/00207549008942761&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -486,7 +486,7 @@ Optimum_BatchSize&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Barton, Russell R, and Martin Meckesheimer. 2006. “Metamodel-Based Simulation Optimization” 13 (06). &lt;a href=&#34;https://doi.org/10.1016/S0927-0507(06)13018-2&#34;&gt;https://doi.org/10.1016/S0927-0507(06)13018-2&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-Kleijnen2017&#34;&gt;
-&lt;p&gt;Kleijnen, Jack P C. 2017. “Regression and Kriging metamodels with their experimental designs in simulation : A review.” &lt;em&gt;European Journal of Operational Research&lt;/em&gt; 256 (1). Elsevier B.V.: 1–16. &lt;a href=&#34;https://doi.org/10.1016/j.ejor.2016.06.041&#34;&gt;https://doi.org/10.1016/j.ejor.2016.06.041&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Kleijnen, Jack P C. 2017. “Regression and Kriging metamodels with their experimental designs in simulation : A review.” &lt;em&gt;European Journal of Operational Research&lt;/em&gt; 256 (1): 1–16. &lt;a href=&#34;https://doi.org/10.1016/j.ejor.2016.06.041&#34;&gt;https://doi.org/10.1016/j.ejor.2016.06.041&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;

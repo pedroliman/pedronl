@@ -13,8 +13,8 @@ tags:
   - Metamodeling
   - R
 header:
-  caption: 'Learn how to use R to build Spline Metamodels of Arena Simulation Models.'
-  image: ''
+  caption: ''
+  image: '/thumbnails/splines-post.png'
 bibliography: [references/references-metamodeling.bib]
 link-citations: true
 ---
