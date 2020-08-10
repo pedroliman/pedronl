@@ -147,9 +147,8 @@ knitr::kable(head(data_benchmark))</code></pre>
 <div id="how-would-the-actual-system-behave-if" class="section level2">
 <h2>How would the Actual System Behave if…</h2>
 <p>Ok, now I have a table with all the basic benchmarking results. What if I have a better model of the system? We can accomplish this by building a discrete event simulation model of the actual system, and using a <a href="/post/des-metamodeling-splines-r-arena/">metamodel</a> of this model to approximate its results (you can find the data from my penny fab model <a href="/post/2019-data/penny-fab/penny-fab.rar">here</a>). During my course, I used several <a href="https://www.arenasimulation.com">Arena Simulation</a> models to illustrate that adding variability to the system always degrades performance (as the variability law predicts!). Doing so allowed the students to build confidence into the model and the theory, which was great to see!</p>
-<pre class="r"><code>library(arena2r)</code></pre>
-<pre><code>## Warning: package &#39;arena2r&#39; was built under R version 3.6.1</code></pre>
-<pre class="r"><code>library(tidyr)
+<pre class="r"><code>library(arena2r)
+library(tidyr)
 library(splines)
 
 arena_data = arena2r::get_simulation_results(&quot;2019-data/penny-fab&quot;)
@@ -180,9 +179,8 @@ model_data = data.frame(
   CycleTime = predict(ct_model, subset(data_benchmark, Scenario == &quot;Best Case&quot;)),
   Scenario = &quot;DES Model&quot;
 )</code></pre>
-<pre><code>## Warning in splines::bs(WIP, degree = 3L, knots = numeric(0), Boundary.knots
-## = c(1, : some &#39;x&#39; values beyond boundary knots may cause ill-conditioned
-## bases</code></pre>
+<pre><code>## Warning in splines::bs(WIP, degree = 3L, knots = numeric(0), Boundary.knots =
+## c(1, : some &#39;x&#39; values beyond boundary knots may cause ill-conditioned bases</code></pre>
 <pre class="r"><code># Adding our Model&#39;s Data to the DataFrame:
 
 data_benchmark = rbind(
@@ -193,7 +191,7 @@ data_benchmark = rbind(
 <pre class="r"><code>library(tidyr)
 library(ggplot2)
 library(viridis)</code></pre>
-<pre><code>## Carregando pacotes exigidos: viridisLite</code></pre>
+<pre><code>## Loading required package: viridisLite</code></pre>
 <pre class="r"><code># Lets define a wrapper function for our plot:
 
 plot_benchmarking = function(data) {

@@ -1,182 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pedro N. de Lima</title>
+    <title>Pedro Nascimento de Lima</title>
     <link>/</link>
-    <description>Recent content on Pedro N. de Lima</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2019</copyright>
-    <lastBuildDate>Tue, 03 Sep 2019 00:00:00 +0000</lastBuildDate>
-    
-        <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title></title>
-      <link>/home/hero_carousel/</link>
-      <pubDate>Sun, 15 Oct 2017 00:00:00 -0700</pubDate>
-      
-      <guid>/home/hero_carousel/</guid>
-      <description></description>
-    </item>
+      <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <description>Pedro Nascimento de Lima</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Built with R, hosted at Netlify.</copyright><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Pedro Nascimento de Lima</title>
+      <link>/</link>
+    </image>
     
     <item>
-      <title>Academic</title>
-      <link>/home/hero/</link>
-      <pubDate>Sun, 15 Oct 2017 00:00:00 -0700</pubDate>
-      
-      <guid>/home/hero/</guid>
-      <description>&lt;p&gt;The highly flexible website framework for Hugo with an extensible plugin mechanism. Create a beautifully simple site in under 10 minutes 🚀
-&lt;div style=&#34;margin-top: -0.5rem;&#34;&gt;
-  &lt;a id=&#34;academic-release&#34; href=&#34;https://sourcethemes.com/academic/updates&#34; data-repo=&#34;gcushen/hugo-academic&#34;&gt;
-  Latest release &lt;!-- V --&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-&lt;div class=&#34;mt-3&#34;&gt;
-  &lt;a class=&#34;github-button&#34; href=&#34;https://github.com/gcushen/hugo-academic&#34; data-icon=&#34;octicon-star&#34; data-size=&#34;large&#34; data-show-count=&#34;true&#34; aria-label=&#34;Star this on GitHub&#34;&gt;Star&lt;/a&gt;
-&lt;/div&gt;
-&lt;script async defer src=&#34;https://buttons.github.io/buttons.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+      <title>Example Page 1</title>
+      <link>/courses/example/example1/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>/courses/example/example1/</guid>
+      <description>&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
+&lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+&lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Skills</title>
-      <link>/home/skills/</link>
-      <pubDate>Wed, 20 Sep 2017 00:00:00 -0700</pubDate>
-      
-      <guid>/home/skills/</guid>
-      <description></description>
+      <title>Example Page 2</title>
+      <link>/courses/example/example2/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>/courses/example/example2/</guid>
+      <description>&lt;p&gt;Here are some more tips for getting started with Academic:&lt;/p&gt;
+&lt;h2 id=&#34;tip-3&#34;&gt;Tip 3&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+&lt;h2 id=&#34;tip-4&#34;&gt;Tip 4&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+</description>
     </item>
     
     <item>
-      <title>R Posts</title>
-      <link>/home/posts_r/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
-      
-      <guid>/home/posts_r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Recent Publications</title>
-      <link>/home/publications/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
-      
-      <guid>/home/publications/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Other Posts</title>
-      <link>/home/posts/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
-      
-      <guid>/home/posts/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Selected Talks</title>
-      <link>/home/talks_selected/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
-      
-      <guid>/home/talks_selected/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Recent &amp; Upcoming Talks</title>
-      <link>/home/talks/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
-      
-      <guid>/home/talks/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Projects</title>
-      <link>/home/projects/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
-      
-      <guid>/home/projects/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Selected Publications</title>
-      <link>/home/publications_selected/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
-      
-      <guid>/home/publications_selected/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Teaching</title>
-      <link>/home/teaching/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
-      
-      <guid>/home/teaching/</guid>
-      <description>&lt;p&gt;This is an example of using the &lt;em&gt;custom&lt;/em&gt; widget to create your own homepage section.&lt;/p&gt;
-
-&lt;p&gt;I am a teaching instructor for the following courses at University X:&lt;/p&gt;
-
+      <title>Example Talk</title>
+      <link>/talk/example/</link>
+      <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
+      <guid>/talk/example/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Slides can be added in a few ways:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;CS101: An intro to computer science&lt;/li&gt;
-&lt;li&gt;CS102: An intro to computer science&lt;/li&gt;
-&lt;li&gt;CS103: An intro to computer science&lt;/li&gt;
-&lt;li&gt;CS104: An intro to computer science&lt;/li&gt;
-&lt;li&gt;CS105: An intro to computer science&lt;/li&gt;
-&lt;li&gt;CS106: An intro to computer science&lt;/li&gt;
-&lt;li&gt;CS107: An intro to computer science&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Create&lt;/strong&gt; slides using Academic&amp;rsquo;s 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Slides&lt;/em&gt;&lt;/a&gt; feature and link using &lt;code&gt;slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Upload&lt;/strong&gt; an existing slide deck to &lt;code&gt;static/&lt;/code&gt; and link using &lt;code&gt;url_slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Embed&lt;/strong&gt; your slides (e.g. Google Slides) or presentation video on this page using 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shortcodes&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Further talk details can easily be added to this page using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Tags</title>
-      <link>/home/tags/</link>
-      <pubDate>Wed, 20 Sep 2017 00:00:00 -0700</pubDate>
-      
-      <guid>/home/tags/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>/home/contact/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
-      
-      <guid>/home/contact/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/home/about/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0700</pubDate>
-      
-      <guid>/home/about/</guid>
-      <description>
-
-&lt;h1 id=&#34;about&#34;&gt;About&lt;/h1&gt;
-
-&lt;p&gt;Hi! Welcome to my blog! I’m an Assistant Policy Researcher at &lt;a href=&#34;https://rand.org&#34; target=&#34;_blank&#34;&gt;RAND&lt;/a&gt; and a Ph.D. candidate at &lt;a href=&#34;https://www.prgs.edu/&#34; target=&#34;_blank&#34;&gt;Pardee RAND Graduate School&lt;/a&gt;. You will find updated information about my professional background and RAND-related work  &lt;a href=&#34;https://www.rand.org/about/people/l/lima_pedro.html&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. My interest in R started in 2013 when I was first introduced to it by a professor. Since then, I’ve been using R for virtually everything. From statistical/ML applications to simulation packages (e.g., &lt;a href=&#34;/post/arena2r-package-tutorial/&#34;&gt;Arena2R&lt;/a&gt;), to modeling &lt;a href=&#34;/post/3d-printing-rdm-analysis-2018-dmdu-meeting/&#34;&gt;competition within the 3D printing industry&lt;/a&gt;, R has been my go-to language. In this blog, you will find some R code and tech/R/analytics-related posts that I would like to share with the R community and are not appropriate for a paper. If you find any of this helpful and would like to &lt;a href=&#34;https://www.linkedin.com/in/pedro-nascimento-de-lima/&#34; target=&#34;_blank&#34;&gt;connect&lt;/a&gt;, &lt;a href=&#34;mailto:pedrolima.n@gmail.com&#34; target=&#34;_blank&#34;&gt;let me know&lt;/a&gt;!&lt;/p&gt;
-
-&lt;!---
-
-My academic interests often gravitate tow1ards the intersection between OR, Programming, and Management of Wicked Problems. My [undergraduate](files/Pedro-Lima-Undergrad-Dissertation-PSMs.pdf) and [master&#39;s](files/Pedro-Lima-MS-Dissertation-RDM-AM.pdf) dissertations focused on wicked problems and decision under deep uncertainty, have received the Best Brazilian Dissertation in Production Engineering Prize from ABEPRO, in [2016](http://www.unisinos.br/fique-sabendo/escola-politecnica/engenharia-de-producao/aluno-e-premiado-pela-abepro-2016/) and [2018](http://www.unisinos.br/noticias/universidade/gmap-unisinos-em-destaque), respectively.
-
----&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Search</title>
-      <link>/home/search/</link>
-      <pubDate>Mon, 23 Jul 2018 00:00:00 -0700</pubDate>
-      
-      <guid>/home/search/</guid>
+      <title>The Health and Economic Impacts of Nonpharmaceutical Interventions to Address COVID-19 - A Decision Support Tool for State and Local Policymakers</title>
+      <link>/publication/2020-health-economic-impacts-covid-19-npis/</link>
+      <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/2020-health-economic-impacts-covid-19-npis/</guid>
       <description></description>
     </item>
     
@@ -184,7 +88,6 @@ My academic interests often gravitate tow1ards the intersection between OR, Prog
       <title>Slides - Simulação (por Eventos Discretos), Sistemas de Informação e outros</title>
       <link>/post/slides-graduacao-simulacao-sistemas-de-informacaosistemas-produtivos/</link>
       <pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
-      
       <guid>/post/slides-graduacao-simulacao-sistemas-de-informacaosistemas-produtivos/</guid>
       <description>
 
@@ -197,22 +100,255 @@ My academic interests often gravitate tow1ards the intersection between OR, Prog
     </item>
     
     <item>
-      <title>Learning Resources</title>
-      <link>/resources/</link>
-      <pubDate>Sun, 28 Apr 2019 00:00:00 -0700</pubDate>
-      
-      <guid>/resources/</guid>
-      <description>&lt;p&gt;This is a non-exaustive list of resources that I find useful for learning.&lt;/p&gt;
+      <title>Writing technical content in Academic</title>
+      <link>/post-not-used/writing-technical-content/</link>
+      <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>/post-not-used/writing-technical-content/</guid>
+      <description>&lt;p&gt;Academic is designed to give technical content creators a seamless experience. You can focus on the content and Academic handles the rest.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Highlight your code snippets, take notes on math classes, and draw diagrams from textual representation.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;On this page, you&amp;rsquo;ll find some examples of the types of technical content that can be rendered with Academic.&lt;/p&gt;
+&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;
+&lt;h3 id=&#34;code&#34;&gt;Code&lt;/h3&gt;
+&lt;p&gt;Academic supports a Markdown extension for highlighting code syntax. You can enable this feature by toggling the &lt;code&gt;highlight&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```python
+import pandas as pd
+data = pd.read_csv(&amp;quot;data.csv&amp;quot;)
+data.head()
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
+data = pd.read_csv(&amp;quot;data.csv&amp;quot;)
+data.head()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;math&#34;&gt;Math&lt;/h3&gt;
+&lt;p&gt;Academic supports a Markdown extension for $\LaTeX$ math. You can enable this feature by toggling the &lt;code&gt;math&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file.&lt;/p&gt;
+&lt;p&gt;To render &lt;em&gt;inline&lt;/em&gt; or &lt;em&gt;block&lt;/em&gt; math, wrap your LaTeX math with &lt;code&gt;$...$&lt;/code&gt; or &lt;code&gt;$$...$$&lt;/code&gt;, respectively.&lt;/p&gt;
+&lt;p&gt;Example &lt;strong&gt;math block&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;$$\gamma_{n} = \frac{ 
+\left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T 
+\left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}
+{\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}$$
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;p&gt;$$\gamma_{n} = \frac{ \left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T \left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}{\left |\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right |^2}$$&lt;/p&gt;
+&lt;p&gt;Example &lt;strong&gt;inline math&lt;/strong&gt; &lt;code&gt;$\nabla F(\mathbf{x}_{n})$&lt;/code&gt; renders as $\nabla F(\mathbf{x}_{n})$.&lt;/p&gt;
+&lt;p&gt;Example &lt;strong&gt;multi-line math&lt;/strong&gt; using the &lt;code&gt;\\\\&lt;/code&gt; math linebreak:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-tex&#34;&gt;$$f(k;p_0^*) = \begin{cases} p_0^* &amp;amp; \text{if }k=1, \\\\
+1-p_0^* &amp;amp; \text {if }k=0.\end{cases}$$
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;p&gt;$$f(k;p_0^*) = \begin{cases} p_0^* &amp;amp; \text{if }k=1, \\&lt;br&gt;
+1-p_0^* &amp;amp; \text {if }k=0.\end{cases}$$&lt;/p&gt;
+&lt;h3 id=&#34;diagrams&#34;&gt;Diagrams&lt;/h3&gt;
+&lt;p&gt;Academic supports a Markdown extension for diagrams. You can enable this feature by toggling the &lt;code&gt;diagram&lt;/code&gt; option in your &lt;code&gt;config/_default/params.toml&lt;/code&gt; file or by adding &lt;code&gt;diagram: true&lt;/code&gt; to your page front matter.&lt;/p&gt;
+&lt;p&gt;An example &lt;strong&gt;flowchart&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+graph TD
+A[Hard] --&amp;gt;|Text| B(Round)
+B --&amp;gt; C{Decision}
+C --&amp;gt;|One| D[Result 1]
+C --&amp;gt;|Two| E[Result 2]
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;graph TD
+A[Hard] --&amp;gt;|Text| B(Round)
+B --&amp;gt; C{Decision}
+C --&amp;gt;|One| D[Result 1]
+C --&amp;gt;|Two| E[Result 2]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;An example &lt;strong&gt;sequence diagram&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+sequenceDiagram
+Alice-&amp;gt;&amp;gt;John: Hello John, how are you?
+loop Healthcheck
+    John-&amp;gt;&amp;gt;John: Fight against hypochondria
+end
+Note right of John: Rational thoughts!
+John--&amp;gt;&amp;gt;Alice: Great!
+John-&amp;gt;&amp;gt;Bob: How about you?
+Bob--&amp;gt;&amp;gt;John: Jolly good!
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;sequenceDiagram
+Alice-&amp;gt;&amp;gt;John: Hello John, how are you?
+loop Healthcheck
+    John-&amp;gt;&amp;gt;John: Fight against hypochondria
+end
+Note right of John: Rational thoughts!
+John--&amp;gt;&amp;gt;Alice: Great!
+John-&amp;gt;&amp;gt;Bob: How about you?
+Bob--&amp;gt;&amp;gt;John: Jolly good!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;An example &lt;strong&gt;Gantt diagram&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+gantt
+section Section
+Completed :done,    des1, 2014-01-06,2014-01-08
+Active        :active,  des2, 2014-01-07, 3d
+Parallel 1   :         des3, after des1, 1d
+Parallel 2   :         des4, after des1, 1d
+Parallel 3   :         des5, after des3, 1d
+Parallel 4   :         des6, after des4, 1d
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;gantt
+section Section
+Completed :done,    des1, 2014-01-06,2014-01-08
+Active        :active,  des2, 2014-01-07, 3d
+Parallel 1   :         des3, after des1, 1d
+Parallel 2   :         des4, after des1, 1d
+Parallel 3   :         des5, after des3, 1d
+Parallel 4   :         des6, after des4, 1d
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;An example &lt;strong&gt;class diagram&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+classDiagram
+Class01 &amp;lt;|-- AveryLongClass : Cool
+&amp;lt;&amp;lt;interface&amp;gt;&amp;gt; Class01
+Class09 --&amp;gt; C2 : Where am i?
+Class09 --* C3
+Class09 --|&amp;gt; Class07
+Class07 : equals()
+Class07 : Object[] elementData
+Class01 : size()
+Class01 : int chimp
+Class01 : int gorilla
+class Class10 {
+  &amp;lt;&amp;lt;service&amp;gt;&amp;gt;
+  int id
+  size()
+}
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;classDiagram
+Class01 &amp;lt;|-- AveryLongClass : Cool
+&amp;lt;&amp;lt;interface&amp;gt;&amp;gt; Class01
+Class09 --&amp;gt; C2 : Where am i?
+Class09 --* C3
+Class09 --|&amp;gt; Class07
+Class07 : equals()
+Class07 : Object[] elementData
+Class01 : size()
+Class01 : int chimp
+Class01 : int gorilla
+class Class10 {
+  &amp;lt;&amp;lt;service&amp;gt;&amp;gt;
+  int id
+  size()
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;An example &lt;strong&gt;state diagram&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```mermaid
+stateDiagram
+[*] --&amp;gt; Still
+Still --&amp;gt; [*]
+Still --&amp;gt; Moving
+Moving --&amp;gt; Still
+Moving --&amp;gt; Crash
+Crash --&amp;gt; [*]
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;stateDiagram
+[*] --&amp;gt; Still
+Still --&amp;gt; [*]
+Still --&amp;gt; Moving
+Moving --&amp;gt; Still
+Moving --&amp;gt; Crash
+Crash --&amp;gt; [*]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;todo-lists&#34;&gt;Todo lists&lt;/h3&gt;
+&lt;p&gt;You can even write your todo lists in Academic too:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;- [x] Write math example
+- [x] Write diagram example
+- [ ] Do something else
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Write math example&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Write diagram example&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Do something else&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;tables&#34;&gt;Tables&lt;/h3&gt;
+&lt;p&gt;Represent your data in tables:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;First Header&lt;/th&gt;
+&lt;th&gt;Second Header&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Content Cell&lt;/td&gt;
+&lt;td&gt;Content Cell&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Content Cell&lt;/td&gt;
+&lt;td&gt;Content Cell&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;asides&#34;&gt;Asides&lt;/h3&gt;
+&lt;p&gt;Academic supports a 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/#alerts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shortcode for asides&lt;/a&gt;, also referred to as &lt;em&gt;notices&lt;/em&gt;, &lt;em&gt;hints&lt;/em&gt;, or &lt;em&gt;alerts&lt;/em&gt;. By wrapping a paragraph in &lt;code&gt;{{% alert note %}} ... {{% /alert %}}&lt;/code&gt;, it will render as an aside.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{% alert note %}}
+A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
+{{% /alert %}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;spoilers&#34;&gt;Spoilers&lt;/h3&gt;
+&lt;p&gt;Add a spoiler to a page to reveal text, such as an answer to a question, after a button is clicked.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{&amp;lt; spoiler text=&amp;quot;Click to view the spoiler&amp;quot; &amp;gt;}}
+You found me!
+{{&amp;lt; /spoiler &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;div class=&#34;spoiler &#34; &gt;
+  &lt;p&gt;
+    &lt;a class=&#34;btn btn-primary&#34; data-toggle=&#34;collapse&#34; href=&#34;#spoiler-1&#34; role=&#34;button&#34; aria-expanded=&#34;false&#34; aria-controls=&#34;spoiler-1&#34;&gt;
+      Click to view the spoiler
+    &lt;/a&gt;
+  &lt;/p&gt;
+  &lt;div class=&#34;collapse card &#34; id=&#34;spoiler-1&#34;&gt;
+    &lt;div class=&#34;card-body&#34;&gt;
+      You found me!
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;icons&#34;&gt;Icons&lt;/h3&gt;
+&lt;p&gt;Academic enables you to use a wide range of 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/page-builder/#icons&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;icons from &lt;em&gt;Font Awesome&lt;/em&gt; and &lt;em&gt;Academicons&lt;/em&gt;&lt;/a&gt; in addition to 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/#emojis&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;emojis&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here are some examples using the &lt;code&gt;icon&lt;/code&gt; shortcode to render icons:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{&amp;lt; icon name=&amp;quot;terminal&amp;quot; pack=&amp;quot;fas&amp;quot; &amp;gt;}} Terminal  
+{{&amp;lt; icon name=&amp;quot;python&amp;quot; pack=&amp;quot;fab&amp;quot; &amp;gt;}} Python  
+{{&amp;lt; icon name=&amp;quot;r-project&amp;quot; pack=&amp;quot;fab&amp;quot; &amp;gt;}} R
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;renders as&lt;/p&gt;
+&lt;p&gt;
+  &lt;i class=&#34;fas fa-terminal  pr-1 fa-fw&#34;&gt;&lt;/i&gt; Terminal&lt;br&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://www.r-bloggers.com/&#34; target=&#34;_blank&#34;&gt;R-Bloggers&lt;/a&gt;: Subscribe to the R-bloggers website to get updates from thousands of R blogs like this.&lt;/p&gt;
+  &lt;i class=&#34;fab fa-python  pr-1 fa-fw&#34;&gt;&lt;/i&gt; Python&lt;br&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://rweekly.org/&#34; target=&#34;_blank&#34;&gt;R Weekly&lt;/a&gt;: Another R mailing list.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.datacamp.com&#34; target=&#34;_blank&#34;&gt;Data Camp&lt;/a&gt;: My favourite resource for learning R and python.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://waterprogramming.wordpress.com&#34; target=&#34;_blank&#34;&gt;Water Programming Blog&lt;/a&gt;: Great resource for python and R tutorials (even if you do not work on the Water Resources Management field).&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://deepuncertainty.org&#34; target=&#34;_blank&#34;&gt;DMDU Society&lt;/a&gt;: The Society for Decision Making Under Deep Uncertainty is a great resource for those interested in simulation-based decision making. Check out the materials from previous meetings!&lt;/p&gt;
+  &lt;i class=&#34;fab fa-r-project  pr-1 fa-fw&#34;&gt;&lt;/i&gt; R&lt;/p&gt;
+&lt;h3 id=&#34;did-you-find-this-page-helpful-consider-sharing-it-&#34;&gt;Did you find this page helpful? Consider sharing it 🙌&lt;/h3&gt;
 </description>
     </item>
     
@@ -220,7 +356,6 @@ My academic interests often gravitate tow1ards the intersection between OR, Prog
       <title>Teaching Factory Physics Flow Benchmarking with R and Many-Objective Visuals</title>
       <link>/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/</link>
       <pubDate>Sun, 28 Apr 2019 00:00:00 +0000</pubDate>
-      
       <guid>/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/</guid>
       <description>
 
@@ -352,9 +487,8 @@ knitr::kable(head(data_benchmark))&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;how-would-the-actual-system-behave-if&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;How would the Actual System Behave if…&lt;/h2&gt;
 &lt;p&gt;Ok, now I have a table with all the basic benchmarking results. What if I have a better model of the system? We can accomplish this by building a discrete event simulation model of the actual system, and using a &lt;a href=&#34;/post/des-metamodeling-splines-r-arena/&#34;&gt;metamodel&lt;/a&gt; of this model to approximate its results (you can find the data from my penny fab model &lt;a href=&#34;/post/2019-data/penny-fab/penny-fab.rar&#34;&gt;here&lt;/a&gt;). During my course, I used several &lt;a href=&#34;https://www.arenasimulation.com&#34;&gt;Arena Simulation&lt;/a&gt; models to illustrate that adding variability to the system always degrades performance (as the variability law predicts!). Doing so allowed the students to build confidence into the model and the theory, which was great to see!&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(arena2r)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;arena2r&amp;#39; was built under R version 3.6.1&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyr)
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(arena2r)
+library(tidyr)
 library(splines)
 
 arena_data = arena2r::get_simulation_results(&amp;quot;2019-data/penny-fab&amp;quot;)
@@ -385,9 +519,8 @@ model_data = data.frame(
   CycleTime = predict(ct_model, subset(data_benchmark, Scenario == &amp;quot;Best Case&amp;quot;)),
   Scenario = &amp;quot;DES Model&amp;quot;
 )&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning in splines::bs(WIP, degree = 3L, knots = numeric(0), Boundary.knots
-## = c(1, : some &amp;#39;x&amp;#39; values beyond boundary knots may cause ill-conditioned
-## bases&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning in splines::bs(WIP, degree = 3L, knots = numeric(0), Boundary.knots =
+## c(1, : some &amp;#39;x&amp;#39; values beyond boundary knots may cause ill-conditioned bases&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Adding our Model&amp;#39;s Data to the DataFrame:
 
 data_benchmark = rbind(
@@ -398,7 +531,7 @@ data_benchmark = rbind(
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyr)
 library(ggplot2)
 library(viridis)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Carregando pacotes exigidos: viridisLite&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Loading required package: viridisLite&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Lets define a wrapper function for our plot:
 
 plot_benchmarking = function(data) {
@@ -449,7 +582,6 @@ plot_benchmarking(data = data_benchmark)&lt;/code&gt;&lt;/pre&gt;
       <title>Discrete Event Simulation (DES) Metamodeling - Splines with R and Arena</title>
       <link>/post/des-metamodeling-splines-r-arena/</link>
       <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
-      
       <guid>/post/des-metamodeling-splines-r-arena/</guid>
       <description>
 
@@ -574,10 +706,24 @@ ggplot(sim_results, mapping = aes(x = BatchSize, y = Value)) +
     </item>
     
     <item>
+      <title>An example preprint / working paper</title>
+      <link>/publication-not-used/preprint/</link>
+      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/publication-not-used/preprint/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Supplementary notes can be added here, including 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Making Sense of Simulation Models with Metamodels Part 1 - Low-Order Polynomials with Arena and R</title>
       <link>/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-      
       <guid>/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/</guid>
       <description>
 
@@ -699,20 +845,201 @@ Optimum_BatchSize&lt;/code&gt;&lt;/pre&gt;
     </item>
     
     <item>
-      <title>Do Socioeconomic Contextual Factors Influence SMEs Service Quality? A cross-sector and cross-city SERVPERF Analysis</title>
-      <link>/publication/socioeconomic-factors-service-quality-servperf/</link>
-      <pubDate>Sat, 01 Dec 2018 00:00:00 -0800</pubDate>
+      <title>Display Jupyter Notebooks with Academic</title>
+      <link>/post-not-used/jupyter/</link>
+      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>/post-not-used/jupyter/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from IPython.core.display import Image
+Image(&#39;https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;./index_1_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(&amp;quot;Welcome to Academic!&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;Welcome to Academic!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;install-python-and-jupyterlab&#34;&gt;Install Python and JupyterLab&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.anaconda.com/distribution/#download-section&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Install Anaconda&lt;/a&gt; which includes Python 3 and JupyterLab.&lt;/p&gt;
+&lt;p&gt;Alternatively, install JupyterLab with &lt;code&gt;pip3 install jupyterlab&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;create-or-upload-a-jupyter-notebook&#34;&gt;Create or upload a Jupyter notebook&lt;/h2&gt;
+&lt;p&gt;Run the following commands in your Terminal, substituting &lt;code&gt;&amp;lt;MY-WEBSITE-FOLDER&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;SHORT-POST-TITLE&amp;gt;&lt;/code&gt; with the file path to your Academic website folder and a short title for your blog post (use hyphens instead of spaces), respectively:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir -p &amp;lt;MY-WEBSITE-FOLDER&amp;gt;/content/post/&amp;lt;SHORT-POST-TITLE&amp;gt;/
+cd &amp;lt;MY-WEBSITE-FOLDER&amp;gt;/content/post/&amp;lt;SHORT-POST-TITLE&amp;gt;/
+jupyter lab index.ipynb
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;code&gt;jupyter&lt;/code&gt; command above will launch the JupyterLab editor, allowing us to add Academic metadata and write the content.&lt;/p&gt;
+&lt;h2 id=&#34;edit-your-post-metadata&#34;&gt;Edit your post metadata&lt;/h2&gt;
+&lt;p&gt;The first cell of your Jupter notebook will contain your post metadata (
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/front-matter/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;front matter&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;In Jupter, choose &lt;em&gt;Markdown&lt;/em&gt; as the type of the first cell and wrap your Academic metadata in three dashes, indicating that it is YAML front matter:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: My post&#39;s title
+date: 2019-09-01
+
+# Put any other Academic metadata here...
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Edit the metadata of your post, using the 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentation&lt;/a&gt; as a guide to the available options.&lt;/p&gt;
+&lt;p&gt;To set a 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#featured-image&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;featured image&lt;/a&gt;, place an image named &lt;code&gt;featured&lt;/code&gt; into your post&amp;rsquo;s folder.&lt;/p&gt;
+&lt;p&gt;For other tips, such as using math, see the guide on 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;writing content with Academic&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;convert-notebook-to-markdown&#34;&gt;Convert notebook to Markdown&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;jupyter nbconvert index.ipynb --to markdown --NbConvertApp.output_files_dir=.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
+&lt;p&gt;This post was created with Jupyter. The orginal files can be found at &lt;a href=&#34;https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/post/jupyter&#34;&gt;https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/post/jupyter&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Slides</title>
+      <link>/slides/example/</link>
+      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>/slides/example/</guid>
+      <description>&lt;h1 id=&#34;create-slides-in-markdown-with-academic&#34;&gt;Create slides in Markdown with Academic&lt;/h1&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic&lt;/a&gt; | 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Efficiently write slides in Markdown&lt;/li&gt;
+&lt;li&gt;3-in-1: Create, Present, and Publish your slides&lt;/li&gt;
+&lt;li&gt;Supports speaker notes&lt;/li&gt;
+&lt;li&gt;Mobile friendly slides&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;controls&#34;&gt;Controls&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Next: &lt;code&gt;Right Arrow&lt;/code&gt; or &lt;code&gt;Space&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Previous: &lt;code&gt;Left Arrow&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Start: &lt;code&gt;Home&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Finish: &lt;code&gt;End&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Overview: &lt;code&gt;Esc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Speaker notes: &lt;code&gt;S&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Fullscreen: &lt;code&gt;F&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Zoom: &lt;code&gt;Alt + Click&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://github.com/hakimel/reveal.js#pdf-export&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PDF Export&lt;/a&gt;: &lt;code&gt;E&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;code-highlighting&#34;&gt;Code Highlighting&lt;/h2&gt;
+&lt;p&gt;Inline code: &lt;code&gt;variable&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Code block:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;porridge = &amp;quot;blueberry&amp;quot;
+if porridge == &amp;quot;blueberry&amp;quot;:
+    print(&amp;quot;Eating...&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;math&#34;&gt;Math&lt;/h2&gt;
+&lt;p&gt;In-line math: $x + y = z$&lt;/p&gt;
+&lt;p&gt;Block math:&lt;/p&gt;
+&lt;p&gt;$$
+f\left( x \right) = ;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}}
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;fragments&#34;&gt;Fragments&lt;/h2&gt;
+&lt;p&gt;Make content appear incrementally&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{{% fragment %}} One {{% /fragment %}}
+{{% fragment %}} **Two** {{% /fragment %}}
+{{% fragment %}} Three {{% /fragment %}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Press &lt;code&gt;Space&lt;/code&gt; to play!&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;fragment &#34; &gt;
+One
+&lt;/span&gt;
+&lt;span class=&#34;fragment &#34; &gt;
+&lt;strong&gt;Two&lt;/strong&gt;
+&lt;/span&gt;
+&lt;span class=&#34;fragment &#34; &gt;
+Three
+&lt;/span&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;A fragment can accept two optional parameters:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;class&lt;/code&gt;: use a custom style (requires definition in custom CSS)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;weight&lt;/code&gt;: sets the order in which a fragment appears&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;speaker-notes&#34;&gt;Speaker Notes&lt;/h2&gt;
+&lt;p&gt;Add speaker notes to your presentation&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{% speaker_note %}}
+- Only the speaker can read these notes
+- Press `S` key to view
+{{% /speaker_note %}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Press the &lt;code&gt;S&lt;/code&gt; key to view the speaker notes!&lt;/p&gt;
+&lt;aside class=&#34;notes&#34;&gt;
+  &lt;ul&gt;
+&lt;li&gt;Only the speaker can read these notes&lt;/li&gt;
+&lt;li&gt;Press &lt;code&gt;S&lt;/code&gt; key to view&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/aside&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;black: Black background, white text, blue links (default)&lt;/li&gt;
+&lt;li&gt;white: White background, black text, blue links&lt;/li&gt;
+&lt;li&gt;league: Gray background, white text, blue links&lt;/li&gt;
+&lt;li&gt;beige: Beige background, dark text, brown links&lt;/li&gt;
+&lt;li&gt;sky: Blue background, thin dark text, blue links&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;night: Black background, thick white text, orange links&lt;/li&gt;
+&lt;li&gt;serif: Cappuccino background, gray text, brown links&lt;/li&gt;
+&lt;li&gt;simple: White background, black text, blue links&lt;/li&gt;
+&lt;li&gt;solarized: Cream-colored background, dark green text, blue links&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+
+&lt;section data-noprocess data-shortcode-slide
+  
       
-      <guid>/publication/socioeconomic-factors-service-quality-servperf/</guid>
+      data-background-image=&#34;/media/boards.jpg&#34;
+  &gt;
+
+&lt;h2 id=&#34;custom-slide&#34;&gt;Custom Slide&lt;/h2&gt;
+&lt;p&gt;Customize the slide style and background&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{&amp;lt; slide background-image=&amp;quot;/media/boards.jpg&amp;quot; &amp;gt;}}
+{{&amp;lt; slide background-color=&amp;quot;#0000FF&amp;quot; &amp;gt;}}
+{{&amp;lt; slide class=&amp;quot;my-style&amp;quot; &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;custom-css-example&#34;&gt;Custom CSS Example&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s make headers navy colored.&lt;/p&gt;
+&lt;p&gt;Create &lt;code&gt;assets/css/reveal_custom.css&lt;/code&gt; with:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.reveal section h1,
+.reveal section h2,
+.reveal section h3 {
+  color: navy;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://spectrum.chat/academic&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Do Socioeconomic Contextual Factors Influence SMEs Service Quality? A cross-sector and cross-city SERVPERF Analysis</title>
+      <link>/publication/2018-socioeconomic-factors/</link>
+      <pubDate>Sat, 01 Dec 2018 00:00:00 -0800</pubDate>
+      <guid>/publication/2018-socioeconomic-factors/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Inducing Brazilian manufacturing SMEs productivity with Lean tools</title>
-      <link>/publication/inducing-brazilian-smes-productivity-lean-manufacturing/</link>
+      <link>/publication/2018-smes-lean-tools/inducing-brazilian-smes-productivity-lean-manufacturing/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 -0800</pubDate>
-      
-      <guid>/publication/inducing-brazilian-smes-productivity-lean-manufacturing/</guid>
+      <guid>/publication/2018-smes-lean-tools/inducing-brazilian-smes-productivity-lean-manufacturing/</guid>
       <description></description>
     </item>
     
@@ -720,7 +1047,6 @@ Optimum_BatchSize&lt;/code&gt;&lt;/pre&gt;
       <title>Strategic Decision Making in the 3D Printing Industry - 2018 DMDU Annual Meeting Materials</title>
       <link>/post/3d-printing-rdm-analysis-2018-dmdu-meeting/</link>
       <pubDate>Mon, 05 Nov 2018 00:00:00 +0000</pubDate>
-      
       <guid>/post/3d-printing-rdm-analysis-2018-dmdu-meeting/</guid>
       <description>
 
@@ -729,7 +1055,6 @@ Optimum_BatchSize&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;Full Master’s Thesis:&lt;/strong&gt; &lt;a href=&#34;/../files/Pedro-Lima-MS-Dissertation-RDM-AM.pdf&#34;&gt;Donwload Here.&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Slides:&lt;/strong&gt; &lt;a href=&#34;/../files/dmdu2018-rdm-pedro-lima.pdf&#34;&gt;Donwload Here.&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Poster:&lt;/strong&gt; &lt;a href=&#34;/../files/PosterPedroLimaDMDU2018.pdf&#34;&gt;Donwload Here.&lt;/a&gt;&lt;/p&gt;
-&lt;embed src=&#34;/../files/PosterPedroLimaDMDU2018.pdf&#34; width=&#34;100%&#34; height=&#34;800&#34; type=&#34;application/pdf&#34; /&gt;
 </description>
     </item>
     
@@ -737,7 +1062,6 @@ Optimum_BatchSize&lt;/code&gt;&lt;/pre&gt;
       <title>Previsão de Séries Temporais com o R</title>
       <link>/post/previsao-de-series-temporais-com-o-r/</link>
       <pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
-      
       <guid>/post/previsao-de-series-temporais-com-o-r/</guid>
       <description>
 
@@ -751,7 +1075,7 @@ Optimum_BatchSize&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;Cada um destes pacotes tem um fim específico. Neste curso, utilizaremos principalmente as bibliotecas ‘forecast’ e o fpp2. Ambos os pacotes são utlizados no livro &lt;a href=&#34;https://otexts.org/fpp2/&#34;&gt;Forecating: Principles and Practice&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;passos-para-realizar-previsoes&#34; class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;passos-para-realizar-previsões&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Passos para Realizar Previsões&lt;/h2&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;Faça um gráfico dos dados;&lt;/li&gt;
@@ -779,7 +1103,7 @@ install.packages(&amp;quot;readxl&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 library(fpp2)
 library(readxl)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;trabalhando-com-a-primeira-serie&#34; class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;trabalhando-com-a-primeira-série&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Trabalhando com a Primeira Série&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Observe as série gold:&lt;/li&gt;
@@ -788,7 +1112,7 @@ library(readxl)&lt;/code&gt;&lt;/pre&gt;
 autoplot(gold)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;padroes-em-series-temporais&#34; class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;padrões-em-séries-temporais&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Padrões em séries temporais&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Tendência: Os dados possuem uma tendência geral de aumento ou queda (exemplo: Crescimento da população).&lt;/li&gt;
@@ -808,7 +1132,7 @@ autoplot(woolyrnq) &lt;/code&gt;&lt;/pre&gt;
 autoplot(gas) &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;observando-o-a-sazonalidade-das-series&#34; class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;observando-o-a-sazonalidade-das-séries&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Observando o a Sazonalidade das Séries&lt;/h2&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# A função frequency determina a frequência da série. 
 # Para dados sazonais, irá definir o período dominante da sazonalidade, 
@@ -816,7 +1140,7 @@ autoplot(gas) &lt;/code&gt;&lt;/pre&gt;
 frequency(gas) &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] 12&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;observando-graficos-sazonais&#34; class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;observando-gráficos-sazonais&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Observando Gráficos Sazonais&lt;/h2&gt;
 &lt;p&gt;Observando a série temporal:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Produção de Gás na Austrália
@@ -839,7 +1163,7 @@ autoplot(beer) + ylab(&amp;quot;Venda de Cerveja&amp;quot;)&lt;/code&gt;&lt;/pre
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggsubseriesplot(beer)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;criando-objetos-ts-para-series-temporais-a-partir-de-dados-reais&#34; class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;criando-objetos-ts-para-séries-temporais-a-partir-de-dados-reais&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Criando Objetos ‘ts’ para Séries Temporais a partir de dados reais&lt;/h2&gt;
 &lt;p&gt;Para manipular séries temporais no R, é interessante criar objetos do tipo ‘ts’. Podemos criar objetos a partir de arquivos do excel, csv, bases de dados, ou mesmo APIs públicas.&lt;/p&gt;
 &lt;p&gt;Podemos utilizar a biblioteca ‘readxl’ para ler arquivos do excel. Obtenha &lt;a href=&#34;/post/2018-10-10-previsao-serie-temporais/VendasCarros.xlsx&#34;&gt;aqui o arquivo de dados VendasCarros.xlsx&lt;/a&gt;.&lt;/p&gt;
@@ -856,7 +1180,7 @@ head(dados_excel)&lt;/code&gt;&lt;/pre&gt;
 ## 5  2018     5         4094            4353
 ## 6  2018     6         4994            4842&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;transformando-um-data-frame-em-uma-serie-temporal&#34; class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;transformando-um-data-frame-em-uma-série-temporal&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Transformando um Data Frame em uma Série Temporal&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Para trabalhar com séries temporais, iremos transformar esta tabela:&lt;/li&gt;
@@ -873,9 +1197,9 @@ ts_vendas&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;forecast::autoplot(ts_vendas)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;previsoes-com-modelos-de-suavizacao-exponencial&#34; class=&#34;section level1&#34; data-background=&#34;imgs/background-1.jpg&#34; data-background-size=&#34;cover&#34;&gt;
+&lt;div id=&#34;previsões-com-modelos-de-suavização-exponencial&#34; class=&#34;section level1&#34; data-background=&#34;imgs/background-1.jpg&#34; data-background-size=&#34;cover&#34;&gt;
 &lt;h1&gt;Previsões com Modelos de Suavização Exponencial&lt;/h1&gt;
-&lt;div id=&#34;suavizacao-exponencial-simples&#34; class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;suavização-exponencial-simples&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Suavização Exponencial Simples&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Método da média simples: Leva em consideração todos os períodos;&lt;/li&gt;
@@ -887,7 +1211,7 @@ ts_vendas&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Equação da Previsão:
 &lt;span class=&#34;math display&#34;&gt;\[\hat{y}_{t+h|t} = \alpha y_{t} + \alpha(1-\alpha)y_{t-1} + \alpha(1-\alpha)^2y_{t-2} + ... \ para \  0 \leq \alpha \leq 1\]&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;modelo-de-suavizacao-exponencial-simples&#34; class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;modelo-de-suavização-exponencial-simples&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Modelo de Suavização Exponencial Simples&lt;/h2&gt;
 &lt;p&gt;Previsão:
 &lt;span class=&#34;math display&#34;&gt;\[\hat{y}_{t+h|t} = l_t\]&lt;/span&gt;
@@ -924,10 +1248,8 @@ summary(previsao_petroleo)&lt;/code&gt;&lt;/pre&gt;
 ## 178.1430 179.8573 180.8141 
 ## 
 ## Error measures:
-##                    ME     RMSE     MAE      MPE     MAPE      MASE
-## Training set 6.401975 28.12234 22.2587 1.097574 4.610635 0.9256774
-##                     ACF1
-## Training set -0.03377748
+##                    ME     RMSE     MAE      MPE     MAPE      MASE        ACF1
+## Training set 6.401975 28.12234 22.2587 1.097574 4.610635 0.9256774 -0.03377748
 ## 
 ## Forecasts:
 ##      Point Forecast    Lo 80    Hi 80    Lo 95    Hi 95
@@ -942,7 +1264,7 @@ summary(previsao_petroleo)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;autoplot(previsao_petroleo)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;modelo-de-suavizacao-exponencial-com-tendencia-linear---holt&#34; class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;modelo-de-suavização-exponencial-com-tendência-linear---holt&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Modelo de Suavização Exponencial com Tendência Linear - Holt&lt;/h2&gt;
 &lt;p&gt;Previsão:
 &lt;span class=&#34;math display&#34;&gt;\[\hat{y}_{t+h|t} = l_t + h b_t\]&lt;/span&gt;
@@ -1019,7 +1341,7 @@ autoplot(dados_petroleo) +
   autolayer(previsao_petroleo_holt_damp, series=&amp;quot;Holt com Damp&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;modelo-de-suavizacao-exponencial-com-tendencia-e-sazonalidade---holt-winters&#34; class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;modelo-de-suavização-exponencial-com-tendência-e-sazonalidade---holt-winters&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Modelo de Suavização Exponencial com Tendência e Sazonalidade - Holt-Winters&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Método Aditivo: Adequado quando a amplitude dos ciclos de sazonalidade não está correlacionada ao tempo.&lt;/li&gt;
@@ -1089,7 +1411,7 @@ autoplot(a10) + ylab(&amp;quot;Demanda de Remédios&amp;quot;) +
 autoplot(forecast(modelo_arima))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-23-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;mais-aspectos-tecnicos&#34; class=&#34;section level1&#34; data-background=&#34;imgs/background-1.jpg&#34; data-background-size=&#34;cover&#34;&gt;
+&lt;div id=&#34;mais-aspectos-técnicos&#34; class=&#34;section level1&#34; data-background=&#34;imgs/background-1.jpg&#34; data-background-size=&#34;cover&#34;&gt;
 &lt;h1&gt;Mais Aspectos Técnicos&lt;/h1&gt;
 &lt;div id=&#34;o-modelo-naive&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;O modelo “Naive”&lt;/h2&gt;
@@ -1132,11 +1454,11 @@ Propriedades úteis:&lt;/li&gt;
 ##  Ljung-Box test
 ## 
 ## data:  Residuals from Naive method
-## Q* = 11.814, df = 9.8, p-value = 0.2824
+## Q* = 12.59, df = 10, p-value = 0.2475
 ## 
-## Model df: 0.   Total lags used: 9.8&lt;/code&gt;&lt;/pre&gt;
+## Model df: 0.   Total lags used: 10&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;o-que-fazer-se-os-erros-nao-forem-normais&#34; class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;o-que-fazer-se-os-erros-não-forem-normais&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;O que fazer se os erros não forem normais?&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Ainda assim, as previsões podem ser boas e podem ser utilizadas, porém os intervalos de predição podem ser muito justos ou amplos em função deste problema.&lt;/li&gt;
@@ -1152,7 +1474,7 @@ Propriedades úteis:&lt;/li&gt;
 &lt;li&gt;É comum construirmos um modelo altamente complexo que possui poucos erros nos dados de treinamento, porém gera péssimas previsões. Isto é chamado de &lt;strong&gt;overfitting&lt;/strong&gt;, e deve ser evitado.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;medidas-de-acuracia-da-previsao&#34; class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;medidas-de-acurácia-da-previsão&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Medidas de Acurácia da Previsão&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Mean Absolute Error: &lt;span class=&#34;math inline&#34;&gt;\(MAE = avg(|e_t|)\)&lt;/span&gt;&lt;/li&gt;
@@ -1180,14 +1502,14 @@ autoplot(previsao) +
 &lt;li&gt;Usar o Comando Accuracy para observar o modelo:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;accuracy(previsao, teste)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##                    ME     RMSE      MAE      MPE      MAPE      MASE
-## Training set  9.87358 52.56156 39.42504 2.506565 12.570647 1.0000000
-## Test set     21.60250 35.09832 29.97666 3.963914  5.777875 0.7603458
-##                   ACF1 Theil&amp;#39;s U
-## Training set 0.1801528        NA
-## Test set     0.4029519  1.184862&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##                    ME     RMSE      MAE      MPE      MAPE      MASE      ACF1
+## Training set  9.87358 52.56156 39.42504 2.506565 12.570647 1.0000000 0.1801528
+## Test set     21.60250 35.09832 29.97666 3.963914  5.777875 0.7603458 0.4029519
+##              Theil&amp;#39;s U
+## Training set        NA
+## Test set      1.184862&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;obtendo-mais-series-de-dados-reais&#34; class=&#34;section level2&#34;&gt;
+&lt;div id=&#34;obtendo-mais-séries-de-dados-reais&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Obtendo Mais Séries de Dados reais:&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;O agregador de dados &lt;a href=&#34;https://www.quandl.com/&#34;&gt;Quandl&lt;/a&gt; possui milhares de séries temporais disponíveis diretamente no R, pela biblioteca Quandl.&lt;/li&gt;
@@ -1205,7 +1527,6 @@ autoplot(ts_bovespa)&lt;/code&gt;&lt;/pre&gt;
       <title>Arena2R - An R Package for Arena Simulation Users</title>
       <link>/post/arena2r-package-tutorial/</link>
       <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
-      
       <guid>/post/arena2r-package-tutorial/</guid>
       <description>
 
@@ -1218,7 +1539,6 @@ autoplot(ts_bovespa)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(&amp;quot;arena2r&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Then, load the package:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(arena2r)
-## Warning: package &amp;#39;arena2r&amp;#39; was built under R version 3.6.1
 library(dplyr)
 ## 
 ## Attaching package: &amp;#39;dplyr&amp;#39;
@@ -1327,6 +1647,7 @@ knitr::kable(head(results))&lt;/code&gt;&lt;/pre&gt;
 # Plot a Statistic confidence interval across scenarios for a response variable.
 
 arena2r::plot_confint(sim_results = results, response_variable = &amp;quot;Entity 1.NumberOut&amp;quot;)
+## Warning: `fun.y` is deprecated. Use `fun` instead.
 ## Warning: Computation failed in `stat_summary()`:
 ## Hmisc package required for this function&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/2018-09-27-arena2r-package-tutorial_files/figure-html/arena2r-confidence-interval-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
@@ -1423,18 +1744,34 @@ knitr::kable(head(statistics_summary[,1:6]))&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>The Impacts of Additive Manufacturing on Production Systems</title>
-      <link>/publication/impacts-additive-manufacturing-production-systems/</link>
+      <link>/publication/2019-additive-manufacturing-impacts/</link>
       <pubDate>Sat, 01 Sep 2018 00:00:00 -0700</pubDate>
-      
-      <guid>/publication/impacts-additive-manufacturing-production-systems/</guid>
+      <guid>/publication/2019-additive-manufacturing-impacts/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>/privacy/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
+      <guid>/privacy/</guid>
+      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Terms</title>
+      <link>/terms/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
+      <guid>/terms/</guid>
+      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>Introdução ao R - Aprendendo com o Moneyball</title>
       <link>/post/introducao-ao-r-aprendendo-com-o-moneyball/</link>
       <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
-      
       <guid>/post/introducao-ao-r-aprendendo-com-o-moneyball/</guid>
       <description>
 
@@ -1457,7 +1794,7 @@ knitr::kable(head(statistics_summary[,1:6]))&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;Conhecimento “cumulativo” e transferível a outros contextos.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outras-alternativas-se-voce-nao-quiser-programar.&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;outras-alternativas-se-você-não-quiser-programar.&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Outras alternativas se você não quiser programar.&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Excel(?);&lt;/li&gt;
@@ -1489,7 +1826,7 @@ Este exercício e a ideia de usar o exemplo do Moneyball é baseda em uma aula d
 &lt;li&gt;Em 2002 o time perdeu três jogadores principais (é desse ponto que o filme começa);&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;qual-e-a-meta-de-um-time-de-baseball&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;qual-é-a-meta-de-um-time-de-baseball&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Qual é a meta de um time de Baseball?&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Ir para as Playoffs!&lt;/li&gt;
@@ -1519,8 +1856,8 @@ Dados incluem Runs Scored (RS), Runs Allowed (RA) e Vitórias (W).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Podemos fazer isso usando a função str() (que mostra a estrutura)
 str(baseball)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## &amp;#39;data.frame&amp;#39;:    1232 obs. of  15 variables:
-##  $ Team        : Factor w/ 39 levels &amp;quot;ANA&amp;quot;,&amp;quot;ARI&amp;quot;,&amp;quot;ATL&amp;quot;,..: 2 3 4 5 7 8 9 10 11 12 ...
-##  $ League      : Factor w/ 2 levels &amp;quot;AL&amp;quot;,&amp;quot;NL&amp;quot;: 2 2 1 1 2 1 2 1 2 1 ...
+##  $ Team        : chr  &amp;quot;ARI&amp;quot; &amp;quot;ATL&amp;quot; &amp;quot;BAL&amp;quot; &amp;quot;BOS&amp;quot; ...
+##  $ League      : chr  &amp;quot;NL&amp;quot; &amp;quot;NL&amp;quot; &amp;quot;AL&amp;quot; &amp;quot;AL&amp;quot; ...
 ##  $ Year        : int  2012 2012 2012 2012 2012 2012 2012 2012 2012 2012 ...
 ##  $ RS          : int  734 700 712 734 613 748 669 667 758 726 ...
 ##  $ RA          : int  688 600 705 806 759 676 588 845 890 670 ...
@@ -1539,54 +1876,54 @@ str(baseball)&lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;Resumindo com o summary()&lt;/h3&gt;
 &lt;p&gt;Também podemos ter uma ideia dos dados usando o summary. Ele nos retorna médias, quartis, valores mínimos e máximos.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(baseball)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##       Team     League        Year            RS               RA        
-##  BAL    : 47   AL:616   Min.   :1962   Min.   : 463.0   Min.   : 472.0  
-##  BOS    : 47   NL:616   1st Qu.:1977   1st Qu.: 652.0   1st Qu.: 649.8  
-##  CHC    : 47            Median :1989   Median : 711.0   Median : 709.0  
-##  CHW    : 47            Mean   :1989   Mean   : 715.1   Mean   : 715.1  
-##  CIN    : 47            3rd Qu.:2002   3rd Qu.: 775.0   3rd Qu.: 774.2  
-##  CLE    : 47            Max.   :2012   Max.   :1009.0   Max.   :1103.0  
-##  (Other):950                                                            
-##        W              OBP              SLG               BA        
-##  Min.   : 40.0   Min.   :0.2770   Min.   :0.3010   Min.   :0.2140  
-##  1st Qu.: 73.0   1st Qu.:0.3170   1st Qu.:0.3750   1st Qu.:0.2510  
-##  Median : 81.0   Median :0.3260   Median :0.3960   Median :0.2600  
-##  Mean   : 80.9   Mean   :0.3263   Mean   :0.3973   Mean   :0.2593  
-##  3rd Qu.: 89.0   3rd Qu.:0.3370   3rd Qu.:0.4210   3rd Qu.:0.2680  
-##  Max.   :116.0   Max.   :0.3730   Max.   :0.4910   Max.   :0.2940  
+&lt;pre&gt;&lt;code&gt;##      Team              League               Year            RS        
+##  Length:1232        Length:1232        Min.   :1962   Min.   : 463.0  
+##  Class :character   Class :character   1st Qu.:1977   1st Qu.: 652.0  
+##  Mode  :character   Mode  :character   Median :1989   Median : 711.0  
+##                                        Mean   :1989   Mean   : 715.1  
+##                                        3rd Qu.:2002   3rd Qu.: 775.0  
+##                                        Max.   :2012   Max.   :1009.0  
+##                                                                       
+##        RA               W              OBP              SLG        
+##  Min.   : 472.0   Min.   : 40.0   Min.   :0.2770   Min.   :0.3010  
+##  1st Qu.: 649.8   1st Qu.: 73.0   1st Qu.:0.3170   1st Qu.:0.3750  
+##  Median : 709.0   Median : 81.0   Median :0.3260   Median :0.3960  
+##  Mean   : 715.1   Mean   : 80.9   Mean   :0.3263   Mean   :0.3973  
+##  3rd Qu.: 774.2   3rd Qu.: 89.0   3rd Qu.:0.3370   3rd Qu.:0.4210  
+##  Max.   :1103.0   Max.   :116.0   Max.   :0.3730   Max.   :0.4910  
 ##                                                                    
-##     Playoffs        RankSeason     RankPlayoffs         G        
-##  Min.   :0.0000   Min.   :1.000   Min.   :1.000   Min.   :158.0  
-##  1st Qu.:0.0000   1st Qu.:2.000   1st Qu.:2.000   1st Qu.:162.0  
-##  Median :0.0000   Median :3.000   Median :3.000   Median :162.0  
-##  Mean   :0.1981   Mean   :3.123   Mean   :2.717   Mean   :161.9  
-##  3rd Qu.:0.0000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:162.0  
-##  Max.   :1.0000   Max.   :8.000   Max.   :5.000   Max.   :165.0  
-##                   NA&amp;#39;s   :988     NA&amp;#39;s   :988                    
-##       OOBP             OSLG       
-##  Min.   :0.2940   Min.   :0.3460  
-##  1st Qu.:0.3210   1st Qu.:0.4010  
-##  Median :0.3310   Median :0.4190  
-##  Mean   :0.3323   Mean   :0.4197  
-##  3rd Qu.:0.3430   3rd Qu.:0.4380  
-##  Max.   :0.3840   Max.   :0.4990  
-##  NA&amp;#39;s   :812      NA&amp;#39;s   :812&lt;/code&gt;&lt;/pre&gt;
+##        BA            Playoffs        RankSeason     RankPlayoffs  
+##  Min.   :0.2140   Min.   :0.0000   Min.   :1.000   Min.   :1.000  
+##  1st Qu.:0.2510   1st Qu.:0.0000   1st Qu.:2.000   1st Qu.:2.000  
+##  Median :0.2600   Median :0.0000   Median :3.000   Median :3.000  
+##  Mean   :0.2593   Mean   :0.1981   Mean   :3.123   Mean   :2.717  
+##  3rd Qu.:0.2680   3rd Qu.:0.0000   3rd Qu.:4.000   3rd Qu.:4.000  
+##  Max.   :0.2940   Max.   :1.0000   Max.   :8.000   Max.   :5.000  
+##                                    NA&amp;#39;s   :988     NA&amp;#39;s   :988    
+##        G              OOBP             OSLG       
+##  Min.   :158.0   Min.   :0.2940   Min.   :0.3460  
+##  1st Qu.:162.0   1st Qu.:0.3210   1st Qu.:0.4010  
+##  Median :162.0   Median :0.3310   Median :0.4190  
+##  Mean   :161.9   Mean   :0.3323   Mean   :0.4197  
+##  3rd Qu.:162.0   3rd Qu.:0.3430   3rd Qu.:0.4380  
+##  Max.   :165.0   Max.   :0.3840   Max.   :0.4990  
+##                  NA&amp;#39;s   :812      NA&amp;#39;s   :812&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;acessando-variaveis-especificas-de-um-dataframe&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;acessando-variáveis-específicas-de-um-dataframe&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Acessando variáveis específicas de um DataFrame&lt;/h3&gt;
 &lt;p&gt;Podemos acessar variáveis específicas de um Data Frame usando algumas notações possíveis.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head(baseball$Year)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] 2012 2012 2012 2012 2012 2012&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;selecionando-linhas-especificas-do-df&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;selecionando-linhas-específicas-do-df&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Selecionando Linhas Específicas do DF&lt;/h3&gt;
 &lt;p&gt;Vamos selecionar apenas dados até o ano de 2002 (que foram os dados que eles possuíam em 2002)&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Considerando apenas anos exibidos pelo moneyball
 moneyball = subset(baseball, Year &amp;lt; 2002)
 str(moneyball)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## &amp;#39;data.frame&amp;#39;:    902 obs. of  15 variables:
-##  $ Team        : Factor w/ 39 levels &amp;quot;ANA&amp;quot;,&amp;quot;ARI&amp;quot;,&amp;quot;ATL&amp;quot;,..: 1 2 3 4 5 7 8 9 10 11 ...
-##  $ League      : Factor w/ 2 levels &amp;quot;AL&amp;quot;,&amp;quot;NL&amp;quot;: 1 2 2 1 1 2 1 2 1 2 ...
+##  $ Team        : chr  &amp;quot;ANA&amp;quot; &amp;quot;ARI&amp;quot; &amp;quot;ATL&amp;quot; &amp;quot;BAL&amp;quot; ...
+##  $ League      : chr  &amp;quot;AL&amp;quot; &amp;quot;NL&amp;quot; &amp;quot;NL&amp;quot; &amp;quot;AL&amp;quot; ...
 ##  $ Year        : int  2001 2001 2001 2001 2001 2001 2001 2001 2001 2001 ...
 ##  $ RS          : int  691 818 729 687 772 777 798 735 897 923 ...
 ##  $ RA          : int  730 677 643 829 745 701 795 850 821 906 ...
@@ -1616,8 +1953,8 @@ str(moneyball)&lt;/code&gt;&lt;/pre&gt;
 moneyball$RD = moneyball$RS - moneyball$RA
 str(moneyball)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## &amp;#39;data.frame&amp;#39;:    902 obs. of  16 variables:
-##  $ Team        : Factor w/ 39 levels &amp;quot;ANA&amp;quot;,&amp;quot;ARI&amp;quot;,&amp;quot;ATL&amp;quot;,..: 1 2 3 4 5 7 8 9 10 11 ...
-##  $ League      : Factor w/ 2 levels &amp;quot;AL&amp;quot;,&amp;quot;NL&amp;quot;: 1 2 2 1 1 2 1 2 1 2 ...
+##  $ Team        : chr  &amp;quot;ANA&amp;quot; &amp;quot;ARI&amp;quot; &amp;quot;ATL&amp;quot; &amp;quot;BAL&amp;quot; ...
+##  $ League      : chr  &amp;quot;AL&amp;quot; &amp;quot;NL&amp;quot; &amp;quot;NL&amp;quot; &amp;quot;AL&amp;quot; ...
 ##  $ Year        : int  2001 2001 2001 2001 2001 2001 2001 2001 2001 2001 ...
 ##  $ RS          : int  691 818 729 687 772 777 798 735 897 923 ...
 ##  $ RA          : int  730 677 643 829 745 701 795 850 821 906 ...
@@ -1633,13 +1970,13 @@ str(moneyball)&lt;/code&gt;&lt;/pre&gt;
 ##  $ OSLG        : num  0.412 0.404 0.384 0.439 0.393 0.398 0.427 0.455 0.417 0.48 ...
 ##  $ RD          : int  -39 141 86 -142 27 76 3 -115 76 17 ...&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;existe-uma-relacao-entre-run-difference-e-vitorias&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;existe-uma-relação-entre-run-difference-e-vitórias&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Existe uma Relação entre Run Difference e Vitórias?&lt;/h3&gt;
 &lt;p&gt;Só faz sentido usar uma regressão linear se é plausível a existência de uma relação linear entre as variáveis.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(moneyball$RD, moneyball$W, main = &amp;quot;Vitórias vs Runs Diff.&amp;quot;, xlab = &amp;quot;Run. Diff.&amp;quot;, ylab = &amp;quot;Vitórias&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/2017-10-10-introducao-ao-r-aprendendo-com-o-moneyball_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;realizando-um-teste-de-correlacao&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;realizando-um-teste-de-correlação&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Realizando um teste de Correlação&lt;/h3&gt;
 &lt;p&gt;Existe uma correlação alta entre estas duas variáveis?&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;cor(x = moneyball$RD, y = moneyball$W, method=c(&amp;quot;pearson&amp;quot;, &amp;quot;kendall&amp;quot;, &amp;quot;spearman&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
@@ -1657,16 +1994,17 @@ str(moneyball)&lt;/code&gt;&lt;/pre&gt;
 ##      cor 
 ## 0.938515&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;visualizando-a-correlacao-entre-as-duas-variaveis&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;visualizando-a-correlação-entre-as-duas-variáveis&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Visualizando a Correlação entre as duas variáveis&lt;/h3&gt;
 &lt;p&gt;Também podemos visualizar que existe uma correlação alta entre estas duas variáveis utilizando gráficos da biblioteca ggpubr.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggpubr::ggscatter(moneyball, x = &amp;quot;RD&amp;quot;, y = &amp;quot;W&amp;quot;,
           add = &amp;quot;reg.line&amp;quot;, conf.int = TRUE,
           cor.coef = TRUE, cor.method = &amp;quot;pearson&amp;quot;,
           xlab = &amp;quot;Run Diff.&amp;quot;, ylab = &amp;quot;Vitórias&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/2017-10-10-introducao-ao-r-aprendendo-com-o-moneyball_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;ok-como-predizer-o-numero-de-vitorias-com-base-em-run-differences&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;ok-como-predizer-o-número-de-vitórias-com-base-em-run-differences&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Ok, como predizer o número de vitórias com base em Run Differences?&lt;/h3&gt;
 &lt;p&gt;Usando uma Regressão Linear!&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[ y = \beta_0 + \beta_1 * x + e\]&lt;/span&gt;&lt;/p&gt;
@@ -1675,7 +2013,7 @@ str(moneyball)&lt;/code&gt;&lt;/pre&gt;
 Como fazer isso no R?&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;modelo_vitorias = lm(W ~ RD, data=moneyball)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;analisando-o-modelo-para-predizer-vitorias&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;analisando-o-modelo-para-predizer-vitórias&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Analisando o Modelo para Predizer Vitórias&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;O que isso significa: Podemos predizer o número de vitórias que um time terá a partir de um número de Home Runs.
@@ -1701,7 +2039,7 @@ Como fazer isso no R?&lt;/p&gt;
 ## Multiple R-squared:  0.8808, Adjusted R-squared:  0.8807 
 ## F-statistic:  6651 on 1 and 900 DF,  p-value: &amp;lt; 2.2e-16&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;sera-que-e-sao-necessarios-135-runs-a-mais-para-chegar-a-playoffs&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;será-que-é-são-necessários-135-runs-a-mais-para-chegar-à-playoffs&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Será que é são necessários 135 Runs a mais para chegar à Playoffs?&lt;/h3&gt;
 &lt;p&gt;A partir da regressão linear nós estimamos que $ Vitorias = 80.88 + 0.1057 RunDiffs$ e também sabemos que &lt;span class=&#34;math inline&#34;&gt;\(Vitorias &amp;gt;= 95\)&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;Então…&lt;/p&gt;
@@ -1714,7 +2052,7 @@ RD_min&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] 133.4461&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;OU seja, sabemos que se um time quer ir para as playoffs ele precisa fazer &lt;strong&gt;133,4&lt;/strong&gt; Runs a mais do que seus oponentes.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;o-que-temos-ate-agora&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;o-que-temos-até-agora&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;O que temos até Agora&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Para ir para as playoffs o time precisa de 95 vitórias ou mais.&lt;/li&gt;
@@ -1733,15 +2071,15 @@ RD_min&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;Quais destas estatísticas são mais importantes para considerar quando é necessário &lt;strong&gt;comprar um jogador&lt;/strong&gt;?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;recorrendo-a-regressao-linear-novamente&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;recorrendo-à-regressão-linear-novamente&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Recorrendo à Regressão Linear Novamente!&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Na nossa base de dados estas estatísticas estão indicadas nas variáveis RS (Runs Scored), On-Base Percentage (OBP), Slugging Percentage (SLG) e Batting Average (BA).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;str(moneyball)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## &amp;#39;data.frame&amp;#39;:    902 obs. of  16 variables:
-##  $ Team        : Factor w/ 39 levels &amp;quot;ANA&amp;quot;,&amp;quot;ARI&amp;quot;,&amp;quot;ATL&amp;quot;,..: 1 2 3 4 5 7 8 9 10 11 ...
-##  $ League      : Factor w/ 2 levels &amp;quot;AL&amp;quot;,&amp;quot;NL&amp;quot;: 1 2 2 1 1 2 1 2 1 2 ...
+##  $ Team        : chr  &amp;quot;ANA&amp;quot; &amp;quot;ARI&amp;quot; &amp;quot;ATL&amp;quot; &amp;quot;BAL&amp;quot; ...
+##  $ League      : chr  &amp;quot;AL&amp;quot; &amp;quot;NL&amp;quot; &amp;quot;NL&amp;quot; &amp;quot;AL&amp;quot; ...
 ##  $ Year        : int  2001 2001 2001 2001 2001 2001 2001 2001 2001 2001 ...
 ##  $ RS          : int  691 818 729 687 772 777 798 735 897 923 ...
 ##  $ RA          : int  730 677 643 829 745 701 795 850 821 906 ...
@@ -1757,7 +2095,7 @@ RD_min&lt;/code&gt;&lt;/pre&gt;
 ##  $ OSLG        : num  0.412 0.404 0.384 0.439 0.393 0.398 0.427 0.455 0.417 0.48 ...
 ##  $ RD          : int  -39 141 86 -142 27 76 3 -115 76 17 ...&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;predizendo-o-numero-de-runs---modelo-completo&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;predizendo-o-número-de-runs---modelo-completo&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Predizendo o Número de Runs - Modelo Completo&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Quanto menos Batting Average, mais Runs?!&lt;/li&gt;
@@ -1785,7 +2123,7 @@ summary(modeloruns)&lt;/code&gt;&lt;/pre&gt;
 ## Multiple R-squared:  0.9302, Adjusted R-squared:   0.93 
 ## F-statistic:  3989 on 3 and 898 DF,  p-value: &amp;lt; 2.2e-16&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;predizendo-o-numero-de-runs---sem-batting-average&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;predizendo-o-número-de-runs---sem-batting-average&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Predizendo o Número de Runs - Sem Batting Average&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;O modelo mais simples tem menos variáveis e ainda tem um R ao quadrado alto.&lt;/li&gt;
@@ -1813,7 +2151,7 @@ summary(modeloruns_sBA)&lt;/code&gt;&lt;/pre&gt;
 ## Multiple R-squared:  0.9296, Adjusted R-squared:  0.9294 
 ## F-statistic:  5934 on 2 and 899 DF,  p-value: &amp;lt; 2.2e-16&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;predizendo-o-numero-de-runs-allowed&#34; class=&#34;section level3&#34;&gt;
+&lt;div id=&#34;predizendo-o-número-de-runs-allowed&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Predizendo o Número de Runs Allowed&lt;/h3&gt;
 &lt;p&gt;Com essa regressão, podemos estimar as Runs Permitidas com a equação:
 &lt;span class=&#34;math display&#34;&gt;\[ Runs Permitidas = -837 + 2913.6 * OOBP + 1514.29 * OSLG\]&lt;/span&gt;&lt;/p&gt;
@@ -1943,12 +2281,260 @@ if (Vitorias &amp;gt;= 95) {
     </item>
     
     <item>
-      <title>Arena2R</title>
-      <link>/project/arena2r/</link>
-      <pubDate>Thu, 28 Apr 2016 00:00:00 -0700</pubDate>
-      
-      <guid>/project/arena2r/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://arena2r.pedronl.com&#34; target=&#34;_blank&#34;&gt;Arena2R&lt;/a&gt; is an R package for Arena Simulation users. &lt;a href=&#34;https://arenasimulation.com&#34; target=&#34;_blank&#34;&gt;Arena Simulation&lt;/a&gt; is a great discrete event simulation software, but it lacks neat plots and data reporting tools. After spending a considerable ammount of time struggling with arena output files, I&amp;rsquo;ve decided to write a few functions, which  evolved into this package. You can use the package either via it&amp;rsquo;s accompanying app, or build your own R script and work from there.&lt;/p&gt;
+      <title>External Project</title>
+      <link>/project/external-project/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/project/external-project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Internal Project</title>
+      <link>/project/internal-project/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/project/internal-project/</guid>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Academic: the website builder for Hugo</title>
+      <link>/post-not-used/getting-started/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/post-not-used/getting-started/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Create a free website with Academic using Markdown, Jupyter, or RStudio. Choose a beautiful color theme and build anything with the Page Builder - over 40 &lt;em&gt;widgets&lt;/em&gt;, &lt;em&gt;themes&lt;/em&gt;, and &lt;em&gt;language packs&lt;/em&gt; included!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Check out the latest &lt;strong&gt;demo&lt;/strong&gt;&lt;/a&gt; of what you&amp;rsquo;ll get in less than 10 minutes, or 
+&lt;a href=&#34;https://sourcethemes.com/academic/#expo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;view the &lt;strong&gt;showcase&lt;/strong&gt;&lt;/a&gt; of personal, project, and business sites.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;👉 
+&lt;a href=&#34;#install&#34;&gt;&lt;strong&gt;Get Started&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;📚 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View the &lt;strong&gt;documentation&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;💬 
+&lt;a href=&#34;https://discourse.gohugo.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Ask a question&lt;/strong&gt; on the forum&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;👥 
+&lt;a href=&#34;https://spectrum.chat/academic&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chat with the &lt;strong&gt;community&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🐦 Twitter: 
+&lt;a href=&#34;https://twitter.com/source_themes&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@source_themes&lt;/a&gt; 
+&lt;a href=&#34;https://twitter.com/GeorgeCushen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@GeorgeCushen&lt;/a&gt; 
+&lt;a href=&#34;https://twitter.com/search?q=%23MadeWithAcademic&amp;amp;src=typd&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#MadeWithAcademic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;💡 
+&lt;a href=&#34;https://github.com/gcushen/hugo-academic/issues&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Request a &lt;strong&gt;feature&lt;/strong&gt; or report a &lt;strong&gt;bug&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;⬆️ &lt;strong&gt;Updating?&lt;/strong&gt; View the 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/update/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Update Guide&lt;/a&gt; and 
+&lt;a href=&#34;https://sourcethemes.com/academic/updates/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Release Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;❤️ &lt;strong&gt;Support development&lt;/strong&gt; of Academic:
+&lt;ul&gt;
+&lt;li&gt;☕️ 
+&lt;a href=&#34;https://paypal.me/cushen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Donate a coffee&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;💵 
+&lt;a href=&#34;https://www.patreon.com/cushen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Become a backer on &lt;strong&gt;Patreon&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🖼️ 
+&lt;a href=&#34;https://www.redbubble.com/people/neutreno/works/34387919-academic&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Decorate your laptop or journal with an Academic &lt;strong&gt;sticker&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;👕 
+&lt;a href=&#34;https://academic.threadless.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wear the &lt;strong&gt;T-shirt&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;👩‍💻 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/contribute/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Contribute&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-academic-is-mobile-first-with-a-responsive-design-to-ensure-that-your-site-looks-stunning-on-every-device&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/academic.png&#34; data-caption=&#34;Academic is mobile first with a responsive design to ensure that your site looks stunning on every device.&#34;&gt;
+
+
+  &lt;img src=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/academic.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Academic is mobile first with a responsive design to ensure that your site looks stunning on every device.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Key features:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Page builder&lt;/strong&gt; - Create &lt;em&gt;anything&lt;/em&gt; with 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/page-builder/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;widgets&lt;/strong&gt;&lt;/a&gt; and 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;elements&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Edit any type of content&lt;/strong&gt; - Blog posts, publications, talks, slides, projects, and more!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Create content&lt;/strong&gt; in 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/a&gt;, 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/jupyter/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Jupyter&lt;/strong&gt;&lt;/a&gt;, or 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-rstudio&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Plugin System&lt;/strong&gt; - Fully customizable 
+&lt;a href=&#34;https://sourcethemes.com/academic/themes/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;color&lt;/strong&gt; and &lt;strong&gt;font themes&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Display Code and Math&lt;/strong&gt; - Code highlighting and 
+&lt;a href=&#34;https://en.wikibooks.org/wiki/LaTeX/Mathematics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LaTeX math&lt;/a&gt; supported&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integrations&lt;/strong&gt; - 
+&lt;a href=&#34;https://analytics.google.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google Analytics&lt;/a&gt;, 
+&lt;a href=&#34;https://disqus.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Disqus commenting&lt;/a&gt;, Maps, Contact Forms, and more!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Beautiful Site&lt;/strong&gt; - Simple and refreshing one page design&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Industry-Leading SEO&lt;/strong&gt; - Help get your website found on search engines and social media&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Media Galleries&lt;/strong&gt; - Display your images and videos with captions in a customizable gallery&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mobile Friendly&lt;/strong&gt; - Look amazing on every screen with a mobile friendly version of your site&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-language&lt;/strong&gt; - 15+ language packs including English, 中文, and Português&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-user&lt;/strong&gt; - Each author gets their own profile page&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Privacy Pack&lt;/strong&gt; - Assists with GDPR&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stand Out&lt;/strong&gt; - Bring your site to life with animation, parallax backgrounds, and scroll effects&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;One-Click Deployment&lt;/strong&gt; - No servers. No databases. Only files.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
+&lt;p&gt;Academic comes with &lt;strong&gt;automatic day (light) and night (dark) mode&lt;/strong&gt; built-in. Alternatively, visitors can  choose their preferred mode - click the sun/moon icon in the top right of the 
+&lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Demo&lt;/a&gt; to see it in action! Day/night mode can also be disabled by the site admin in &lt;code&gt;params.toml&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/themes/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Choose a stunning &lt;strong&gt;theme&lt;/strong&gt; and &lt;strong&gt;font&lt;/strong&gt;&lt;/a&gt; for your site. Themes are fully 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/customization/#custom-theme&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;customizable&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;ecosystem&#34;&gt;Ecosystem&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;
+&lt;a href=&#34;https://github.com/sourcethemes/academic-admin&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic Admin&lt;/a&gt;:&lt;/strong&gt; An admin tool to import publications from BibTeX or import assets for an offline site&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;
+&lt;a href=&#34;https://github.com/sourcethemes/academic-scripts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic Scripts&lt;/a&gt;:&lt;/strong&gt; Scripts to help migrate content to new versions of Academic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;p&gt;You can choose from one of the following four methods to install:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-web-browser&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;one-click install using your web browser (recommended)&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-git&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;install on your computer using &lt;strong&gt;Git&lt;/strong&gt; with the Command Prompt/Terminal app&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-zip&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;install on your computer by downloading the &lt;strong&gt;ZIP files&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-rstudio&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;install on your computer with &lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Then 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/get-started/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;personalize and deploy your new site&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;updating&#34;&gt;Updating&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/update/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View the Update Guide&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Feel free to &lt;em&gt;star&lt;/em&gt; the project on 
+&lt;a href=&#34;https://github.com/gcushen/hugo-academic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Github&lt;/a&gt; to help keep track of 
+&lt;a href=&#34;https://sourcethemes.com/academic/updates&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;updates&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;p&gt;Copyright 2016-present 
+&lt;a href=&#34;https://georgecushen.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;George Cushen&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Released under the 
+&lt;a href=&#34;https://github.com/gcushen/hugo-academic/blob/master/LICENSE.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MIT&lt;/a&gt; license.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An example journal article</title>
+      <link>/publication-not-used/journal-article/</link>
+      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>/publication-not-used/journal-article/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Supplementary notes can be added here, including 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hello R Markdown</title>
+      <link>/post/2015-07-23-r-rmarkdown/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <guid>/post/2015-07-23-r-rmarkdown/</guid>
+      <description>
+
+
+&lt;div id=&#34;r-markdown&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;R Markdown&lt;/h1&gt;
+&lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; class=&#34;uri&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can embed an R code chunk like this:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(cars)
+##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+fit &amp;lt;- lm(dist ~ speed, data = cars)
+fit
+## 
+## Call:
+## lm(formula = dist ~ speed, data = cars)
+## 
+## Coefficients:
+## (Intercept)        speed  
+##     -17.579        3.932&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;including-plots&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Including Plots&lt;/h1&gt;
+&lt;p&gt;You can also embed plots. See Figure &lt;a href=&#34;#fig:pie&#34;&gt;1&lt;/a&gt; for example:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar = c(0, 1, 0, 1))
+pie(
+  c(280, 60, 20),
+  c(&amp;#39;Sky&amp;#39;, &amp;#39;Sunny side of pyramid&amp;#39;, &amp;#39;Shady side of pyramid&amp;#39;),
+  col = c(&amp;#39;#0292D8&amp;#39;, &amp;#39;#F7EA39&amp;#39;, &amp;#39;#C4B632&amp;#39;),
+  init.angle = -50, border = NA
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:pie&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/post/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: A fancy pie chart.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An example conference paper</title>
+      <link>/publication-not-used/conference-paper/</link>
+      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      <guid>/publication-not-used/conference-paper/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&amp;rsquo;s Markdown slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Supplementary notes can be added here, including 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code and math&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

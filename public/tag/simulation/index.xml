@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Simulation | Pedro Nascimento de Lima</title>
+    <link>/tag/simulation/</link>
+      <atom:link href="/tag/simulation/index.xml" rel="self" type="application/rss+xml" />
+    <description>Simulation</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Built with R, hosted at Netlify.</copyright><lastBuildDate>Sun, 28 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Simulation</title>
+      <link>/tag/simulation/</link>
+    </image>
+    
+    <item>
+      <title>Teaching Factory Physics Flow Benchmarking with R and Many-Objective Visuals</title>
+      <link>/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/</link>
+      <pubDate>Sun, 28 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/</guid>
+      <description>
+
+
+&lt;p&gt;Teaching to seasoned managers in MBE classes is challenging. While it’s important to bring new thoughts and ideas and not sound repetitive, it is necessary to provide a theoretical basis for experienced people with diverse backgrounds. One of the strategies I found to overcome these obstacles this week was to use a new analysis framework (in my case, Factory Physics concepts) to challenge their views about existing frames they already master. Using a combination of concepts, simulation sodels, many-objective tradeoffs visuals (like the gif below) and tasks was great to challenge their intuition about manufacturing systems.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-data/many-objective-inventory-tradeoffs.gif&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;This post shares some of the &lt;a href=&#34;https://www.r-project.org/&#34;&gt;R&lt;/a&gt; code I developed while putting together course materials. This post is also an example of how to use &lt;a href=&#34;/post/des-metamodeling-splines-r-arena/&#34;&gt;simulation metamodeling&lt;/a&gt; and Arena to Run Factory Physics’ Flow Benchmarking.&lt;/p&gt;
+&lt;div id=&#34;flow-benchmarking&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Flow Benchmarking&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://factoryphysics.com/flow-benchmarking&#34;&gt;Flow Benchmarking&lt;/a&gt; is an absolute benchmarking technique useful to determine how close a production flow is to its best possible performance. The technique has been introduced in the award-winning &lt;em&gt;Factory Physics&lt;/em&gt; (FP) Book &lt;span class=&#34;citation&#34;&gt;(Hopp and Spearman &lt;a href=&#34;#ref-hopp2008factory&#34;&gt;2008&lt;/a&gt;)&lt;/span&gt;, and is a key component of the science-based manufacturing management approach described in &lt;span class=&#34;citation&#34;&gt;(Pound, Bell, and Spearman &lt;a href=&#34;#ref-pound2014factory&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;defining-factory-physics-laws&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Defining Factory Physics Laws&lt;/h2&gt;
+&lt;p&gt;The Flow Benchmarking analysis is grounded on Little’s Law (WIP = TH * CT), and utilizes three general cases as absolute benchmarks for any real manufacturing system: The &lt;strong&gt;Best Case&lt;/strong&gt;, the &lt;strong&gt;Worst Case&lt;/strong&gt; and the &lt;strong&gt;Practical Worst Case&lt;/strong&gt; .Please refer to &lt;span class=&#34;citation&#34;&gt;(Hopp and Spearman &lt;a href=&#34;#ref-hopp2008factory&#34;&gt;2008&lt;/a&gt;)&lt;/span&gt; and &lt;span class=&#34;citation&#34;&gt;(Pound, Bell, and Spearman &lt;a href=&#34;#ref-pound2014factory&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt; for the rationale for these laws and equations.&lt;/p&gt;
+&lt;p&gt;I’ll define these equations as R functions:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;calc_w0 = function(rb, t0) {rb * t0}
+
+ct_best = function(t0, w, w0, rb) {ifelse(w&amp;lt;=w0,t0,w/rb)}
+
+th_best = function(t0, w, w0, rb) {ifelse(w&amp;lt;=w0,w/t0,rb)}
+
+ct_worst = function(w,t0){w*t0}
+
+th_worst = function(t0){1/t0}
+
+ct_marginal = function(t0,w,rb){t0+(w-1)/rb}
+
+th_marginal = function(w0,w,rb){rb*w/(w0+w-1)}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In summary, these equations provide a starting point to discuss how well a manufacturing system is doing in terms of converting inventory to Throughput. The initial analysis requires two inputs. The first input is the &lt;strong&gt;Bottleneck rate (rb)&lt;/strong&gt;, which is the production rate (parts, orders / time) of the bottleneck (defined as the process center with the highest long-term utilization). The second parameter is the &lt;strong&gt;Total Raw Processing Time (t0)&lt;/strong&gt;, which is the sum of the long-term average process times of each processing center. Based on these two parameters, it’s possible to draw benchmarking curves for the System’s Throughput and Cycle Time as a function of its Work in Process, assuming a CONWIP control system &lt;span class=&#34;citation&#34;&gt;(SPEARMAN, WOODRUFF, and HOPP &lt;a href=&#34;#ref-Spearman1990&#34;&gt;1990&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;drawing-absolute-benchmarking-curves&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Drawing Absolute Benchmarking Curves&lt;/h2&gt;
+&lt;p&gt;Once I have the basic laws of manufacturing dynamics as R functions, I’ll create a &lt;code&gt;benchmarck_flow&lt;/code&gt; function to execute the analysis. This function accepts the &lt;code&gt;rb&lt;/code&gt; and &lt;code&gt;t0&lt;/code&gt; parameters and will calculate the system’s Throughput and Cycle time as a function of the wip under different scenarios for benchmarking purposes.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## Defining Cycle time and Throughput functions
+
+benchmark_flow = function(rb, t0, step = 1, wip_mult = 5) {
+  
+  # First, calculate wip_crit
+  w0 = calc_w0(rb = rb, t0 = t0)
+  
+  # Then, define WIP Range to consider:
+  wip = seq.int(from = 1, to = w0 * wip_mult, by = step)
+  
+  # Then, calculate The Best Case Variables
+  Best_Cycle_Time = ct_best(t0 = t0, w = wip, w0 = w0, rb = rb)
+  Best_Throughput = th_best(t0 = t0, w = wip, w0 = w0, rb = rb)
+  
+  best_data = data.frame(WIP = wip,
+                    Throughput = Best_Throughput,
+                    CycleTime = Best_Cycle_Time,
+                    Scenario = &amp;quot;Best Case&amp;quot;)
+  
+  # Calculate the Marginal Cases:
+  Marginal_Cycle_Time = ct_marginal(t0=t0,w=wip,rb=rb)
+  Marginal_Throughput = th_marginal(w0=w0,w=wip,rb=rb)
+  
+  marginal_data = data.frame(WIP = wip,
+                    Throughput = Marginal_Throughput,
+                    CycleTime = Marginal_Cycle_Time,
+                    Scenario = &amp;quot;Marginal&amp;quot;)
+  
+  # Calculate Worst Case
+  worst_data = data.frame(
+    WIP = wip,
+    Throughput = th_worst(t0 = t0),
+    CycleTime = ct_worst(w = wip, t0 = t0),
+    Scenario = &amp;quot;Worst Case&amp;quot;
+  )
+
+  # Output A DataFrame with results:
+  # I&amp;#39;m not including the Worst Case because it&amp;#39;s unrealistic (and messes up my cycle time plot).
+  rbind(best_data, marginal_data, worst_data)
+  
+}
+
+# The First Penny Fab Example:
+data_benchmark = benchmark_flow(rb = 0.5, t0 = 8)
+
+knitr::kable(head(data_benchmark))&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;right&#34;&gt;WIP&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;Throughput&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;CycleTime&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Scenario&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.125&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Best Case&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.250&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Best Case&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.375&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Best Case&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.500&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;8&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Best Case&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.500&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;10&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Best Case&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;right&#34;&gt;6&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;0.500&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;12&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Best Case&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;how-would-the-actual-system-behave-if&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;How would the Actual System Behave if…&lt;/h2&gt;
+&lt;p&gt;Ok, now I have a table with all the basic benchmarking results. What if I have a better model of the system? We can accomplish this by building a discrete event simulation model of the actual system, and using a &lt;a href=&#34;/post/des-metamodeling-splines-r-arena/&#34;&gt;metamodel&lt;/a&gt; of this model to approximate its results (you can find the data from my penny fab model &lt;a href=&#34;/post/2019-data/penny-fab/penny-fab.rar&#34;&gt;here&lt;/a&gt;). During my course, I used several &lt;a href=&#34;https://www.arenasimulation.com&#34;&gt;Arena Simulation&lt;/a&gt; models to illustrate that adding variability to the system always degrades performance (as the variability law predicts!). Doing so allowed the students to build confidence into the model and the theory, which was great to see!&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(arena2r)
+library(tidyr)
+library(splines)
+
+arena_data = arena2r::get_simulation_results(&amp;quot;2019-data/penny-fab&amp;quot;)
+
+# Filtering only Statistics of our Interest:
+
+filtered_data = subset(arena_data, Statistic %in% c(&amp;quot;w&amp;quot;, &amp;quot;LeadTime&amp;quot;, &amp;quot;Throughput&amp;quot;))
+
+# Spreading and Data Wrangling
+
+final_data = filtered_data %&amp;gt;% 
+  tidyr::spread(Statistic, Value) %&amp;gt;%
+  dplyr::select(LeadTime, Throughput, w)
+
+colnames(final_data) = c(&amp;quot;CycleTime&amp;quot;, &amp;quot;Throughput&amp;quot;, &amp;quot;WIP&amp;quot;)
+
+# Now, build a spline metamodel for CycleTime and Throughput as a function of WIP.
+
+th_model = lm(Throughput ~ splines::bs(WIP), data = final_data)
+
+ct_model = lm(CycleTime ~ WIP, data = final_data)
+
+# Put Together a Final DataFrame like the Benchmarking:
+
+model_data = data.frame(
+  WIP = unique(data_benchmark$WIP),
+  Throughput = predict(th_model, subset(data_benchmark, Scenario == &amp;quot;Best Case&amp;quot;)),
+  CycleTime = predict(ct_model, subset(data_benchmark, Scenario == &amp;quot;Best Case&amp;quot;)),
+  Scenario = &amp;quot;DES Model&amp;quot;
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning in splines::bs(WIP, degree = 3L, knots = numeric(0), Boundary.knots =
+## c(1, : some &amp;#39;x&amp;#39; values beyond boundary knots may cause ill-conditioned bases&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Adding our Model&amp;#39;s Data to the DataFrame:
+
+data_benchmark = rbind(
+  data_benchmark,
+  model_data
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Once we have data from the basic FP laws and from our model, let’s plot it!&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyr)
+library(ggplot2)
+library(viridis)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Loading required package: viridisLite&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Lets define a wrapper function for our plot:
+
+plot_benchmarking = function(data) {
+  data %&amp;gt;%
+    gather(-WIP, -Scenario, key = &amp;quot;var&amp;quot;, value = &amp;quot;Value&amp;quot;) %&amp;gt;%
+  ggplot(aes(x = WIP, y = Value, color = Scenario)) +
+    geom_line(size = 1) +
+    facet_wrap(~ var, scales = &amp;quot;free&amp;quot;, nrow = 2, ncol = 1) +
+    labs(title = &amp;quot;Flow Benchmarking Plot&amp;quot;) +
+    scale_color_viridis(discrete = TRUE, option = &amp;quot;D&amp;quot;) + 
+    theme_bw()
+}
+
+# Then let&amp;#39;s just benchmark and plot!
+
+plot_benchmarking(data = data_benchmark)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-04-28-teaching-factory-physics-flow-benchmarking-with-r_files/figure-html/factory-physics-flow-benchmarking-cycletime-wip-throughput-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Cool! My simulation metamodel is still quite equivalent to the marginal case.&lt;/p&gt;
+&lt;p&gt;However, it has one advantage. I can now build a model that can simulate arbitrarily complex scenarios (e,g.: I can include different product routings, change product mix, include non-stationary demand, simulate setup time reduction, even maybe use a multi-method model, etc.) and my model will actually be a better approximation of the actual system than any simple queueing network model. Also, my model can simulate detailed improvement what-if scenarios, which queueing network models won’t be able to simulate.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;wrapping-up-with-tradeoffs-and-many-objective-visuals&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Wrapping up with Tradeoffs and Many-Objective Visuals&lt;/h2&gt;
+&lt;p&gt;I also used simulation models to illustrate tradeoffs implied by two simple decisions: How much WIP a manufacturing flow should have and what should be the reorder level of a part. Unfortunetly, trying to use R to this task wasn’t productive. I ended up using &lt;a href=&#34;https://www.decisionvis.com/ddv/&#34;&gt;DiscoveryDV&lt;/a&gt;, which is a great tool for many-objective visualization.&lt;/p&gt;
+&lt;p&gt;For instance, plotting WIP, Throughput, Cycle Time and Utilization of the Practical Worse Case yields this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-data/many-objective-inventory-tradeoffs.gif&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;And visualizing the tradeoffs implied by different reorder levels in a &lt;a href=&#34;https://en.wikipedia.org/wiki/Reorder_point&#34;&gt;(Q,r) inventory system&lt;/a&gt; yields this:
+&lt;img src=&#34;/post/2019-data/inventory-tradeoffs.jpg&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;At this point, many of the participants were excited to get to grips with models that illuminate tradeoffs they have been facing for years. Hopefully, their intuition was sharpened by these exercises and they will be better equiped to use these frontiers to promote productive and tradeoff-aware discussions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level1 unnumbered&#34;&gt;
+&lt;h1&gt;References&lt;/h1&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-hopp2008factory&#34;&gt;
+&lt;p&gt;Hopp, W.J., and M.L. Spearman. 2008. &lt;em&gt;Factory Physics&lt;/em&gt;. Irwin/Mcgraw-Hill Series in Operations and Decision Sciences. McGraw-Hill. &lt;a href=&#34;https://books.google.com.br/books?id=tEjkAAAACAAJ&#34;&gt;https://books.google.com.br/books?id=tEjkAAAACAAJ&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-pound2014factory&#34;&gt;
+&lt;p&gt;Pound, E.S., J.H. Bell, and M.L. Spearman. 2014. &lt;em&gt;Factory Physics for Managers: How Leaders Improve Performance in a Post-Lean Six Sigma World&lt;/em&gt;. McGraw-Hill Education. &lt;a href=&#34;https://books.google.com.br/books?id=B5sXAwAAQBAJ&#34;&gt;https://books.google.com.br/books?id=B5sXAwAAQBAJ&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-Spearman1990&#34;&gt;
+&lt;p&gt;SPEARMAN, MARK L., DAVID L. WOODRUFF, and WALLACE J. HOPP. 1990. “CONWIP: A Pull Alternative to Kanban.” &lt;em&gt;International Journal of Production Research&lt;/em&gt; 28 (5): 879–94. &lt;a href=&#34;https://doi.org/10.1080/00207549008942761&#34;&gt;https://doi.org/10.1080/00207549008942761&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Making Sense of Simulation Models with Metamodels Part 1 - Low-Order Polynomials with Arena and R</title>
+      <link>/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/</guid>
+      <description>
+
+
+&lt;p&gt;This is part 1 of a series of posts in which I will explore the utility of using metamodels to make sense of (and possibly optimizing) simulation models.&lt;/p&gt;
+&lt;p&gt;If you used simulation modeling on a real project, you might be familiar with this fictional story:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You spent long hours building and refining your simulation model (eg.: a Discrete Event Model). Hopefully, you are confident that it can yield reliable results. Now it’s time to use the model and draw recommendations. At this point, you are probably out of time, the project was delayed by successive rounds of data collection and validation. After running a few scenarios the night before the final presentation, you reach the conclusion that it is going to be hard to explain to your client that the results are highly non-linear and maybe counter-intuitive.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div id=&#34;making-sense-and-possibly-optimizing-models-with-metamodels&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Making Sense (and possibly optimizing) Models with Metamodels&lt;/h2&gt;
+&lt;p&gt;The idea of building a simple model as a surrogate of a more complicated model might seem analytical overkill. However, long ago, scholars have recognized the utility of using more explicit models to synthesize simulation results, and to find optimal parameters for models with long run time. Refer to &lt;span class=&#34;citation&#34;&gt;(Kleijnen &lt;a href=&#34;#ref-Kleijnen2017&#34;&gt;2017&lt;/a&gt;)&lt;/span&gt; and &lt;span class=&#34;citation&#34;&gt;(Barton and Meckesheimer &lt;a href=&#34;#ref-Barton2006&#34;&gt;2006&lt;/a&gt;)&lt;/span&gt; for comprehensive reviews on Metamodeling for optimization.&lt;/p&gt;
+&lt;p&gt;In this post, I will show you how to analyze an Arena Discrete Event Model in R using Low-Order Polynomials.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;an-example-with-arena-and-r&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;An Example with Arena and R&lt;/h2&gt;
+&lt;p&gt;In this example, the goal is to find an “ideal” batch size, so that our expected output is maximized. Setting the Batch Size “too low”, causes the production system to lose too much time in setups (a setup is required for every batch). Setting the batch size “too high” can cause starvation in other job stations. What “too low” or “too high” means is dependent on various factors, such as cycle times, setup times and other model parameters. Also, improvements in the system may cause the “ideal” batch size to change, but we can’t figure this out without a model.&lt;/p&gt;
+&lt;p&gt;Although this example is simple, the underlying idea can be generalized to any case in which a response variable is concave (e.g., Total Costs, Revenue, Throughput) in respect to a decision variable, and your goal is to figure out what this relationship looks like to better manage the system.&lt;/p&gt;
+&lt;p&gt;After this introduction, we are going to focus on how to create a metamodel after simulating a few scenarios with Arena.&lt;/p&gt;
+&lt;div id=&#34;data-wrangling&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Data Wrangling&lt;/h3&gt;
+&lt;p&gt;The first step is obtaining a data.frame where individual observations are simulation replications, and we have one column as the dependent variable &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt; and another column as the independent variable &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;, so that we can find a function &lt;span class=&#34;math inline&#34;&gt;\(y = f_{meta}(x)\)&lt;/span&gt; that will provide an aproximation of our model results. This aproximation should be usefull to explain the relationship between &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;First, I simulated all scenarios and saved their results as separate csv files. You can download the files &lt;a href=&#34;/post/2019-03-metamodeling/batchsizefiles.zip&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;As you can see opening these files, Arena’s output files need work to become a useful tidy dataframe. By using the package &lt;a href=&#34;arena2r.pedronl.com&#34;&gt;Arena2R&lt;/a&gt;, I can obtain my dataframe easily with the function ‘get_simulation_results’, which will read all csv files in a given path and provide a tidy data.frame with all simulation results.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(arena2r)
+library(dplyr)
+library(ggplot2)
+library(readr)
+
+# Obtaining a dataframe compiling all simulation results stored at the &amp;quot;source&amp;quot; folder.
+sim_results = arena2r::get_simulation_results(source = &amp;quot;2019-03-metamodeling/&amp;quot;)
+
+head(sim_results)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##       Scenario                   Statistic Replication    Value
+## 1 BatchSize200 Colagem.Queue.NumberInQueue           1 9.476321
+## 2 BatchSize200 Colagem.Queue.NumberInQueue           2 7.313429
+## 3 BatchSize200 Colagem.Queue.NumberInQueue           3 8.647507
+## 4 BatchSize200 Colagem.Queue.NumberInQueue           4 7.966887
+## 5 BatchSize200 Colagem.Queue.NumberInQueue           5 9.214783
+## 6 BatchSize200 Colagem.Queue.NumberInQueue           6 8.143359&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Although this dataframe is a good starting point, it does not contain our independent variable (the Batch Size) as a numeric value. I coded my output files so that they will always correspond to BatchSizeXXX, wherein XXX will be a number. After some data wrangling we will be good to continue our metamodeling.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Creating a Column For The Dependent Variable, assigning it to the number in the file name:
+sim_results$BatchSize = readr::parse_number(as.character(sim_results$Scenario))
+
+# Filter only the Outcome Variable of Interest
+
+sim_results = subset(sim_results, Statistic == &amp;quot;Entity 1.NumberOut&amp;quot;)
+
+# Now Let&amp;#39;s view the relationship between BatchSize and Throughput:
+
+ggplot(sim_results, mapping = aes(x = BatchSize, y = Value, color = Value)) + 
+  geom_point() +
+  labs(y = &amp;quot;Output&amp;quot;, color = &amp;quot;Output&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-03-09-making-sense-of-models-with-metamodels-low-order-polynomials-with-arena-and-r_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;This plot shows us important lessons about &lt;em&gt;non-linearity&lt;/em&gt;. Clearly, the output variable has a non-linear relationship with Batch Size. The tricky implication is that if you decided to sample only values of BatchSize &amp;gt; 300, you might reach the conclusion that increasing Batch Size has little impact on Output, and this impact is likely negative. Conversely, if you sample only BatchSize &amp;lt; 300, you would reach the opposite conclusion.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;drawing-curves-revealing-non-linear-patterns&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Drawing Curves, Revealing Non-Linear Patterns&lt;/h2&gt;
+&lt;p&gt;If you could draw a curve explaining the relationship between BatchSize and the Output Variable, what would this curve look like? That’s where polynomial metamodels in.&lt;/p&gt;
+&lt;p&gt;You can find documentation about polynomial regression in R &lt;a href=&#34;https://www.r-bloggers.com/fitting-polynomial-regression-in-r/&#34;&gt;here&lt;/a&gt;, &lt;a href=&#34;https://medium.com/wwblog/polynomial-regression-in-r-c377f18d6efa&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;https://www.theanalysisfactor.com/r-tutorial-4/&#34;&gt;here&lt;/a&gt;. Put simply, regression modeling can be seen as drawing lines (or maybe curves) with the purpose of revealing the existence of relationships between variables. In our case, we will first use a polynomial function in the form $y = a + bx + cx^2 $ that will be useful to picture the non-linear relationship between BatchSize and the Output Variable.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(sim_results, mapping = aes(x = BatchSize, y = Value)) + 
+  geom_point() + 
+  stat_smooth(method = &amp;quot;lm&amp;quot;, formula = y ~ x + I(x^2), size = 1) + 
+  labs(y = &amp;quot;Output&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-03-09-making-sense-of-models-with-metamodels-low-order-polynomials-with-arena-and-r_files/figure-html/second-order-polynomial-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div id=&#34;optimizing-with-a-quadratic-metamodel&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;“Optimizing” with a Quadratic Metamodel&lt;/h3&gt;
+&lt;p&gt;Since our model is quadratic, we can do some calculus to find the point in which the output peaks:&lt;/p&gt;
+&lt;p&gt;Since our function is clearly concave down, we can use simple calculus to find the BatchSize Value that maximizes the Output:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[x_{opt} = \arg\max \ \  ax^2 + bx + c \]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;We can find the optimal point by taking the first derivative:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[y&amp;#39; = 2ax + b\]&lt;/span&gt;
+Since we know our model is concave down, we know that when the first derivative reaches 0, we will be at its maximum value.&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[0 = 2ax_{opt} + b\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[x_{opt} = -b / 2a\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Now that we have a formula, let’s calculate the optimum batch size (based on our metamodel):&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;quadratic_model = lm(formula = Value ~ BatchSize + I(BatchSize^2), data = sim_results)
+
+## Since our Model is Quadratic, we can derive a formula for the maximum, based on our results
+
+Optimum_BatchSize = - quadratic_model$coefficients[2] / (2 * quadratic_model$coefficients[3])
+
+Optimum_BatchSize&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## BatchSize 
+##  342.8003&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Does it make sense?&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(sim_results, mapping = aes(x = BatchSize, y = Value)) + 
+  geom_point() + 
+  stat_smooth(method = &amp;quot;lm&amp;quot;, formula = y ~ x + I(x^2), size = 1) +
+  geom_vline(xintercept = Optimum_BatchSize) + 
+  geom_text(aes(x=Optimum_BatchSize, label=&amp;quot;\nOptimum Batch Size&amp;quot;, y=9700), angle=90, text=element_text(size=11)) + 
+  labs(y = &amp;quot;Output&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-03-09-making-sense-of-models-with-metamodels-low-order-polynomials-with-arena-and-r_files/figure-html/second-order-polynomial-with-optimum-value-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;caveats&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Caveats&lt;/h3&gt;
+&lt;p&gt;There are a few caveats you should be aware of when using polynomial metamodels, and I’m citing only two of them here:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Use only low-order polynomials.&lt;/strong&gt; First, if you try a higher order polynomial (for instance, one that includes &lt;span class=&#34;math inline&#34;&gt;\(x^5\)&lt;/span&gt;), you will likely end up with an overfitted model. Try that and see that for yourself.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. Avoid using them “Globally”&lt;/strong&gt;: You should avoid using low-order polynomials globally simply because they will become inacurate as you expand the sampling space. Look at the figure above. When Batch Size = 350, the quadratic model over-estimates the Output. There’s a workaround this called “Splines” which will be explored on another post, and there are better options (such as Kriging / Gaussian processes, Neural Nets, etc.).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;conclusion&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;Using low-order polynomials is a relatively straightforward option you can use to explore and visualize non-linear relationships between decision variables and outcome variables. However, simple polynomial models are limited, and more advanced techniques are available (including Splines, Gaussian Processes, and Neural Nets). The good news is that you can easily find documentation about these techniques in R. Once you have the data, putting together a metamodel in R is usually only a few keystrokes away. In future posts, I will continue to explore increasingly complex metamodels, but keep in mind that the goal should not be to add complexity to the analysis “just because we can”, but to add interpretability and meaning to our results.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level1 unnumbered&#34;&gt;
+&lt;h1&gt;References&lt;/h1&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-Barton2006&#34;&gt;
+&lt;p&gt;Barton, Russell R, and Martin Meckesheimer. 2006. “Metamodel-Based Simulation Optimization” 13 (06). &lt;a href=&#34;https://doi.org/10.1016/S0927-0507(06)13018-2&#34;&gt;https://doi.org/10.1016/S0927-0507(06)13018-2&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-Kleijnen2017&#34;&gt;
+&lt;p&gt;Kleijnen, Jack P C. 2017. “Regression and Kriging metamodels with their experimental designs in simulation : A review.” &lt;em&gt;European Journal of Operational Research&lt;/em&gt; 256 (1): 1–16. &lt;a href=&#34;https://doi.org/10.1016/j.ejor.2016.06.041&#34;&gt;https://doi.org/10.1016/j.ejor.2016.06.041&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Strategic Decision Making in the 3D Printing Industry - 2018 DMDU Annual Meeting Materials</title>
+      <link>/post/3d-printing-rdm-analysis-2018-dmdu-meeting/</link>
+      <pubDate>Mon, 05 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>/post/3d-printing-rdm-analysis-2018-dmdu-meeting/</guid>
+      <description>
+
+
+&lt;p&gt;This post contains materials related to the the presentation given at the &lt;a href=&#34;http://www.deepuncertainty.org/annual-meetings/2018-annual-meeting/&#34;&gt;2018 DMDU Annual Meeting&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Full Master’s Thesis:&lt;/strong&gt; &lt;a href=&#34;/../files/Pedro-Lima-MS-Dissertation-RDM-AM.pdf&#34;&gt;Donwload Here.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Slides:&lt;/strong&gt; &lt;a href=&#34;/../files/dmdu2018-rdm-pedro-lima.pdf&#34;&gt;Donwload Here.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Poster:&lt;/strong&gt; &lt;a href=&#34;/../files/PosterPedroLimaDMDU2018.pdf&#34;&gt;Donwload Here.&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

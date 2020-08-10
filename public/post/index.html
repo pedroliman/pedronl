@@ -1,21 +1,36 @@
-<!DOCTYPE html>
-<html lang="en-us">
+<!DOCTYPE html><html lang="en-us" >
+
 <head>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Source Themes Academic 2.4.0">
-  <meta name="generator" content="Hugo 0.57.2" />
-  <meta name="author" content="Pedro Nascimento de Lima">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
 
   
   
   
   
+  
+    
+    
     
   
-  <meta name="description" content="Welcome to Pedro Nascimento de Lima personal blog.">
+  
+
+  <meta name="author" content="Pedro Nascimento de Lima">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="">
 
   
   <link rel="alternate" hreflang="en-us" href="/post/">
@@ -24,11 +39,15 @@
 
 
   
+  
+  
+  <meta name="theme-color" content="#2B2B2B">
+  
 
   
   
   
-  <meta name="theme-color" content="#3f51b5">
+  <script src="/js/mathjax-config.js"></script>
   
 
   
@@ -36,10 +55,9 @@
   
   
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
     
     
@@ -47,264 +65,563 @@
       
     
     
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
     
 
     
 
-  
-
-  
-  
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Playfair&#43;Display:400,700%7cFauna&#43;One">
-  
-
-  <link rel="stylesheet" href="/styles.css">
-  
-
-  
-  
-    <script>
-      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-      ga('create', 'UA-88356256-3', 'auto');
-      ga('set', 'anonymizeIp', true);
-      ga('require', 'eventTracker');
-      ga('require', 'outboundLinkTracker');
-      ga('require', 'urlChangeTracker');
-      ga('send', 'pageview');
-    </script>
-    <script async src="//www.google-analytics.com/analytics.js"></script>
     
-    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono&display=swap">
     
   
-  
 
   
-  <link rel="alternate" href="/post/index.xml" type="application/rss+xml" title="Pedro N. de Lima">
-  <link rel="feed" href="/post/index.xml" type="application/rss+xml" title="Pedro N. de Lima">
-  
-
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="icon" type="image/png" href="/img/icon.png">
-  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
-
-  <link rel="canonical" href="/post/">
-
-  <meta property="twitter:card" content="summary_large_image">
-  
-  <meta property="og:site_name" content="Pedro N. de Lima">
-  <meta property="og:url" content="/post/">
-  <meta property="og:title" content="Posts | Pedro N. de Lima">
-  <meta property="og:description" content="Welcome to Pedro Nascimento de Lima personal blog.">
   
   
-    
-  <meta property="og:image" content="/img/pedro-nascimento-de-lima.png">
-  <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2017-01-01T00:00:00-08:00">
-  
+  <link rel="stylesheet" href="/css/academic.css">
 
   
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88356256-3"></script>
 <script>
-  window.addEventListener("load", function(){
-    window.cookieconsent.initialise({
-      "palette": {
-        "popup": {
-          "background": "#3f51b5",
-          "text": "#fff"
-        },
-        "button": {
-          "background": "#fff",
-          "text": "#3f51b5"
-        }
-      },
-      "theme": "classic",
-      "content": {
-        "message": "This website uses cookies to ensure you get the best experience on our website.",
-        "dismiss": "Got it!",
-        "link": "Learn more",
-        "href": "https://cookies.insites.com"
-      }
-    })});
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-88356256-3', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
 </script>
 
 
   
 
-  <title>Posts | Pedro N. de Lima</title>
+
+  
+  
+
+  
+  <link rel="alternate" href="/post/index.xml" type="application/rss+xml" title="Pedro Nascimento de Lima">
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/post/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="twitter:site" content="@pedrolima_n">
+  <meta property="twitter:creator" content="@pedrolima_n">
+  
+  <meta property="og:site_name" content="Pedro Nascimento de Lima">
+  <meta property="og:url" content="/post/">
+  <meta property="og:title" content="Posts | Pedro Nascimento de Lima">
+  <meta property="og:description" content=""><meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  
+    <meta property="og:updated_time" content="2019-09-03T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Posts | Pedro Nascimento de Lima</title>
 
 </head>
-<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
 
-<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class=" ">
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
   <div class="container">
 
     
-      <a class="navbar-brand" href="/">Pedro N. de Lima</a>
-      
-      <button type="button" class="navbar-toggler" data-toggle="collapse"
-              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span><i class="fas fa-bars"></i></span>
-      </button>
-      
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Pedro Nascimento de Lima</a>
+    </div>
+    
 
     
-    <div class="collapse navbar-collapse" id="navbar">
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Pedro Nascimento de Lima</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
 
       
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>Recent Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Blog Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/files/PedroNascimentodeLima-CV.pdf"><span>CV</span></a>
+        </li>
+
+        
+        
+
       
-      <ul class="navbar-nav ml-auto">
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/#posts_r">
-            
-            <span>Posts</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/#projects">
-            
-            <span>Projects</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/#publications_selected">
-            
-            <span>Publications</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/#about">
-            
-            <span>About</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/resources">
-            
-            <span>Learning Resources</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-      
-
-        
 
         
       </ul>
-
     </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+
+      
+
+    </ul>
+
   </div>
 </nav>
 
 
 
+  
 
 
-<div class="universal-wrapper">
 
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+<div class="universal-wrapper pt-3">
   <h1>Posts</h1>
 
   
 
   
+</div>
+
+
+
+<div class="universal-wrapper">
+
   
-    
+
+  
+  
     
       
 
-<div class="card-simple" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+
+
+
+
+
+
+
+
+
+
+
   
+
+
+<div class="media stream-item">
+  <div class="media-body">
+
+    <h3 class="article-title mb-0 mt-0">
+      <a href="/post/slides-graduacao-simulacao-sistemas-de-informacaosistemas-produtivos/" >Slides - Simulação (por Eventos Discretos), Sistemas de Informação e outros</a>
+    </h3>
+
+    
+    <a href="/post/slides-graduacao-simulacao-sistemas-de-informacaosistemas-produtivos/" class="summary-link">
+      <div class="article-style">
+        Durante o meu tempo como como professor na UNISINOS no curso de Engenharia de Produção, acumulei uma boa quantidade de slides. Provavelmente não vou utilizar estes slides nos próximos 5 anos, portanto nada mais razoável do que compartilhar!
+      </div>
+    </a>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+        
+
 
 <div class="article-metadata">
 
   
   
-  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Pedro Nascimento de Lima">
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Sep 3, 2019
   </span>
   
 
-  <span class="article-date">
-    
-    <meta content="2019-09-03 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-    <time datetime="2019-09-03 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-      Sep 3, 2019
-    </time>
-  </span>
-  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Pedro Nascimento de Lima">
-  </span>
+  
 
   
   <span class="middot-divider"></span>
@@ -315,71 +632,87 @@
 
   
   
-
   
+
   
   
   <span class="middot-divider"></span>
   <span class="article-categories">
-    <i class="fas fa-folder"></i>
-    
-    <a href="/categories/slides/">Slides</a>
-    
-  </span>
-  
-  
-
+    <i class="fas fa-folder mr-1"></i><a href="/category/slides/">Slides</a></span>
   
 
 </div>
 
+      
+    </div>
 
-  
-  
-  <h3 class="article-title" itemprop="headline">
-    <a href="/post/slides-graduacao-simulacao-sistemas-de-informacaosistemas-produtivos/" itemprop="url">Slides - Simulação (por Eventos Discretos), Sistemas de Informação e outros</a>
-  </h3>
-  <div class="article-style" itemprop="articleBody">
     
-    Durante o meu tempo como como professor na UNISINOS no curso de Engenharia de Produção, acumulei uma boa quantidade de slides. Provavelmente não vou utilizar estes slides nos próximos 5 anos, portanto nada mais razoável do que compartilhar!
-Simulação Computacional: (por Eventos Discretos, com o Arena): Estes slides contém o conteúdo das aulas de simulação por eventos discretos, utilizando o Arena. Alguma parte deste material foi influenciada pelas aulas dos Profs.
+
+  </div>
+  <div class="ml-3">
+    
     
   </div>
-  <p class="read-more" itemprop="mainEntityOfPage">
-    <a href="/post/slides-graduacao-simulacao-sistemas-de-informacaosistemas-produtivos/" class="btn btn-outline-primary my-1">
-      CONTINUE READING
-    </a>
-  </p>
 </div>
 
     
   
-    
     
       
 
-<div class="card-simple" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+
+
+
+
+
+
+
+
+
+
+
   
+
+
+<div class="media stream-item">
+  <div class="media-body">
+
+    <h3 class="article-title mb-0 mt-0">
+      <a href="/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/" >Teaching Factory Physics Flow Benchmarking with R and Many-Objective Visuals</a>
+    </h3>
+
+    
+    <a href="/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/" class="summary-link">
+      <div class="article-style">
+        Teaching to seasoned managers in MBE classes is challenging. While it’s important to bring new thoughts and ideas and not sound repetitive, it is necessary to provide a theoretical basis for experienced people with diverse backgrounds.
+      </div>
+    </a>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+        
+
 
 <div class="article-metadata">
 
   
   
-  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Pedro Nascimento de Lima">
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Apr 28, 2019
   </span>
   
 
-  <span class="article-date">
-    
-    <meta content="2019-04-28 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-    <time datetime="2019-04-28 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-      Apr 28, 2019
-    </time>
-  </span>
-  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Pedro Nascimento de Lima">
-  </span>
+  
 
   
   <span class="middot-divider"></span>
@@ -390,79 +723,87 @@ Simulação Computacional: (por Eventos Discretos, com o Arena): Estes slides co
 
   
   
-
   
+
   
   
   <span class="middot-divider"></span>
   <span class="article-categories">
-    <i class="fas fa-folder"></i>
-    
-    <a href="">R Blogs</a>, 
-    
-    <a href="/categories/r/">R</a>
-    
-  </span>
-  
-  
-
+    <i class="fas fa-folder mr-1"></i><a href="/category/r-blogs/">R Blogs</a>, <a href="/category/r/">R</a></span>
   
 
 </div>
 
+      
+    </div>
 
-  
-  
-  <a href="/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/">
     
+
+  </div>
+  <div class="ml-3">
     
-      <img src="/img//thumbnails/teaching-fp-many-objective-visuals.png" class="article-banner" itemprop="image">
-    
-  </a>
-  
-  <h3 class="article-title" itemprop="headline">
-    <a href="/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/" itemprop="url">Teaching Factory Physics Flow Benchmarking with R and Many-Objective Visuals</a>
-  </h3>
-  <div class="article-style" itemprop="articleBody">
-    
-    Teaching to seasoned managers in MBE classes is challenging. While it’s important to bring new thoughts and ideas and not sound repetitive, it is necessary to provide a theoretical basis for experienced people with diverse backgrounds. One of the strategies I found to overcome these obstacles this week was to use a new analysis framework (in my case, Factory Physics concepts) to challenge their views about existing frames they already master.
     
   </div>
-  <p class="read-more" itemprop="mainEntityOfPage">
-    <a href="/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/" class="btn btn-outline-primary my-1">
-      CONTINUE READING
-    </a>
-  </p>
 </div>
 
     
   
-    
     
       
 
-<div class="card-simple" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+
+
+
+
+
+
+
+
+
+
+
   
+
+
+<div class="media stream-item">
+  <div class="media-body">
+
+    <h3 class="article-title mb-0 mt-0">
+      <a href="/post/des-metamodeling-splines-r-arena/" >Discrete Event Simulation (DES) Metamodeling - Splines with R and Arena</a>
+    </h3>
+
+    
+    <a href="/post/des-metamodeling-splines-r-arena/" class="summary-link">
+      <div class="article-style">
+        Simulation Metamodeling - building and using surrogate models that can approximate results from more complicated simulation models - is an interesting approach to analyze results from complicated, computationally expensive simulation models.
+      </div>
+    </a>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+        
+
 
 <div class="article-metadata">
 
   
   
-  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Pedro Nascimento de Lima">
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Apr 14, 2019
   </span>
   
 
-  <span class="article-date">
-    
-    <meta content="2019-04-14 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-    <time datetime="2019-04-14 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-      Apr 14, 2019
-    </time>
-  </span>
-  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Pedro Nascimento de Lima">
-  </span>
+  
 
   
   <span class="middot-divider"></span>
@@ -473,80 +814,88 @@ Simulação Computacional: (por Eventos Discretos, com o Arena): Estes slides co
 
   
   
-
   
+
   
   
   <span class="middot-divider"></span>
   <span class="article-categories">
-    <i class="fas fa-folder"></i>
-    
-    <a href="">R Blogs</a>, 
-    
-    <a href="/categories/r/">R</a>
-    
-  </span>
-  
-  
-
+    <i class="fas fa-folder mr-1"></i><a href="/category/r-blogs/">R Blogs</a>, <a href="/category/r/">R</a></span>
   
 
 </div>
 
+      
+    </div>
 
-  
-  
-  <a href="/post/des-metamodeling-splines-r-arena/">
     
+
+  </div>
+  <div class="ml-3">
     
-      <img src="/img//thumbnails/splines-post.png" class="article-banner" itemprop="image">
-    
-  </a>
-  
-  <h3 class="article-title" itemprop="headline">
-    <a href="/post/des-metamodeling-splines-r-arena/" itemprop="url">Discrete Event Simulation (DES) Metamodeling - Splines with R and Arena</a>
-  </h3>
-  <div class="article-style" itemprop="articleBody">
-    
-    Simulation Metamodeling - building and using surrogate models that can approximate results from more complicated simulation models - is an interesting approach to analyze results from complicated, computationally expensive simulation models. Metamodels are useful because they can yield good approximations of the original simulation model response variables using less computational resources. For an introduction to Metamodeling, refer to (Barton 2015).
-To my knowledge, no Discrete-Event Simulation (DES) software provides metamodeling capabilities, and guidance on how to actually execute metamodeling is scarce.
     
   </div>
-  <p class="read-more" itemprop="mainEntityOfPage">
-    <a href="/post/des-metamodeling-splines-r-arena/" class="btn btn-outline-primary my-1">
-      CONTINUE READING
-    </a>
-  </p>
 </div>
 
     
   
-    
     
       
 
-<div class="card-simple" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+
+
+
+
+
+
+
+
+
+
+
   
+
+
+<div class="media stream-item">
+  <div class="media-body">
+
+    <h3 class="article-title mb-0 mt-0">
+      <a href="/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/" >Making Sense of Simulation Models with Metamodels Part 1 - Low-Order Polynomials with Arena and R</a>
+    </h3>
+
+    
+    <a href="/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/" class="summary-link">
+      <div class="article-style">
+        This is part 1 of a series of posts in which I will explore the utility of using metamodels to make sense of (and possibly optimizing) simulation models.
+If you used simulation modeling on a real project, you might be familiar with this fictional story:
+      </div>
+    </a>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+        
+
 
 <div class="article-metadata">
 
   
   
-  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Pedro Nascimento de Lima">
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Mar 9, 2019
   </span>
   
 
-  <span class="article-date">
-    
-    <meta content="2019-03-09 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-    <time datetime="2019-03-09 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-      Mar 9, 2019
-    </time>
-  </span>
-  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Pedro Nascimento de Lima">
-  </span>
+  
 
   
   <span class="middot-divider"></span>
@@ -557,81 +906,90 @@ To my knowledge, no Discrete-Event Simulation (DES) software provides metamodeli
 
   
   
-
   
+
   
   
   <span class="middot-divider"></span>
   <span class="article-categories">
-    <i class="fas fa-folder"></i>
-    
-    <a href="/categories/r/">R</a>, 
-    
-    <a href="">R Blogs</a>
-    
-  </span>
-  
-  
-
+    <i class="fas fa-folder mr-1"></i><a href="/category/r/">R</a>, <a href="/category/r-blogs/">R Blogs</a></span>
   
 
 </div>
 
+      
+    </div>
 
-  
-  
-  <a href="/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/">
     
+
+  </div>
+  <div class="ml-3">
     
-      <img src="/img//thumbnails/making-sense-of-simulation-models.png" class="article-banner" itemprop="image">
-    
-  </a>
-  
-  <h3 class="article-title" itemprop="headline">
-    <a href="/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/" itemprop="url">Making Sense of Simulation Models with Metamodels Part 1 - Low-Order Polynomials with Arena and R</a>
-  </h3>
-  <div class="article-style" itemprop="articleBody">
-    
-    This is part 1 of a series of posts in which I will explore the utility of using metamodels to make sense of (and possibly optimizing) simulation models.
-If you used simulation modeling on a real project, you might be familiar with this fictional story:
-You spent long hours building and refining your simulation model (eg.: a Discrete Event Model). Hopefully, you are confident that it can yield reliable results.
     
   </div>
-  <p class="read-more" itemprop="mainEntityOfPage">
-    <a href="/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/" class="btn btn-outline-primary my-1">
-      CONTINUE READING
-    </a>
-  </p>
 </div>
 
     
   
-    
     
       
 
-<div class="card-simple" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+
+
+
+
+
+
+
+
+
+
+
   
+
+
+<div class="media stream-item">
+  <div class="media-body">
+
+    <h3 class="article-title mb-0 mt-0">
+      <a href="/post/3d-printing-rdm-analysis-2018-dmdu-meeting/" >Strategic Decision Making in the 3D Printing Industry - 2018 DMDU Annual Meeting Materials</a>
+    </h3>
+
+    
+    <a href="/post/3d-printing-rdm-analysis-2018-dmdu-meeting/" class="summary-link">
+      <div class="article-style">
+        This post contains materials related to the the presentation given at the 2018 DMDU Annual Meeting.
+Full Master’s Thesis: Donwload Here.
+Slides: Donwload Here.
+Poster: Donwload Here.
+      </div>
+    </a>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+        
+
 
 <div class="article-metadata">
 
   
   
-  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Pedro Nascimento de Lima">
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Nov 5, 2018
   </span>
   
 
-  <span class="article-date">
-    
-    <meta content="2018-11-05 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-    <time datetime="2018-11-05 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-      Nov 5, 2018
-    </time>
-  </span>
-  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Pedro Nascimento de Lima">
-  </span>
+  
 
   
   <span class="middot-divider"></span>
@@ -642,78 +1000,87 @@ If you used simulation modeling on a real project, you might be familiar with th
 
   
   
-
   
+
   
   
   <span class="middot-divider"></span>
   <span class="article-categories">
-    <i class="fas fa-folder"></i>
-    
-    <a href="/categories/conference/">Conference</a>
-    
-  </span>
-  
-  
-
+    <i class="fas fa-folder mr-1"></i><a href="/category/conference/">Conference</a></span>
   
 
 </div>
 
+      
+    </div>
 
-  
-  
-  <h3 class="article-title" itemprop="headline">
-    <a href="/post/3d-printing-rdm-analysis-2018-dmdu-meeting/" itemprop="url">Strategic Decision Making in the 3D Printing Industry - 2018 DMDU Annual Meeting Materials</a>
-  </h3>
-  <div class="article-style" itemprop="articleBody">
-    
     
 
-
-<p>This post contains materials related to the the presentation given at the <a href="http://www.deepuncertainty.org/annual-meetings/2018-annual-meeting/">2018 DMDU Annual Meeting</a>.</p>
-<p><strong>Full Master’s Thesis:</strong> <a href="/../files/Pedro-Lima-MS-Dissertation-RDM-AM.pdf">Donwload Here.</a></p>
-<p><strong>Slides:</strong> <a href="/../files/dmdu2018-rdm-pedro-lima.pdf">Donwload Here.</a></p>
-<p><strong>Poster:</strong> <a href="/../files/PosterPedroLimaDMDU2018.pdf">Donwload Here.</a></p>
-<embed src="/../files/PosterPedroLimaDMDU2018.pdf" width="100%" height="800" type="application/pdf" />
-
+  </div>
+  <div class="ml-3">
+    
     
   </div>
-  <p class="read-more" itemprop="mainEntityOfPage">
-    <a href="/post/3d-printing-rdm-analysis-2018-dmdu-meeting/" class="btn btn-outline-primary my-1">
-      CONTINUE READING
-    </a>
-  </p>
 </div>
 
     
   
-    
     
       
 
-<div class="card-simple" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+
+
+
+
+
+
+
+
+
+
+
   
+
+
+<div class="media stream-item">
+  <div class="media-body">
+
+    <h3 class="article-title mb-0 mt-0">
+      <a href="/post/previsao-de-series-temporais-com-o-r/" >Previsão de Séries Temporais com o R</a>
+    </h3>
+
+    
+    <a href="/post/previsao-de-series-temporais-com-o-r/" class="summary-link">
+      <div class="article-style">
+        Este arquivo foi utilizado como arquivo de apoio à aulas ministradas sobre previsão de demanda utilizando o R. Para um tramento mais aprofundado sobre o tema, recorrer ao excelente livro Forecating: Principles and Practice.
+      </div>
+    </a>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+        
+
 
 <div class="article-metadata">
 
   
   
-  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Pedro Nascimento de Lima">
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Oct 10, 2018
   </span>
   
 
-  <span class="article-date">
-    
-    <meta content="2018-10-10 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-    <time datetime="2018-10-10 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-      Oct 10, 2018
-    </time>
-  </span>
-  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Pedro Nascimento de Lima">
-  </span>
+  
 
   
   <span class="middot-divider"></span>
@@ -724,72 +1091,87 @@ If you used simulation modeling on a real project, you might be familiar with th
 
   
   
-
   
+
   
   
   <span class="middot-divider"></span>
   <span class="article-categories">
-    <i class="fas fa-folder"></i>
-    
-    <a href="/categories/r/">R</a>
-    
-  </span>
-  
-  
-
+    <i class="fas fa-folder mr-1"></i><a href="/category/r/">R</a></span>
   
 
 </div>
 
+      
+    </div>
 
-  
-  
-  <h3 class="article-title" itemprop="headline">
-    <a href="/post/previsao-de-series-temporais-com-o-r/" itemprop="url">Previsão de Séries Temporais com o R</a>
-  </h3>
-  <div class="article-style" itemprop="articleBody">
     
-    Este arquivo foi utilizado como arquivo de apoio à aulas ministradas sobre previsão de demanda utilizando o R. Para um tramento mais aprofundado sobre o tema, recorrer ao excelente livro Forecating: Principles and Practice.
-Este post possui uma apresentação relacionada neste link.
-Sobre o RO R é um ambiente de computação estatística, com mais de 13 mil pacotes publicados.Cada um destes pacotes tem um fim específico. Neste curso, utilizaremos principalmente as bibliotecas ‘forecast’ e o fpp2.
+
+  </div>
+  <div class="ml-3">
+    
     
   </div>
-  <p class="read-more" itemprop="mainEntityOfPage">
-    <a href="/post/previsao-de-series-temporais-com-o-r/" class="btn btn-outline-primary my-1">
-      CONTINUE READING
-    </a>
-  </p>
 </div>
 
     
   
-    
     
       
 
-<div class="card-simple" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+
+
+
+
+
+
+
+
+
+
+
   
+
+
+<div class="media stream-item">
+  <div class="media-body">
+
+    <h3 class="article-title mb-0 mt-0">
+      <a href="/post/arena2r-package-tutorial/" >Arena2R - An R Package for Arena Simulation Users</a>
+    </h3>
+
+    
+    <a href="/post/arena2r-package-tutorial/" class="summary-link">
+      <div class="article-style">
+        Arena Simulation is a well-known Discrete Event Simulation Software. However, if you are a power user you might want to extend your analysis beyond what Arena’s Process Analyzer offers. In this tutorial, I’ll guide you through the main functions of Arena2R package.
+      </div>
+    </a>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+        
+
 
 <div class="article-metadata">
 
   
   
-  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Pedro Nascimento de Lima">
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Sep 27, 2018
   </span>
   
 
-  <span class="article-date">
-    
-    <meta content="2018-09-27 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-    <time datetime="2018-09-27 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-      Sep 27, 2018
-    </time>
-  </span>
-  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Pedro Nascimento de Lima">
-  </span>
+  
 
   
   <span class="middot-divider"></span>
@@ -800,80 +1182,87 @@ Sobre o RO R é um ambiente de computação estatística, com mais de 13 mil p
 
   
   
-
   
+
   
   
   <span class="middot-divider"></span>
   <span class="article-categories">
-    <i class="fas fa-folder"></i>
-    
-    <a href="/categories/r/">R</a>, 
-    
-    <a href="">R Blogs</a>
-    
-  </span>
-  
-  
-
+    <i class="fas fa-folder mr-1"></i><a href="/category/r/">R</a>, <a href="/category/r-blogs/">R Blogs</a></span>
   
 
 </div>
 
+      
+    </div>
 
-  
-  
-  <a href="/post/arena2r-package-tutorial/">
     
+
+  </div>
+  <div class="ml-3">
     
-      <img src="/img//thumbnails/arena2r-post.png" class="article-banner" itemprop="image">
-    
-  </a>
-  
-  <h3 class="article-title" itemprop="headline">
-    <a href="/post/arena2r-package-tutorial/" itemprop="url">Arena2R - An R Package for Arena Simulation Users</a>
-  </h3>
-  <div class="article-style" itemprop="articleBody">
-    
-    Arena Simulation is a well-known Discrete Event Simulation Software. However, if you are a power user you might want to extend your analysis beyond what Arena’s Process Analyzer offers. In this tutorial, I’ll guide you through the main functions of Arena2R package.
-If you’re not an R user, fear not! Arena2R comes with an app you can use to explore your Arena Simulation data. All you’ll have to do is to Install R and R Studio, and run two commands in your R console.
     
   </div>
-  <p class="read-more" itemprop="mainEntityOfPage">
-    <a href="/post/arena2r-package-tutorial/" class="btn btn-outline-primary my-1">
-      CONTINUE READING
-    </a>
-  </p>
 </div>
 
     
   
-    
     
       
 
-<div class="card-simple" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+
+
+
+
+
+
+
+
+
+
+
   
+
+
+<div class="media stream-item">
+  <div class="media-body">
+
+    <h3 class="article-title mb-0 mt-0">
+      <a href="/post/introducao-ao-r-aprendendo-com-o-moneyball/" >Introdução ao R - Aprendendo com o Moneyball</a>
+    </h3>
+
+    
+    <a href="/post/introducao-ao-r-aprendendo-com-o-moneyball/" class="summary-link">
+      <div class="article-style">
+        Este post corresponde aos slides do Mini-Curso “Introdução ao R - Aprendendo com o Moneyball”, realizado em 2017 no SIGEPRO. Cada um dos títulos neste post correspondia a um slide.
+      </div>
+    </a>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+        
+
 
 <div class="article-metadata">
 
   
   
-  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Pedro Nascimento de Lima">
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Oct 10, 2017
   </span>
   
 
-  <span class="article-date">
-    
-    <meta content="2017-10-10 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-    <time datetime="2017-10-10 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-      Oct 10, 2017
-    </time>
-  </span>
-  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Pedro Nascimento de Lima">
-  </span>
+  
 
   
   <span class="middot-divider"></span>
@@ -884,159 +1273,181 @@ If you’re not an R user, fear not! Arena2R comes with an app you can use to ex
 
   
   
-
   
+
   
   
   <span class="middot-divider"></span>
   <span class="article-categories">
-    <i class="fas fa-folder"></i>
+    <i class="fas fa-folder mr-1"></i><a href="/category/r/">R</a></span>
+  
+
+</div>
+
+      
+    </div>
+
     
-    <a href="/categories/r/">R</a>
+
+  </div>
+  <div class="ml-3">
     
+    
+  </div>
+</div>
+
+    
+  
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<div class="media stream-item">
+  <div class="media-body">
+
+    <h3 class="article-title mb-0 mt-0">
+      <a href="/post/2015-07-23-r-rmarkdown/" >Hello R Markdown</a>
+    </h3>
+
+    
+    <a href="/post/2015-07-23-r-rmarkdown/" class="summary-link">
+      <div class="article-style">
+        R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.
+      </div>
+    </a>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+        
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jul 23, 2015
   </span>
   
+
   
 
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    1 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/r/">R</a></span>
   
 
 </div>
 
-
-  
-  
-  <h3 class="article-title" itemprop="headline">
-    <a href="/post/introducao-ao-r-aprendendo-com-o-moneyball/" itemprop="url">Introdução ao R - Aprendendo com o Moneyball</a>
-  </h3>
-  <div class="article-style" itemprop="articleBody">
-    
-    Este post corresponde aos slides do Mini-Curso “Introdução ao R - Aprendendo com o Moneyball”, realizado em 2017 no SIGEPRO. Cada um dos títulos neste post correspondia a um slide.
-O que Veremos neste Mini-Curso?O que é Data Analytics?Exemplo Moneyball.Como continuar aprendendo.Porque usar o R ?Open Source e Gratuito;Mais de 10 k bibliotecas gratuitas;Suporta muitos tipos de Análises;Conhecimento “cumulativo” e transferível a outros contextos.
-    
-  </div>
-  <p class="read-more" itemprop="mainEntityOfPage">
-    <a href="/post/introducao-ao-r-aprendendo-com-o-moneyball/" class="btn btn-outline-primary my-1">
-      CONTINUE READING
-    </a>
-  </p>
-</div>
-
-    
-  
-
-  
-
-
-</div>
-<div class="container">
-  <footer class="site-footer">
-  
-
-  <p class="powered-by">
-    &copy; 2019 &middot; 
-
-    Built with <a href="https://www.r-project.org/" target="_blank" rel="noopener">R</a> and <a href="https://bookdown.org/yihui/blogdown/" target="_blank" rel="noopener">blogdown</a>. Powered by the
-    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
-    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>. 
-
-    
-    <span class="float-right" aria-hidden="true">
-      <a href="#" id="back_to_top">
-        <span class="button_icon">
-          <i class="fas fa-chevron-up fa-2x"></i>
-        </span>
-      </a>
-    </span>
-    
-  </p>
-</footer>
-
-</div>
-
-
-<div id="modal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Cite</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <pre><code class="tex hljs"></code></pre>
-      </div>
-      <div class="modal-footer">
-        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
-          <i class="fas fa-copy"></i> Copy
-        </a>
-        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
-          <i class="fas fa-download"></i> Download
-        </a>
-        <div id="modal-error"></div>
-      </div>
+      
     </div>
+
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
   </div>
 </div>
 
     
+  
 
-    
-    
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        CommonHTML: { linebreaks: { automatic: true } },
-        tex2jax: { inlineMath: [ ['$', '$'], ['\\(','\\)'] ], displayMath: [ ['$$','$$'], ['\\[', '\\]'] ], processEscapes: false },
-        TeX: { noUndefined: { attributes: { mathcolor: 'red', mathbackground: '#FFEEEE', mathsize: '90%' } } },
-        messageStyle: 'none'
-      });
-    </script>
-    
+  
+
+
+</div>
+
+      
 
     
     
     
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
 
       
 
       
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js" integrity="sha512-7t8APmYpzEsZP7CYoA7RfMPV9Bb+PJHa9x2WiUnDXZx3XHveuyWUtvNOexhkierl5flZ3tr92dP1mMS+SGlD+A==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/r.min.js"></script>
+        
       
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
-      
-    
 
-    <script src="/js/hugo-academic.js"></script>
     
 
     
     
-
-    
-    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
     
 
     
     
+    <script>const code_highlighting = true;</script>
+    
 
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
     
     
     <script>
-      const search_index_filename = "/index.json";
-      const i18n = {
-        'placeholder': "Search...",
-        'results': "Search Results",
-        'no_results': "No results found"
-      };
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
       const content_type = {
         'post': "Posts",
         'project': "Projects",
         'publication' : "Publications",
-        'talk' : "Talks"
+        'talk' : "Talks",
+        'slides' : "Slides"
         };
     </script>
     
@@ -1063,12 +1474,114 @@ O que Veremos neste Mini-Curso?O que é Data Analytics?Exemplo Moneyball.Com
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
-    <script src="/js/search.js"></script>
     
 
     
     
 
-  </body>
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.66c553246b0f279a03be6e5597f72b52.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+  <p class="powered-by">
+    
+      <a href="/privacy/">Privacy Policy</a>
+    
+    
+       &middot; 
+      <a href="/terms/">Terms</a>
+    
+  </p>
+  
+
+  <p class="powered-by">
+    Built with R, hosted at Netlify.
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    Published with
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic Website Builder</a>
+    
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
 </html>
-

@@ -24,11 +24,7 @@ This post contains materials related to the the presentation given at the [2018 
 
 **Poster:** [Donwload Here.](/../files/PosterPedroLimaDMDU2018.pdf)
 
-```{r poster, echo=FALSE,out.width="100%",out.height=800}
 
-knitr::include_graphics("/../files/PosterPedroLimaDMDU2018.pdf")
-
-```
 
 
 

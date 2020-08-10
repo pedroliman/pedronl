@@ -26,7 +26,6 @@ header:
 <pre class="r"><code>install.packages(&quot;arena2r&quot;)</code></pre>
 <p>Then, load the package:</p>
 <pre class="r"><code>library(arena2r)
-## Warning: package &#39;arena2r&#39; was built under R version 3.6.1
 library(dplyr)
 ## 
 ## Attaching package: &#39;dplyr&#39;
@@ -135,6 +134,7 @@ knitr::kable(head(results))</code></pre>
 # Plot a Statistic confidence interval across scenarios for a response variable.
 
 arena2r::plot_confint(sim_results = results, response_variable = &quot;Entity 1.NumberOut&quot;)
+## Warning: `fun.y` is deprecated. Use `fun` instead.
 ## Warning: Computation failed in `stat_summary()`:
 ## Hmisc package required for this function</code></pre>
 <p><img src="/post/2018-09-27-arena2r-package-tutorial_files/figure-html/arena2r-confidence-interval-plot-1.png" width="672" /></p>

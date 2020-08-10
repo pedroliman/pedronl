@@ -1,307 +1,459 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
-    
-    <url>
-    
-      <loc>/tags/arena/</loc>
-      <lastmod>2019-09-03T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/courses/example/example1/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/tags/arena-simualtion/</loc>
-      <lastmod>2019-09-03T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/courses/example/</loc>
+    <lastmod>2018-09-09T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/categories/</loc>
-      <lastmod>2019-09-03T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/courses/example/example2/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/tags/discrete-event-simulation/</loc>
-      <lastmod>2019-09-03T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/talk/example/</loc>
+    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/</loc>
-      <lastmod>2019-09-03T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/</loc>
+    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/categories/slides/</loc>
-      <lastmod>2019-09-03T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/talk/</loc>
+    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/post/slides-graduacao-simulacao-sistemas-de-informacaosistemas-produtivos/</loc>
-      <lastmod>2019-09-03T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/publication-type/0/</loc>
+    <lastmod>2020-05-05T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/tags/</loc>
-      <lastmod>2019-09-03T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/author/aaron-strong/</loc>
+    <lastmod>2020-05-05T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/resources/</loc>
-      <lastmod>2019-04-28T00:00:00-07:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/authors/</loc>
+    <lastmod>2020-05-05T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/tags/arena2r/</loc>
-      <lastmod>2019-04-28T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/author/jeanne-s.-ringel/</loc>
+    <lastmod>2020-05-05T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/categories/r/</loc>
-      <lastmod>2019-04-28T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/author/jennifer-bouey/</loc>
+    <lastmod>2020-05-05T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/tags/r/</loc>
-      <lastmod>2019-04-28T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/author/jonathan-william-welburn/</loc>
+    <lastmod>2020-05-05T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/categories/r-blogs/</loc>
-      <lastmod>2019-04-28T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/author/keren-zhu/</loc>
+    <lastmod>2020-05-05T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/tags/simulation/</loc>
-      <lastmod>2019-04-28T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/author/lawrence-baker/</loc>
+    <lastmod>2020-05-05T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/</loc>
-      <lastmod>2019-04-28T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/author/lynn-hu/</loc>
+    <lastmod>2020-05-05T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/post/des-metamodeling-splines-r-arena/</loc>
-      <lastmod>2019-04-14T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/author/michelle-priest/</loc>
+    <lastmod>2020-05-05T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/tags/metamodeling/</loc>
-      <lastmod>2019-04-14T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/author/pedro-nascimento-de-lima/</loc>
+    <lastmod>2020-05-05T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/</loc>
-      <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/publication_types/</loc>
+    <lastmod>2020-05-05T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/publication_types/2/</loc>
-      <lastmod>2018-12-01T00:00:00-08:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/publication/</loc>
+    <lastmod>2020-05-05T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/publication/socioeconomic-factors-service-quality-servperf/</loc>
-      <lastmod>2018-12-01T00:00:00-08:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/author/raffaele-vardavas/</loc>
+    <lastmod>2020-05-05T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/publication/inducing-brazilian-smes-productivity-lean-manufacturing/</loc>
-      <lastmod>2018-12-01T00:00:00-08:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/tag/source-themes/</loc>
+    <lastmod>2020-05-05T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/publication_types/</loc>
-      <lastmod>2018-12-01T00:00:00-08:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-05-05T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/categories/conference/</loc>
-      <lastmod>2018-11-05T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/publication/2020-health-economic-impacts-covid-19-npis/</loc>
+    <lastmod>2020-05-05T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/post/3d-printing-rdm-analysis-2018-dmdu-meeting/</loc>
-      <lastmod>2018-11-05T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/tag/arena/</loc>
+    <lastmod>2019-09-03T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/tags/previs%C3%A3o-de-demanda/</loc>
-      <lastmod>2018-10-10T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/tag/arena-simualtion/</loc>
+    <lastmod>2019-09-03T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/post/previsao-de-series-temporais-com-o-r/</loc>
-      <lastmod>2018-10-10T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2019-09-03T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/tags/suaviza%C3%A7%C3%A3o-exponencial/</loc>
-      <lastmod>2018-10-10T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/tag/discrete-event-simulation/</loc>
+    <lastmod>2019-09-03T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/tags/s%C3%A9ries-temporais/</loc>
-      <lastmod>2018-10-10T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2019-09-03T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/post/arena2r-package-tutorial/</loc>
-      <lastmod>2018-09-27T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/category/slides/</loc>
+    <lastmod>2019-09-03T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/tags/r-package/</loc>
-      <lastmod>2018-09-27T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/post/slides-graduacao-simulacao-sistemas-de-informacaosistemas-produtivos/</loc>
+    <lastmod>2019-09-03T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/publication_types/6/</loc>
-      <lastmod>2018-09-01T00:00:00-07:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/post-not-used/</loc>
+    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/publication/impacts-additive-manufacturing-production-systems/</loc>
-      <lastmod>2018-09-01T00:00:00-07:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/post-not-used/writing-technical-content/</loc>
+    <lastmod>2019-07-12T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/post/introducao-ao-r-aprendendo-com-o-moneyball/</loc>
-      <lastmod>2017-10-10T00:00:00+00:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/courses/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/post/</loc>
-      <lastmod>2017-01-01T00:00:00-08:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/tag/arena2r/</loc>
+    <lastmod>2019-04-28T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/publication/</loc>
-      <lastmod>2017-01-01T00:00:00-08:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/tag/r/</loc>
+    <lastmod>2019-04-28T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/project/arena2r/</loc>
-      <lastmod>2016-04-28T00:00:00-07:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/category/r/</loc>
+    <lastmod>2019-04-28T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/project/</loc>
-      <lastmod>2016-04-28T00:00:00-07:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/category/r-blogs/</loc>
+    <lastmod>2019-04-28T00:00:00+00:00</lastmod>
+  </url>
   
-    
-    <url>
-    
-      <loc>/tags/software/</loc>
-      <lastmod>2016-04-28T00:00:00-07:00</lastmod>
-    </url>
-    
+  <url>
+    <loc>/tag/simulation/</loc>
+    <lastmod>2019-04-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/</loc>
+    <lastmod>2019-04-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/des-metamodeling-splines-r-arena/</loc>
+    <lastmod>2019-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/metamodeling/</loc>
+    <lastmod>2019-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication-type/3/</loc>
+    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication-not-used/preprint/</loc>
+    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication-not-used/</loc>
+    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/</loc>
+    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post-not-used/jupyter/</loc>
+    <lastmod>2019-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/slides/</loc>
+    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/slides/example/</loc>
+    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication-type/2/</loc>
+    <lastmod>2018-12-01T00:00:00-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/a-dresch/</loc>
+    <lastmod>2018-12-01T00:00:00-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/dc-collato/</loc>
+    <lastmod>2018-12-01T00:00:00-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/2018-socioeconomic-factors/</loc>
+    <lastmod>2018-12-01T00:00:00-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/dp-lacerda/</loc>
+    <lastmod>2018-12-01T00:00:00-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/dr-veit/</loc>
+    <lastmod>2018-12-01T00:00:00-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/2018-smes-lean-tools/inducing-brazilian-smes-productivity-lean-manufacturing/</loc>
+    <lastmod>2018-12-01T00:00:00-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/pn-lima/</loc>
+    <lastmod>2018-12-01T00:00:00-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/category/conference/</loc>
+    <lastmod>2018-11-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/3d-printing-rdm-analysis-2018-dmdu-meeting/</loc>
+    <lastmod>2018-11-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/previsao-de-demanda/</loc>
+    <lastmod>2018-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/previsao-de-series-temporais-com-o-r/</loc>
+    <lastmod>2018-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/suavizacao-exponencial/</loc>
+    <lastmod>2018-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/series-temporais/</loc>
+    <lastmod>2018-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/arena2r-package-tutorial/</loc>
+    <lastmod>2018-09-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/r-package/</loc>
+    <lastmod>2018-09-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication-type/6/</loc>
+    <lastmod>2018-09-01T00:00:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/lh-rodrigues/</loc>
+    <lastmod>2018-09-01T00:00:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/miwm-morandi/</loc>
+    <lastmod>2018-09-01T00:00:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/2019-additive-manufacturing-impacts/</loc>
+    <lastmod>2018-09-01T00:00:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/privacy/</loc>
+    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/terms/</loc>
+    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/introducao-ao-r-aprendendo-com-o-moneyball/</loc>
+    <lastmod>2017-10-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/deep-learning/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/demo/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/external-project/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/internal-project/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/academic/</loc>
+    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post-not-used/getting-started/</loc>
+    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/category/demo/</loc>
+    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/%E5%90%B3%E6%81%A9%E9%81%94/</loc>
+    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/%E5%BC%80%E6%BA%90/</loc>
+    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/category/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2019-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication-not-used/journal-article/</loc>
+    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/robert-ford/</loc>
+    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2015-07-23-r-rmarkdown/</loc>
+    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/plot/</loc>
+    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/r-markdown/</loc>
+    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/regression/</loc>
+    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication-type/1/</loc>
+    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication-not-used/conference-paper/</loc>
+    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/%E5%90%B3%E6%81%A9%E9%81%94/</loc>
+  </url>
   
 </urlset>

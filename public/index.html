@@ -1,22 +1,36 @@
+<!DOCTYPE html><html lang="en-us" >
 
-<!DOCTYPE html>
-<html lang="en-us">
 <head>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Source Themes Academic 2.4.0">
-  <meta name="generator" content="Hugo 0.57.2" />
-  <meta name="author" content="Pedro Nascimento de Lima">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
 
   
   
   
   
+  
+    
+    
     
   
-  <meta name="description" content="Welcome to Pedro Nascimento de Lima personal blog.">
+  
+
+  <meta name="author" content="Pedro Nascimento de Lima">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="">
 
   
   <link rel="alternate" hreflang="en-us" href="/">
@@ -25,11 +39,15 @@
 
 
   
+  
+  
+  <meta name="theme-color" content="#2B2B2B">
+  
 
   
   
   
-  <meta name="theme-color" content="#3f51b5">
+  <script src="/js/mathjax-config.js"></script>
   
 
   
@@ -37,10 +55,9 @@
   
   
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
     
     
@@ -51,1106 +68,589 @@
       
       
         
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" crossorigin="anonymous">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
         
       
     
 
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
 
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
     
 
   
 
   
   
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Playfair&#43;Display:400,700%7cFauna&#43;One">
-  
-
-  <link rel="stylesheet" href="/styles.css">
-  
-
-  
-  
-    <script>
-      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-      ga('create', 'UA-88356256-3', 'auto');
-      ga('set', 'anonymizeIp', true);
-      ga('require', 'eventTracker');
-      ga('require', 'outboundLinkTracker');
-      ga('require', 'urlChangeTracker');
-      ga('send', 'pageview');
-    </script>
-    <script async src="//www.google-analytics.com/analytics.js"></script>
-    
-    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
-    
-  
-  
-
-  
-  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Pedro N. de Lima">
-  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Pedro N. de Lima">
-  
-
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="icon" type="image/png" href="/img/icon.png">
-  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
-
-  <link rel="canonical" href="/">
-
-  <meta property="twitter:card" content="summary_large_image">
-  
-  <meta property="og:site_name" content="Pedro N. de Lima">
-  <meta property="og:url" content="/">
-  <meta property="og:title" content="Pedro N. de Lima">
-  <meta property="og:description" content="Welcome to Pedro Nascimento de Lima personal blog.">
-  
   
     
-  <meta property="og:image" content="/img/pedro-nascimento-de-lima.png">
-  <meta property="og:locale" content="en-us">
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono&display=swap">
+    
   
-  <meta property="og:updated_time" content="2019-09-03T00:00:00&#43;00:00">
+
   
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
 
   
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88356256-3"></script>
 <script>
-  window.addEventListener("load", function(){
-    window.cookieconsent.initialise({
-      "palette": {
-        "popup": {
-          "background": "#3f51b5",
-          "text": "#fff"
-        },
-        "button": {
-          "background": "#fff",
-          "text": "#3f51b5"
-        }
-      },
-      "theme": "classic",
-      "content": {
-        "message": "This website uses cookies to ensure you get the best experience on our website.",
-        "dismiss": "Got it!",
-        "link": "Learn more",
-        "href": "https://cookies.insites.com"
-      }
-    })});
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-88356256-3', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
 </script>
 
 
   
 
-  <title>Pedro N. de Lima</title>
+
+  
+  
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  
+
+  
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Pedro Nascimento de Lima">
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="twitter:site" content="@pedrolima_n">
+  <meta property="twitter:creator" content="@pedrolima_n">
+  
+  <meta property="og:site_name" content="Pedro Nascimento de Lima">
+  <meta property="og:url" content="/">
+  <meta property="og:title" content="Pedro Nascimento de Lima">
+  <meta property="og:description" content=""><meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  
+    <meta property="og:updated_time" content="2030-06-01T13:00:00&#43;00:00">
+  
+
+  
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "url": "/"
+}
+</script>
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Pedro Nascimento de Lima</title>
 
 </head>
-<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71" >
 
-<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" class=" ">
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
   <div class="container">
 
     
-      <a class="navbar-brand" href="/">Pedro N. de Lima</a>
-      
-      <button type="button" class="navbar-toggler" data-toggle="collapse"
-              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span><i class="fas fa-bars"></i></span>
-      </button>
-      
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Pedro Nascimento de Lima</a>
+    </div>
+    
 
     
-    <div class="collapse navbar-collapse" id="navbar">
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Pedro Nascimento de Lima</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
 
       
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about" data-target="#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications" data-target="#publications"><span>Recent Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts" data-target="#posts"><span>Blog Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/files/PedroNascimentodeLima-CV.pdf"><span>CV</span></a>
+        </li>
+
+        
+        
+
       
-      <ul class="navbar-nav ml-auto">
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/#posts_r" data-target="#posts_r">
-            
-            <span>Posts</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/#projects" data-target="#projects">
-            
-            <span>Projects</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/#publications_selected" data-target="#publications_selected">
-            
-            <span>Publications</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/#about" data-target="#about">
-            
-            <span>About</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/resources" data-target="/resources">
-            
-            <span>Learning Resources</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-      
-
-        
 
         
       </ul>
-
     </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+
+      
+
+    </ul>
+
   </div>
 </nav>
 
 
 
-<span id="homepage" style="display: none"></span>
-
-
   
 
 
 
 
 
+
+
+
+
+
+
+  
+<span class="js-widget-page d-none"></span>
+
+
+
+
+
   
   
   
-  <section id="posts_r" class="home-section">
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  <section id="about" class="home-section wg-about   "  >
     <div class="container">
       
+
+
+
+
+  
+
+
+
+
+
+
 
 
 
 
 <div class="row">
-  <div class="col-12 col-lg-4 section-heading">
-
-    <h1>R Posts</h1>
-    <p>R Code Involved</p>
-    
-    <p class="view-all">
-      <a href="/post/">
-        More Posts
-        <i class="fas fa-angle-double-right"></i>
-      </a>
-    </p>
-    
-
-  </div>
-  <div class="col-12 col-lg-8">
-
-    
-
-    
-      
-
-      
-      
-
-        
-
-        
-        
-        
-        
-          
-      
-          
-      
-          
-      
-          
-      
-
-      
-      
-        
-        
-          
-
-<div class="card-simple" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  
-
-<div class="article-metadata">
-
-  
-  
-  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Pedro Nascimento de Lima">
-  </span>
-  
-
-  <span class="article-date">
-    
-    <meta content="2019-04-28 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-    <time datetime="2019-04-28 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-      Apr 28, 2019
-    </time>
-  </span>
-  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Pedro Nascimento de Lima">
-  </span>
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    7 min read
-  </span>
-  
-
-  
-  
-
-  
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder"></i>
-    
-    <a href="">R Blogs</a>, 
-    
-    <a href="/categories/r/">R</a>
-    
-  </span>
-  
-  
-
-  
-
-</div>
-
-
-  
-  
-  <a href="/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/">
-    
-    
-      <img src="/img//thumbnails/teaching-fp-many-objective-visuals.png" class="article-banner" itemprop="image">
-    
-  </a>
-  
-  <h3 class="article-title" itemprop="headline">
-    <a href="/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/" itemprop="url">Teaching Factory Physics Flow Benchmarking with R and Many-Objective Visuals</a>
-  </h3>
-  <div class="article-style" itemprop="articleBody">
-    
-    Teaching to seasoned managers in MBE classes is challenging. While it’s important to bring new thoughts and ideas and not sound repetitive, it is necessary to provide a theoretical basis for experienced people with diverse backgrounds. One of the strategies I found to overcome these obstacles this week was to use a new analysis framework (in my case, Factory Physics concepts) to challenge their views about existing frames they already master.
-    
-  </div>
-  <p class="read-more" itemprop="mainEntityOfPage">
-    <a href="/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/" class="btn btn-outline-primary my-1">
-      CONTINUE READING
-    </a>
-  </p>
-</div>
-
-        
-      
-
-      
-
-        
-
-        
-        
-        
-        
-          
-      
-          
-      
-          
-      
-          
-      
-          
-      
-
-      
-      
-        
-        
-          
-
-<div class="card-simple" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  
-
-<div class="article-metadata">
-
-  
-  
-  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Pedro Nascimento de Lima">
-  </span>
-  
-
-  <span class="article-date">
-    
-    <meta content="2019-04-14 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-    <time datetime="2019-04-14 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-      Apr 14, 2019
-    </time>
-  </span>
-  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Pedro Nascimento de Lima">
-  </span>
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    4 min read
-  </span>
-  
-
-  
-  
-
-  
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder"></i>
-    
-    <a href="">R Blogs</a>, 
-    
-    <a href="/categories/r/">R</a>
-    
-  </span>
-  
-  
-
-  
-
-</div>
-
-
-  
-  
-  <a href="/post/des-metamodeling-splines-r-arena/">
-    
-    
-      <img src="/img//thumbnails/splines-post.png" class="article-banner" itemprop="image">
-    
-  </a>
-  
-  <h3 class="article-title" itemprop="headline">
-    <a href="/post/des-metamodeling-splines-r-arena/" itemprop="url">Discrete Event Simulation (DES) Metamodeling - Splines with R and Arena</a>
-  </h3>
-  <div class="article-style" itemprop="articleBody">
-    
-    Simulation Metamodeling - building and using surrogate models that can approximate results from more complicated simulation models - is an interesting approach to analyze results from complicated, computationally expensive simulation models. Metamodels are useful because they can yield good approximations of the original simulation model response variables using less computational resources. For an introduction to Metamodeling, refer to (Barton 2015).
-To my knowledge, no Discrete-Event Simulation (DES) software provides metamodeling capabilities, and guidance on how to actually execute metamodeling is scarce.
-    
-  </div>
-  <p class="read-more" itemprop="mainEntityOfPage">
-    <a href="/post/des-metamodeling-splines-r-arena/" class="btn btn-outline-primary my-1">
-      CONTINUE READING
-    </a>
-  </p>
-</div>
-
-        
-      
-
-      
-
-        
-
-        
-        
-        
-        
-          
-      
-          
-      
-          
-      
-          
-      
-          
-      
-          
-      
-
-      
-      
-        
-        
-          
-
-<div class="card-simple" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  
-
-<div class="article-metadata">
-
-  
-  
-  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Pedro Nascimento de Lima">
-  </span>
-  
-
-  <span class="article-date">
-    
-    <meta content="2019-03-09 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-    <time datetime="2019-03-09 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-      Mar 9, 2019
-    </time>
-  </span>
-  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Pedro Nascimento de Lima">
-  </span>
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    7 min read
-  </span>
-  
-
-  
-  
-
-  
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder"></i>
-    
-    <a href="/categories/r/">R</a>, 
-    
-    <a href="">R Blogs</a>
-    
-  </span>
-  
-  
-
-  
-
-</div>
-
-
-  
-  
-  <a href="/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/">
-    
-    
-      <img src="/img//thumbnails/making-sense-of-simulation-models.png" class="article-banner" itemprop="image">
-    
-  </a>
-  
-  <h3 class="article-title" itemprop="headline">
-    <a href="/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/" itemprop="url">Making Sense of Simulation Models with Metamodels Part 1 - Low-Order Polynomials with Arena and R</a>
-  </h3>
-  <div class="article-style" itemprop="articleBody">
-    
-    This is part 1 of a series of posts in which I will explore the utility of using metamodels to make sense of (and possibly optimizing) simulation models.
-If you used simulation modeling on a real project, you might be familiar with this fictional story:
-You spent long hours building and refining your simulation model (eg.: a Discrete Event Model). Hopefully, you are confident that it can yield reliable results.
-    
-  </div>
-  <p class="read-more" itemprop="mainEntityOfPage">
-    <a href="/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/" class="btn btn-outline-primary my-1">
-      CONTINUE READING
-    </a>
-  </p>
-</div>
-
-        
-      
-
-      
-
-        
-
-        
-        
-        
-        
-          
-      
-          
-      
-          
-      
-          
-      
-
-      
-      
-        
-        
-          
-
-<div class="card-simple" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  
-
-<div class="article-metadata">
-
-  
-  
-  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Pedro Nascimento de Lima">
-  </span>
-  
-
-  <span class="article-date">
-    
-    <meta content="2018-09-27 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-    <time datetime="2018-09-27 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-      Sep 27, 2018
-    </time>
-  </span>
-  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Pedro Nascimento de Lima">
-  </span>
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    4 min read
-  </span>
-  
-
-  
-  
-
-  
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder"></i>
-    
-    <a href="/categories/r/">R</a>, 
-    
-    <a href="">R Blogs</a>
-    
-  </span>
-  
-  
-
-  
-
-</div>
-
-
-  
-  
-  <a href="/post/arena2r-package-tutorial/">
-    
-    
-      <img src="/img//thumbnails/arena2r-post.png" class="article-banner" itemprop="image">
-    
-  </a>
-  
-  <h3 class="article-title" itemprop="headline">
-    <a href="/post/arena2r-package-tutorial/" itemprop="url">Arena2R - An R Package for Arena Simulation Users</a>
-  </h3>
-  <div class="article-style" itemprop="articleBody">
-    
-    Arena Simulation is a well-known Discrete Event Simulation Software. However, if you are a power user you might want to extend your analysis beyond what Arena’s Process Analyzer offers. In this tutorial, I’ll guide you through the main functions of Arena2R package.
-If you’re not an R user, fear not! Arena2R comes with an app you can use to explore your Arena Simulation data. All you’ll have to do is to Install R and R Studio, and run two commands in your R console.
-    
-  </div>
-  <p class="read-more" itemprop="mainEntityOfPage">
-    <a href="/post/arena2r-package-tutorial/" class="btn btn-outline-primary my-1">
-      CONTINUE READING
-    </a>
-  </p>
-</div>
-
-        
-      
-
-      
-    
-
-  </div>
-</div>
-
-    </div>
-  </section>
-  
-
-  
-  
-  
-  <section id="posts" class="home-section">
-    <div class="container">
-      
-
-
-
-
-<div class="row">
-  <div class="col-12 col-lg-4 section-heading">
-
-    <h1>Other Posts</h1>
-    <p>Everything else</p>
-    
-    <p class="view-all">
-      <a href="/post/">
-        More Posts
-        <i class="fas fa-angle-double-right"></i>
-      </a>
-    </p>
-    
-
-  </div>
-  <div class="col-12 col-lg-8">
-
-    
-
-    
-      
-
-      
-      
-
-        
-
-        
-        
-
-        
-        
-          
-      
-          
-      
-          
-      
-
-      
-      
-        
-        
-          
-
-<div class="pub-list-item" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  <i class="far fa-newspaper pub-icon" aria-hidden="true"></i>
-  <a href="/post/slides-graduacao-simulacao-sistemas-de-informacaosistemas-produtivos/" itemprop="url"><span itemprop="headline">Slides - Simulação (por Eventos Discretos), Sistemas de Informação e outros</span></a>
-</div>
-
-        
-      
-
-      
-
-        
-
-        
-        
-
-        
-        
-          
-          
-        
-      
-          
-      
-          
-      
-          
-      
-
-      
-      
-
-      
-
-        
-
-        
-        
-
-        
-        
-          
-      
-          
-      
-          
-      
-          
-      
-          
-          
-        
-      
-
-      
-      
-
-      
-
-        
-
-        
-        
-
-        
-        
-          
-      
-          
-          
-        
-      
-          
-      
-          
-      
-          
-      
-          
-      
-
-      
-      
-
-      
-
-        
-
-        
-        
-
-        
-        
-          
-      
-
-      
-      
-        
-        
-          
-
-<div class="pub-list-item" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  <i class="far fa-newspaper pub-icon" aria-hidden="true"></i>
-  <a href="/post/3d-printing-rdm-analysis-2018-dmdu-meeting/" itemprop="url"><span itemprop="headline">Strategic Decision Making in the 3D Printing Industry - 2018 DMDU Annual Meeting Materials</span></a>
-</div>
-
-        
-      
-
-      
-    
-
-  </div>
-</div>
-
-    </div>
-  </section>
-  
-
-  
-  
-  
-  <section id="projects" class="home-section">
-    <div class="container">
-      
-
-
-
-<div class="row">
-  <div class="col-12 col-lg-4 section-heading">
-    <h1>Projects</h1>
-    <p>Things I&rsquo;ve contributed to</p>
-  </div>
-  <div class="col-12 col-lg-8">
-    
-
-    
-
-    
-
-    <div class="row isotope projects-container js-layout-row">
-        
-        <div class="col-lg-12 project-item isotope-item software" itemscope itemtype="http://schema.org/CreativeWork">
-          <i class="far fa-copy pub-icon" aria-hidden="true"></i>
-
-          <span class="project-title">
-          
-          <a href="/project/arena2r/">
-          
-          Arena2R
-          </a>
-          </span>
-          <p class="project-summary">An R package for Arena Discrete Event Simulation software.</p>
-        </div>
-        
-    </div>
-
-    
-
-  </div>
-</div>
-
-    </div>
-  </section>
-  
-
-  
-  
-  
-  <section id="publications_selected" class="home-section">
-    <div class="container">
-      
-
-
-
-<div class="row">
-  <div class="col-12 col-lg-4 section-heading">
-    <h1>Selected Publications</h1>
-    
-  </div>
-  <div class="col-12 col-lg-8">
-    
-
-    
-      
-    
-
-    
-    
-      
-        <div class="pub-list-item" style="margin-bottom: 1rem" itemscope itemtype="http://schema.org/CreativeWork">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-  <span itemprop="author">
-    PN Lima, A Dresch, DP Lacerda</span>.
-  <a href="/publication/socioeconomic-factors-service-quality-servperf/" itemprop="name">Do Socioeconomic Contextual Factors Influence SMEs Service Quality? A cross-sector and cross-city SERVPERF Analysis</a>.
-  <em>IJBPM</em>,
-  2018.
-  <p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://doi.org/10.1504/IJBPM.2019.101998" target="_blank" rel="noopener">
-  DOI
-</a>
-
-
-</p>
-</div>
-
-      
-    
-      
-        <div class="pub-list-item" style="margin-bottom: 1rem" itemscope itemtype="http://schema.org/CreativeWork">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-  <span itemprop="author">
-    A Dresch, DR Veit, PN Lima, DP Lacerda, DC Collato</span>.
-  <a href="/publication/inducing-brazilian-smes-productivity-lean-manufacturing/" itemprop="name">Inducing Brazilian manufacturing SMEs productivity with Lean tools</a>.
-  <em>IJPPM</em>,
-  2018.
-  <p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://doi.org/10.1108/IJPPM-10-2017-0248" target="_blank" rel="noopener">
-  DOI
-</a>
-
-
-</p>
-</div>
-
-      
-    
-      
-        <div class="pub-list-item" style="margin-bottom: 1rem" itemscope itemtype="http://schema.org/CreativeWork">
-  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-  <span itemprop="author">
-    DR Veit, DP Lacerda, MIWM Morandi, A Dresch, LH Rodrigues, PN Lima</span>.
-  <a href="/publication/impacts-additive-manufacturing-production-systems/" itemprop="name">The Impacts of Additive Manufacturing on Production Systems</a>.
-  In <em>New Global Perspectives on Industrial Engineering and Management</em>, Springer.,
-  2018.
-  <p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://doi.org/10.1007/978-3-319-93488-4_21" target="_blank" rel="noopener">
-  DOI
-</a>
-
-
-</p>
-</div>
-
-      
-    
-
-  </div>
-</div>
-
-    </div>
-  </section>
-  
-
-  
-  
-  
-  <section id="about" class="home-section">
-    <div class="container">
-      
-
-
-
-<div class="row" itemprop="author" itemscope itemtype="http://schema.org/Person" itemref="person-email">
   <div class="col-12 col-lg-4">
     <div id="profile">
 
       
-      <img class="portrait" src="/img/pedro-nascimento-de-lima.png" itemprop="image">
+      
+      <img class="avatar avatar-circle" src="/author/pedro-nascimento-de-lima/avatar_hufcf6af275d8e36a85ef77190691ade14_25304_270x270_fill_q90_lanczos_center.jpg" alt="Pedro Nascimento de Lima">
       
 
       <div class="portrait-title">
-        <h2 itemprop="name">Pedro Nascimento de Lima</h2>
-        <h3 itemprop="jobTitle">Assistant Policy Researcher | Ph.D. Candidate</h3>
-
-        
+        <h2>Pedro Nascimento de Lima</h2>
         
 
         
-        <h3 itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
-          <a href="https://rand.org" target="_blank" itemprop="url" rel="noopener">
-          <span itemprop="name">RAND Corporation</span>
+        <h3>
+          <a href="https://www.rand.org/about/people/l/lima_pedro_nascimento_de.html" target="_blank" rel="noopener">
+          <span>RAND Corporation</span>
           </a>
         </h3>
         
-        <h3 itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
-          <a href="https://prgs.edu" target="_blank" itemprop="url" rel="noopener">
-          <span itemprop="name">Pardee RAND Graduate School</span>
+        <h3>
+          <a href="https://www.prgs.edu/" target="_blank" rel="noopener">
+          <span>Pardee RAND Graduate School</span>
           </a>
         </h3>
         
       </div>
-
-      <link itemprop="url" href="/">
 
       <ul class="network-icon" aria-hidden="true">
         
@@ -1159,8 +659,14 @@ If you’re not an R user, fear not! Arena2R comes with an app you can use to ex
         
           
         
+        
+        
+        
+        
+          
+        
         <li>
-          <a itemprop="sameAs" href="mailto:pedrolima.n@gmail.com" target="_blank" rel="noopener">
+          <a href="/#contact" >
             <i class="fas fa-envelope big-icon"></i>
           </a>
         </li>
@@ -1170,27 +676,30 @@ If you’re not an R user, fear not! Arena2R comes with an app you can use to ex
         
           
         
+        
+        
+        
+        
+          
+        
         <li>
-          <a itemprop="sameAs" href="https://www.linkedin.com/in/pedro-nascimento-de-lima/" target="_blank" rel="noopener">
-            <i class="fab fa-linkedin big-icon"></i>
+          <a href="http://twitter.com/pedrolima_n" target="_blank" rel="noopener">
+            <i class="fab fa-twitter big-icon"></i>
           </a>
         </li>
         
         
         
         
+        
+        
+        
+        
+          
+        
         <li>
-          <a itemprop="sameAs" href="https://scholar.google.com.br/citations?user=VOlVFVYAAAAJ" target="_blank" rel="noopener">
+          <a href="https://scholar.google.com/citations?user=VOlVFVYAAAAJ&amp;hl=en" target="_blank" rel="noopener">
             <i class="ai ai-google-scholar big-icon"></i>
-          </a>
-        </li>
-        
-        
-        
-        
-        <li>
-          <a itemprop="sameAs" href="https://www.researchgate.net/profile/Pedro_Lima21" target="_blank" rel="noopener">
-            <i class="ai ai-researchgate big-icon"></i>
           </a>
         </li>
         
@@ -1199,18 +708,15 @@ If you’re not an R user, fear not! Arena2R comes with an app you can use to ex
         
           
         
+        
+        
+        
+        
+          
+        
         <li>
-          <a itemprop="sameAs" href="//github.com/pedroliman" target="_blank" rel="noopener">
+          <a href="https://github.com/pedroliman" target="_blank" rel="noopener">
             <i class="fab fa-github big-icon"></i>
-          </a>
-        </li>
-        
-        
-        
-        
-        <li>
-          <a itemprop="sameAs" href="files/PedroNascimentodeLima-CV.pdf" target="_blank" rel="noopener">
-            <i class="ai ai-cv big-icon"></i>
           </a>
         </li>
         
@@ -1218,19 +724,19 @@ If you’re not an R user, fear not! Arena2R comes with an app you can use to ex
 
     </div>
   </div>
-  <div class="col-12 col-lg-8" itemprop="description">
+  <div class="col-12 col-lg-8">
 
     
+    <h1>About me</h1>
 
-<h1 id="about">About</h1>
-
-<p>Hi! Welcome to my blog! I’m an Assistant Policy Researcher at <a href="https://rand.org" target="_blank">RAND</a> and a Ph.D. candidate at <a href="https://www.prgs.edu/" target="_blank">Pardee RAND Graduate School</a>. You will find updated information about my professional background and RAND-related work  <a href="https://www.rand.org/about/people/l/lima_pedro.html" target="_blank">here</a>. My interest in R started in 2013 when I was first introduced to it by a professor. Since then, I’ve been using R for virtually everything. From statistical/ML applications to simulation packages (e.g., <a href="/post/arena2r-package-tutorial/">Arena2R</a>), to modeling <a href="/post/3d-printing-rdm-analysis-2018-dmdu-meeting/">competition within the 3D printing industry</a>, R has been my go-to language. In this blog, you will find some R code and tech/R/analytics-related posts that I would like to share with the R community and are not appropriate for a paper. If you find any of this helpful and would like to <a href="https://www.linkedin.com/in/pedro-nascimento-de-lima/" target="_blank">connect</a>, <a href="mailto:pedrolima.n@gmail.com" target="_blank">let me know</a>!</p>
-
-<!---
-
-My academic interests often gravitate tow1ards the intersection between OR, Programming, and Management of Wicked Problems. My [undergraduate](files/Pedro-Lima-Undergrad-Dissertation-PSMs.pdf) and [master's](files/Pedro-Lima-MS-Dissertation-RDM-AM.pdf) dissertations focused on wicked problems and decision under deep uncertainty, have received the Best Brazilian Dissertation in Production Engineering Prize from ABEPRO, in [2016](http://www.unisinos.br/fique-sabendo/escola-politecnica/engenharia-de-producao/aluno-e-premiado-pela-abepro-2016/) and [2018](http://www.unisinos.br/noticias/universidade/gmap-unisinos-em-destaque), respectively.
-
---->
+    <p>Hi! Welcome to my blog! I’m an Assistant Policy Researcher at 
+<a href="https://rand.org" target="_blank" rel="noopener">RAND</a> and a Ph.D. candidate at 
+<a href="https://www.prgs.edu/" target="_blank" rel="noopener">Pardee RAND Graduate School</a>. You will find updated information about my professional background and RAND-related work  
+<a href="https://www.rand.org/about/people/l/lima_pedro.html" target="_blank" rel="noopener">here</a>. My interest in R started in 2013 when I was first introduced to it by a professor. Since then, I’ve been using R for virtually everything. From statistical/ML applications to simulation packages (e.g., 
+<a href="/post/arena2r-package-tutorial/">Arena2R</a>), to modeling 
+<a href="/post/3d-printing-rdm-analysis-2018-dmdu-meeting/">competition within the 3D printing industry</a>, R has been my go-to language. In this blog, you will find some R code and tech/R/analytics-related posts that I would like to share with the R community and are not appropriate for a paper. If you find any of this helpful and would like to 
+<a href="https://www.linkedin.com/in/pedro-nascimento-de-lima/" target="_blank" rel="noopener">connect</a>, 
+<a href="mailto:pedrolima.n@gmail.com">let me know</a>!</p>
 
 
     <div class="row">
@@ -1240,9 +746,9 @@ My academic interests often gravitate tow1ards the intersection between OR, Prog
         <h3>Interests</h3>
         <ul class="ul-interests">
           
-          <li>Simulation Modeling</li>
+          <li>Simulation Modeling / Optimization</li>
           
-          <li>Decision Under Deep Uncertainty</li>
+          <li>Decision Under Uncertianty</li>
           
           <li>R Programming</li>
           
@@ -1267,7 +773,7 @@ My academic interests often gravitate tow1ards the intersection between OR, Prog
             <i class="fa-li fas fa-graduation-cap"></i>
             <div class="description">
               <p class="course">Msc in Production Engineering, 2017</p>
-              <p class="institution">UNISINOS University</p>
+              <p class="institution">UNISINOS University, Brazil</p>
             </div>
           </li>
           
@@ -1275,7 +781,7 @@ My academic interests often gravitate tow1ards the intersection between OR, Prog
             <i class="fa-li fas fa-graduation-cap"></i>
             <div class="description">
               <p class="course">Bsc in Production Engineering, 2015</p>
-              <p class="institution">UNISINOS University</p>
+              <p class="institution">UNISINOS University, Brazil</p>
             </div>
           </li>
           
@@ -1289,158 +795,1180 @@ My academic interests often gravitate tow1ards the intersection between OR, Prog
 
     </div>
   </section>
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
   
 
   
   
   
-  <section id="search" class="home-section">
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  <section id="publications" class="home-section wg-pages   "  >
     <div class="container">
       
 
 
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
 <div class="row">
-  <div class="col-xs-12 col-md-4 section-heading">
-    <h1>Search</h1>
+  <div class="col-12 col-lg-4 section-heading">
+    <h1>Publications</h1>
     
   </div>
-  <div class="col-xs-12 col-md-8">
+  <div class="col-12 col-lg-8">
+
     
 
-    <div id="search-box">
+    
       
-      <input name="q" id="search-query" placeholder="Search..." autocapitalize="off" autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
-      
-    </div>
+        
 
-    <div id="search-hits">
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  
+  <span >Raffaele Vardavas</span>, <span >Aaron Strong</span>, <span >Jennifer Bouey</span>, <span >Jonathan William Welburn</span>, <span class="font-weight-bold"><a href="/author/pedro-nascimento-de-lima/">Pedro Nascimento de Lima</a></span>, <span >Lawrence Baker</span>, <span >Keren Zhu</span>, <span >Michelle Priest</span>, <span >Lynn Hu</span>, <span >Jeanne S. Ringel</span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
       
+    
+    May 2020
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="pub-publication">
+    
+      RAND Tool
+    
+  </span>
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/publication/2020-health-economic-impacts-covid-19-npis/">The Health and Economic Impacts of Nonpharmaceutical Interventions to Address COVID-19 - A Decision Support Tool for State and Local Policymakers</a>
+  </h3>
+
+  
+  <a href="/publication/2020-health-economic-impacts-covid-19-npis/" class="summary-link">
+    <div class="article-style">
+      <p>This model and tool helps local decision makers understand the impacts of Nonpharmaceutical interventions to tackle COVID-19.</p>
     </div>
+  </a>
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://www.rand.org/pubs/tools/TLA173-1.html" target="_blank" rel="noopener">
+  Source Document
+</a>
+
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  
+  <span >PN Lima</span>, <span >A Dresch</span>, <span >DP Lacerda</span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    December 2018
+  </span>
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="pub-publication">
+    
+      <em>IJBPM</em>
+    
+  </span>
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/publication/2018-socioeconomic-factors/">Do Socioeconomic Contextual Factors Influence SMEs Service Quality? A cross-sector and cross-city SERVPERF Analysis</a>
+  </h3>
+
+  
+  <a href="/publication/2018-socioeconomic-factors/" class="summary-link">
+    <div class="article-style">
+      <p>There is an increasing body of knowledge on service quality relationship with many contextual factors, including culture, firm size, and public vs. private settings. However, local socioeconomic factors influence towards SMEs Service Quality is still unknown. We conducted statistical analyzes to observe the relationship between contextual socioeconomic factors of an SMEs city and its services quality performance using a SERVPERF survey database of more than 3,000 Brazilian SMEs. While Service Performance did not linearly correlate with the analyzed socioeconomic factors, a closer look at the data shows significant differences in Service Performance among groups of SMEs on highly developed and underdeveloped cities from the other cities. The paper discusses theoretical and managerial implications derived from these findings and proposes new research questions to generate data-backed knowledge to support SMEs service quality improvement.</p>
+    </div>
+  </a>
+  
+
+  
+  <div class="btn-links">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://doi.org/10.1504/IJBPM.2019.101998" target="_blank" rel="noopener">
+  DOI
+</a>
+
+
+
+  </div>
+  
+
+</div>
+
+      
+    
+
+    
+    <div class="see-all">
+      <a href="/publication/">
+        See all publications
+        <i class="fas fa-angle-right"></i>
+      </a>
+    </div>
+    
 
   </div>
 </div>
 
     </div>
   </section>
+
+  
+  
   
 
-
-
-<div class="container">
-  <footer class="site-footer">
   
 
-  <p class="powered-by">
-    &copy; 2019 &middot; 
+  
 
-    Built with <a href="https://www.r-project.org/" target="_blank" rel="noopener">R</a> and <a href="https://bookdown.org/yihui/blogdown/" target="_blank" rel="noopener">blogdown</a>. Powered by the
-    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
-    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>. 
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  <section id="experience" class="home-section wg-experience   "  >
+    <div class="container">
+      
+
+
+
+<div class="row">
+  <div class="col-12 col-lg-4 section-heading">
+    <h1>Experience</h1>
+    
+  </div>
+  <div class="col-12 col-lg-8">
+    
 
     
-    <span class="float-right" aria-hidden="true">
-      <a href="#" id="back_to_top">
-        <span class="button_icon">
-          <i class="fas fa-chevron-up fa-2x"></i>
-        </span>
-      </a>
-    </span>
     
-  </p>
-</footer>
-
+    
+    <div class="row experience">
+      
+      <div class="col-auto text-center flex-column d-none d-sm-flex">
+        <div class="row h-50">
+          <div class="col ">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+        <div class="m-2">
+          <span class="badge badge-pill border exp-fill">&nbsp;</span>
+        </div>
+        <div class="row h-50">
+          <div class="col border-right">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+      </div>
+      
+      <div class="col py-2">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title exp-title text-muted mt-0 mb-1">Policy Research Assistant | Ph.D Candidate</h4>
+            <h4 class="card-title exp-company text-muted my-0"><a href="http://rand.org" target="_blank" rel="noopener">RAND Corporation | Pardee RAND Graduate School</a></h4>
+            <div class="text-muted exp-meta">
+              Sep 2019 –
+              
+                Present
+              
+              
+                <span class="middot-divider"></span>
+                <span>Santa Monica, CA</span>
+              
+            </div>
+            <div class="card-text"><p>I&rsquo;ve been working on many exciting policy research projects, usually using R and simulation modeling to build decisions support tools. These projects include:</p>
+<ul>
+<li>Modeling COVID-19 and building a decision support tool;</li>
+<li>Modeling and Visualizing the Economic and Health effects of improved diet quality;</li>
+<li>Up-to-date information about my RAND work can be found here.</li>
+</ul>
 </div>
-
-
-<div id="modal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Cite</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <pre><code class="tex hljs"></code></pre>
-      </div>
-      <div class="modal-footer">
-        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
-          <i class="fas fa-copy"></i> Copy
-        </a>
-        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
-          <i class="fas fa-download"></i> Download
-        </a>
-        <div id="modal-error"></div>
+          </div>
+        </div>
       </div>
     </div>
+    
+    <div class="row experience">
+      
+      <div class="col-auto text-center flex-column d-none d-sm-flex">
+        <div class="row h-50">
+          <div class="col border-right">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+        <div class="m-2">
+          <span class="badge badge-pill border ">&nbsp;</span>
+        </div>
+        <div class="row h-50">
+          <div class="col border-right">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+      </div>
+      
+      <div class="col py-2">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title exp-title text-muted mt-0 mb-1">Lecturer</h4>
+            <h4 class="card-title exp-company text-muted my-0"><a href="http://unisinos.br" target="_blank" rel="noopener">UNISINOS University</a></h4>
+            <div class="text-muted exp-meta">
+              Feb 2018 –
+              
+                Jun 2019
+              
+              
+                <span class="middot-divider"></span>
+                <span>RS, Brazil</span>
+              
+            </div>
+            <div class="card-text"><p>Taught the following disciplines in undergraduate and MBA classes:</p>
+<ul>
+<li>
+<p>Simulation Modeling (Discrete Event Simulation &amp; Systems Dynamics);</p>
+</li>
+<li>
+<p>Operations Research - Linear Programming;</p>
+</li>
+<li>
+<p>Information Systems Management;</p>
+</li>
+<li>
+<p>Operations Management.</p>
+</li>
+<li>
+<p>Advised undergraduate and MBA students in their capstone research projects, one of which received the Best Brazilian Production Engineering Undergraduate Dissertation Award from ABEPRO (2019).</p>
+</li>
+</ul>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row experience">
+      
+      <div class="col-auto text-center flex-column d-none d-sm-flex">
+        <div class="row h-50">
+          <div class="col border-right">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+        <div class="m-2">
+          <span class="badge badge-pill border ">&nbsp;</span>
+        </div>
+        <div class="row h-50">
+          <div class="col border-right">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+      </div>
+      
+      <div class="col py-2">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title exp-title text-muted mt-0 mb-1">Research Assistant</h4>
+            <h4 class="card-title exp-company text-muted my-0"><a href="http://gmap.unisinos.br" target="_blank" rel="noopener">GMAP | Unisinos Research Group</a></h4>
+            <div class="text-muted exp-meta">
+              Jun 2013 –
+              
+                Feb 2018
+              
+              
+                <span class="middot-divider"></span>
+                <span>RS, Brazil</span>
+              
+            </div>
+            <div class="card-text"><ul>
+<li>Developed a Monte Carlo Simulation package in R for cost-benefit analysis of Organizational
+Safety and Health Initiatives;</li>
+<li>Developed a competition dynamics model for the Professional Additive Manufacturing Industry;</li>
+<li>Developed a model of global competition between iron ore producers, taking into account regional comparative advantages and detailed substitution dynamics among different iron ore types;</li>
+<li>Conducted Business Process Modeling of productivity and innovation induction programs for government agencies in Southern Brazil.</li>
+</ul>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row experience">
+      
+      <div class="col-auto text-center flex-column d-none d-sm-flex">
+        <div class="row h-50">
+          <div class="col border-right">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+        <div class="m-2">
+          <span class="badge badge-pill border ">&nbsp;</span>
+        </div>
+        <div class="row h-50">
+          <div class="col ">&nbsp;</div>
+          <div class="col">&nbsp;</div>
+        </div>
+      </div>
+      
+      <div class="col py-2">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title exp-title text-muted mt-0 mb-1">Rede Industrial</h4>
+            <h4 class="card-title exp-company text-muted my-0">Analyst</h4>
+            <div class="text-muted exp-meta">
+              Jun 2013 –
+              
+                Jan 2009
+              
+              
+                <span class="middot-divider"></span>
+                <span>RS, Brazil</span>
+              
+            </div>
+            <div class="card-text"><ul>
+<li>Oversaw SIGMA’s (a CMMS) software development and support teams;</li>
+<li>Conceptualized most of the new features included in the 2012 release, including the SIGMA’s interagration module, Sigma SMS module and SIGMA’s Android App;</li>
+<li>Conducted software requirements analysis for internal and external clients;</li>
+<li>Developed SQL queries for database reporting and bug troubleshooting.</li>
+</ul>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
   </div>
 </div>
 
+    </div>
+  </section>
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  <section id="posts" class="home-section wg-pages   "  >
+    <div class="container">
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+<div class="row">
+  <div class="col-12 col-lg-4 section-heading">
+    <h1>Blog Posts</h1>
+    
+  </div>
+  <div class="col-12 col-lg-8">
+
     
 
     
+      
+        
+
+
+
+
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
     
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        CommonHTML: { linebreaks: { automatic: true } },
-        tex2jax: { inlineMath: [ ['$', '$'], ['\\(','\\)'] ], displayMath: [ ['$$','$$'], ['\\[', '\\]'] ], processEscapes: false },
-        TeX: { noUndefined: { attributes: { mathcolor: 'red', mathbackground: '#FFEEEE', mathsize: '90%' } } },
-        messageStyle: 'none'
-      });
-    </script>
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
     
+    
+      
+    
+    Sep 3, 2019
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    1 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/slides/">Slides</a></span>
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/post/slides-graduacao-simulacao-sistemas-de-informacaosistemas-produtivos/">Slides - Simulação (por Eventos Discretos), Sistemas de Informação e outros</a>
+  </h3>
+
+  
+  <a href="/post/slides-graduacao-simulacao-sistemas-de-informacaosistemas-produtivos/" class="summary-link">
+    <div class="article-style">
+      <p>Durante o meu tempo como como professor na UNISINOS no curso de Engenharia de Produção, acumulei uma boa quantidade de slides. Provavelmente não vou utilizar estes slides nos próximos 5 anos, portanto nada mais razoável do que compartilhar!</p>
+    </div>
+  </a>
+  
+
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Apr 28, 2019
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    7 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/r-blogs/">R Blogs</a>, <a href="/category/r/">R</a></span>
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/">Teaching Factory Physics Flow Benchmarking with R and Many-Objective Visuals</a>
+  </h3>
+
+  
+  <a href="/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/" class="summary-link">
+    <div class="article-style">
+      <p>Teaching to seasoned managers in MBE classes is challenging. While it’s important to bring new thoughts and ideas and not sound repetitive, it is necessary to provide a theoretical basis for experienced people with diverse backgrounds.</p>
+    </div>
+  </a>
+  
+
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Apr 14, 2019
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    4 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/r-blogs/">R Blogs</a>, <a href="/category/r/">R</a></span>
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/post/des-metamodeling-splines-r-arena/">Discrete Event Simulation (DES) Metamodeling - Splines with R and Arena</a>
+  </h3>
+
+  
+  <a href="/post/des-metamodeling-splines-r-arena/" class="summary-link">
+    <div class="article-style">
+      <p>Simulation Metamodeling - building and using surrogate models that can approximate results from more complicated simulation models - is an interesting approach to analyze results from complicated, computationally expensive simulation models.</p>
+    </div>
+  </a>
+  
+
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Mar 9, 2019
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    7 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/r/">R</a>, <a href="/category/r-blogs/">R Blogs</a></span>
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/">Making Sense of Simulation Models with Metamodels Part 1 - Low-Order Polynomials with Arena and R</a>
+  </h3>
+
+  
+  <a href="/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/" class="summary-link">
+    <div class="article-style">
+      <p>This is part 1 of a series of posts in which I will explore the utility of using metamodels to make sense of (and possibly optimizing) simulation models.
+If you used simulation modeling on a real project, you might be familiar with this fictional story:</p>
+    </div>
+  </a>
+  
+
+  
+
+</div>
+
+      
+    
+      
+        
+
+
+
+
+
+
+
+
+
+  
+
+
+<div class="card-simple">
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Nov 5, 2018
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    1 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/conference/">Conference</a></span>
+  
+
+</div>
+
+  
+
+  
+  
+  
+
+  <h3 class="article-title mb-1 mt-3">
+    <a href="/post/3d-printing-rdm-analysis-2018-dmdu-meeting/">Strategic Decision Making in the 3D Printing Industry - 2018 DMDU Annual Meeting Materials</a>
+  </h3>
+
+  
+  <a href="/post/3d-printing-rdm-analysis-2018-dmdu-meeting/" class="summary-link">
+    <div class="article-style">
+      <p>This post contains materials related to the the presentation given at the 2018 DMDU Annual Meeting.
+Full Master’s Thesis: Donwload Here.
+Slides: Donwload Here.
+Poster: Donwload Here.</p>
+    </div>
+  </a>
+  
+
+  
+
+</div>
+
+      
+    
+
+    
+    <div class="see-all">
+      <a href="/post/">
+        See all posts
+        <i class="fas fa-angle-right"></i>
+      </a>
+    </div>
+    
+
+  </div>
+</div>
+
+    </div>
+  </section>
+
+
+
+
+      
 
     
     
     
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
 
       
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js" integrity="sha512-7t8APmYpzEsZP7CYoA7RfMPV9Bb+PJHa9x2WiUnDXZx3XHveuyWUtvNOexhkierl5flZ3tr92dP1mMS+SGlD+A==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/r.min.js"></script>
         
       
 
-      
-      
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
-      
-    
-
-    <script src="/js/hugo-academic.js"></script>
     
 
     
     
-
-    
-    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
     
 
     
     
-    <script>hljs.initHighlightingOnLoad();</script>
+    <script>const code_highlighting = true;</script>
     
 
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
     
     
     <script>
-      const search_index_filename = "/index.json";
-      const i18n = {
-        'placeholder': "Search...",
-        'results': "Search Results",
-        'no_results': "No results found"
-      };
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
       const content_type = {
         'post': "Posts",
         'project': "Projects",
         'publication' : "Publications",
-        'talk' : "Talks"
+        'talk' : "Talks",
+        'slides' : "Slides"
         };
     </script>
     
@@ -1467,13 +1995,126 @@ My academic interests often gravitate tow1ards the intersection between OR, Prog
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
-    <script src="/js/search.js"></script>
     
 
     
     
 
-  </body>
+    
+    
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.66c553246b0f279a03be6e5597f72b52.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+  <p class="powered-by">
+    
+      <a href="/privacy/">Privacy Policy</a>
+    
+    
+       &middot; 
+      <a href="/terms/">Terms</a>
+    
+  </p>
+  
+
+  <p class="powered-by">
+    Built with R, hosted at Netlify.
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    Published with
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic Website Builder</a>
+    
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
 </html>
-
-

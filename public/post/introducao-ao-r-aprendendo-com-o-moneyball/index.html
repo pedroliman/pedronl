@@ -1,22 +1,36 @@
-<!DOCTYPE html>
-<html lang="en-us">
+<!DOCTYPE html><html lang="en-us" >
+
 <head>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Source Themes Academic 2.4.0">
-  <meta name="generator" content="Hugo 0.57.2" />
-  <meta name="author" content="Pedro Nascimento de Lima">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
 
   
   
   
   
+  
+    
+    
     
   
-  <meta name="description" content="Este post corresponde aos slides do Mini-Curso “Introdução ao R - Aprendendo com o Moneyball”, realizado em 2017 no SIGEPRO. Cada um dos títulos neste post correspondia a um slide.
-O que Veremos neste Mini-Curso?O que é Data Analytics?Exemplo Moneyball.Como continuar aprendendo.Porque usar o R ?Open Source e Gratuito;Mais de 10 k bibliotecas gratuitas;Suporta muitos tipos de Análises;Conhecimento “cumulativo” e transferível a outros contextos.">
+  
+
+  <meta name="author" content="Pedro Nascimento de Lima">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Este post corresponde aos slides do Mini-Curso “Introdução ao R - Aprendendo com o Moneyball”, realizado em 2017 no SIGEPRO. Cada um dos títulos neste post correspondia a um slide.">
 
   
   <link rel="alternate" hreflang="en-us" href="/post/introducao-ao-r-aprendendo-com-o-moneyball/">
@@ -25,11 +39,15 @@ O que Veremos neste Mini-Curso?O que é Data Analytics?Exemplo Moneyball.Com
 
 
   
+  
+  
+  <meta name="theme-color" content="#2B2B2B">
+  
 
   
   
   
-  <meta name="theme-color" content="#3f51b5">
+  <script src="/js/mathjax-config.js"></script>
   
 
   
@@ -37,10 +55,9 @@ O que Veremos neste Mini-Curso?O que é Data Analytics?Exemplo Moneyball.Com
   
   
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
     
     
@@ -51,263 +68,559 @@ O que Veremos neste Mini-Curso?O que é Data Analytics?Exemplo Moneyball.Com
       
       
         
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" crossorigin="anonymous">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
         
       
     
 
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
 
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
     
 
   
 
   
   
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Playfair&#43;Display:400,700%7cFauna&#43;One">
-  
-
-  <link rel="stylesheet" href="/styles.css">
-  
-
-  
-  
-    <script>
-      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-      ga('create', 'UA-88356256-3', 'auto');
-      ga('set', 'anonymizeIp', true);
-      ga('require', 'eventTracker');
-      ga('require', 'outboundLinkTracker');
-      ga('require', 'urlChangeTracker');
-      ga('send', 'pageview');
-    </script>
-    <script async src="//www.google-analytics.com/analytics.js"></script>
-    
-    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
-    
-  
-  
-
-  
-  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Pedro N. de Lima">
-  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Pedro N. de Lima">
-  
-
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="icon" type="image/png" href="/img/icon.png">
-  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
-
-  <link rel="canonical" href="/post/introducao-ao-r-aprendendo-com-o-moneyball/">
-
-  <meta property="twitter:card" content="summary_large_image">
-  
-  <meta property="og:site_name" content="Pedro N. de Lima">
-  <meta property="og:url" content="/post/introducao-ao-r-aprendendo-com-o-moneyball/">
-  <meta property="og:title" content="Introdução ao R - Aprendendo com o Moneyball | Pedro N. de Lima">
-  <meta property="og:description" content="Este post corresponde aos slides do Mini-Curso “Introdução ao R - Aprendendo com o Moneyball”, realizado em 2017 no SIGEPRO. Cada um dos títulos neste post correspondia a um slide.
-O que Veremos neste Mini-Curso?O que é Data Analytics?Exemplo Moneyball.Como continuar aprendendo.Porque usar o R ?Open Source e Gratuito;Mais de 10 k bibliotecas gratuitas;Suporta muitos tipos de Análises;Conhecimento “cumulativo” e transferível a outros contextos.">
-  
   
     
-  <meta property="og:image" content="/img/pedro-nascimento-de-lima.png">
-  <meta property="og:locale" content="en-us">
-  
-  <meta property="article:published_time" content="2017-10-10T00:00:00&#43;00:00">
-  
-  <meta property="article:modified_time" content="2017-10-10T00:00:00&#43;00:00">
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono&display=swap">
+    
   
 
   
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88356256-3"></script>
 <script>
-  window.addEventListener("load", function(){
-    window.cookieconsent.initialise({
-      "palette": {
-        "popup": {
-          "background": "#3f51b5",
-          "text": "#fff"
-        },
-        "button": {
-          "background": "#fff",
-          "text": "#3f51b5"
-        }
-      },
-      "theme": "classic",
-      "content": {
-        "message": "This website uses cookies to ensure you get the best experience on our website.",
-        "dismiss": "Got it!",
-        "link": "Learn more",
-        "href": "https://cookies.insites.com"
-      }
-    })});
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-88356256-3', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
 </script>
 
 
   
 
-  <title>Introdução ao R - Aprendendo com o Moneyball | Pedro N. de Lima</title>
 
-</head>
-<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+  
+  
 
-<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
-  <div class="container">
+  
 
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/post/introducao-ao-r-aprendendo-com-o-moneyball/">
+
+  
+  
+  
+  
+  
+  
+  
     
-      <a class="navbar-brand" href="/">Pedro N. de Lima</a>
-      
-      <button type="button" class="navbar-toggler" data-toggle="collapse"
-              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span><i class="fas fa-bars"></i></span>
-      </button>
-      
-
     
-    <div class="collapse navbar-collapse" id="navbar">
-
-      
-      
-      <ul class="navbar-nav ml-auto">
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/#posts_r">
-            
-            <span>Posts</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/#projects">
-            
-            <span>Projects</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/#publications_selected">
-            
-            <span>Publications</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/#about">
-            
-            <span>About</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/resources">
-            
-            <span>Learning Resources</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-      
-
-        
-
-        
-      </ul>
-
-    </div>
-  </div>
-</nav>
-
-
-<article class="article" itemscope itemtype="http://schema.org/Article">
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="twitter:site" content="@pedrolima_n">
+  <meta property="twitter:creator" content="@pedrolima_n">
+  
+  <meta property="og:site_name" content="Pedro Nascimento de Lima">
+  <meta property="og:url" content="/post/introducao-ao-r-aprendendo-com-o-moneyball/">
+  <meta property="og:title" content="Introdução ao R - Aprendendo com o Moneyball | Pedro Nascimento de Lima">
+  <meta property="og:description" content="Este post corresponde aos slides do Mini-Curso “Introdução ao R - Aprendendo com o Moneyball”, realizado em 2017 no SIGEPRO. Cada um dos títulos neste post correspondia a um slide."><meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2017-10-10T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2017-10-10T00:00:00&#43;00:00">
+  
 
   
 
 
-  <div class="article-container">
-    <h1 itemprop="name">Introdução ao R - Aprendendo com o Moneyball</h1>
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/post/introducao-ao-r-aprendendo-com-o-moneyball/"
+  },
+  "headline": "Introdução ao R - Aprendendo com o Moneyball",
+  
+  "datePublished": "2017-10-10T00:00:00Z",
+  "dateModified": "2017-10-10T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Pedro Nascimento de Lima"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Pedro Nascimento de Lima",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "Este post corresponde aos slides do Mini-Curso “Introdução ao R - Aprendendo com o Moneyball”, realizado em 2017 no SIGEPRO. Cada um dos títulos neste post correspondia a um slide."
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Introdução ao R - Aprendendo com o Moneyball | Pedro Nascimento de Lima</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class=" ">
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
 
     
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Pedro Nascimento de Lima</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Pedro Nascimento de Lima</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>Recent Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Blog Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/files/PedroNascimentodeLima-CV.pdf"><span>CV</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Introdução ao R - Aprendendo com o Moneyball</h1>
+
+  
+
+  
+    
+
 
 <div class="article-metadata">
 
   
   
-  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Pedro Nascimento de Lima">
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Oct 10, 2017
   </span>
   
 
-  <span class="article-date">
-    
-    <meta content="2017-10-10 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-    <time datetime="2017-10-10 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-      Oct 10, 2017
-    </time>
-  </span>
-  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Pedro Nascimento de Lima">
-  </span>
+  
 
   
   <span class="middot-divider"></span>
@@ -318,68 +631,40 @@ O que Veremos neste Mini-Curso?O que é Data Analytics?Exemplo Moneyball.Com
 
   
   
-
   
+
   
   
   <span class="middot-divider"></span>
   <span class="article-categories">
-    <i class="fas fa-folder"></i>
-    
-    <a href="/categories/r/">R</a>
-    
-  </span>
-  
-  
-
-  
-  
-<div class="share-box" aria-hidden="true">
-  <ul class="share">
-    <li>
-      <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Introdu%c3%a7%c3%a3o%20ao%20R%20-%20Aprendendo%20com%20o%20Moneyball&amp;url=%2fpost%2fintroducao-ao-r-aprendendo-com-o-moneyball%2f"
-         target="_blank" rel="noopener">
-        <i class="fab fa-twitter"></i>
-      </a>
-    </li>
-    <li>
-      <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=%2fpost%2fintroducao-ao-r-aprendendo-com-o-moneyball%2f"
-         target="_blank" rel="noopener">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-    </li>
-    <li>
-      <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fintroducao-ao-r-aprendendo-com-o-moneyball%2f&amp;title=Introdu%c3%a7%c3%a3o%20ao%20R%20-%20Aprendendo%20com%20o%20Moneyball"
-         target="_blank" rel="noopener">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-    </li>
-    <li>
-      <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=%2fpost%2fintroducao-ao-r-aprendendo-com-o-moneyball%2f&amp;title=Introdu%c3%a7%c3%a3o%20ao%20R%20-%20Aprendendo%20com%20o%20Moneyball"
-         target="_blank" rel="noopener">
-        <i class="fab fa-weibo"></i>
-      </a>
-    </li>
-    <li>
-      <a class="email"
-         href="mailto:?subject=Introdu%c3%a7%c3%a3o%20ao%20R%20-%20Aprendendo%20com%20o%20Moneyball&amp;body=%2fpost%2fintroducao-ao-r-aprendendo-com-o-moneyball%2f">
-        <i class="fas fa-envelope"></i>
-      </a>
-    </li>
-  </ul>
-</div>
-
-
+    <i class="fas fa-folder mr-1"></i><a href="/category/r/">R</a></span>
   
 
 </div>
 
+    
 
-    <div class="article-style" itemprop="articleBody">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
       
 
 
@@ -401,7 +686,7 @@ O que Veremos neste Mini-Curso?O que é Data Analytics?Exemplo Moneyball.Com
 <li>Conhecimento “cumulativo” e transferível a outros contextos.</li>
 </ul>
 </div>
-<div id="outras-alternativas-se-voce-nao-quiser-programar." class="section level3">
+<div id="outras-alternativas-se-você-não-quiser-programar." class="section level3">
 <h3>Outras alternativas se você não quiser programar.</h3>
 <ul>
 <li>Excel(?);</li>
@@ -433,7 +718,7 @@ Este exercício e a ideia de usar o exemplo do Moneyball é baseda em uma aula d
 <li>Em 2002 o time perdeu três jogadores principais (é desse ponto que o filme começa);</li>
 </ul>
 </div>
-<div id="qual-e-a-meta-de-um-time-de-baseball" class="section level3">
+<div id="qual-é-a-meta-de-um-time-de-baseball" class="section level3">
 <h3>Qual é a meta de um time de Baseball?</h3>
 <ul>
 <li>Ir para as Playoffs!</li>
@@ -463,8 +748,8 @@ Dados incluem Runs Scored (RS), Runs Allowed (RA) e Vitórias (W).</p>
 <pre class="r"><code># Podemos fazer isso usando a função str() (que mostra a estrutura)
 str(baseball)</code></pre>
 <pre><code>## &#39;data.frame&#39;:    1232 obs. of  15 variables:
-##  $ Team        : Factor w/ 39 levels &quot;ANA&quot;,&quot;ARI&quot;,&quot;ATL&quot;,..: 2 3 4 5 7 8 9 10 11 12 ...
-##  $ League      : Factor w/ 2 levels &quot;AL&quot;,&quot;NL&quot;: 2 2 1 1 2 1 2 1 2 1 ...
+##  $ Team        : chr  &quot;ARI&quot; &quot;ATL&quot; &quot;BAL&quot; &quot;BOS&quot; ...
+##  $ League      : chr  &quot;NL&quot; &quot;NL&quot; &quot;AL&quot; &quot;AL&quot; ...
 ##  $ Year        : int  2012 2012 2012 2012 2012 2012 2012 2012 2012 2012 ...
 ##  $ RS          : int  734 700 712 734 613 748 669 667 758 726 ...
 ##  $ RA          : int  688 600 705 806 759 676 588 845 890 670 ...
@@ -483,54 +768,54 @@ str(baseball)</code></pre>
 <h3>Resumindo com o summary()</h3>
 <p>Também podemos ter uma ideia dos dados usando o summary. Ele nos retorna médias, quartis, valores mínimos e máximos.</p>
 <pre class="r"><code>summary(baseball)</code></pre>
-<pre><code>##       Team     League        Year            RS               RA        
-##  BAL    : 47   AL:616   Min.   :1962   Min.   : 463.0   Min.   : 472.0  
-##  BOS    : 47   NL:616   1st Qu.:1977   1st Qu.: 652.0   1st Qu.: 649.8  
-##  CHC    : 47            Median :1989   Median : 711.0   Median : 709.0  
-##  CHW    : 47            Mean   :1989   Mean   : 715.1   Mean   : 715.1  
-##  CIN    : 47            3rd Qu.:2002   3rd Qu.: 775.0   3rd Qu.: 774.2  
-##  CLE    : 47            Max.   :2012   Max.   :1009.0   Max.   :1103.0  
-##  (Other):950                                                            
-##        W              OBP              SLG               BA        
-##  Min.   : 40.0   Min.   :0.2770   Min.   :0.3010   Min.   :0.2140  
-##  1st Qu.: 73.0   1st Qu.:0.3170   1st Qu.:0.3750   1st Qu.:0.2510  
-##  Median : 81.0   Median :0.3260   Median :0.3960   Median :0.2600  
-##  Mean   : 80.9   Mean   :0.3263   Mean   :0.3973   Mean   :0.2593  
-##  3rd Qu.: 89.0   3rd Qu.:0.3370   3rd Qu.:0.4210   3rd Qu.:0.2680  
-##  Max.   :116.0   Max.   :0.3730   Max.   :0.4910   Max.   :0.2940  
+<pre><code>##      Team              League               Year            RS        
+##  Length:1232        Length:1232        Min.   :1962   Min.   : 463.0  
+##  Class :character   Class :character   1st Qu.:1977   1st Qu.: 652.0  
+##  Mode  :character   Mode  :character   Median :1989   Median : 711.0  
+##                                        Mean   :1989   Mean   : 715.1  
+##                                        3rd Qu.:2002   3rd Qu.: 775.0  
+##                                        Max.   :2012   Max.   :1009.0  
+##                                                                       
+##        RA               W              OBP              SLG        
+##  Min.   : 472.0   Min.   : 40.0   Min.   :0.2770   Min.   :0.3010  
+##  1st Qu.: 649.8   1st Qu.: 73.0   1st Qu.:0.3170   1st Qu.:0.3750  
+##  Median : 709.0   Median : 81.0   Median :0.3260   Median :0.3960  
+##  Mean   : 715.1   Mean   : 80.9   Mean   :0.3263   Mean   :0.3973  
+##  3rd Qu.: 774.2   3rd Qu.: 89.0   3rd Qu.:0.3370   3rd Qu.:0.4210  
+##  Max.   :1103.0   Max.   :116.0   Max.   :0.3730   Max.   :0.4910  
 ##                                                                    
-##     Playoffs        RankSeason     RankPlayoffs         G        
-##  Min.   :0.0000   Min.   :1.000   Min.   :1.000   Min.   :158.0  
-##  1st Qu.:0.0000   1st Qu.:2.000   1st Qu.:2.000   1st Qu.:162.0  
-##  Median :0.0000   Median :3.000   Median :3.000   Median :162.0  
-##  Mean   :0.1981   Mean   :3.123   Mean   :2.717   Mean   :161.9  
-##  3rd Qu.:0.0000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:162.0  
-##  Max.   :1.0000   Max.   :8.000   Max.   :5.000   Max.   :165.0  
-##                   NA&#39;s   :988     NA&#39;s   :988                    
-##       OOBP             OSLG       
-##  Min.   :0.2940   Min.   :0.3460  
-##  1st Qu.:0.3210   1st Qu.:0.4010  
-##  Median :0.3310   Median :0.4190  
-##  Mean   :0.3323   Mean   :0.4197  
-##  3rd Qu.:0.3430   3rd Qu.:0.4380  
-##  Max.   :0.3840   Max.   :0.4990  
-##  NA&#39;s   :812      NA&#39;s   :812</code></pre>
+##        BA            Playoffs        RankSeason     RankPlayoffs  
+##  Min.   :0.2140   Min.   :0.0000   Min.   :1.000   Min.   :1.000  
+##  1st Qu.:0.2510   1st Qu.:0.0000   1st Qu.:2.000   1st Qu.:2.000  
+##  Median :0.2600   Median :0.0000   Median :3.000   Median :3.000  
+##  Mean   :0.2593   Mean   :0.1981   Mean   :3.123   Mean   :2.717  
+##  3rd Qu.:0.2680   3rd Qu.:0.0000   3rd Qu.:4.000   3rd Qu.:4.000  
+##  Max.   :0.2940   Max.   :1.0000   Max.   :8.000   Max.   :5.000  
+##                                    NA&#39;s   :988     NA&#39;s   :988    
+##        G              OOBP             OSLG       
+##  Min.   :158.0   Min.   :0.2940   Min.   :0.3460  
+##  1st Qu.:162.0   1st Qu.:0.3210   1st Qu.:0.4010  
+##  Median :162.0   Median :0.3310   Median :0.4190  
+##  Mean   :161.9   Mean   :0.3323   Mean   :0.4197  
+##  3rd Qu.:162.0   3rd Qu.:0.3430   3rd Qu.:0.4380  
+##  Max.   :165.0   Max.   :0.3840   Max.   :0.4990  
+##                  NA&#39;s   :812      NA&#39;s   :812</code></pre>
 </div>
-<div id="acessando-variaveis-especificas-de-um-dataframe" class="section level3">
+<div id="acessando-variáveis-específicas-de-um-dataframe" class="section level3">
 <h3>Acessando variáveis específicas de um DataFrame</h3>
 <p>Podemos acessar variáveis específicas de um Data Frame usando algumas notações possíveis.</p>
 <pre class="r"><code>head(baseball$Year)</code></pre>
 <pre><code>## [1] 2012 2012 2012 2012 2012 2012</code></pre>
 </div>
-<div id="selecionando-linhas-especificas-do-df" class="section level3">
+<div id="selecionando-linhas-específicas-do-df" class="section level3">
 <h3>Selecionando Linhas Específicas do DF</h3>
 <p>Vamos selecionar apenas dados até o ano de 2002 (que foram os dados que eles possuíam em 2002)</p>
 <pre class="r"><code># Considerando apenas anos exibidos pelo moneyball
 moneyball = subset(baseball, Year &lt; 2002)
 str(moneyball)</code></pre>
 <pre><code>## &#39;data.frame&#39;:    902 obs. of  15 variables:
-##  $ Team        : Factor w/ 39 levels &quot;ANA&quot;,&quot;ARI&quot;,&quot;ATL&quot;,..: 1 2 3 4 5 7 8 9 10 11 ...
-##  $ League      : Factor w/ 2 levels &quot;AL&quot;,&quot;NL&quot;: 1 2 2 1 1 2 1 2 1 2 ...
+##  $ Team        : chr  &quot;ANA&quot; &quot;ARI&quot; &quot;ATL&quot; &quot;BAL&quot; ...
+##  $ League      : chr  &quot;AL&quot; &quot;NL&quot; &quot;NL&quot; &quot;AL&quot; ...
 ##  $ Year        : int  2001 2001 2001 2001 2001 2001 2001 2001 2001 2001 ...
 ##  $ RS          : int  691 818 729 687 772 777 798 735 897 923 ...
 ##  $ RA          : int  730 677 643 829 745 701 795 850 821 906 ...
@@ -560,8 +845,8 @@ str(moneyball)</code></pre>
 moneyball$RD = moneyball$RS - moneyball$RA
 str(moneyball)</code></pre>
 <pre><code>## &#39;data.frame&#39;:    902 obs. of  16 variables:
-##  $ Team        : Factor w/ 39 levels &quot;ANA&quot;,&quot;ARI&quot;,&quot;ATL&quot;,..: 1 2 3 4 5 7 8 9 10 11 ...
-##  $ League      : Factor w/ 2 levels &quot;AL&quot;,&quot;NL&quot;: 1 2 2 1 1 2 1 2 1 2 ...
+##  $ Team        : chr  &quot;ANA&quot; &quot;ARI&quot; &quot;ATL&quot; &quot;BAL&quot; ...
+##  $ League      : chr  &quot;AL&quot; &quot;NL&quot; &quot;NL&quot; &quot;AL&quot; ...
 ##  $ Year        : int  2001 2001 2001 2001 2001 2001 2001 2001 2001 2001 ...
 ##  $ RS          : int  691 818 729 687 772 777 798 735 897 923 ...
 ##  $ RA          : int  730 677 643 829 745 701 795 850 821 906 ...
@@ -577,13 +862,13 @@ str(moneyball)</code></pre>
 ##  $ OSLG        : num  0.412 0.404 0.384 0.439 0.393 0.398 0.427 0.455 0.417 0.48 ...
 ##  $ RD          : int  -39 141 86 -142 27 76 3 -115 76 17 ...</code></pre>
 </div>
-<div id="existe-uma-relacao-entre-run-difference-e-vitorias" class="section level3">
+<div id="existe-uma-relação-entre-run-difference-e-vitórias" class="section level3">
 <h3>Existe uma Relação entre Run Difference e Vitórias?</h3>
 <p>Só faz sentido usar uma regressão linear se é plausível a existência de uma relação linear entre as variáveis.</p>
 <pre class="r"><code>plot(moneyball$RD, moneyball$W, main = &quot;Vitórias vs Runs Diff.&quot;, xlab = &quot;Run. Diff.&quot;, ylab = &quot;Vitórias&quot;)</code></pre>
 <p><img src="/post/2017-10-10-introducao-ao-r-aprendendo-com-o-moneyball_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 </div>
-<div id="realizando-um-teste-de-correlacao" class="section level3">
+<div id="realizando-um-teste-de-correlação" class="section level3">
 <h3>Realizando um teste de Correlação</h3>
 <p>Existe uma correlação alta entre estas duas variáveis?</p>
 <pre class="r"><code>cor(x = moneyball$RD, y = moneyball$W, method=c(&quot;pearson&quot;, &quot;kendall&quot;, &quot;spearman&quot;))</code></pre>
@@ -601,16 +886,17 @@ str(moneyball)</code></pre>
 ##      cor 
 ## 0.938515</code></pre>
 </div>
-<div id="visualizando-a-correlacao-entre-as-duas-variaveis" class="section level3">
+<div id="visualizando-a-correlação-entre-as-duas-variáveis" class="section level3">
 <h3>Visualizando a Correlação entre as duas variáveis</h3>
 <p>Também podemos visualizar que existe uma correlação alta entre estas duas variáveis utilizando gráficos da biblioteca ggpubr.</p>
 <pre class="r"><code>ggpubr::ggscatter(moneyball, x = &quot;RD&quot;, y = &quot;W&quot;,
           add = &quot;reg.line&quot;, conf.int = TRUE,
           cor.coef = TRUE, cor.method = &quot;pearson&quot;,
           xlab = &quot;Run Diff.&quot;, ylab = &quot;Vitórias&quot;)</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
 <p><img src="/post/2017-10-10-introducao-ao-r-aprendendo-com-o-moneyball_files/figure-html/unnamed-chunk-9-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
-<div id="ok-como-predizer-o-numero-de-vitorias-com-base-em-run-differences" class="section level3">
+<div id="ok-como-predizer-o-número-de-vitórias-com-base-em-run-differences" class="section level3">
 <h3>Ok, como predizer o número de vitórias com base em Run Differences?</h3>
 <p>Usando uma Regressão Linear!</p>
 <p><span class="math display">\[ y = \beta_0 + \beta_1 * x + e\]</span></p>
@@ -619,7 +905,7 @@ str(moneyball)</code></pre>
 Como fazer isso no R?</p>
 <pre class="r"><code>modelo_vitorias = lm(W ~ RD, data=moneyball)</code></pre>
 </div>
-<div id="analisando-o-modelo-para-predizer-vitorias" class="section level3">
+<div id="analisando-o-modelo-para-predizer-vitórias" class="section level3">
 <h3>Analisando o Modelo para Predizer Vitórias</h3>
 <ul>
 <li>O que isso significa: Podemos predizer o número de vitórias que um time terá a partir de um número de Home Runs.
@@ -645,7 +931,7 @@ Como fazer isso no R?</p>
 ## Multiple R-squared:  0.8808, Adjusted R-squared:  0.8807 
 ## F-statistic:  6651 on 1 and 900 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
-<div id="sera-que-e-sao-necessarios-135-runs-a-mais-para-chegar-a-playoffs" class="section level3">
+<div id="será-que-é-são-necessários-135-runs-a-mais-para-chegar-à-playoffs" class="section level3">
 <h3>Será que é são necessários 135 Runs a mais para chegar à Playoffs?</h3>
 <p>A partir da regressão linear nós estimamos que $ Vitorias = 80.88 + 0.1057 RunDiffs$ e também sabemos que <span class="math inline">\(Vitorias &gt;= 95\)</span>.</p>
 <p>Então…</p>
@@ -658,7 +944,7 @@ RD_min</code></pre>
 <pre><code>## [1] 133.4461</code></pre>
 <p>OU seja, sabemos que se um time quer ir para as playoffs ele precisa fazer <strong>133,4</strong> Runs a mais do que seus oponentes.</p>
 </div>
-<div id="o-que-temos-ate-agora" class="section level3">
+<div id="o-que-temos-até-agora" class="section level3">
 <h3>O que temos até Agora</h3>
 <ul>
 <li>Para ir para as playoffs o time precisa de 95 vitórias ou mais.</li>
@@ -677,15 +963,15 @@ RD_min</code></pre>
 <li>Quais destas estatísticas são mais importantes para considerar quando é necessário <strong>comprar um jogador</strong>?</li>
 </ul>
 </div>
-<div id="recorrendo-a-regressao-linear-novamente" class="section level3">
+<div id="recorrendo-à-regressão-linear-novamente" class="section level3">
 <h3>Recorrendo à Regressão Linear Novamente!</h3>
 <ul>
 <li>Na nossa base de dados estas estatísticas estão indicadas nas variáveis RS (Runs Scored), On-Base Percentage (OBP), Slugging Percentage (SLG) e Batting Average (BA).</li>
 </ul>
 <pre class="r"><code>str(moneyball)</code></pre>
 <pre><code>## &#39;data.frame&#39;:    902 obs. of  16 variables:
-##  $ Team        : Factor w/ 39 levels &quot;ANA&quot;,&quot;ARI&quot;,&quot;ATL&quot;,..: 1 2 3 4 5 7 8 9 10 11 ...
-##  $ League      : Factor w/ 2 levels &quot;AL&quot;,&quot;NL&quot;: 1 2 2 1 1 2 1 2 1 2 ...
+##  $ Team        : chr  &quot;ANA&quot; &quot;ARI&quot; &quot;ATL&quot; &quot;BAL&quot; ...
+##  $ League      : chr  &quot;AL&quot; &quot;NL&quot; &quot;NL&quot; &quot;AL&quot; ...
 ##  $ Year        : int  2001 2001 2001 2001 2001 2001 2001 2001 2001 2001 ...
 ##  $ RS          : int  691 818 729 687 772 777 798 735 897 923 ...
 ##  $ RA          : int  730 677 643 829 745 701 795 850 821 906 ...
@@ -701,7 +987,7 @@ RD_min</code></pre>
 ##  $ OSLG        : num  0.412 0.404 0.384 0.439 0.393 0.398 0.427 0.455 0.417 0.48 ...
 ##  $ RD          : int  -39 141 86 -142 27 76 3 -115 76 17 ...</code></pre>
 </div>
-<div id="predizendo-o-numero-de-runs---modelo-completo" class="section level3">
+<div id="predizendo-o-número-de-runs---modelo-completo" class="section level3">
 <h3>Predizendo o Número de Runs - Modelo Completo</h3>
 <ul>
 <li>Quanto menos Batting Average, mais Runs?!</li>
@@ -729,7 +1015,7 @@ summary(modeloruns)</code></pre>
 ## Multiple R-squared:  0.9302, Adjusted R-squared:   0.93 
 ## F-statistic:  3989 on 3 and 898 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
-<div id="predizendo-o-numero-de-runs---sem-batting-average" class="section level3">
+<div id="predizendo-o-número-de-runs---sem-batting-average" class="section level3">
 <h3>Predizendo o Número de Runs - Sem Batting Average</h3>
 <ul>
 <li>O modelo mais simples tem menos variáveis e ainda tem um R ao quadrado alto.</li>
@@ -757,7 +1043,7 @@ summary(modeloruns_sBA)</code></pre>
 ## Multiple R-squared:  0.9296, Adjusted R-squared:  0.9294 
 ## F-statistic:  5934 on 2 and 899 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
-<div id="predizendo-o-numero-de-runs-allowed" class="section level3">
+<div id="predizendo-o-número-de-runs-allowed" class="section level3">
 <h3>Predizendo o Número de Runs Allowed</h3>
 <p>Com essa regressão, podemos estimar as Runs Permitidas com a equação:
 <span class="math display">\[ Runs Permitidas = -837 + 2913.6 * OOBP + 1514.29 * OSLG\]</span></p>
@@ -892,132 +1178,309 @@ if (Vitorias &gt;= 95) {
 
 
 
-    
-    
 
-    
+  
+  
 
+<p class="edit-page">
+  <a href="https://github.com/pedroliman/pedronl/edit/master/content/post%5c2017-10-10-introducao-ao-r-aprendendo-com-o-moneyball.html">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
     
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/post/introducao-ao-r-aprendendo-com-o-moneyball/&amp;text=Introdu%c3%a7%c3%a3o%20ao%20R%20-%20Aprendendo%20com%20o%20Moneyball" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/post/introducao-ao-r-aprendendo-com-o-moneyball/&amp;t=Introdu%c3%a7%c3%a3o%20ao%20R%20-%20Aprendendo%20com%20o%20Moneyball" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Introdu%c3%a7%c3%a3o%20ao%20R%20-%20Aprendendo%20com%20o%20Moneyball&amp;body=/post/introducao-ao-r-aprendendo-com-o-moneyball/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/post/introducao-ao-r-aprendendo-com-o-moneyball/&amp;title=Introdu%c3%a7%c3%a3o%20ao%20R%20-%20Aprendendo%20com%20o%20Moneyball" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Introdu%c3%a7%c3%a3o%20ao%20R%20-%20Aprendendo%20com%20o%20Moneyball%20/post/introducao-ao-r-aprendendo-com-o-moneyball/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/post/introducao-ao-r-aprendendo-com-o-moneyball/&amp;title=Introdu%c3%a7%c3%a3o%20ao%20R%20-%20Aprendendo%20com%20o%20Moneyball" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+    
+    
+    
+      
+    
+    
+    
+    <div class="media author-card content-widget-hr">
+      
+        
+        <img class="avatar mr-3 avatar-circle" src="/author/pedro-nascimento-de-lima/avatar_hufcf6af275d8e36a85ef77190691ade14_25304_270x270_fill_q90_lanczos_center.jpg" alt="Pedro Nascimento de Lima">
+      
+
+      <div class="media-body">
+        <h5 class="card-title"><a href="/">Pedro Nascimento de Lima</a></h5>
+        
+        <p class="card-text">I&rsquo;m a Ph.D. Candidate in Policy Analysis working at the intersection of Simulation Modeling (ABM, Systems Dynamics, Microsim), Infectious Diseases and Decision Making Under Deep Uncertainty. Oh, and I love doing all of that with R.</p>
+        <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="http://twitter.com/pedrolima_n" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=VOlVFVYAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/pedroliman" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+      </div>
+    </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/">Teaching Factory Physics Flow Benchmarking with R and Many-Objective Visuals</a></li>
+      
+      <li><a href="/post/des-metamodeling-splines-r-arena/">Discrete Event Simulation (DES) Metamodeling - Splines with R and Arena</a></li>
+      
+      <li><a href="/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/">Making Sense of Simulation Models with Metamodels Part 1 - Low-Order Polynomials with Arena and R</a></li>
+      
+      <li><a href="/post/previsao-de-series-temporais-com-o-r/">Previsão de Séries Temporais com o R</a></li>
+      
+      <li><a href="/post/arena2r-package-tutorial/">Arena2R - An R Package for Arena Simulation Users</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
 
 
   </div>
 </article>
 
-<div class="container">
-  <footer class="site-footer">
-  
-
-  <p class="powered-by">
-    &copy; 2019 &middot; 
-
-    Built with <a href="https://www.r-project.org/" target="_blank" rel="noopener">R</a> and <a href="https://bookdown.org/yihui/blogdown/" target="_blank" rel="noopener">blogdown</a>. Powered by the
-    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
-    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>. 
-
-    
-    <span class="float-right" aria-hidden="true">
-      <a href="#" id="back_to_top">
-        <span class="button_icon">
-          <i class="fas fa-chevron-up fa-2x"></i>
-        </span>
-      </a>
-    </span>
-    
-  </p>
-</footer>
-
-</div>
-
-
-<div id="modal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Cite</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <pre><code class="tex hljs"></code></pre>
-      </div>
-      <div class="modal-footer">
-        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
-          <i class="fas fa-copy"></i> Copy
-        </a>
-        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
-          <i class="fas fa-download"></i> Download
-        </a>
-        <div id="modal-error"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-    
-
-    
-    
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        CommonHTML: { linebreaks: { automatic: true } },
-        tex2jax: { inlineMath: [ ['$', '$'], ['\\(','\\)'] ], displayMath: [ ['$$','$$'], ['\\[', '\\]'] ], processEscapes: false },
-        TeX: { noUndefined: { attributes: { mathcolor: 'red', mathbackground: '#FFEEEE', mathsize: '90%' } } },
-        messageStyle: 'none'
-      });
-    </script>
-    
+      
 
     
     
     
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
 
       
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js" integrity="sha512-7t8APmYpzEsZP7CYoA7RfMPV9Bb+PJHa9x2WiUnDXZx3XHveuyWUtvNOexhkierl5flZ3tr92dP1mMS+SGlD+A==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/r.min.js"></script>
         
       
 
-      
-      
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
-      
-    
-
-    <script src="/js/hugo-academic.js"></script>
     
 
     
     
-
-    
-    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
     
 
     
     
-    <script>hljs.initHighlightingOnLoad();</script>
+    <script>const code_highlighting = true;</script>
     
 
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
     
     
     <script>
-      const search_index_filename = "/index.json";
-      const i18n = {
-        'placeholder': "Search...",
-        'results': "Search Results",
-        'no_results': "No results found"
-      };
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
       const content_type = {
         'post': "Posts",
         'project': "Projects",
         'publication' : "Publications",
-        'talk' : "Talks"
+        'talk' : "Talks",
+        'slides' : "Slides"
         };
     </script>
     
@@ -1044,12 +1507,114 @@ if (Vitorias &gt;= 95) {
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
-    <script src="/js/search.js"></script>
     
 
     
     
 
-  </body>
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.66c553246b0f279a03be6e5597f72b52.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+  <p class="powered-by">
+    
+      <a href="/privacy/">Privacy Policy</a>
+    
+    
+       &middot; 
+      <a href="/terms/">Terms</a>
+    
+  </p>
+  
+
+  <p class="powered-by">
+    Built with R, hosted at Netlify.
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    Published with
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic Website Builder</a>
+    
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
 </html>
-

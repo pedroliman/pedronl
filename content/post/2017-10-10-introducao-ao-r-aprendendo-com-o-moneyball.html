@@ -31,7 +31,7 @@ header:
 <li>Conhecimento “cumulativo” e transferível a outros contextos.</li>
 </ul>
 </div>
-<div id="outras-alternativas-se-voce-nao-quiser-programar." class="section level3">
+<div id="outras-alternativas-se-você-não-quiser-programar." class="section level3">
 <h3>Outras alternativas se você não quiser programar.</h3>
 <ul>
 <li>Excel(?);</li>
@@ -63,7 +63,7 @@ Este exercício e a ideia de usar o exemplo do Moneyball é baseda em uma aula d
 <li>Em 2002 o time perdeu três jogadores principais (é desse ponto que o filme começa);</li>
 </ul>
 </div>
-<div id="qual-e-a-meta-de-um-time-de-baseball" class="section level3">
+<div id="qual-é-a-meta-de-um-time-de-baseball" class="section level3">
 <h3>Qual é a meta de um time de Baseball?</h3>
 <ul>
 <li>Ir para as Playoffs!</li>
@@ -93,8 +93,8 @@ Dados incluem Runs Scored (RS), Runs Allowed (RA) e Vitórias (W).</p>
 <pre class="r"><code># Podemos fazer isso usando a função str() (que mostra a estrutura)
 str(baseball)</code></pre>
 <pre><code>## &#39;data.frame&#39;:    1232 obs. of  15 variables:
-##  $ Team        : Factor w/ 39 levels &quot;ANA&quot;,&quot;ARI&quot;,&quot;ATL&quot;,..: 2 3 4 5 7 8 9 10 11 12 ...
-##  $ League      : Factor w/ 2 levels &quot;AL&quot;,&quot;NL&quot;: 2 2 1 1 2 1 2 1 2 1 ...
+##  $ Team        : chr  &quot;ARI&quot; &quot;ATL&quot; &quot;BAL&quot; &quot;BOS&quot; ...
+##  $ League      : chr  &quot;NL&quot; &quot;NL&quot; &quot;AL&quot; &quot;AL&quot; ...
 ##  $ Year        : int  2012 2012 2012 2012 2012 2012 2012 2012 2012 2012 ...
 ##  $ RS          : int  734 700 712 734 613 748 669 667 758 726 ...
 ##  $ RA          : int  688 600 705 806 759 676 588 845 890 670 ...
@@ -113,54 +113,54 @@ str(baseball)</code></pre>
 <h3>Resumindo com o summary()</h3>
 <p>Também podemos ter uma ideia dos dados usando o summary. Ele nos retorna médias, quartis, valores mínimos e máximos.</p>
 <pre class="r"><code>summary(baseball)</code></pre>
-<pre><code>##       Team     League        Year            RS               RA        
-##  BAL    : 47   AL:616   Min.   :1962   Min.   : 463.0   Min.   : 472.0  
-##  BOS    : 47   NL:616   1st Qu.:1977   1st Qu.: 652.0   1st Qu.: 649.8  
-##  CHC    : 47            Median :1989   Median : 711.0   Median : 709.0  
-##  CHW    : 47            Mean   :1989   Mean   : 715.1   Mean   : 715.1  
-##  CIN    : 47            3rd Qu.:2002   3rd Qu.: 775.0   3rd Qu.: 774.2  
-##  CLE    : 47            Max.   :2012   Max.   :1009.0   Max.   :1103.0  
-##  (Other):950                                                            
-##        W              OBP              SLG               BA        
-##  Min.   : 40.0   Min.   :0.2770   Min.   :0.3010   Min.   :0.2140  
-##  1st Qu.: 73.0   1st Qu.:0.3170   1st Qu.:0.3750   1st Qu.:0.2510  
-##  Median : 81.0   Median :0.3260   Median :0.3960   Median :0.2600  
-##  Mean   : 80.9   Mean   :0.3263   Mean   :0.3973   Mean   :0.2593  
-##  3rd Qu.: 89.0   3rd Qu.:0.3370   3rd Qu.:0.4210   3rd Qu.:0.2680  
-##  Max.   :116.0   Max.   :0.3730   Max.   :0.4910   Max.   :0.2940  
+<pre><code>##      Team              League               Year            RS        
+##  Length:1232        Length:1232        Min.   :1962   Min.   : 463.0  
+##  Class :character   Class :character   1st Qu.:1977   1st Qu.: 652.0  
+##  Mode  :character   Mode  :character   Median :1989   Median : 711.0  
+##                                        Mean   :1989   Mean   : 715.1  
+##                                        3rd Qu.:2002   3rd Qu.: 775.0  
+##                                        Max.   :2012   Max.   :1009.0  
+##                                                                       
+##        RA               W              OBP              SLG        
+##  Min.   : 472.0   Min.   : 40.0   Min.   :0.2770   Min.   :0.3010  
+##  1st Qu.: 649.8   1st Qu.: 73.0   1st Qu.:0.3170   1st Qu.:0.3750  
+##  Median : 709.0   Median : 81.0   Median :0.3260   Median :0.3960  
+##  Mean   : 715.1   Mean   : 80.9   Mean   :0.3263   Mean   :0.3973  
+##  3rd Qu.: 774.2   3rd Qu.: 89.0   3rd Qu.:0.3370   3rd Qu.:0.4210  
+##  Max.   :1103.0   Max.   :116.0   Max.   :0.3730   Max.   :0.4910  
 ##                                                                    
-##     Playoffs        RankSeason     RankPlayoffs         G        
-##  Min.   :0.0000   Min.   :1.000   Min.   :1.000   Min.   :158.0  
-##  1st Qu.:0.0000   1st Qu.:2.000   1st Qu.:2.000   1st Qu.:162.0  
-##  Median :0.0000   Median :3.000   Median :3.000   Median :162.0  
-##  Mean   :0.1981   Mean   :3.123   Mean   :2.717   Mean   :161.9  
-##  3rd Qu.:0.0000   3rd Qu.:4.000   3rd Qu.:4.000   3rd Qu.:162.0  
-##  Max.   :1.0000   Max.   :8.000   Max.   :5.000   Max.   :165.0  
-##                   NA&#39;s   :988     NA&#39;s   :988                    
-##       OOBP             OSLG       
-##  Min.   :0.2940   Min.   :0.3460  
-##  1st Qu.:0.3210   1st Qu.:0.4010  
-##  Median :0.3310   Median :0.4190  
-##  Mean   :0.3323   Mean   :0.4197  
-##  3rd Qu.:0.3430   3rd Qu.:0.4380  
-##  Max.   :0.3840   Max.   :0.4990  
-##  NA&#39;s   :812      NA&#39;s   :812</code></pre>
+##        BA            Playoffs        RankSeason     RankPlayoffs  
+##  Min.   :0.2140   Min.   :0.0000   Min.   :1.000   Min.   :1.000  
+##  1st Qu.:0.2510   1st Qu.:0.0000   1st Qu.:2.000   1st Qu.:2.000  
+##  Median :0.2600   Median :0.0000   Median :3.000   Median :3.000  
+##  Mean   :0.2593   Mean   :0.1981   Mean   :3.123   Mean   :2.717  
+##  3rd Qu.:0.2680   3rd Qu.:0.0000   3rd Qu.:4.000   3rd Qu.:4.000  
+##  Max.   :0.2940   Max.   :1.0000   Max.   :8.000   Max.   :5.000  
+##                                    NA&#39;s   :988     NA&#39;s   :988    
+##        G              OOBP             OSLG       
+##  Min.   :158.0   Min.   :0.2940   Min.   :0.3460  
+##  1st Qu.:162.0   1st Qu.:0.3210   1st Qu.:0.4010  
+##  Median :162.0   Median :0.3310   Median :0.4190  
+##  Mean   :161.9   Mean   :0.3323   Mean   :0.4197  
+##  3rd Qu.:162.0   3rd Qu.:0.3430   3rd Qu.:0.4380  
+##  Max.   :165.0   Max.   :0.3840   Max.   :0.4990  
+##                  NA&#39;s   :812      NA&#39;s   :812</code></pre>
 </div>
-<div id="acessando-variaveis-especificas-de-um-dataframe" class="section level3">
+<div id="acessando-variáveis-específicas-de-um-dataframe" class="section level3">
 <h3>Acessando variáveis específicas de um DataFrame</h3>
 <p>Podemos acessar variáveis específicas de um Data Frame usando algumas notações possíveis.</p>
 <pre class="r"><code>head(baseball$Year)</code></pre>
 <pre><code>## [1] 2012 2012 2012 2012 2012 2012</code></pre>
 </div>
-<div id="selecionando-linhas-especificas-do-df" class="section level3">
+<div id="selecionando-linhas-específicas-do-df" class="section level3">
 <h3>Selecionando Linhas Específicas do DF</h3>
 <p>Vamos selecionar apenas dados até o ano de 2002 (que foram os dados que eles possuíam em 2002)</p>
 <pre class="r"><code># Considerando apenas anos exibidos pelo moneyball
 moneyball = subset(baseball, Year &lt; 2002)
 str(moneyball)</code></pre>
 <pre><code>## &#39;data.frame&#39;:    902 obs. of  15 variables:
-##  $ Team        : Factor w/ 39 levels &quot;ANA&quot;,&quot;ARI&quot;,&quot;ATL&quot;,..: 1 2 3 4 5 7 8 9 10 11 ...
-##  $ League      : Factor w/ 2 levels &quot;AL&quot;,&quot;NL&quot;: 1 2 2 1 1 2 1 2 1 2 ...
+##  $ Team        : chr  &quot;ANA&quot; &quot;ARI&quot; &quot;ATL&quot; &quot;BAL&quot; ...
+##  $ League      : chr  &quot;AL&quot; &quot;NL&quot; &quot;NL&quot; &quot;AL&quot; ...
 ##  $ Year        : int  2001 2001 2001 2001 2001 2001 2001 2001 2001 2001 ...
 ##  $ RS          : int  691 818 729 687 772 777 798 735 897 923 ...
 ##  $ RA          : int  730 677 643 829 745 701 795 850 821 906 ...
@@ -190,8 +190,8 @@ str(moneyball)</code></pre>
 moneyball$RD = moneyball$RS - moneyball$RA
 str(moneyball)</code></pre>
 <pre><code>## &#39;data.frame&#39;:    902 obs. of  16 variables:
-##  $ Team        : Factor w/ 39 levels &quot;ANA&quot;,&quot;ARI&quot;,&quot;ATL&quot;,..: 1 2 3 4 5 7 8 9 10 11 ...
-##  $ League      : Factor w/ 2 levels &quot;AL&quot;,&quot;NL&quot;: 1 2 2 1 1 2 1 2 1 2 ...
+##  $ Team        : chr  &quot;ANA&quot; &quot;ARI&quot; &quot;ATL&quot; &quot;BAL&quot; ...
+##  $ League      : chr  &quot;AL&quot; &quot;NL&quot; &quot;NL&quot; &quot;AL&quot; ...
 ##  $ Year        : int  2001 2001 2001 2001 2001 2001 2001 2001 2001 2001 ...
 ##  $ RS          : int  691 818 729 687 772 777 798 735 897 923 ...
 ##  $ RA          : int  730 677 643 829 745 701 795 850 821 906 ...
@@ -207,13 +207,13 @@ str(moneyball)</code></pre>
 ##  $ OSLG        : num  0.412 0.404 0.384 0.439 0.393 0.398 0.427 0.455 0.417 0.48 ...
 ##  $ RD          : int  -39 141 86 -142 27 76 3 -115 76 17 ...</code></pre>
 </div>
-<div id="existe-uma-relacao-entre-run-difference-e-vitorias" class="section level3">
+<div id="existe-uma-relação-entre-run-difference-e-vitórias" class="section level3">
 <h3>Existe uma Relação entre Run Difference e Vitórias?</h3>
 <p>Só faz sentido usar uma regressão linear se é plausível a existência de uma relação linear entre as variáveis.</p>
 <pre class="r"><code>plot(moneyball$RD, moneyball$W, main = &quot;Vitórias vs Runs Diff.&quot;, xlab = &quot;Run. Diff.&quot;, ylab = &quot;Vitórias&quot;)</code></pre>
 <p><img src="/post/2017-10-10-introducao-ao-r-aprendendo-com-o-moneyball_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 </div>
-<div id="realizando-um-teste-de-correlacao" class="section level3">
+<div id="realizando-um-teste-de-correlação" class="section level3">
 <h3>Realizando um teste de Correlação</h3>
 <p>Existe uma correlação alta entre estas duas variáveis?</p>
 <pre class="r"><code>cor(x = moneyball$RD, y = moneyball$W, method=c(&quot;pearson&quot;, &quot;kendall&quot;, &quot;spearman&quot;))</code></pre>
@@ -231,16 +231,17 @@ str(moneyball)</code></pre>
 ##      cor 
 ## 0.938515</code></pre>
 </div>
-<div id="visualizando-a-correlacao-entre-as-duas-variaveis" class="section level3">
+<div id="visualizando-a-correlação-entre-as-duas-variáveis" class="section level3">
 <h3>Visualizando a Correlação entre as duas variáveis</h3>
 <p>Também podemos visualizar que existe uma correlação alta entre estas duas variáveis utilizando gráficos da biblioteca ggpubr.</p>
 <pre class="r"><code>ggpubr::ggscatter(moneyball, x = &quot;RD&quot;, y = &quot;W&quot;,
           add = &quot;reg.line&quot;, conf.int = TRUE,
           cor.coef = TRUE, cor.method = &quot;pearson&quot;,
           xlab = &quot;Run Diff.&quot;, ylab = &quot;Vitórias&quot;)</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
 <p><img src="/post/2017-10-10-introducao-ao-r-aprendendo-com-o-moneyball_files/figure-html/unnamed-chunk-9-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
-<div id="ok-como-predizer-o-numero-de-vitorias-com-base-em-run-differences" class="section level3">
+<div id="ok-como-predizer-o-número-de-vitórias-com-base-em-run-differences" class="section level3">
 <h3>Ok, como predizer o número de vitórias com base em Run Differences?</h3>
 <p>Usando uma Regressão Linear!</p>
 <p><span class="math display">\[ y = \beta_0 + \beta_1 * x + e\]</span></p>
@@ -249,7 +250,7 @@ str(moneyball)</code></pre>
 Como fazer isso no R?</p>
 <pre class="r"><code>modelo_vitorias = lm(W ~ RD, data=moneyball)</code></pre>
 </div>
-<div id="analisando-o-modelo-para-predizer-vitorias" class="section level3">
+<div id="analisando-o-modelo-para-predizer-vitórias" class="section level3">
 <h3>Analisando o Modelo para Predizer Vitórias</h3>
 <ul>
 <li>O que isso significa: Podemos predizer o número de vitórias que um time terá a partir de um número de Home Runs.
@@ -275,7 +276,7 @@ Como fazer isso no R?</p>
 ## Multiple R-squared:  0.8808, Adjusted R-squared:  0.8807 
 ## F-statistic:  6651 on 1 and 900 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
-<div id="sera-que-e-sao-necessarios-135-runs-a-mais-para-chegar-a-playoffs" class="section level3">
+<div id="será-que-é-são-necessários-135-runs-a-mais-para-chegar-à-playoffs" class="section level3">
 <h3>Será que é são necessários 135 Runs a mais para chegar à Playoffs?</h3>
 <p>A partir da regressão linear nós estimamos que $ Vitorias = 80.88 + 0.1057 RunDiffs$ e também sabemos que <span class="math inline">\(Vitorias &gt;= 95\)</span>.</p>
 <p>Então…</p>
@@ -288,7 +289,7 @@ RD_min</code></pre>
 <pre><code>## [1] 133.4461</code></pre>
 <p>OU seja, sabemos que se um time quer ir para as playoffs ele precisa fazer <strong>133,4</strong> Runs a mais do que seus oponentes.</p>
 </div>
-<div id="o-que-temos-ate-agora" class="section level3">
+<div id="o-que-temos-até-agora" class="section level3">
 <h3>O que temos até Agora</h3>
 <ul>
 <li>Para ir para as playoffs o time precisa de 95 vitórias ou mais.</li>
@@ -307,15 +308,15 @@ RD_min</code></pre>
 <li>Quais destas estatísticas são mais importantes para considerar quando é necessário <strong>comprar um jogador</strong>?</li>
 </ul>
 </div>
-<div id="recorrendo-a-regressao-linear-novamente" class="section level3">
+<div id="recorrendo-à-regressão-linear-novamente" class="section level3">
 <h3>Recorrendo à Regressão Linear Novamente!</h3>
 <ul>
 <li>Na nossa base de dados estas estatísticas estão indicadas nas variáveis RS (Runs Scored), On-Base Percentage (OBP), Slugging Percentage (SLG) e Batting Average (BA).</li>
 </ul>
 <pre class="r"><code>str(moneyball)</code></pre>
 <pre><code>## &#39;data.frame&#39;:    902 obs. of  16 variables:
-##  $ Team        : Factor w/ 39 levels &quot;ANA&quot;,&quot;ARI&quot;,&quot;ATL&quot;,..: 1 2 3 4 5 7 8 9 10 11 ...
-##  $ League      : Factor w/ 2 levels &quot;AL&quot;,&quot;NL&quot;: 1 2 2 1 1 2 1 2 1 2 ...
+##  $ Team        : chr  &quot;ANA&quot; &quot;ARI&quot; &quot;ATL&quot; &quot;BAL&quot; ...
+##  $ League      : chr  &quot;AL&quot; &quot;NL&quot; &quot;NL&quot; &quot;AL&quot; ...
 ##  $ Year        : int  2001 2001 2001 2001 2001 2001 2001 2001 2001 2001 ...
 ##  $ RS          : int  691 818 729 687 772 777 798 735 897 923 ...
 ##  $ RA          : int  730 677 643 829 745 701 795 850 821 906 ...
@@ -331,7 +332,7 @@ RD_min</code></pre>
 ##  $ OSLG        : num  0.412 0.404 0.384 0.439 0.393 0.398 0.427 0.455 0.417 0.48 ...
 ##  $ RD          : int  -39 141 86 -142 27 76 3 -115 76 17 ...</code></pre>
 </div>
-<div id="predizendo-o-numero-de-runs---modelo-completo" class="section level3">
+<div id="predizendo-o-número-de-runs---modelo-completo" class="section level3">
 <h3>Predizendo o Número de Runs - Modelo Completo</h3>
 <ul>
 <li>Quanto menos Batting Average, mais Runs?!</li>
@@ -359,7 +360,7 @@ summary(modeloruns)</code></pre>
 ## Multiple R-squared:  0.9302, Adjusted R-squared:   0.93 
 ## F-statistic:  3989 on 3 and 898 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
-<div id="predizendo-o-numero-de-runs---sem-batting-average" class="section level3">
+<div id="predizendo-o-número-de-runs---sem-batting-average" class="section level3">
 <h3>Predizendo o Número de Runs - Sem Batting Average</h3>
 <ul>
 <li>O modelo mais simples tem menos variáveis e ainda tem um R ao quadrado alto.</li>
@@ -387,7 +388,7 @@ summary(modeloruns_sBA)</code></pre>
 ## Multiple R-squared:  0.9296, Adjusted R-squared:  0.9294 
 ## F-statistic:  5934 on 2 and 899 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
-<div id="predizendo-o-numero-de-runs-allowed" class="section level3">
+<div id="predizendo-o-número-de-runs-allowed" class="section level3">
 <h3>Predizendo o Número de Runs Allowed</h3>
 <p>Com essa regressão, podemos estimar as Runs Permitidas com a equação:
 <span class="math display">\[ Runs Permitidas = -837 + 2913.6 * OOBP + 1514.29 * OSLG\]</span></p>

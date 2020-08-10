@@ -1,27 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Previsão de Demanda on Pedro N. de Lima</title>
-    <link>/tags/previs%C3%A3o-de-demanda/</link>
-    <description>Recent content in Previsão de Demanda on Pedro N. de Lima</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2019</copyright>
-    <lastBuildDate>Wed, 10 Oct 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/previs%C3%A3o-de-demanda/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Previsão de Séries Temporais com o R</title>
-      <link>/post/previsao-de-series-temporais-com-o-r/</link>
-      <pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/previsao-de-series-temporais-com-o-r/</guid>
-      <description>Este arquivo foi utilizado como arquivo de apoio à aulas ministradas sobre previsão de demanda utilizando o R. Para um tramento mais aprofundado sobre o tema, recorrer ao excelente livro Forecating: Principles and Practice.
-Este post possui uma apresentação relacionada neste link.
-Sobre o RO R é um ambiente de computação estatística, com mais de 13 mil pacotes publicados.Cada um destes pacotes tem um fim específico. Neste curso, utilizaremos principalmente as bibliotecas ‘forecast’ e o fpp2.</description>
-    </item>
-    
-  </channel>
-</rss>

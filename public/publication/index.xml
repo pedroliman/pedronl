@@ -1,41 +1,46 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Publications on Pedro N. de Lima</title>
+    <title>Publications | Pedro Nascimento de Lima</title>
     <link>/publication/</link>
-    <description>Recent content in Publications on Pedro N. de Lima</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2019</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0800</lastBuildDate>
+      <atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
+    <description>Publications</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Built with R, hosted at Netlify.</copyright><lastBuildDate>Tue, 05 May 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Publications</title>
+      <link>/publication/</link>
+    </image>
     
-	<atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>The Health and Economic Impacts of Nonpharmaceutical Interventions to Address COVID-19 - A Decision Support Tool for State and Local Policymakers</title>
+      <link>/publication/2020-health-economic-impacts-covid-19-npis/</link>
+      <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/2020-health-economic-impacts-covid-19-npis/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Do Socioeconomic Contextual Factors Influence SMEs Service Quality? A cross-sector and cross-city SERVPERF Analysis</title>
-      <link>/publication/socioeconomic-factors-service-quality-servperf/</link>
+      <link>/publication/2018-socioeconomic-factors/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 -0800</pubDate>
-      
-      <guid>/publication/socioeconomic-factors-service-quality-servperf/</guid>
+      <guid>/publication/2018-socioeconomic-factors/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Inducing Brazilian manufacturing SMEs productivity with Lean tools</title>
-      <link>/publication/inducing-brazilian-smes-productivity-lean-manufacturing/</link>
+      <link>/publication/2018-smes-lean-tools/inducing-brazilian-smes-productivity-lean-manufacturing/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 -0800</pubDate>
-      
-      <guid>/publication/inducing-brazilian-smes-productivity-lean-manufacturing/</guid>
+      <guid>/publication/2018-smes-lean-tools/inducing-brazilian-smes-productivity-lean-manufacturing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>The Impacts of Additive Manufacturing on Production Systems</title>
-      <link>/publication/impacts-additive-manufacturing-production-systems/</link>
+      <link>/publication/2019-additive-manufacturing-impacts/</link>
       <pubDate>Sat, 01 Sep 2018 00:00:00 -0700</pubDate>
-      
-      <guid>/publication/impacts-additive-manufacturing-production-systems/</guid>
+      <guid>/publication/2019-additive-manufacturing-impacts/</guid>
       <description></description>
     </item>
     

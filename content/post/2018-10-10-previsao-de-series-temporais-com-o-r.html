@@ -25,7 +25,7 @@ header:
 <li>Cada um destes pacotes tem um fim específico. Neste curso, utilizaremos principalmente as bibliotecas ‘forecast’ e o fpp2. Ambos os pacotes são utlizados no livro <a href="https://otexts.org/fpp2/">Forecating: Principles and Practice</a>.</li>
 </ul>
 </div>
-<div id="passos-para-realizar-previsoes" class="section level2">
+<div id="passos-para-realizar-previsões" class="section level2">
 <h2>Passos para Realizar Previsões</h2>
 <ol style="list-style-type: decimal">
 <li>Faça um gráfico dos dados;</li>
@@ -53,7 +53,7 @@ install.packages(&quot;readxl&quot;)</code></pre>
 library(fpp2)
 library(readxl)</code></pre>
 </div>
-<div id="trabalhando-com-a-primeira-serie" class="section level2">
+<div id="trabalhando-com-a-primeira-série" class="section level2">
 <h2>Trabalhando com a Primeira Série</h2>
 <ul>
 <li>Observe as série gold:</li>
@@ -62,7 +62,7 @@ library(readxl)</code></pre>
 autoplot(gold)</code></pre>
 <p><img src="/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
-<div id="padroes-em-series-temporais" class="section level2">
+<div id="padrões-em-séries-temporais" class="section level2">
 <h2>Padrões em séries temporais</h2>
 <ul>
 <li>Tendência: Os dados possuem uma tendência geral de aumento ou queda (exemplo: Crescimento da população).</li>
@@ -82,7 +82,7 @@ autoplot(woolyrnq) </code></pre>
 autoplot(gas) </code></pre>
 <p><img src="/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
-<div id="observando-o-a-sazonalidade-das-series" class="section level2">
+<div id="observando-o-a-sazonalidade-das-séries" class="section level2">
 <h2>Observando o a Sazonalidade das Séries</h2>
 <pre class="r"><code># A função frequency determina a frequência da série. 
 # Para dados sazonais, irá definir o período dominante da sazonalidade, 
@@ -90,7 +90,7 @@ autoplot(gas) </code></pre>
 frequency(gas) </code></pre>
 <pre><code>## [1] 12</code></pre>
 </div>
-<div id="observando-graficos-sazonais" class="section level2">
+<div id="observando-gráficos-sazonais" class="section level2">
 <h2>Observando Gráficos Sazonais</h2>
 <p>Observando a série temporal:</p>
 <pre class="r"><code># Produção de Gás na Austrália
@@ -113,7 +113,7 @@ autoplot(beer) + ylab(&quot;Venda de Cerveja&quot;)</code></pre>
 <pre class="r"><code>ggsubseriesplot(beer)</code></pre>
 <p><img src="/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-12-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
-<div id="criando-objetos-ts-para-series-temporais-a-partir-de-dados-reais" class="section level2">
+<div id="criando-objetos-ts-para-séries-temporais-a-partir-de-dados-reais" class="section level2">
 <h2>Criando Objetos ‘ts’ para Séries Temporais a partir de dados reais</h2>
 <p>Para manipular séries temporais no R, é interessante criar objetos do tipo ‘ts’. Podemos criar objetos a partir de arquivos do excel, csv, bases de dados, ou mesmo APIs públicas.</p>
 <p>Podemos utilizar a biblioteca ‘readxl’ para ler arquivos do excel. Obtenha <a href="/post/2018-10-10-previsao-serie-temporais/VendasCarros.xlsx">aqui o arquivo de dados VendasCarros.xlsx</a>.</p>
@@ -130,7 +130,7 @@ head(dados_excel)</code></pre>
 ## 5  2018     5         4094            4353
 ## 6  2018     6         4994            4842</code></pre>
 </div>
-<div id="transformando-um-data-frame-em-uma-serie-temporal" class="section level2">
+<div id="transformando-um-data-frame-em-uma-série-temporal" class="section level2">
 <h2>Transformando um Data Frame em uma Série Temporal</h2>
 <ul>
 <li>Para trabalhar com séries temporais, iremos transformar esta tabela:</li>
@@ -147,9 +147,9 @@ ts_vendas</code></pre>
 <pre class="r"><code>forecast::autoplot(ts_vendas)</code></pre>
 <p><img src="/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-15-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
-<div id="previsoes-com-modelos-de-suavizacao-exponencial" class="section level1" data-background="imgs/background-1.jpg" data-background-size="cover">
+<div id="previsões-com-modelos-de-suavização-exponencial" class="section level1" data-background="imgs/background-1.jpg" data-background-size="cover">
 <h1>Previsões com Modelos de Suavização Exponencial</h1>
-<div id="suavizacao-exponencial-simples" class="section level2">
+<div id="suavização-exponencial-simples" class="section level2">
 <h2>Suavização Exponencial Simples</h2>
 <ul>
 <li>Método da média simples: Leva em consideração todos os períodos;</li>
@@ -161,7 +161,7 @@ ts_vendas</code></pre>
 <p>Equação da Previsão:
 <span class="math display">\[\hat{y}_{t+h|t} = \alpha y_{t} + \alpha(1-\alpha)y_{t-1} + \alpha(1-\alpha)^2y_{t-2} + ... \ para \  0 \leq \alpha \leq 1\]</span></p>
 </div>
-<div id="modelo-de-suavizacao-exponencial-simples" class="section level2">
+<div id="modelo-de-suavização-exponencial-simples" class="section level2">
 <h2>Modelo de Suavização Exponencial Simples</h2>
 <p>Previsão:
 <span class="math display">\[\hat{y}_{t+h|t} = l_t\]</span>
@@ -198,10 +198,8 @@ summary(previsao_petroleo)</code></pre>
 ## 178.1430 179.8573 180.8141 
 ## 
 ## Error measures:
-##                    ME     RMSE     MAE      MPE     MAPE      MASE
-## Training set 6.401975 28.12234 22.2587 1.097574 4.610635 0.9256774
-##                     ACF1
-## Training set -0.03377748
+##                    ME     RMSE     MAE      MPE     MAPE      MASE        ACF1
+## Training set 6.401975 28.12234 22.2587 1.097574 4.610635 0.9256774 -0.03377748
 ## 
 ## Forecasts:
 ##      Point Forecast    Lo 80    Hi 80    Lo 95    Hi 95
@@ -216,7 +214,7 @@ summary(previsao_petroleo)</code></pre>
 <pre class="r"><code>autoplot(previsao_petroleo)</code></pre>
 <p><img src="/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-17-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
-<div id="modelo-de-suavizacao-exponencial-com-tendencia-linear---holt" class="section level2">
+<div id="modelo-de-suavização-exponencial-com-tendência-linear---holt" class="section level2">
 <h2>Modelo de Suavização Exponencial com Tendência Linear - Holt</h2>
 <p>Previsão:
 <span class="math display">\[\hat{y}_{t+h|t} = l_t + h b_t\]</span>
@@ -293,7 +291,7 @@ autoplot(dados_petroleo) +
   autolayer(previsao_petroleo_holt_damp, series=&quot;Holt com Damp&quot;)</code></pre>
 <p><img src="/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-20-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
-<div id="modelo-de-suavizacao-exponencial-com-tendencia-e-sazonalidade---holt-winters" class="section level2">
+<div id="modelo-de-suavização-exponencial-com-tendência-e-sazonalidade---holt-winters" class="section level2">
 <h2>Modelo de Suavização Exponencial com Tendência e Sazonalidade - Holt-Winters</h2>
 <ul>
 <li>Método Aditivo: Adequado quando a amplitude dos ciclos de sazonalidade não está correlacionada ao tempo.</li>
@@ -363,7 +361,7 @@ autoplot(a10) + ylab(&quot;Demanda de Remédios&quot;) +
 autoplot(forecast(modelo_arima))</code></pre>
 <p><img src="/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-23-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
-<div id="mais-aspectos-tecnicos" class="section level1" data-background="imgs/background-1.jpg" data-background-size="cover">
+<div id="mais-aspectos-técnicos" class="section level1" data-background="imgs/background-1.jpg" data-background-size="cover">
 <h1>Mais Aspectos Técnicos</h1>
 <div id="o-modelo-naive" class="section level2">
 <h2>O modelo “Naive”</h2>
@@ -406,11 +404,11 @@ Propriedades úteis:</li>
 ##  Ljung-Box test
 ## 
 ## data:  Residuals from Naive method
-## Q* = 11.814, df = 9.8, p-value = 0.2824
+## Q* = 12.59, df = 10, p-value = 0.2475
 ## 
-## Model df: 0.   Total lags used: 9.8</code></pre>
+## Model df: 0.   Total lags used: 10</code></pre>
 </div>
-<div id="o-que-fazer-se-os-erros-nao-forem-normais" class="section level2">
+<div id="o-que-fazer-se-os-erros-não-forem-normais" class="section level2">
 <h2>O que fazer se os erros não forem normais?</h2>
 <ul>
 <li>Ainda assim, as previsões podem ser boas e podem ser utilizadas, porém os intervalos de predição podem ser muito justos ou amplos em função deste problema.</li>
@@ -426,7 +424,7 @@ Propriedades úteis:</li>
 <li>É comum construirmos um modelo altamente complexo que possui poucos erros nos dados de treinamento, porém gera péssimas previsões. Isto é chamado de <strong>overfitting</strong>, e deve ser evitado.</li>
 </ul>
 </div>
-<div id="medidas-de-acuracia-da-previsao" class="section level2">
+<div id="medidas-de-acurácia-da-previsão" class="section level2">
 <h2>Medidas de Acurácia da Previsão</h2>
 <ul>
 <li>Mean Absolute Error: <span class="math inline">\(MAE = avg(|e_t|)\)</span></li>
@@ -454,14 +452,14 @@ autoplot(previsao) +
 <li>Usar o Comando Accuracy para observar o modelo:</li>
 </ul>
 <pre class="r"><code>accuracy(previsao, teste)</code></pre>
-<pre><code>##                    ME     RMSE      MAE      MPE      MAPE      MASE
-## Training set  9.87358 52.56156 39.42504 2.506565 12.570647 1.0000000
-## Test set     21.60250 35.09832 29.97666 3.963914  5.777875 0.7603458
-##                   ACF1 Theil&#39;s U
-## Training set 0.1801528        NA
-## Test set     0.4029519  1.184862</code></pre>
+<pre><code>##                    ME     RMSE      MAE      MPE      MAPE      MASE      ACF1
+## Training set  9.87358 52.56156 39.42504 2.506565 12.570647 1.0000000 0.1801528
+## Test set     21.60250 35.09832 29.97666 3.963914  5.777875 0.7603458 0.4029519
+##              Theil&#39;s U
+## Training set        NA
+## Test set      1.184862</code></pre>
 </div>
-<div id="obtendo-mais-series-de-dados-reais" class="section level2">
+<div id="obtendo-mais-séries-de-dados-reais" class="section level2">
 <h2>Obtendo Mais Séries de Dados reais:</h2>
 <ul>
 <li>O agregador de dados <a href="https://www.quandl.com/">Quandl</a> possui milhares de séries temporais disponíveis diretamente no R, pela biblioteca Quandl.</li>

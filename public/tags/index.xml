@@ -1,124 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Pedro N. de Lima</title>
+    <title>Tags | Pedro Nascimento de Lima</title>
     <link>/tags/</link>
-    <description>Recent content in Tags on Pedro N. de Lima</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2019</copyright>
-    <lastBuildDate>Tue, 03 Sep 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Arena</title>
-      <link>/tags/arena/</link>
-      <pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/arena/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Arena Simualtion</title>
-      <link>/tags/arena-simualtion/</link>
-      <pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/arena-simualtion/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Discrete Event Simulation</title>
-      <link>/tags/discrete-event-simulation/</link>
-      <pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/discrete-event-simulation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Arena2R</title>
-      <link>/tags/arena2r/</link>
-      <pubDate>Sun, 28 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/arena2r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>/tags/r/</link>
-      <pubDate>Sun, 28 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Simulation</title>
-      <link>/tags/simulation/</link>
-      <pubDate>Sun, 28 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/simulation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Metamodeling</title>
-      <link>/tags/metamodeling/</link>
-      <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/metamodeling/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Previsão de Demanda</title>
-      <link>/tags/previs%C3%A3o-de-demanda/</link>
-      <pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/previs%C3%A3o-de-demanda/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Suavização Exponencial</title>
-      <link>/tags/suaviza%C3%A7%C3%A3o-exponencial/</link>
-      <pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/suaviza%C3%A7%C3%A3o-exponencial/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Séries Temporais</title>
-      <link>/tags/s%C3%A9ries-temporais/</link>
-      <pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/s%C3%A9ries-temporais/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R Package</title>
-      <link>/tags/r-package/</link>
-      <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/r-package/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Software</title>
-      <link>/tags/software/</link>
-      <pubDate>Thu, 28 Apr 2016 00:00:00 -0700</pubDate>
-      
-      <guid>/tags/software/</guid>
-      <description></description>
-    </item>
+      <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <description>Tags</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Built with R, hosted at Netlify.</copyright><lastBuildDate>Tue, 05 May 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Tags</title>
+      <link>/tags/</link>
+    </image>
     
   </channel>
 </rss>

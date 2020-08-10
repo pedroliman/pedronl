@@ -1,14 +1,19 @@
 # Theme metadata
-name = "OceanPedroRAND"
+name = "OceanPedro"
 
 # Is theme light or dark?
 light = true
 
 # Primary
 # Originals
-primary = "#3f51b5"
-primary_light = "#757de8"
-primary_dark = "#002984"
+#primary = "#3f51b5"
+#primary_light = "#757de8"
+#primary_dark = "#002984"
+
+
+primary = "#2B2B2B"
+primary_light = "#787878"
+primary_dark = "#2B2B2B"
 
 # Purple
 #primary = "#4b197c"
@@ -16,13 +21,13 @@ primary_dark = "#002984"
 #primary_dark = "#460d7d"
 
 # Menu
-menu_primary = "#3f51b5" # 500
-menu_text = "#fff"
-menu_text_active = "#8c9eff" # A100
+menu_primary = "#2B2B2B" # 500
+menu_text = "#C4C4C4"
+menu_text_active = "#fff" # A100
 menu_title = "#fff"
 
 # Purple
-#menu_primary = "#4b197c" # 500
+##menu_primary = "#4b197c" # 500
 #menu_text = "#fff"
 #menu_text_active = "#639" # A100
 #menu_title = "#fff"

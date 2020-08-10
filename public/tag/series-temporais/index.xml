@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Séries Temporais | Pedro Nascimento de Lima</title>
+    <link>/tag/series-temporais/</link>
+      <atom:link href="/tag/series-temporais/index.xml" rel="self" type="application/rss+xml" />
+    <description>Séries Temporais</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Built with R, hosted at Netlify.</copyright><lastBuildDate>Wed, 10 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Séries Temporais</title>
+      <link>/tag/series-temporais/</link>
+    </image>
+    
+    <item>
+      <title>Previsão de Séries Temporais com o R</title>
+      <link>/post/previsao-de-series-temporais-com-o-r/</link>
+      <pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
+      <guid>/post/previsao-de-series-temporais-com-o-r/</guid>
+      <description>
+
+
+&lt;p&gt;Este arquivo foi utilizado como arquivo de apoio à aulas ministradas sobre previsão de demanda utilizando o R. Para um tramento mais aprofundado sobre o tema, recorrer ao excelente livro &lt;a href=&#34;https://otexts.org/fpp2/&#34;&gt;Forecating: Principles and Practice&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Este post possui uma apresentação relacionada &lt;a href=&#34;/files/slides/previsao-r/&#34;&gt;neste link&lt;/a&gt;.&lt;/p&gt;
+&lt;div id=&#34;sobre-o-r&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Sobre o R&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;O R é um ambiente de computação estatística, com mais de 13 mil pacotes publicados.&lt;/li&gt;
+&lt;li&gt;Cada um destes pacotes tem um fim específico. Neste curso, utilizaremos principalmente as bibliotecas ‘forecast’ e o fpp2. Ambos os pacotes são utlizados no livro &lt;a href=&#34;https://otexts.org/fpp2/&#34;&gt;Forecating: Principles and Practice&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;passos-para-realizar-previsões&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Passos para Realizar Previsões&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Faça um gráfico dos dados;&lt;/li&gt;
+&lt;li&gt;Selecione uma função para a previsão;&lt;/li&gt;
+&lt;li&gt;Estime os parâmetros da função;&lt;/li&gt;
+&lt;li&gt;Avalie a Qualidade do modelo de previsão;&lt;/li&gt;
+&lt;li&gt;Selecione e implemente o melhor modelo encontrado.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;instalando-bibliotecas-no-r&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Instalando Bibliotecas no R&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Instale E carregue as bibliotecas que iremos utilizar nesta aula rodando estes comandos:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;bibliotecas = c(&amp;quot;forecast&amp;quot;, &amp;quot;fpp2&amp;quot;, &amp;quot;readxl&amp;quot;)
+
+install.packages(bibliotecas)
+
+# Caso encontre algum erro, rode o install packages separadamente para cada biblioteca:
+install.packages(&amp;quot;forecast&amp;quot;)
+install.packages(&amp;quot;fpp2&amp;quot;)
+install.packages(&amp;quot;readxl&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Antes de começar, carregue as bibliotecas:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(forecast)
+library(fpp2)
+library(readxl)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;trabalhando-com-a-primeira-série&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Trabalhando com a Primeira Série&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Observe as série gold:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# A série temporal &amp;quot;gold&amp;quot; foi carregada pela biblioteca forecast.
+autoplot(gold)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;padrões-em-séries-temporais&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Padrões em séries temporais&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Tendência: Os dados possuem uma tendência geral de aumento ou queda (exemplo: Crescimento da população).&lt;/li&gt;
+&lt;li&gt;Sazonalidade: Os dados se comportam de modo similar, obedecendo padrões com &lt;strong&gt;durações fixas&lt;/strong&gt; (exemplo: venda de ovos de páscoa).&lt;/li&gt;
+&lt;li&gt;Ciclicidade: A série possui um comportamento variando em ciclos, porém &lt;strong&gt;sem duração fixa&lt;/strong&gt; (exemplo: ciclos econômicos.).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;observando-outras-series-temporais&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Observando outras series temporais&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Produção de Lâ na Austrália
+autoplot(woolyrnq) &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;observando-outras-series-temporais-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Observando outras series temporais&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Produção de Gás na Austrália
+autoplot(gas) &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;observando-o-a-sazonalidade-das-séries&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Observando o a Sazonalidade das Séries&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# A função frequency determina a frequência da série. 
+# Para dados sazonais, irá definir o período dominante da sazonalidade, 
+# e para dados em ciclos, a duração média dos ciclos.
+frequency(gas) &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 12&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;observando-gráficos-sazonais&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Observando Gráficos Sazonais&lt;/h2&gt;
+&lt;p&gt;Observando a série temporal:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Produção de Gás na Austrália
+autoplot(a10) + ylab(&amp;quot;Demanda Anti-Diabeticos&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Observando um gráfico sazonal:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggseasonplot(a10) &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Observando um gráfico sazonal “polar”:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggseasonplot(a10, polar = T)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Observando a Venda de Cerveja:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;beer &amp;lt;- window(ausbeer, start = 1992)
+autoplot(beer) + ylab(&amp;quot;Venda de Cerveja&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Observando a Venda de Cerveja e sua Sazonalidade:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggseasonplot(beer) &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Mais uma forma de visualizar a demanda sazonal:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggsubseriesplot(beer)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;criando-objetos-ts-para-séries-temporais-a-partir-de-dados-reais&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Criando Objetos ‘ts’ para Séries Temporais a partir de dados reais&lt;/h2&gt;
+&lt;p&gt;Para manipular séries temporais no R, é interessante criar objetos do tipo ‘ts’. Podemos criar objetos a partir de arquivos do excel, csv, bases de dados, ou mesmo APIs públicas.&lt;/p&gt;
+&lt;p&gt;Podemos utilizar a biblioteca ‘readxl’ para ler arquivos do excel. Obtenha &lt;a href=&#34;/post/2018-10-10-previsao-serie-temporais/VendasCarros.xlsx&#34;&gt;aqui o arquivo de dados VendasCarros.xlsx&lt;/a&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(readxl)
+dados_excel = readxl::read_xlsx(path = &amp;quot;2018-10-10-previsao-serie-temporais/VendasCarros.xlsx&amp;quot;, sheet = &amp;quot;Dados&amp;quot;)
+head(dados_excel)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 4
+##     Ano   Mês VendasCarros VendasCarrosAux
+##   &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt;           &amp;lt;dbl&amp;gt;
+## 1  2018     1         2493            2486
+## 2  2018     2         2875            3003
+## 3  2018     3         3504            3454
+## 4  2018     4         3786            3665
+## 5  2018     5         4094            4353
+## 6  2018     6         4994            4842&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;transformando-um-data-frame-em-uma-série-temporal&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Transformando um Data Frame em uma Série Temporal&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Para trabalhar com séries temporais, iremos transformar esta tabela:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ts_vendas = ts(data = dados_excel$VendasCarros, start = c(2018,1),frequency = 12)
+ts_vendas&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##       Jan  Feb  Mar  Apr  May  Jun  Jul  Aug  Sep  Oct  Nov  Dec
+## 2018 2493 2875 3504 3786 4094 4994 4910 5575 5839 6202 6833 7382
+## 2019 2470 3059 3537 4003 4110 4516 5364 5854 5752 6089 7025 7801
+## 2020 2473 2884 3328 3689 4133 4932 5097 5397 6205 6374 6697 8024&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Agora que temos uma série temporal, vamos plotar:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;forecast::autoplot(ts_vendas)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;previsões-com-modelos-de-suavização-exponencial&#34; class=&#34;section level1&#34; data-background=&#34;imgs/background-1.jpg&#34; data-background-size=&#34;cover&#34;&gt;
+&lt;h1&gt;Previsões com Modelos de Suavização Exponencial&lt;/h1&gt;
+&lt;div id=&#34;suavização-exponencial-simples&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Suavização Exponencial Simples&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Método da média simples: Leva em consideração todos os períodos;&lt;/li&gt;
+&lt;li&gt;Método “Naive”: Leva em consideração apenas o último período;&lt;/li&gt;
+&lt;li&gt;Método da Suavização Exponencial: Leva em consideração a demanda observada nos períodos anteriores, porém faz com que o impacto dos períodos anteriores caia progressivamente.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Notação da Previsão: &lt;span class=&#34;math inline&#34;&gt;\(\hat{y}_{t+h|t}\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Previsão para a demanda &lt;span class=&#34;math inline&#34;&gt;\(y_{t+h}\)&lt;/span&gt;, considerando dados disponiveis até &lt;span class=&#34;math inline&#34;&gt;\(y_{t}\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Equação da Previsão:
+&lt;span class=&#34;math display&#34;&gt;\[\hat{y}_{t+h|t} = \alpha y_{t} + \alpha(1-\alpha)y_{t-1} + \alpha(1-\alpha)^2y_{t-2} + ... \ para \  0 \leq \alpha \leq 1\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;modelo-de-suavização-exponencial-simples&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Modelo de Suavização Exponencial Simples&lt;/h2&gt;
+&lt;p&gt;Previsão:
+&lt;span class=&#34;math display&#34;&gt;\[\hat{y}_{t+h|t} = l_t\]&lt;/span&gt;
+Nível:
+&lt;span class=&#34;math display&#34;&gt;\[l_t = \alpha y_t + (1-\alpha)l_{t-1}\]&lt;/span&gt;
+O valor &lt;span class=&#34;math inline&#34;&gt;\(\alpha\)&lt;/span&gt; é obtido minimizando os erros ao rodar o modelo em um set de teste.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;estimando-o-modelo-com-o-r&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Estimando o Modelo com o R&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A função ‘ses’ (Simple Exponetial Smoothing) estima um modelo de suavização exponencial simples:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dados_petroleo = window(oil, start= 1996)
+previsao_petroleo = ses(dados_petroleo, h = 5) # Previsao para os próximos 5 anos
+summary(previsao_petroleo)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Forecast method: Simple exponential smoothing
+## 
+## Model Information:
+## Simple exponential smoothing 
+## 
+## Call:
+##  ses(y = dados_petroleo, h = 5) 
+## 
+##   Smoothing parameters:
+##     alpha = 0.8339 
+## 
+##   Initial states:
+##     l = 446.5868 
+## 
+##   sigma:  29.8282
+## 
+##      AIC     AICc      BIC 
+## 178.1430 179.8573 180.8141 
+## 
+## Error measures:
+##                    ME     RMSE     MAE      MPE     MAPE      MASE        ACF1
+## Training set 6.401975 28.12234 22.2587 1.097574 4.610635 0.9256774 -0.03377748
+## 
+## Forecasts:
+##      Point Forecast    Lo 80    Hi 80    Lo 95    Hi 95
+## 2014       542.6806 504.4541 580.9070 484.2183 601.1429
+## 2015       542.6806 492.9073 592.4539 466.5589 618.8023
+## 2016       542.6806 483.5747 601.7864 452.2860 633.0752
+## 2017       542.6806 475.5269 609.8343 439.9778 645.3834
+## 2018       542.6806 468.3452 617.0159 428.9945 656.3667&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Visualizando a Previsão:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;autoplot(previsao_petroleo)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;modelo-de-suavização-exponencial-com-tendência-linear---holt&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Modelo de Suavização Exponencial com Tendência Linear - Holt&lt;/h2&gt;
+&lt;p&gt;Previsão:
+&lt;span class=&#34;math display&#34;&gt;\[\hat{y}_{t+h|t} = l_t + h b_t\]&lt;/span&gt;
+Nível:
+&lt;span class=&#34;math display&#34;&gt;\[l_t = \alpha y_t + (1-\alpha)(l_{t-1}+b_{t-1})\]&lt;/span&gt;
+Tendência:
+&lt;span class=&#34;math display&#34;&gt;\[b_t = \beta *(l_t-l_{t-1}) + (1-\beta)b_{t-1}\]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;estimando-o-modelo-com-o-r-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Estimando o Modelo com o R&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A função ‘holt’ (Simple Exponetial Smoothing) estima o modelo de Holt (que considera a tendência):&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;previsao_petroleo_holt = holt(dados_petroleo, h = 5) # Previsao para os próximos 5 anos
+autoplot(previsao_petroleo_holt)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-18-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Também podemos observar os parâmetros estimados para o modelo:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(previsao_petroleo_holt)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Forecast method: Holt&amp;#39;s method
+## 
+## Model Information:
+## Holt&amp;#39;s method 
+## 
+## Call:
+##  holt(y = dados_petroleo, h = 5) 
+## 
+##   Smoothing parameters:
+##     alpha = 1e-04 
+##     beta  = 1e-04 
+## 
+##   Initial states:
+##     l = 428.4833 
+##     b = 5.5771 
+## 
+##   sigma:  27.8684
+## 
+##      AIC     AICc      BIC 
+## 177.2927 182.2927 181.7446 
+## 
+## Error measures:
+##                      ME     RMSE      MAE        MPE     MAPE      MASE
+## Training set -0.2851768 24.57757 20.53231 -0.3285466 4.337459 0.8538816
+##                   ACF1
+## Training set 0.3429178
+## 
+## Forecasts:
+##      Point Forecast    Lo 80    Hi 80    Lo 95    Hi 95
+## 2014       534.4382 498.7234 570.1529 479.8172 589.0591
+## 2015       540.0148 504.3000 575.7295 485.3938 594.6357
+## 2016       545.5913 509.8766 581.3061 490.9704 600.2123
+## 2017       551.1679 515.4532 586.8827 496.5469 605.7889
+## 2018       556.7445 521.0298 592.4592 502.1235 611.3655&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;modelo-de-holt-com-damp&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Modelo de Holt com “Damp”&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Podemos utilizar o modelo Holt com “Damp”, pressupondo que o crescimento não será linear no longo prazo.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Previsão:
+&lt;span class=&#34;math display&#34;&gt;\[\hat{y}_{t+h|t} = l_t + (\phi+\phi^2+...+\phi^h) b_t\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Nível:
+&lt;span class=&#34;math display&#34;&gt;\[l_t = \alpha y_t + (1-\alpha)(l_{t-1}+\phi b_{t-1})\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Tendência:
+&lt;span class=&#34;math display&#34;&gt;\[b_t = \beta *(l_t-l_{t-1}) + (1-\beta) \phi b_{t-1}\]&lt;/span&gt;
+O parâmetro &lt;span class=&#34;math inline&#34;&gt;\(\phi\)&lt;/span&gt; é entre 0 e 1. Se o parâmetro for igual a 1, o crescimento será linear.&lt;/p&gt;
+&lt;p&gt;Utilizando o Modelo de Holt com “Damp”:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;previsao_petroleo_holt = holt(dados_petroleo, h = 15, PI = F)
+previsao_petroleo_holt_damp = holt(dados_petroleo, h = 15, damped = T, PI = F) # Previsao para os próximos 5 anos
+autoplot(dados_petroleo) + 
+  autolayer(previsao_petroleo_holt, series=&amp;quot;Holt Linear&amp;quot;) + 
+  autolayer(previsao_petroleo_holt_damp, series=&amp;quot;Holt com Damp&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;modelo-de-suavização-exponencial-com-tendência-e-sazonalidade---holt-winters&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Modelo de Suavização Exponencial com Tendência e Sazonalidade - Holt-Winters&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Método Aditivo: Adequado quando a amplitude dos ciclos de sazonalidade não está correlacionada ao tempo.&lt;/li&gt;
+&lt;li&gt;Método Multiplicativo: Adequado quando a amplitude dos ciclos de sazonalidade está correlacionadao ao tempo.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;modelo-holt-winters-aditivo&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Modelo Holt-Winters Aditivo&lt;/h2&gt;
+&lt;p&gt;Previsão:
+&lt;span class=&#34;math display&#34;&gt;\[\hat{y}_{t+h|t} = l_t + hb_t + s_{t-m+h_m^+}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Nível:
+&lt;span class=&#34;math display&#34;&gt;\[l_t = \alpha (y_t-s_{t-m}) + (1-\alpha)(l_{t-1}+b_{t-1})\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Tendência:
+&lt;span class=&#34;math display&#34;&gt;\[b_t = \beta *(l_t-l_{t-1}) + (1-\beta) b_{t-1}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Sazonalidade:
+&lt;span class=&#34;math display&#34;&gt;\[b_t = \gamma(y_t - l_{t-1 - b_{t-1}}) + (1-\gamma)s_{t-m} \]&lt;/span&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(s_{t-m+h_m^+}\)&lt;/span&gt;: componente de sazonalidade do último ano de dados disponíveis.
+&lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt;: Período de sazonalidade.
+A média do componente de sazonalidade tende a zero.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;modelo-holt-winters-multiplicatio&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Modelo Holt-Winters Multiplicatio&lt;/h2&gt;
+&lt;p&gt;Previsão:
+&lt;span class=&#34;math display&#34;&gt;\[\hat{y}_{t+h|t} = (l_t + hb_t) s_{t-m+h_m^+}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Nível:
+&lt;span class=&#34;math display&#34;&gt;\[l_t = \alpha \frac{y_t}{s_{t-m}} + (1-\alpha)(l_{t-1}+b_{t-1})\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Tendência:
+&lt;span class=&#34;math display&#34;&gt;\[b_t = \beta *(l_t-l_{t-1}) + (1-\beta) b_{t-1}\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Sazonalidade:
+&lt;span class=&#34;math display&#34;&gt;\[b_t = \gamma  \frac{y_t}{l_{t-1} + b_{t-1}} + (1-\gamma)s_{t-m} \]&lt;/span&gt;
+&lt;span class=&#34;math inline&#34;&gt;\(s_{t-m+h_m^+}\)&lt;/span&gt;: componente de sazonalidade do último ano de dados disponíveis.
+&lt;span class=&#34;math inline&#34;&gt;\(m\)&lt;/span&gt;: Período de sazonalidade.
+A média do componente de sazonalidade tende a 1.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exemplo---holt-winters-aditivo&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Exemplo - Holt-Winters Aditivo&lt;/h2&gt;
+&lt;p&gt;Relembrando a série de anti-glicêmicos.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Produção de Gás na Austrália
+autoplot(a10) + ylab(&amp;quot;Demanda AntiDiabeticos&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-21-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Realizando a Previsão:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Produção de Gás na Austrália
+previsao_anti_diab_aditivo = hw(a10, seasonal = &amp;quot;additive&amp;quot;, PI= F)
+previsao_anti_diab_multiplicativo = hw(a10, seasonal = &amp;quot;multiplicative&amp;quot;, PI = F)
+autoplot(a10) + ylab(&amp;quot;Demanda de Remédios&amp;quot;) +
+  autolayer(previsao_anti_diab_aditivo, series=&amp;quot;HW Add.&amp;quot;) + 
+  autolayer(previsao_anti_diab_multiplicativo, series=&amp;quot;HW Mult.&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-22-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;desafio&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Desafio:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Colete dados de demanda de diferentes produts em sua empresa;&lt;/li&gt;
+&lt;li&gt;Verifique quais são as técnicas de previsão aplicadas a estes produtos;&lt;/li&gt;
+&lt;li&gt;Identifique se há ou não tendência e sazonalidade;&lt;/li&gt;
+&lt;li&gt;Aplique os métodos aprendidos;&lt;/li&gt;
+&lt;li&gt;Proponha um modelo de previsão novo;&lt;/li&gt;
+&lt;li&gt;Compare a acurácia do novo modelo em relação ao que existe atualmente na empresa.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;arima&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;ARIMA&lt;/h1&gt;
+&lt;p&gt;O modelo ARIMA não será coberto nesta aula, porém a biblioteca forecast possui uma função para estimar modelos Arima de modo automático.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;modelo_arima = forecast::auto.arima(a10)
+
+autoplot(forecast(modelo_arima))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-23-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mais-aspectos-técnicos&#34; class=&#34;section level1&#34; data-background=&#34;imgs/background-1.jpg&#34; data-background-size=&#34;cover&#34;&gt;
+&lt;h1&gt;Mais Aspectos Técnicos&lt;/h1&gt;
+&lt;div id=&#34;o-modelo-naive&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;O modelo “Naive”&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;O modelo “naive” simplesmente pressupõe que o futuro repetirá o passado, logo a previsão é correspondente ao último valor observado.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;previsao = naive(oil)
+autoplot(oil, series=&amp;quot;Dados&amp;quot;) + 
+  xlab(&amp;quot;Ano&amp;quot;) +
+  autolayer(fitted(previsao), series = &amp;quot;Previsao&amp;quot;) + 
+  ggtitle(&amp;quot;Produção de Petróleo na Arábia Saudita&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-24-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;observando-os-erros&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Observando os Erros&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Os erros também podem ser plotados. Espera-se que os erros sejam “white noise”. Se isso é verdade, é provável que o modelo tenha captado toda a informação disponível nos dados.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;autoplot(residuals(previsao))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-25-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;pressupostos-sobre-os-erros&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Pressupostos sobre os Erros&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Os erros deveriam ser não-correlacionados;&lt;/li&gt;
+&lt;li&gt;Os erros devem ter média zero;
+Propriedades úteis:&lt;/li&gt;
+&lt;li&gt;Variância Constante;&lt;/li&gt;
+&lt;li&gt;São normalmente distribuídos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;verificando-pressupostos-sobre-os-erros&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Verificando Pressupostos sobre os Erros&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A função ‘checkresiduals’ verifica os pressupostos indicados anteriormente. Espera-se que o resultado do p-valor do Ljung-box seja acima de 0.05, indicando que os erros não são correlacionados.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;checkresiduals(previsao)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-26-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## 
+##  Ljung-Box test
+## 
+## data:  Residuals from Naive method
+## Q* = 12.59, df = 10, p-value = 0.2475
+## 
+## Model df: 0.   Total lags used: 10&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;o-que-fazer-se-os-erros-não-forem-normais&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;O que fazer se os erros não forem normais?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Ainda assim, as previsões podem ser boas e podem ser utilizadas, porém os intervalos de predição podem ser muito justos ou amplos em função deste problema.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;training-and-test-sets&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Training and Test Sets&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Traning Set: Parte dos dados que você utiliza para construir o modelo.&lt;/li&gt;
+&lt;li&gt;Test Set: Parte dos dados que você utiliza para testar o modelo.&lt;/li&gt;
+&lt;li&gt;O test set não pode ser usado para calcular a previsão.&lt;/li&gt;
+&lt;li&gt;Um modelo que se ajusta bem aos dados de treinamento não necessáriamente terá uma boa previsão;&lt;/li&gt;
+&lt;li&gt;É comum construirmos um modelo altamente complexo que possui poucos erros nos dados de treinamento, porém gera péssimas previsões. Isto é chamado de &lt;strong&gt;overfitting&lt;/strong&gt;, e deve ser evitado.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;medidas-de-acurácia-da-previsão&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Medidas de Acurácia da Previsão&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Mean Absolute Error: &lt;span class=&#34;math inline&#34;&gt;\(MAE = avg(|e_t|)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Mean Square Error: &lt;span class=&#34;math inline&#34;&gt;\(MAE = avg(|e_t^2|)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Mean Absolute Percentage Error: &lt;span class=&#34;math inline&#34;&gt;\(MAPE = 100 * avg(|e_t/y_t|)\)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Mean Absolute Scaled Error: &lt;span class=&#34;math inline&#34;&gt;\(MASE = MAE / Q\)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exemplo-com-um-modelo-naive&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Exemplo com um Modelo Naive&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Separamos o modelo em duas partes, e geramos um modelo naive para ilustrar este ponto:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;treinamento = window(oil, end=2003)
+teste = window(oil, start= 2004)
+previsao = naive(treinamento,h = 10) # h = Número de períodos a prever
+autoplot(previsao) + 
+  ylab(&amp;quot;Vendade Petróleo&amp;quot;) + 
+  autolayer(teste, series = &amp;quot;Dados de Teste&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-27-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;o-comando-accuracy&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;O Comando Accuracy&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Usar o Comando Accuracy para observar o modelo:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;accuracy(previsao, teste)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##                    ME     RMSE      MAE      MPE      MAPE      MASE      ACF1
+## Training set  9.87358 52.56156 39.42504 2.506565 12.570647 1.0000000 0.1801528
+## Test set     21.60250 35.09832 29.97666 3.963914  5.777875 0.7603458 0.4029519
+##              Theil&amp;#39;s U
+## Training set        NA
+## Test set      1.184862&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;obtendo-mais-séries-de-dados-reais&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Obtendo Mais Séries de Dados reais:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;O agregador de dados &lt;a href=&#34;https://www.quandl.com/&#34;&gt;Quandl&lt;/a&gt; possui milhares de séries temporais disponíveis diretamente no R, pela biblioteca Quandl.&lt;/li&gt;
+&lt;li&gt;Exemplo: obtendo a série do índice Bovespa&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(Quandl)
+ts_bovespa = Quandl(&amp;quot;BCB/7&amp;quot;, type = &amp;quot;ts&amp;quot;)
+autoplot(ts_bovespa)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
