@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>David Groves | Pedro Nascimento de Lima</title>
+    <link>/author/david-groves/</link>
+      <atom:link href="/author/david-groves/index.xml" rel="self" type="application/rss+xml" />
+    <description>David Groves</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Built with R, hosted at Netlify.</copyright><lastBuildDate>Tue, 10 Nov 2020 13:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>David Groves</title>
+      <link>/author/david-groves/</link>
+    </image>
+    
+    <item>
+      <title>Seeking Robust COVID-19 Response and Adaptation Strategies</title>
+      <link>/talk/2020-dmdu-meeting/</link>
+      <pubDate>Tue, 10 Nov 2020 13:00:00 +0000</pubDate>
+      <guid>/talk/2020-dmdu-meeting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>COVID-19 and Deep Uncertainty</title>
+      <link>/talk/2020-dmdu-webinar/</link>
+      <pubDate>Mon, 08 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>/talk/2020-dmdu-webinar/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

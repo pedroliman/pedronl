@@ -5,12 +5,36 @@
     <link>/author/pedro-nascimento-de-lima/</link>
       <atom:link href="/author/pedro-nascimento-de-lima/index.xml" rel="self" type="application/rss+xml" />
     <description>Pedro Nascimento de Lima</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Built with R, hosted at Netlify.</copyright><lastBuildDate>Tue, 05 May 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Built with R, hosted at Netlify.</copyright><lastBuildDate>Tue, 10 Nov 2020 13:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Pedro Nascimento de Lima</title>
       <link>/author/pedro-nascimento-de-lima/</link>
     </image>
+    
+    <item>
+      <title>Seeking Robust COVID-19 Response and Adaptation Strategies</title>
+      <link>/talk/2020-dmdu-meeting/</link>
+      <pubDate>Tue, 10 Nov 2020 13:00:00 +0000</pubDate>
+      <guid>/talk/2020-dmdu-meeting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Comparing COVID-19 Epidemiological Outcomes For Nonpharmaceutical Interventions In The U.S.</title>
+      <link>/talk/2020-informs/</link>
+      <pubDate>Sat, 07 Nov 2020 13:00:00 +0000</pubDate>
+      <guid>/talk/2020-informs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>COVID-19 and Deep Uncertainty</title>
+      <link>/talk/2020-dmdu-webinar/</link>
+      <pubDate>Mon, 08 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>/talk/2020-dmdu-webinar/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>The Health and Economic Impacts of Nonpharmaceutical Interventions to Address COVID-19 - A Decision Support Tool for State and Local Policymakers</title>

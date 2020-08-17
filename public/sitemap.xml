@@ -18,18 +18,63 @@
   </url>
   
   <url>
-    <loc>/talk/example/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+    <loc>/authors/</loc>
+    <lastmod>2020-11-10T13:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/carlos-calvo-hernandez/</loc>
+    <lastmod>2020-11-10T13:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/david-groves/</loc>
+    <lastmod>2020-11-10T13:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/lawrence-baker/</loc>
+    <lastmod>2020-11-10T13:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+    <lastmod>2020-11-10T13:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/pedro-nascimento-de-lima/</loc>
+    <lastmod>2020-11-10T13:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/raffaelle-vardavas/</loc>
+    <lastmod>2020-11-10T13:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/talk/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+    <lastmod>2020-11-10T13:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/author/robert-lempert/</loc>
+    <lastmod>2020-11-10T13:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/talk/2020-dmdu-meeting/</loc>
+    <lastmod>2020-11-10T13:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/talk/2020-informs/</loc>
+    <lastmod>2020-11-07T13:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/talk/2020-dmdu-webinar/</loc>
+    <lastmod>2020-06-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -39,11 +84,6 @@
   
   <url>
     <loc>/author/aaron-strong/</loc>
-    <lastmod>2020-05-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/</loc>
     <lastmod>2020-05-05T00:00:00+00:00</lastmod>
   </url>
   
@@ -68,22 +108,12 @@
   </url>
   
   <url>
-    <loc>/author/lawrence-baker/</loc>
-    <lastmod>2020-05-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/author/lynn-hu/</loc>
     <lastmod>2020-05-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/author/michelle-priest/</loc>
-    <lastmod>2020-05-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/pedro-nascimento-de-lima/</loc>
     <lastmod>2020-05-05T00:00:00+00:00</lastmod>
   </url>
   
@@ -420,26 +450,6 @@
   <url>
     <loc>/author/robert-ford/</loc>
     <lastmod>2015-09-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/2015-07-23-r-rmarkdown/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/plot/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/r-markdown/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/regression/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   
   <url>
