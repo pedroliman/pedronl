@@ -2,42 +2,42 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Arena | Pedro Nascimento de Lima</title>
-    <link>/tag/arena/</link>
-      <atom:link href="/tag/arena/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://www.pedronl.com/tag/arena/</link>
+      <atom:link href="https://www.pedronl.com/tag/arena/index.xml" rel="self" type="application/rss+xml" />
     <description>Arena</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Built with R, hosted at Netlify.</copyright><lastBuildDate>Tue, 03 Sep 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>https://www.pedronl.com/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Arena</title>
-      <link>/tag/arena/</link>
+      <link>https://www.pedronl.com/tag/arena/</link>
     </image>
     
     <item>
       <title>Slides - Simulação (por Eventos Discretos), Sistemas de Informação e outros</title>
-      <link>/post/slides-graduacao-simulacao-sistemas-de-informacaosistemas-produtivos/</link>
+      <link>https://www.pedronl.com/post/slides-graduacao-simulacao-sistemas-de-informacaosistemas-produtivos/</link>
       <pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>/post/slides-graduacao-simulacao-sistemas-de-informacaosistemas-produtivos/</guid>
+      <guid>https://www.pedronl.com/post/slides-graduacao-simulacao-sistemas-de-informacaosistemas-produtivos/</guid>
       <description>
 
 
 &lt;p&gt;Durante o meu tempo como como professor na UNISINOS no curso de Engenharia de Produção, acumulei uma boa quantidade de slides. Provavelmente não vou utilizar estes slides nos próximos 5 anos, portanto nada mais razoável do que compartilhar!&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;/../files/slides/Simulacao-Computacional-por-Eventos-Discretos.pdf&#34;&gt;&lt;strong&gt;Simulação Computacional&lt;/strong&gt;&lt;/a&gt;: (por Eventos Discretos, com o Arena): Estes slides contém o conteúdo das aulas de simulação por eventos discretos, utilizando o Arena. Alguma parte deste material foi influenciada pelas aulas dos Profs. Dieter Goldmeyer e Luis Felipe Camargo.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;/../files/slides/Slides-Sistemas-de-Informacao.pdf&#34;&gt;&lt;strong&gt;Sistemas de Informação&lt;/strong&gt;&lt;/a&gt;: Esta disciplina englobou uma série de conteúdos interessantes relacionados à Sistemas de Informação para tomada de decisão. O semestre começava com tópicos de Análise de Decisão, e progredia para modelos de machine learning. Na segunda parte do semestre os alunos recebiam a tarefa de excrever o projeto de um sistema de informação relacionado à sua realidade, e recebiam conteúdos relevantes tanto para a gestão de projetos de sistema de informação (ex.: SCRUM, e análise de requisitos), como para a execução prática (ex.: como projetar um banco de dados estruturado e criar um dashboard no Tableau com este banco).&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;/../files/slides/Fundamentos-Sistemas-Produtivos.pdf&#34;&gt;&lt;strong&gt;Fundamentos de Sistemas Produtivos&lt;/strong&gt;&lt;/a&gt; (Administração Industrial, Com “a Ciência da Fábrica”): Estes slides contém conteúdo que ministrei para alunos de graduação e MBA em Administração Industrial, e incluem slides sobre a “Ciência da Fábrica”.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.pedronl.com/../files/slides/Simulacao-Computacional-por-Eventos-Discretos.pdf&#34;&gt;&lt;strong&gt;Simulação Computacional&lt;/strong&gt;&lt;/a&gt;: (por Eventos Discretos, com o Arena): Estes slides contém o conteúdo das aulas de simulação por eventos discretos, utilizando o Arena. Alguma parte deste material foi influenciada pelas aulas dos Profs. Dieter Goldmeyer e Luis Felipe Camargo.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.pedronl.com/../files/slides/Slides-Sistemas-de-Informacao.pdf&#34;&gt;&lt;strong&gt;Sistemas de Informação&lt;/strong&gt;&lt;/a&gt;: Esta disciplina englobou uma série de conteúdos interessantes relacionados à Sistemas de Informação para tomada de decisão. O semestre começava com tópicos de Análise de Decisão, e progredia para modelos de machine learning. Na segunda parte do semestre os alunos recebiam a tarefa de excrever o projeto de um sistema de informação relacionado à sua realidade, e recebiam conteúdos relevantes tanto para a gestão de projetos de sistema de informação (ex.: SCRUM, e análise de requisitos), como para a execução prática (ex.: como projetar um banco de dados estruturado e criar um dashboard no Tableau com este banco).&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.pedronl.com/../files/slides/Fundamentos-Sistemas-Produtivos.pdf&#34;&gt;&lt;strong&gt;Fundamentos de Sistemas Produtivos&lt;/strong&gt;&lt;/a&gt; (Administração Industrial, Com “a Ciência da Fábrica”): Estes slides contém conteúdo que ministrei para alunos de graduação e MBA em Administração Industrial, e incluem slides sobre a “Ciência da Fábrica”.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Teaching Factory Physics Flow Benchmarking with R and Many-Objective Visuals</title>
-      <link>/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/</link>
+      <link>https://www.pedronl.com/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/</link>
       <pubDate>Sun, 28 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/</guid>
+      <guid>https://www.pedronl.com/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/</guid>
       <description>
 
 
 &lt;p&gt;Teaching to seasoned managers in MBE classes is challenging. While it’s important to bring new thoughts and ideas and not sound repetitive, it is necessary to provide a theoretical basis for experienced people with diverse backgrounds. One of the strategies I found to overcome these obstacles this week was to use a new analysis framework (in my case, Factory Physics concepts) to challenge their views about existing frames they already master. Using a combination of concepts, simulation sodels, many-objective tradeoffs visuals (like the gif below) and tasks was great to challenge their intuition about manufacturing systems.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-data/many-objective-inventory-tradeoffs.gif&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;This post shares some of the &lt;a href=&#34;https://www.r-project.org/&#34;&gt;R&lt;/a&gt; code I developed while putting together course materials. This post is also an example of how to use &lt;a href=&#34;/post/des-metamodeling-splines-r-arena/&#34;&gt;simulation metamodeling&lt;/a&gt; and Arena to Run Factory Physics’ Flow Benchmarking.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2019-data/many-objective-inventory-tradeoffs.gif&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;This post shares some of the &lt;a href=&#34;https://www.r-project.org/&#34;&gt;R&lt;/a&gt; code I developed while putting together course materials. This post is also an example of how to use &lt;a href=&#34;https://www.pedronl.com/post/des-metamodeling-splines-r-arena/&#34;&gt;simulation metamodeling&lt;/a&gt; and Arena to Run Factory Physics’ Flow Benchmarking.&lt;/p&gt;
 &lt;div id=&#34;flow-benchmarking&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Flow Benchmarking&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://factoryphysics.com/flow-benchmarking&#34;&gt;Flow Benchmarking&lt;/a&gt; is an absolute benchmarking technique useful to determine how close a production flow is to its best possible performance. The technique has been introduced in the award-winning &lt;em&gt;Factory Physics&lt;/em&gt; (FP) Book &lt;span class=&#34;citation&#34;&gt;(Hopp and Spearman &lt;a href=&#34;#ref-hopp2008factory&#34;&gt;2008&lt;/a&gt;)&lt;/span&gt;, and is a key component of the science-based manufacturing management approach described in &lt;span class=&#34;citation&#34;&gt;(Pound, Bell, and Spearman &lt;a href=&#34;#ref-pound2014factory&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
@@ -161,7 +161,7 @@ knitr::kable(head(data_benchmark))&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;how-would-the-actual-system-behave-if&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;How would the Actual System Behave if…&lt;/h2&gt;
-&lt;p&gt;Ok, now I have a table with all the basic benchmarking results. What if I have a better model of the system? We can accomplish this by building a discrete event simulation model of the actual system, and using a &lt;a href=&#34;/post/des-metamodeling-splines-r-arena/&#34;&gt;metamodel&lt;/a&gt; of this model to approximate its results (you can find the data from my penny fab model &lt;a href=&#34;/post/2019-data/penny-fab/penny-fab.rar&#34;&gt;here&lt;/a&gt;). During my course, I used several &lt;a href=&#34;https://www.arenasimulation.com&#34;&gt;Arena Simulation&lt;/a&gt; models to illustrate that adding variability to the system always degrades performance (as the variability law predicts!). Doing so allowed the students to build confidence into the model and the theory, which was great to see!&lt;/p&gt;
+&lt;p&gt;Ok, now I have a table with all the basic benchmarking results. What if I have a better model of the system? We can accomplish this by building a discrete event simulation model of the actual system, and using a &lt;a href=&#34;https://www.pedronl.com/post/des-metamodeling-splines-r-arena/&#34;&gt;metamodel&lt;/a&gt; of this model to approximate its results (you can find the data from my penny fab model &lt;a href=&#34;https://www.pedronl.com/post/2019-data/penny-fab/penny-fab.rar&#34;&gt;here&lt;/a&gt;). During my course, I used several &lt;a href=&#34;https://www.arenasimulation.com&#34;&gt;Arena Simulation&lt;/a&gt; models to illustrate that adding variability to the system always degrades performance (as the variability law predicts!). Doing so allowed the students to build confidence into the model and the theory, which was great to see!&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(arena2r)
 library(tidyr)
 library(splines)
@@ -223,7 +223,7 @@ plot_benchmarking = function(data) {
 # Then let&amp;#39;s just benchmark and plot!
 
 plot_benchmarking(data = data_benchmark)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-04-28-teaching-factory-physics-flow-benchmarking-with-r_files/figure-html/factory-physics-flow-benchmarking-cycletime-wip-throughput-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2019-04-28-teaching-factory-physics-flow-benchmarking-with-r_files/figure-html/factory-physics-flow-benchmarking-cycletime-wip-throughput-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Cool! My simulation metamodel is still quite equivalent to the marginal case.&lt;/p&gt;
 &lt;p&gt;However, it has one advantage. I can now build a model that can simulate arbitrarily complex scenarios (e,g.: I can include different product routings, change product mix, include non-stationary demand, simulate setup time reduction, even maybe use a multi-method model, etc.) and my model will actually be a better approximation of the actual system than any simple queueing network model. Also, my model can simulate detailed improvement what-if scenarios, which queueing network models won’t be able to simulate.&lt;/p&gt;
 &lt;/div&gt;
@@ -231,9 +231,9 @@ plot_benchmarking(data = data_benchmark)&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;Wrapping up with Tradeoffs and Many-Objective Visuals&lt;/h2&gt;
 &lt;p&gt;I also used simulation models to illustrate tradeoffs implied by two simple decisions: How much WIP a manufacturing flow should have and what should be the reorder level of a part. Unfortunetly, trying to use R to this task wasn’t productive. I ended up using &lt;a href=&#34;https://www.decisionvis.com/ddv/&#34;&gt;DiscoveryDV&lt;/a&gt;, which is a great tool for many-objective visualization.&lt;/p&gt;
 &lt;p&gt;For instance, plotting WIP, Throughput, Cycle Time and Utilization of the Practical Worse Case yields this:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-data/many-objective-inventory-tradeoffs.gif&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2019-data/many-objective-inventory-tradeoffs.gif&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;And visualizing the tradeoffs implied by different reorder levels in a &lt;a href=&#34;https://en.wikipedia.org/wiki/Reorder_point&#34;&gt;(Q,r) inventory system&lt;/a&gt; yields this:
-&lt;img src=&#34;/post/2019-data/inventory-tradeoffs.jpg&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://www.pedronl.com/post/2019-data/inventory-tradeoffs.jpg&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;At this point, many of the participants were excited to get to grips with models that illuminate tradeoffs they have been facing for years. Hopefully, their intuition was sharpened by these exercises and they will be better equiped to use these frontiers to promote productive and tradeoff-aware discussions.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level1 unnumbered&#34;&gt;

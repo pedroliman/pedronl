@@ -1,7 +1,7 @@
 ---
 authors:
 - admin
-bio: I'm a Ph.D. Candidate in Policy Analysis working at the intersection of Simulation Modeling (ABM, Systems Dynamics, Microsim), Infectious Diseases and Decision Making Under Deep Uncertainty. Oh, and I love doing all of that with R.
+bio: I'm a Ph.D. Candidate in Policy Analysis working at the intersection of Simulation Modeling (ABM, Systems Dynamics, Microsim), Policy Analysis and Decision Making Under Deep Uncertainty.
 education:
   courses:
   - course: Ph.D. in Policy Analysis
@@ -45,4 +45,9 @@ user_groups:
 - Visitors
 ---
 
-Hi! Welcome to my personal werbpage! I’m an Assistant Policy Researcher at [RAND](https://rand.org) and a Ph.D. candidate at [Pardee RAND Graduate School](https://www.prgs.edu/). You will find updated information about my professional background and RAND-related work  [here](https://www.rand.org/about/people/l/lima_pedro.html). My interest in R started in 2013 when I was first introduced to it by a professor. Since then, I’ve been using R for virtually everything. From statistical/ML applications to simulation packages (e.g., [Arena2R](/post/arena2r-package-tutorial/)), to modeling [competition within the 3D printing industry](/post/3d-printing-rdm-analysis-2018-dmdu-meeting/), R has been my go-to language. In this blog, you will find some R code and tech/R/analytics-related posts that I would like to share with the R community and are not appropriate for a paper. If you find any of this helpful and would like to [connect](https://www.linkedin.com/in/pedro-nascimento-de-lima/), [let me know](mailto:pedrolima.n@gmail.com)!
+
+I am an assistant policy researcher at [RAND](https://rand.org), a Ph.D. candidate at the [Pardee RAND Graduate School](https://www.prgs.edu/) and a visiting graduate student at [Argonne National Laboratory](https://anl.gov). I hold a B.S. and an M.S. in production engineering from UNISINOS University in Brazil and an M.Phil in Policy Analysis from Pardee RAND.
+
+Prior to joining Pardee RAND, I was a lecturer at UNISINOS, Brazil, where I taught simulation modeling and other quantitative courses. In this page, you will find links to recent publications and occasional blog posts. You will find up-to-date information on my RAND work at my [RAND profile](https://www.rand.org/about/people/l/lima_pedro_nascimento_de.html) page.
+
+You can reach out to me at plima@rand.org or at pedrolima.n@gmail.com.

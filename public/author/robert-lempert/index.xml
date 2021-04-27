@@ -2,21 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Robert Lempert | Pedro Nascimento de Lima</title>
-    <link>/author/robert-lempert/</link>
-      <atom:link href="/author/robert-lempert/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://www.pedronl.com/author/robert-lempert/</link>
+      <atom:link href="https://www.pedronl.com/author/robert-lempert/index.xml" rel="self" type="application/rss+xml" />
     <description>Robert Lempert</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Built with R, hosted at Netlify.</copyright><lastBuildDate>Tue, 10 Nov 2020 13:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Built with R, hosted at Netlify.</copyright><lastBuildDate>Mon, 26 Apr 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>https://www.pedronl.com/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Robert Lempert</title>
-      <link>/author/robert-lempert/</link>
+      <link>https://www.pedronl.com/author/robert-lempert/</link>
     </image>
     
     <item>
+      <title>Reopening California: Seeking Robust, Non-Dominated COVID-19 Exit Strategies</title>
+      <link>https://www.pedronl.com/publication/2021-reopening-california-robust-decision-making/</link>
+      <pubDate>Mon, 26 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>https://www.pedronl.com/publication/2021-reopening-california-robust-decision-making/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Seeking Robust COVID-19 Response and Adaptation Strategies</title>
-      <link>/talk/2020-dmdu-meeting/</link>
+      <link>https://www.pedronl.com/talk/2020-dmdu-meeting/</link>
       <pubDate>Tue, 10 Nov 2020 13:00:00 +0000</pubDate>
-      <guid>/talk/2020-dmdu-meeting/</guid>
+      <guid>https://www.pedronl.com/talk/2020-dmdu-meeting/</guid>
       <description></description>
     </item>
     

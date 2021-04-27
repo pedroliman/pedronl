@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DP Lacerda | Pedro Nascimento de Lima</title>
-    <link>/author/dp-lacerda/</link>
-      <atom:link href="/author/dp-lacerda/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://www.pedronl.com/author/dp-lacerda/</link>
+      <atom:link href="https://www.pedronl.com/author/dp-lacerda/index.xml" rel="self" type="application/rss+xml" />
     <description>DP Lacerda</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Built with R, hosted at Netlify.</copyright><lastBuildDate>Sat, 01 Dec 2018 00:00:00 -0800</lastBuildDate>
     <image>
-      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>https://www.pedronl.com/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>DP Lacerda</title>
-      <link>/author/dp-lacerda/</link>
+      <link>https://www.pedronl.com/author/dp-lacerda/</link>
     </image>
     
     <item>
       <title>Do Socioeconomic Contextual Factors Influence SMEs Service Quality? A cross-sector and cross-city SERVPERF Analysis</title>
-      <link>/publication/2018-socioeconomic-factors/</link>
+      <link>https://www.pedronl.com/publication/2018-socioeconomic-factors/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 -0800</pubDate>
-      <guid>/publication/2018-socioeconomic-factors/</guid>
+      <guid>https://www.pedronl.com/publication/2018-socioeconomic-factors/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Inducing Brazilian manufacturing SMEs productivity with Lean tools</title>
-      <link>/publication/2018-smes-lean-tools/inducing-brazilian-smes-productivity-lean-manufacturing/</link>
+      <link>https://www.pedronl.com/publication/2018-smes-lean-tools/inducing-brazilian-smes-productivity-lean-manufacturing/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 -0800</pubDate>
-      <guid>/publication/2018-smes-lean-tools/inducing-brazilian-smes-productivity-lean-manufacturing/</guid>
+      <guid>https://www.pedronl.com/publication/2018-smes-lean-tools/inducing-brazilian-smes-productivity-lean-manufacturing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>The Impacts of Additive Manufacturing on Production Systems</title>
-      <link>/publication/2019-additive-manufacturing-impacts/</link>
+      <link>https://www.pedronl.com/publication/2019-additive-manufacturing-impacts/</link>
       <pubDate>Sat, 01 Sep 2018 00:00:00 -0700</pubDate>
-      <guid>/publication/2019-additive-manufacturing-impacts/</guid>
+      <guid>https://www.pedronl.com/publication/2019-additive-manufacturing-impacts/</guid>
       <description></description>
     </item>
     

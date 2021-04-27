@@ -1,28 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R | Pedro Nascimento de Lima</title>
-    <link>/category/r/</link>
-      <atom:link href="/category/r/index.xml" rel="self" type="application/rss+xml" />
-    <description>R</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Built with R, hosted at Netlify.</copyright><lastBuildDate>Sun, 28 Apr 2019 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
-      <title>R</title>
-      <link>/category/r/</link>
-    </image>
+    <title>R by Pedro Nascimento de Lima</title>
+    <link>https://www.pedronl.com/category/r/</link>
+    <description>Recent content in R on Pedro Nascimento de Lima</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Built with R, hosted at Netlify.</copyright>
+    <lastBuildDate>Sun, 28 Apr 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://www.pedronl.com/category/r/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Teaching Factory Physics Flow Benchmarking with R and Many-Objective Visuals</title>
-      <link>/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/</link>
+      <link>https://www.pedronl.com/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/</link>
       <pubDate>Sun, 28 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/</guid>
+      
+      <guid>https://www.pedronl.com/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/</guid>
       <description>
 
 
 &lt;p&gt;Teaching to seasoned managers in MBE classes is challenging. While it’s important to bring new thoughts and ideas and not sound repetitive, it is necessary to provide a theoretical basis for experienced people with diverse backgrounds. One of the strategies I found to overcome these obstacles this week was to use a new analysis framework (in my case, Factory Physics concepts) to challenge their views about existing frames they already master. Using a combination of concepts, simulation sodels, many-objective tradeoffs visuals (like the gif below) and tasks was great to challenge their intuition about manufacturing systems.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-data/many-objective-inventory-tradeoffs.gif&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;This post shares some of the &lt;a href=&#34;https://www.r-project.org/&#34;&gt;R&lt;/a&gt; code I developed while putting together course materials. This post is also an example of how to use &lt;a href=&#34;/post/des-metamodeling-splines-r-arena/&#34;&gt;simulation metamodeling&lt;/a&gt; and Arena to Run Factory Physics’ Flow Benchmarking.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2019-data/many-objective-inventory-tradeoffs.gif&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;This post shares some of the &lt;a href=&#34;https://www.r-project.org/&#34;&gt;R&lt;/a&gt; code I developed while putting together course materials. This post is also an example of how to use &lt;a href=&#34;https://www.pedronl.com/post/des-metamodeling-splines-r-arena/&#34;&gt;simulation metamodeling&lt;/a&gt; and Arena to Run Factory Physics’ Flow Benchmarking.&lt;/p&gt;
 &lt;div id=&#34;flow-benchmarking&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Flow Benchmarking&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://factoryphysics.com/flow-benchmarking&#34;&gt;Flow Benchmarking&lt;/a&gt; is an absolute benchmarking technique useful to determine how close a production flow is to its best possible performance. The technique has been introduced in the award-winning &lt;em&gt;Factory Physics&lt;/em&gt; (FP) Book &lt;span class=&#34;citation&#34;&gt;(Hopp and Spearman &lt;a href=&#34;#ref-hopp2008factory&#34;&gt;2008&lt;/a&gt;)&lt;/span&gt;, and is a key component of the science-based manufacturing management approach described in &lt;span class=&#34;citation&#34;&gt;(Pound, Bell, and Spearman &lt;a href=&#34;#ref-pound2014factory&#34;&gt;2014&lt;/a&gt;)&lt;/span&gt;.&lt;/p&gt;
@@ -146,7 +146,7 @@ knitr::kable(head(data_benchmark))&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;how-would-the-actual-system-behave-if&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;How would the Actual System Behave if…&lt;/h2&gt;
-&lt;p&gt;Ok, now I have a table with all the basic benchmarking results. What if I have a better model of the system? We can accomplish this by building a discrete event simulation model of the actual system, and using a &lt;a href=&#34;/post/des-metamodeling-splines-r-arena/&#34;&gt;metamodel&lt;/a&gt; of this model to approximate its results (you can find the data from my penny fab model &lt;a href=&#34;/post/2019-data/penny-fab/penny-fab.rar&#34;&gt;here&lt;/a&gt;). During my course, I used several &lt;a href=&#34;https://www.arenasimulation.com&#34;&gt;Arena Simulation&lt;/a&gt; models to illustrate that adding variability to the system always degrades performance (as the variability law predicts!). Doing so allowed the students to build confidence into the model and the theory, which was great to see!&lt;/p&gt;
+&lt;p&gt;Ok, now I have a table with all the basic benchmarking results. What if I have a better model of the system? We can accomplish this by building a discrete event simulation model of the actual system, and using a &lt;a href=&#34;https://www.pedronl.com/post/des-metamodeling-splines-r-arena/&#34;&gt;metamodel&lt;/a&gt; of this model to approximate its results (you can find the data from my penny fab model &lt;a href=&#34;https://www.pedronl.com/post/2019-data/penny-fab/penny-fab.rar&#34;&gt;here&lt;/a&gt;). During my course, I used several &lt;a href=&#34;https://www.arenasimulation.com&#34;&gt;Arena Simulation&lt;/a&gt; models to illustrate that adding variability to the system always degrades performance (as the variability law predicts!). Doing so allowed the students to build confidence into the model and the theory, which was great to see!&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(arena2r)
 library(tidyr)
 library(splines)
@@ -208,7 +208,7 @@ plot_benchmarking = function(data) {
 # Then let&amp;#39;s just benchmark and plot!
 
 plot_benchmarking(data = data_benchmark)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-04-28-teaching-factory-physics-flow-benchmarking-with-r_files/figure-html/factory-physics-flow-benchmarking-cycletime-wip-throughput-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2019-04-28-teaching-factory-physics-flow-benchmarking-with-r_files/figure-html/factory-physics-flow-benchmarking-cycletime-wip-throughput-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Cool! My simulation metamodel is still quite equivalent to the marginal case.&lt;/p&gt;
 &lt;p&gt;However, it has one advantage. I can now build a model that can simulate arbitrarily complex scenarios (e,g.: I can include different product routings, change product mix, include non-stationary demand, simulate setup time reduction, even maybe use a multi-method model, etc.) and my model will actually be a better approximation of the actual system than any simple queueing network model. Also, my model can simulate detailed improvement what-if scenarios, which queueing network models won’t be able to simulate.&lt;/p&gt;
 &lt;/div&gt;
@@ -216,9 +216,9 @@ plot_benchmarking(data = data_benchmark)&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;Wrapping up with Tradeoffs and Many-Objective Visuals&lt;/h2&gt;
 &lt;p&gt;I also used simulation models to illustrate tradeoffs implied by two simple decisions: How much WIP a manufacturing flow should have and what should be the reorder level of a part. Unfortunetly, trying to use R to this task wasn’t productive. I ended up using &lt;a href=&#34;https://www.decisionvis.com/ddv/&#34;&gt;DiscoveryDV&lt;/a&gt;, which is a great tool for many-objective visualization.&lt;/p&gt;
 &lt;p&gt;For instance, plotting WIP, Throughput, Cycle Time and Utilization of the Practical Worse Case yields this:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-data/many-objective-inventory-tradeoffs.gif&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2019-data/many-objective-inventory-tradeoffs.gif&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;And visualizing the tradeoffs implied by different reorder levels in a &lt;a href=&#34;https://en.wikipedia.org/wiki/Reorder_point&#34;&gt;(Q,r) inventory system&lt;/a&gt; yields this:
-&lt;img src=&#34;/post/2019-data/inventory-tradeoffs.jpg&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://www.pedronl.com/post/2019-data/inventory-tradeoffs.jpg&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;At this point, many of the participants were excited to get to grips with models that illuminate tradeoffs they have been facing for years. Hopefully, their intuition was sharpened by these exercises and they will be better equiped to use these frontiers to promote productive and tradeoff-aware discussions.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level1 unnumbered&#34;&gt;
@@ -240,9 +240,10 @@ plot_benchmarking(data = data_benchmark)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Discrete Event Simulation (DES) Metamodeling - Splines with R and Arena</title>
-      <link>/post/des-metamodeling-splines-r-arena/</link>
+      <link>https://www.pedronl.com/post/des-metamodeling-splines-r-arena/</link>
       <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>/post/des-metamodeling-splines-r-arena/</guid>
+      
+      <guid>https://www.pedronl.com/post/des-metamodeling-splines-r-arena/</guid>
       <description>
 
 
@@ -250,11 +251,11 @@ plot_benchmarking(data = data_benchmark)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;To my knowledge, no Discrete-Event Simulation (DES) software provides metamodeling capabilities, and guidance on how to actually execute metamodeling &lt;a href=&#34;https://www.google.com/search?q=discrete+event+simulation+metamodeling&amp;amp;oq=discrete+event+simulation+metamodeling&#34;&gt;is scarce&lt;/a&gt;. In this post, I’ll build a &lt;a href=&#34;https://en.wikipedia.org/wiki/Spline_(mathematics)&#34;&gt;Spline&lt;/a&gt;-based simulation metamodel. This tutorial should be useful to advanced users of &lt;a href=&#34;https://www.arenasimulation.com&#34;&gt;Arena Simulation&lt;/a&gt; who would be willing to give metamodeling a try.&lt;/p&gt;
 &lt;div id=&#34;why-splines&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Why Splines?&lt;/h3&gt;
-&lt;p&gt;In my &lt;a href=&#34;/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/&#34;&gt;previous post&lt;/a&gt;, I briefly described the motivation for using metamodels to approximate simulation models results. Splines are among the useful techniques for metamodeling because: (i) they are relatively simple (they are piecewise-defined polynomials), and (ii) Unlike low-order polynomials, you can generally use them with a global sampling strategy &lt;span class=&#34;citation&#34;&gt;(Barton and Meckesheimer &lt;a href=&#34;#ref-Barton2006&#34;&gt;2006&lt;/a&gt;)&lt;/span&gt;, meaning you can just sample a wide range of input values of your control variable and your model will still have a decent fit.&lt;/p&gt;
+&lt;p&gt;In my &lt;a href=&#34;https://www.pedronl.com/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/&#34;&gt;previous post&lt;/a&gt;, I briefly described the motivation for using metamodels to approximate simulation models results. Splines are among the useful techniques for metamodeling because: (i) they are relatively simple (they are piecewise-defined polynomials), and (ii) Unlike low-order polynomials, you can generally use them with a global sampling strategy &lt;span class=&#34;citation&#34;&gt;(Barton and Meckesheimer &lt;a href=&#34;#ref-Barton2006&#34;&gt;2006&lt;/a&gt;)&lt;/span&gt;, meaning you can just sample a wide range of input values of your control variable and your model will still have a decent fit.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;data-wrangling&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Data Wrangling&lt;/h3&gt;
-&lt;p&gt;Before developing our metamodel, let’s first load the simulation data and do some data wrangling. For the details on this step, please refer to my &lt;a href=&#34;/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/&#34;&gt;previous post&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Before developing our metamodel, let’s first load the simulation data and do some data wrangling. For the details on this step, please refer to my &lt;a href=&#34;https://www.pedronl.com/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/&#34;&gt;previous post&lt;/a&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(arena2r)
 library(dplyr)
 library(ggplot2)
@@ -347,7 +348,7 @@ ggplot(sim_results, mapping = aes(x = BatchSize, y = Value)) +
                 text=element_text(size=11)
             ) + 
   labs(y = &amp;quot;Output&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-04-14-discrete-event-simulation-metamodeling-splines-r-arena_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2019-04-14-discrete-event-simulation-metamodeling-splines-r-arena_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Yes, definitely this is a good estimate! This plot encourages one to avoid going below 300 units, and suggests that going 350 and above is not a good idea either. The interesting pattern that the spline curve suggests is that increasing Batchsize not always increases Output, and that the output loss is not symetric.&lt;/p&gt;
 &lt;p&gt;Acknowledging these non-linear relationships is one of the outcomes I value at the end of a simulation project, and I hope that metamodeling will be an useful tool to you as well. Splines are a straightforward option to interpolate results from a simulation model, but there are other options out there. Future posts might explore other alternatives such as kriging metamodels, neural nets, and other techniques.&lt;/p&gt;
 &lt;/div&gt;
@@ -367,9 +368,10 @@ ggplot(sim_results, mapping = aes(x = BatchSize, y = Value)) +
     
     <item>
       <title>Making Sense of Simulation Models with Metamodels Part 1 - Low-Order Polynomials with Arena and R</title>
-      <link>/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/</link>
+      <link>https://www.pedronl.com/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/</guid>
+      
+      <guid>https://www.pedronl.com/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/</guid>
       <description>
 
 
@@ -391,7 +393,7 @@ ggplot(sim_results, mapping = aes(x = BatchSize, y = Value)) +
 &lt;div id=&#34;data-wrangling&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Data Wrangling&lt;/h3&gt;
 &lt;p&gt;The first step is obtaining a data.frame where individual observations are simulation replications, and we have one column as the dependent variable &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt; and another column as the independent variable &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;, so that we can find a function &lt;span class=&#34;math inline&#34;&gt;\(y = f_{meta}(x)\)&lt;/span&gt; that will provide an aproximation of our model results. This aproximation should be usefull to explain the relationship between &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;First, I simulated all scenarios and saved their results as separate csv files. You can download the files &lt;a href=&#34;/post/2019-03-metamodeling/batchsizefiles.zip&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;First, I simulated all scenarios and saved their results as separate csv files. You can download the files &lt;a href=&#34;https://www.pedronl.com/post/2019-03-metamodeling/batchsizefiles.zip&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;As you can see opening these files, Arena’s output files need work to become a useful tidy dataframe. By using the package &lt;a href=&#34;arena2r.pedronl.com&#34;&gt;Arena2R&lt;/a&gt;, I can obtain my dataframe easily with the function ‘get_simulation_results’, which will read all csv files in a given path and provide a tidy data.frame with all simulation results.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(arena2r)
 library(dplyr)
@@ -422,7 +424,7 @@ sim_results = subset(sim_results, Statistic == &amp;quot;Entity 1.NumberOut&amp;
 ggplot(sim_results, mapping = aes(x = BatchSize, y = Value, color = Value)) + 
   geom_point() +
   labs(y = &amp;quot;Output&amp;quot;, color = &amp;quot;Output&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-03-09-making-sense-of-models-with-metamodels-low-order-polynomials-with-arena-and-r_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2019-03-09-making-sense-of-models-with-metamodels-low-order-polynomials-with-arena-and-r_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;This plot shows us important lessons about &lt;em&gt;non-linearity&lt;/em&gt;. Clearly, the output variable has a non-linear relationship with Batch Size. The tricky implication is that if you decided to sample only values of BatchSize &amp;gt; 300, you might reach the conclusion that increasing Batch Size has little impact on Output, and this impact is likely negative. Conversely, if you sample only BatchSize &amp;lt; 300, you would reach the opposite conclusion.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -434,7 +436,7 @@ ggplot(sim_results, mapping = aes(x = BatchSize, y = Value, color = Value)) +
   geom_point() + 
   stat_smooth(method = &amp;quot;lm&amp;quot;, formula = y ~ x + I(x^2), size = 1) + 
   labs(y = &amp;quot;Output&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-03-09-making-sense-of-models-with-metamodels-low-order-polynomials-with-arena-and-r_files/figure-html/second-order-polynomial-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2019-03-09-making-sense-of-models-with-metamodels-low-order-polynomials-with-arena-and-r_files/figure-html/second-order-polynomial-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;optimizing-with-a-quadratic-metamodel&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;“Optimizing” with a Quadratic Metamodel&lt;/h3&gt;
 &lt;p&gt;Since our model is quadratic, we can do some calculus to find the point in which the output peaks:&lt;/p&gt;
@@ -462,7 +464,7 @@ Optimum_BatchSize&lt;/code&gt;&lt;/pre&gt;
   geom_vline(xintercept = Optimum_BatchSize) + 
   geom_text(aes(x=Optimum_BatchSize, label=&amp;quot;\nOptimum Batch Size&amp;quot;, y=9700), angle=90, text=element_text(size=11)) + 
   labs(y = &amp;quot;Output&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-03-09-making-sense-of-models-with-metamodels-low-order-polynomials-with-arena-and-r_files/figure-html/second-order-polynomial-with-optimum-value-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2019-03-09-making-sense-of-models-with-metamodels-low-order-polynomials-with-arena-and-r_files/figure-html/second-order-polynomial-with-optimum-value-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;caveats&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Caveats&lt;/h3&gt;
@@ -491,14 +493,15 @@ Optimum_BatchSize&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Previsão de Séries Temporais com o R</title>
-      <link>/post/previsao-de-series-temporais-com-o-r/</link>
+      <link>https://www.pedronl.com/post/previsao-de-series-temporais-com-o-r/</link>
       <pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
-      <guid>/post/previsao-de-series-temporais-com-o-r/</guid>
+      
+      <guid>https://www.pedronl.com/post/previsao-de-series-temporais-com-o-r/</guid>
       <description>
 
 
 &lt;p&gt;Este arquivo foi utilizado como arquivo de apoio à aulas ministradas sobre previsão de demanda utilizando o R. Para um tramento mais aprofundado sobre o tema, recorrer ao excelente livro &lt;a href=&#34;https://otexts.org/fpp2/&#34;&gt;Forecating: Principles and Practice&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Este post possui uma apresentação relacionada &lt;a href=&#34;/files/slides/previsao-r/&#34;&gt;neste link&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Este post possui uma apresentação relacionada &lt;a href=&#34;https://www.pedronl.com/files/slides/previsao-r/&#34;&gt;neste link&lt;/a&gt;.&lt;/p&gt;
 &lt;div id=&#34;sobre-o-r&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Sobre o R&lt;/h2&gt;
 &lt;ul&gt;
@@ -541,7 +544,7 @@ library(readxl)&lt;/code&gt;&lt;/pre&gt;
 &lt;/ul&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# A série temporal &amp;quot;gold&amp;quot; foi carregada pela biblioteca forecast.
 autoplot(gold)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;padrões-em-séries-temporais&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Padrões em séries temporais&lt;/h2&gt;
@@ -555,13 +558,13 @@ autoplot(gold)&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;Observando outras series temporais&lt;/h2&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Produção de Lâ na Austrália
 autoplot(woolyrnq) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;observando-outras-series-temporais-1&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Observando outras series temporais&lt;/h2&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Produção de Gás na Austrália
 autoplot(gas) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;observando-o-a-sazonalidade-das-séries&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Observando o a Sazonalidade das Séries&lt;/h2&gt;
@@ -576,28 +579,28 @@ frequency(gas) &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Observando a série temporal:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Produção de Gás na Austrália
 autoplot(a10) + ylab(&amp;quot;Demanda Anti-Diabeticos&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Observando um gráfico sazonal:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggseasonplot(a10) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Observando um gráfico sazonal “polar”:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggseasonplot(a10, polar = T)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Observando a Venda de Cerveja:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;beer &amp;lt;- window(ausbeer, start = 1992)
 autoplot(beer) + ylab(&amp;quot;Venda de Cerveja&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Observando a Venda de Cerveja e sua Sazonalidade:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggseasonplot(beer) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Mais uma forma de visualizar a demanda sazonal:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggsubseriesplot(beer)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;criando-objetos-ts-para-séries-temporais-a-partir-de-dados-reais&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Criando Objetos ‘ts’ para Séries Temporais a partir de dados reais&lt;/h2&gt;
 &lt;p&gt;Para manipular séries temporais no R, é interessante criar objetos do tipo ‘ts’. Podemos criar objetos a partir de arquivos do excel, csv, bases de dados, ou mesmo APIs públicas.&lt;/p&gt;
-&lt;p&gt;Podemos utilizar a biblioteca ‘readxl’ para ler arquivos do excel. Obtenha &lt;a href=&#34;/post/2018-10-10-previsao-serie-temporais/VendasCarros.xlsx&#34;&gt;aqui o arquivo de dados VendasCarros.xlsx&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Podemos utilizar a biblioteca ‘readxl’ para ler arquivos do excel. Obtenha &lt;a href=&#34;https://www.pedronl.com/post/2018-10-10-previsao-serie-temporais/VendasCarros.xlsx&#34;&gt;aqui o arquivo de dados VendasCarros.xlsx&lt;/a&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(readxl)
 dados_excel = readxl::read_xlsx(path = &amp;quot;2018-10-10-previsao-serie-temporais/VendasCarros.xlsx&amp;quot;, sheet = &amp;quot;Dados&amp;quot;)
 head(dados_excel)&lt;/code&gt;&lt;/pre&gt;
@@ -626,7 +629,7 @@ ts_vendas&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;Agora que temos uma série temporal, vamos plotar:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;forecast::autoplot(ts_vendas)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;previsões-com-modelos-de-suavização-exponencial&#34; class=&#34;section level1&#34; data-background=&#34;imgs/background-1.jpg&#34; data-background-size=&#34;cover&#34;&gt;
 &lt;h1&gt;Previsões com Modelos de Suavização Exponencial&lt;/h1&gt;
@@ -693,7 +696,7 @@ summary(previsao_petroleo)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;Visualizando a Previsão:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;autoplot(previsao_petroleo)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;modelo-de-suavização-exponencial-com-tendência-linear---holt&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Modelo de Suavização Exponencial com Tendência Linear - Holt&lt;/h2&gt;
@@ -711,7 +714,7 @@ Tendência:
 &lt;/ul&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;previsao_petroleo_holt = holt(dados_petroleo, h = 5) # Previsao para os próximos 5 anos
 autoplot(previsao_petroleo_holt)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-18-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-18-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Também podemos observar os parâmetros estimados para o modelo:&lt;/li&gt;
 &lt;/ul&gt;
@@ -770,7 +773,7 @@ previsao_petroleo_holt_damp = holt(dados_petroleo, h = 15, damped = T, PI = F) #
 autoplot(dados_petroleo) + 
   autolayer(previsao_petroleo_holt, series=&amp;quot;Holt Linear&amp;quot;) + 
   autolayer(previsao_petroleo_holt_damp, series=&amp;quot;Holt com Damp&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;modelo-de-suavização-exponencial-com-tendência-e-sazonalidade---holt-winters&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Modelo de Suavização Exponencial com Tendência e Sazonalidade - Holt-Winters&lt;/h2&gt;
@@ -812,7 +815,7 @@ A média do componente de sazonalidade tende a 1.&lt;/p&gt;
 &lt;p&gt;Relembrando a série de anti-glicêmicos.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Produção de Gás na Austrália
 autoplot(a10) + ylab(&amp;quot;Demanda AntiDiabeticos&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-21-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-21-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Realizando a Previsão:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Produção de Gás na Austrália
 previsao_anti_diab_aditivo = hw(a10, seasonal = &amp;quot;additive&amp;quot;, PI= F)
@@ -820,7 +823,7 @@ previsao_anti_diab_multiplicativo = hw(a10, seasonal = &amp;quot;multiplicative&
 autoplot(a10) + ylab(&amp;quot;Demanda de Remédios&amp;quot;) +
   autolayer(previsao_anti_diab_aditivo, series=&amp;quot;HW Add.&amp;quot;) + 
   autolayer(previsao_anti_diab_multiplicativo, series=&amp;quot;HW Mult.&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-22-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-22-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;desafio&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Desafio:&lt;/h2&gt;
@@ -840,7 +843,7 @@ autoplot(a10) + ylab(&amp;quot;Demanda de Remédios&amp;quot;) +
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;modelo_arima = forecast::auto.arima(a10)
 
 autoplot(forecast(modelo_arima))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-23-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-23-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;mais-aspectos-técnicos&#34; class=&#34;section level1&#34; data-background=&#34;imgs/background-1.jpg&#34; data-background-size=&#34;cover&#34;&gt;
 &lt;h1&gt;Mais Aspectos Técnicos&lt;/h1&gt;
@@ -854,7 +857,7 @@ autoplot(oil, series=&amp;quot;Dados&amp;quot;) +
   xlab(&amp;quot;Ano&amp;quot;) +
   autolayer(fitted(previsao), series = &amp;quot;Previsao&amp;quot;) + 
   ggtitle(&amp;quot;Produção de Petróleo na Arábia Saudita&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-24-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-24-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;observando-os-erros&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Observando os Erros&lt;/h2&gt;
@@ -862,7 +865,7 @@ autoplot(oil, series=&amp;quot;Dados&amp;quot;) +
 &lt;li&gt;Os erros também podem ser plotados. Espera-se que os erros sejam “white noise”. Se isso é verdade, é provável que o modelo tenha captado toda a informação disponível nos dados.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;autoplot(residuals(previsao))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-25-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-25-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;pressupostos-sobre-os-erros&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Pressupostos sobre os Erros&lt;/h2&gt;
@@ -880,7 +883,7 @@ Propriedades úteis:&lt;/li&gt;
 &lt;li&gt;A função ‘checkresiduals’ verifica os pressupostos indicados anteriormente. Espera-se que o resultado do p-valor do Ljung-box seja acima de 0.05, indicando que os erros não são correlacionados.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;checkresiduals(previsao)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-26-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-26-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;## 
 ##  Ljung-Box test
 ## 
@@ -925,7 +928,7 @@ previsao = naive(treinamento,h = 10) # h = Número de períodos a prever
 autoplot(previsao) + 
   ylab(&amp;quot;Vendade Petróleo&amp;quot;) + 
   autolayer(teste, series = &amp;quot;Dados de Teste&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-27-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-27-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;o-comando-accuracy&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;O Comando Accuracy&lt;/h2&gt;
@@ -956,9 +959,10 @@ autoplot(ts_bovespa)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Arena2R - An R Package for Arena Simulation Users</title>
-      <link>/post/arena2r-package-tutorial/</link>
+      <link>https://www.pedronl.com/post/arena2r-package-tutorial/</link>
       <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>/post/arena2r-package-tutorial/</guid>
+      
+      <guid>https://www.pedronl.com/post/arena2r-package-tutorial/</guid>
       <description>
 
 
@@ -1081,13 +1085,13 @@ arena2r::plot_confint(sim_results = results, response_variable = &amp;quot;Entit
 ## Warning: `fun.y` is deprecated. Use `fun` instead.
 ## Warning: Computation failed in `stat_summary()`:
 ## Hmisc package required for this function&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-09-27-arena2r-package-tutorial_files/figure-html/arena2r-confidence-interval-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-09-27-arena2r-package-tutorial_files/figure-html/arena2r-confidence-interval-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Now let’s explore the relationship between two variables, across scenarios and replications:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
 # Now let&amp;#39;s plot analyse the relationship between two variables:
 
 arena2r::plot_scatter(sim_results = results, x_variable = &amp;quot;Entity 1.NumberIn&amp;quot;, y_variable = &amp;quot;Entity 1.NumberOut&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-09-27-arena2r-package-tutorial_files/figure-html/arena2r-scatter-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-09-27-arena2r-package-tutorial_files/figure-html/arena2r-scatter-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Now let’s go a bit deeper and leverage ggplot2 to create a plot faceted by Scenario:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
 # If you use ggplot and you want to get more customized plots, I suggest you to spread your data.frame:
@@ -1100,7 +1104,7 @@ wide_results = results %&amp;gt;%
 p = ggplot(data = wide_results, mapping = aes(x = `Resource 1.Utilization`, y = `Entity 1.NumberOut`, color = Scenario)) + geom_point() + facet_wrap(~Scenario)
 
 p&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-09-27-arena2r-package-tutorial_files/figure-html/arena2r-custom-ggplot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-09-27-arena2r-package-tutorial_files/figure-html/arena2r-custom-ggplot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Finally, let’s summarise every statistic across all scenarios.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
 statistics_summary = arena2r::get_statistics_summary(sim_results = results, confidence = 0.95)
@@ -1175,9 +1179,10 @@ knitr::kable(head(statistics_summary[,1:6]))&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Introdução ao R - Aprendendo com o Moneyball</title>
-      <link>/post/introducao-ao-r-aprendendo-com-o-moneyball/</link>
+      <link>https://www.pedronl.com/post/introducao-ao-r-aprendendo-com-o-moneyball/</link>
       <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
-      <guid>/post/introducao-ao-r-aprendendo-com-o-moneyball/</guid>
+      
+      <guid>https://www.pedronl.com/post/introducao-ao-r-aprendendo-com-o-moneyball/</guid>
       <description>
 
 
@@ -1249,7 +1254,7 @@ Este exercício e a ideia de usar o exemplo do Moneyball é baseda em uma aula d
 &lt;/div&gt;
 &lt;div id=&#34;lendo-dados-em-csv-com-read.csv&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Lendo Dados em CSV com read.csv()&lt;/h3&gt;
-&lt;p&gt;Normalmente lemos dados no formato .csv no R para realizar as análises. É possível também ler dados em outros formatos. Obtenha &lt;a href=&#34;/post/2018-10-10-moneyball-r/baseball.csv&#34;&gt;aqui o arquivo baseball&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Normalmente lemos dados no formato .csv no R para realizar as análises. É possível também ler dados em outros formatos. Obtenha &lt;a href=&#34;https://www.pedronl.com/post/2018-10-10-moneyball-r/baseball.csv&#34;&gt;aqui o arquivo baseball&lt;/a&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Lendo Dados em CSV
 baseball &amp;lt;- read.csv(&amp;quot;2018-10-10-moneyball-r/baseball.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -1379,7 +1384,7 @@ str(moneyball)&lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;Existe uma Relação entre Run Difference e Vitórias?&lt;/h3&gt;
 &lt;p&gt;Só faz sentido usar uma regressão linear se é plausível a existência de uma relação linear entre as variáveis.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(moneyball$RD, moneyball$W, main = &amp;quot;Vitórias vs Runs Diff.&amp;quot;, xlab = &amp;quot;Run. Diff.&amp;quot;, ylab = &amp;quot;Vitórias&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2017-10-10-introducao-ao-r-aprendendo-com-o-moneyball_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2017-10-10-introducao-ao-r-aprendendo-com-o-moneyball_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;realizando-um-teste-de-correlação&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Realizando um teste de Correlação&lt;/h3&gt;
@@ -1407,7 +1412,7 @@ str(moneyball)&lt;/code&gt;&lt;/pre&gt;
           cor.coef = TRUE, cor.method = &amp;quot;pearson&amp;quot;,
           xlab = &amp;quot;Run Diff.&amp;quot;, ylab = &amp;quot;Vitórias&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## `geom_smooth()` using formula &amp;#39;y ~ x&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2017-10-10-introducao-ao-r-aprendendo-com-o-moneyball_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2017-10-10-introducao-ao-r-aprendendo-com-o-moneyball_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ok-como-predizer-o-número-de-vitórias-com-base-em-run-differences&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Ok, como predizer o número de vitórias com base em Run Differences?&lt;/h3&gt;

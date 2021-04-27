@@ -2,36 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Arena Simualtion | Pedro Nascimento de Lima</title>
-    <link>/tag/arena-simualtion/</link>
-      <atom:link href="/tag/arena-simualtion/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://www.pedronl.com/tag/arena-simualtion/</link>
+      <atom:link href="https://www.pedronl.com/tag/arena-simualtion/index.xml" rel="self" type="application/rss+xml" />
     <description>Arena Simualtion</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Built with R, hosted at Netlify.</copyright><lastBuildDate>Tue, 03 Sep 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>https://www.pedronl.com/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Arena Simualtion</title>
-      <link>/tag/arena-simualtion/</link>
+      <link>https://www.pedronl.com/tag/arena-simualtion/</link>
     </image>
     
     <item>
       <title>Slides - Simulação (por Eventos Discretos), Sistemas de Informação e outros</title>
-      <link>/post/slides-graduacao-simulacao-sistemas-de-informacaosistemas-produtivos/</link>
+      <link>https://www.pedronl.com/post/slides-graduacao-simulacao-sistemas-de-informacaosistemas-produtivos/</link>
       <pubDate>Tue, 03 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>/post/slides-graduacao-simulacao-sistemas-de-informacaosistemas-produtivos/</guid>
+      <guid>https://www.pedronl.com/post/slides-graduacao-simulacao-sistemas-de-informacaosistemas-produtivos/</guid>
       <description>
 
 
 &lt;p&gt;Durante o meu tempo como como professor na UNISINOS no curso de Engenharia de Produção, acumulei uma boa quantidade de slides. Provavelmente não vou utilizar estes slides nos próximos 5 anos, portanto nada mais razoável do que compartilhar!&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;/../files/slides/Simulacao-Computacional-por-Eventos-Discretos.pdf&#34;&gt;&lt;strong&gt;Simulação Computacional&lt;/strong&gt;&lt;/a&gt;: (por Eventos Discretos, com o Arena): Estes slides contém o conteúdo das aulas de simulação por eventos discretos, utilizando o Arena. Alguma parte deste material foi influenciada pelas aulas dos Profs. Dieter Goldmeyer e Luis Felipe Camargo.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;/../files/slides/Slides-Sistemas-de-Informacao.pdf&#34;&gt;&lt;strong&gt;Sistemas de Informação&lt;/strong&gt;&lt;/a&gt;: Esta disciplina englobou uma série de conteúdos interessantes relacionados à Sistemas de Informação para tomada de decisão. O semestre começava com tópicos de Análise de Decisão, e progredia para modelos de machine learning. Na segunda parte do semestre os alunos recebiam a tarefa de excrever o projeto de um sistema de informação relacionado à sua realidade, e recebiam conteúdos relevantes tanto para a gestão de projetos de sistema de informação (ex.: SCRUM, e análise de requisitos), como para a execução prática (ex.: como projetar um banco de dados estruturado e criar um dashboard no Tableau com este banco).&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;/../files/slides/Fundamentos-Sistemas-Produtivos.pdf&#34;&gt;&lt;strong&gt;Fundamentos de Sistemas Produtivos&lt;/strong&gt;&lt;/a&gt; (Administração Industrial, Com “a Ciência da Fábrica”): Estes slides contém conteúdo que ministrei para alunos de graduação e MBA em Administração Industrial, e incluem slides sobre a “Ciência da Fábrica”.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.pedronl.com/../files/slides/Simulacao-Computacional-por-Eventos-Discretos.pdf&#34;&gt;&lt;strong&gt;Simulação Computacional&lt;/strong&gt;&lt;/a&gt;: (por Eventos Discretos, com o Arena): Estes slides contém o conteúdo das aulas de simulação por eventos discretos, utilizando o Arena. Alguma parte deste material foi influenciada pelas aulas dos Profs. Dieter Goldmeyer e Luis Felipe Camargo.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.pedronl.com/../files/slides/Slides-Sistemas-de-Informacao.pdf&#34;&gt;&lt;strong&gt;Sistemas de Informação&lt;/strong&gt;&lt;/a&gt;: Esta disciplina englobou uma série de conteúdos interessantes relacionados à Sistemas de Informação para tomada de decisão. O semestre começava com tópicos de Análise de Decisão, e progredia para modelos de machine learning. Na segunda parte do semestre os alunos recebiam a tarefa de excrever o projeto de um sistema de informação relacionado à sua realidade, e recebiam conteúdos relevantes tanto para a gestão de projetos de sistema de informação (ex.: SCRUM, e análise de requisitos), como para a execução prática (ex.: como projetar um banco de dados estruturado e criar um dashboard no Tableau com este banco).&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.pedronl.com/../files/slides/Fundamentos-Sistemas-Produtivos.pdf&#34;&gt;&lt;strong&gt;Fundamentos de Sistemas Produtivos&lt;/strong&gt;&lt;/a&gt; (Administração Industrial, Com “a Ciência da Fábrica”): Estes slides contém conteúdo que ministrei para alunos de graduação e MBA em Administração Industrial, e incluem slides sobre a “Ciência da Fábrica”.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Discrete Event Simulation (DES) Metamodeling - Splines with R and Arena</title>
-      <link>/post/des-metamodeling-splines-r-arena/</link>
+      <link>https://www.pedronl.com/post/des-metamodeling-splines-r-arena/</link>
       <pubDate>Sun, 14 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>/post/des-metamodeling-splines-r-arena/</guid>
+      <guid>https://www.pedronl.com/post/des-metamodeling-splines-r-arena/</guid>
       <description>
 
 
@@ -39,11 +39,11 @@
 &lt;p&gt;To my knowledge, no Discrete-Event Simulation (DES) software provides metamodeling capabilities, and guidance on how to actually execute metamodeling &lt;a href=&#34;https://www.google.com/search?q=discrete+event+simulation+metamodeling&amp;amp;oq=discrete+event+simulation+metamodeling&#34;&gt;is scarce&lt;/a&gt;. In this post, I’ll build a &lt;a href=&#34;https://en.wikipedia.org/wiki/Spline_(mathematics)&#34;&gt;Spline&lt;/a&gt;-based simulation metamodel. This tutorial should be useful to advanced users of &lt;a href=&#34;https://www.arenasimulation.com&#34;&gt;Arena Simulation&lt;/a&gt; who would be willing to give metamodeling a try.&lt;/p&gt;
 &lt;div id=&#34;why-splines&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Why Splines?&lt;/h3&gt;
-&lt;p&gt;In my &lt;a href=&#34;/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/&#34;&gt;previous post&lt;/a&gt;, I briefly described the motivation for using metamodels to approximate simulation models results. Splines are among the useful techniques for metamodeling because: (i) they are relatively simple (they are piecewise-defined polynomials), and (ii) Unlike low-order polynomials, you can generally use them with a global sampling strategy &lt;span class=&#34;citation&#34;&gt;(Barton and Meckesheimer &lt;a href=&#34;#ref-Barton2006&#34;&gt;2006&lt;/a&gt;)&lt;/span&gt;, meaning you can just sample a wide range of input values of your control variable and your model will still have a decent fit.&lt;/p&gt;
+&lt;p&gt;In my &lt;a href=&#34;https://www.pedronl.com/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/&#34;&gt;previous post&lt;/a&gt;, I briefly described the motivation for using metamodels to approximate simulation models results. Splines are among the useful techniques for metamodeling because: (i) they are relatively simple (they are piecewise-defined polynomials), and (ii) Unlike low-order polynomials, you can generally use them with a global sampling strategy &lt;span class=&#34;citation&#34;&gt;(Barton and Meckesheimer &lt;a href=&#34;#ref-Barton2006&#34;&gt;2006&lt;/a&gt;)&lt;/span&gt;, meaning you can just sample a wide range of input values of your control variable and your model will still have a decent fit.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;data-wrangling&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Data Wrangling&lt;/h3&gt;
-&lt;p&gt;Before developing our metamodel, let’s first load the simulation data and do some data wrangling. For the details on this step, please refer to my &lt;a href=&#34;/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/&#34;&gt;previous post&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Before developing our metamodel, let’s first load the simulation data and do some data wrangling. For the details on this step, please refer to my &lt;a href=&#34;https://www.pedronl.com/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/&#34;&gt;previous post&lt;/a&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(arena2r)
 library(dplyr)
 library(ggplot2)
@@ -136,7 +136,7 @@ ggplot(sim_results, mapping = aes(x = BatchSize, y = Value)) +
                 text=element_text(size=11)
             ) + 
   labs(y = &amp;quot;Output&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-04-14-discrete-event-simulation-metamodeling-splines-r-arena_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2019-04-14-discrete-event-simulation-metamodeling-splines-r-arena_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Yes, definitely this is a good estimate! This plot encourages one to avoid going below 300 units, and suggests that going 350 and above is not a good idea either. The interesting pattern that the spline curve suggests is that increasing Batchsize not always increases Output, and that the output loss is not symetric.&lt;/p&gt;
 &lt;p&gt;Acknowledging these non-linear relationships is one of the outcomes I value at the end of a simulation project, and I hope that metamodeling will be an useful tool to you as well. Splines are a straightforward option to interpolate results from a simulation model, but there are other options out there. Future posts might explore other alternatives such as kriging metamodels, neural nets, and other techniques.&lt;/p&gt;
 &lt;/div&gt;
@@ -156,9 +156,9 @@ ggplot(sim_results, mapping = aes(x = BatchSize, y = Value)) +
     
     <item>
       <title>Making Sense of Simulation Models with Metamodels Part 1 - Low-Order Polynomials with Arena and R</title>
-      <link>/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/</link>
+      <link>https://www.pedronl.com/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/</guid>
+      <guid>https://www.pedronl.com/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/</guid>
       <description>
 
 
@@ -180,7 +180,7 @@ ggplot(sim_results, mapping = aes(x = BatchSize, y = Value)) +
 &lt;div id=&#34;data-wrangling&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Data Wrangling&lt;/h3&gt;
 &lt;p&gt;The first step is obtaining a data.frame where individual observations are simulation replications, and we have one column as the dependent variable &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt; and another column as the independent variable &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt;, so that we can find a function &lt;span class=&#34;math inline&#34;&gt;\(y = f_{meta}(x)\)&lt;/span&gt; that will provide an aproximation of our model results. This aproximation should be usefull to explain the relationship between &lt;span class=&#34;math inline&#34;&gt;\(x\)&lt;/span&gt; and &lt;span class=&#34;math inline&#34;&gt;\(y\)&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;First, I simulated all scenarios and saved their results as separate csv files. You can download the files &lt;a href=&#34;/post/2019-03-metamodeling/batchsizefiles.zip&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;First, I simulated all scenarios and saved their results as separate csv files. You can download the files &lt;a href=&#34;https://www.pedronl.com/post/2019-03-metamodeling/batchsizefiles.zip&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;As you can see opening these files, Arena’s output files need work to become a useful tidy dataframe. By using the package &lt;a href=&#34;arena2r.pedronl.com&#34;&gt;Arena2R&lt;/a&gt;, I can obtain my dataframe easily with the function ‘get_simulation_results’, which will read all csv files in a given path and provide a tidy data.frame with all simulation results.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(arena2r)
 library(dplyr)
@@ -211,7 +211,7 @@ sim_results = subset(sim_results, Statistic == &amp;quot;Entity 1.NumberOut&amp;
 ggplot(sim_results, mapping = aes(x = BatchSize, y = Value, color = Value)) + 
   geom_point() +
   labs(y = &amp;quot;Output&amp;quot;, color = &amp;quot;Output&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-03-09-making-sense-of-models-with-metamodels-low-order-polynomials-with-arena-and-r_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2019-03-09-making-sense-of-models-with-metamodels-low-order-polynomials-with-arena-and-r_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;This plot shows us important lessons about &lt;em&gt;non-linearity&lt;/em&gt;. Clearly, the output variable has a non-linear relationship with Batch Size. The tricky implication is that if you decided to sample only values of BatchSize &amp;gt; 300, you might reach the conclusion that increasing Batch Size has little impact on Output, and this impact is likely negative. Conversely, if you sample only BatchSize &amp;lt; 300, you would reach the opposite conclusion.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -223,7 +223,7 @@ ggplot(sim_results, mapping = aes(x = BatchSize, y = Value, color = Value)) +
   geom_point() + 
   stat_smooth(method = &amp;quot;lm&amp;quot;, formula = y ~ x + I(x^2), size = 1) + 
   labs(y = &amp;quot;Output&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-03-09-making-sense-of-models-with-metamodels-low-order-polynomials-with-arena-and-r_files/figure-html/second-order-polynomial-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2019-03-09-making-sense-of-models-with-metamodels-low-order-polynomials-with-arena-and-r_files/figure-html/second-order-polynomial-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;optimizing-with-a-quadratic-metamodel&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;“Optimizing” with a Quadratic Metamodel&lt;/h3&gt;
 &lt;p&gt;Since our model is quadratic, we can do some calculus to find the point in which the output peaks:&lt;/p&gt;
@@ -251,7 +251,7 @@ Optimum_BatchSize&lt;/code&gt;&lt;/pre&gt;
   geom_vline(xintercept = Optimum_BatchSize) + 
   geom_text(aes(x=Optimum_BatchSize, label=&amp;quot;\nOptimum Batch Size&amp;quot;, y=9700), angle=90, text=element_text(size=11)) + 
   labs(y = &amp;quot;Output&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-03-09-making-sense-of-models-with-metamodels-low-order-polynomials-with-arena-and-r_files/figure-html/second-order-polynomial-with-optimum-value-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2019-03-09-making-sense-of-models-with-metamodels-low-order-polynomials-with-arena-and-r_files/figure-html/second-order-polynomial-with-optimum-value-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;caveats&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Caveats&lt;/h3&gt;
@@ -280,9 +280,9 @@ Optimum_BatchSize&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Arena2R - An R Package for Arena Simulation Users</title>
-      <link>/post/arena2r-package-tutorial/</link>
+      <link>https://www.pedronl.com/post/arena2r-package-tutorial/</link>
       <pubDate>Thu, 27 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>/post/arena2r-package-tutorial/</guid>
+      <guid>https://www.pedronl.com/post/arena2r-package-tutorial/</guid>
       <description>
 
 
@@ -405,13 +405,13 @@ arena2r::plot_confint(sim_results = results, response_variable = &amp;quot;Entit
 ## Warning: `fun.y` is deprecated. Use `fun` instead.
 ## Warning: Computation failed in `stat_summary()`:
 ## Hmisc package required for this function&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-09-27-arena2r-package-tutorial_files/figure-html/arena2r-confidence-interval-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-09-27-arena2r-package-tutorial_files/figure-html/arena2r-confidence-interval-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Now let’s explore the relationship between two variables, across scenarios and replications:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
 # Now let&amp;#39;s plot analyse the relationship between two variables:
 
 arena2r::plot_scatter(sim_results = results, x_variable = &amp;quot;Entity 1.NumberIn&amp;quot;, y_variable = &amp;quot;Entity 1.NumberOut&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-09-27-arena2r-package-tutorial_files/figure-html/arena2r-scatter-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-09-27-arena2r-package-tutorial_files/figure-html/arena2r-scatter-plot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Now let’s go a bit deeper and leverage ggplot2 to create a plot faceted by Scenario:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
 # If you use ggplot and you want to get more customized plots, I suggest you to spread your data.frame:
@@ -424,7 +424,7 @@ wide_results = results %&amp;gt;%
 p = ggplot(data = wide_results, mapping = aes(x = `Resource 1.Utilization`, y = `Entity 1.NumberOut`, color = Scenario)) + geom_point() + facet_wrap(~Scenario)
 
 p&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-09-27-arena2r-package-tutorial_files/figure-html/arena2r-custom-ggplot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-09-27-arena2r-package-tutorial_files/figure-html/arena2r-custom-ggplot-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Finally, let’s summarise every statistic across all scenarios.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
 statistics_summary = arena2r::get_statistics_summary(sim_results = results, confidence = 0.95)

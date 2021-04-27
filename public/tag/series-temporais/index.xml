@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Séries Temporais | Pedro Nascimento de Lima</title>
-    <link>/tag/series-temporais/</link>
-      <atom:link href="/tag/series-temporais/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://www.pedronl.com/tag/series-temporais/</link>
+      <atom:link href="https://www.pedronl.com/tag/series-temporais/index.xml" rel="self" type="application/rss+xml" />
     <description>Séries Temporais</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Built with R, hosted at Netlify.</copyright><lastBuildDate>Wed, 10 Oct 2018 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>https://www.pedronl.com/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Séries Temporais</title>
-      <link>/tag/series-temporais/</link>
+      <link>https://www.pedronl.com/tag/series-temporais/</link>
     </image>
     
     <item>
       <title>Previsão de Séries Temporais com o R</title>
-      <link>/post/previsao-de-series-temporais-com-o-r/</link>
+      <link>https://www.pedronl.com/post/previsao-de-series-temporais-com-o-r/</link>
       <pubDate>Wed, 10 Oct 2018 00:00:00 +0000</pubDate>
-      <guid>/post/previsao-de-series-temporais-com-o-r/</guid>
+      <guid>https://www.pedronl.com/post/previsao-de-series-temporais-com-o-r/</guid>
       <description>
 
 
 &lt;p&gt;Este arquivo foi utilizado como arquivo de apoio à aulas ministradas sobre previsão de demanda utilizando o R. Para um tramento mais aprofundado sobre o tema, recorrer ao excelente livro &lt;a href=&#34;https://otexts.org/fpp2/&#34;&gt;Forecating: Principles and Practice&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Este post possui uma apresentação relacionada &lt;a href=&#34;/files/slides/previsao-r/&#34;&gt;neste link&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Este post possui uma apresentação relacionada &lt;a href=&#34;https://www.pedronl.com/files/slides/previsao-r/&#34;&gt;neste link&lt;/a&gt;.&lt;/p&gt;
 &lt;div id=&#34;sobre-o-r&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Sobre o R&lt;/h2&gt;
 &lt;ul&gt;
@@ -64,7 +64,7 @@ library(readxl)&lt;/code&gt;&lt;/pre&gt;
 &lt;/ul&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# A série temporal &amp;quot;gold&amp;quot; foi carregada pela biblioteca forecast.
 autoplot(gold)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;padrões-em-séries-temporais&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Padrões em séries temporais&lt;/h2&gt;
@@ -78,13 +78,13 @@ autoplot(gold)&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;Observando outras series temporais&lt;/h2&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Produção de Lâ na Austrália
 autoplot(woolyrnq) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;observando-outras-series-temporais-1&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Observando outras series temporais&lt;/h2&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Produção de Gás na Austrália
 autoplot(gas) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;observando-o-a-sazonalidade-das-séries&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Observando o a Sazonalidade das Séries&lt;/h2&gt;
@@ -99,28 +99,28 @@ frequency(gas) &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Observando a série temporal:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Produção de Gás na Austrália
 autoplot(a10) + ylab(&amp;quot;Demanda Anti-Diabeticos&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Observando um gráfico sazonal:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggseasonplot(a10) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Observando um gráfico sazonal “polar”:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggseasonplot(a10, polar = T)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Observando a Venda de Cerveja:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;beer &amp;lt;- window(ausbeer, start = 1992)
 autoplot(beer) + ylab(&amp;quot;Venda de Cerveja&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Observando a Venda de Cerveja e sua Sazonalidade:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggseasonplot(beer) &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Mais uma forma de visualizar a demanda sazonal:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggsubseriesplot(beer)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;criando-objetos-ts-para-séries-temporais-a-partir-de-dados-reais&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Criando Objetos ‘ts’ para Séries Temporais a partir de dados reais&lt;/h2&gt;
 &lt;p&gt;Para manipular séries temporais no R, é interessante criar objetos do tipo ‘ts’. Podemos criar objetos a partir de arquivos do excel, csv, bases de dados, ou mesmo APIs públicas.&lt;/p&gt;
-&lt;p&gt;Podemos utilizar a biblioteca ‘readxl’ para ler arquivos do excel. Obtenha &lt;a href=&#34;/post/2018-10-10-previsao-serie-temporais/VendasCarros.xlsx&#34;&gt;aqui o arquivo de dados VendasCarros.xlsx&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Podemos utilizar a biblioteca ‘readxl’ para ler arquivos do excel. Obtenha &lt;a href=&#34;https://www.pedronl.com/post/2018-10-10-previsao-serie-temporais/VendasCarros.xlsx&#34;&gt;aqui o arquivo de dados VendasCarros.xlsx&lt;/a&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(readxl)
 dados_excel = readxl::read_xlsx(path = &amp;quot;2018-10-10-previsao-serie-temporais/VendasCarros.xlsx&amp;quot;, sheet = &amp;quot;Dados&amp;quot;)
 head(dados_excel)&lt;/code&gt;&lt;/pre&gt;
@@ -149,7 +149,7 @@ ts_vendas&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;Agora que temos uma série temporal, vamos plotar:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;forecast::autoplot(ts_vendas)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;previsões-com-modelos-de-suavização-exponencial&#34; class=&#34;section level1&#34; data-background=&#34;imgs/background-1.jpg&#34; data-background-size=&#34;cover&#34;&gt;
 &lt;h1&gt;Previsões com Modelos de Suavização Exponencial&lt;/h1&gt;
@@ -216,7 +216,7 @@ summary(previsao_petroleo)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;Visualizando a Previsão:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;autoplot(previsao_petroleo)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;modelo-de-suavização-exponencial-com-tendência-linear---holt&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Modelo de Suavização Exponencial com Tendência Linear - Holt&lt;/h2&gt;
@@ -234,7 +234,7 @@ Tendência:
 &lt;/ul&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;previsao_petroleo_holt = holt(dados_petroleo, h = 5) # Previsao para os próximos 5 anos
 autoplot(previsao_petroleo_holt)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-18-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-18-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Também podemos observar os parâmetros estimados para o modelo:&lt;/li&gt;
 &lt;/ul&gt;
@@ -293,7 +293,7 @@ previsao_petroleo_holt_damp = holt(dados_petroleo, h = 15, damped = T, PI = F) #
 autoplot(dados_petroleo) + 
   autolayer(previsao_petroleo_holt, series=&amp;quot;Holt Linear&amp;quot;) + 
   autolayer(previsao_petroleo_holt_damp, series=&amp;quot;Holt com Damp&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;modelo-de-suavização-exponencial-com-tendência-e-sazonalidade---holt-winters&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Modelo de Suavização Exponencial com Tendência e Sazonalidade - Holt-Winters&lt;/h2&gt;
@@ -335,7 +335,7 @@ A média do componente de sazonalidade tende a 1.&lt;/p&gt;
 &lt;p&gt;Relembrando a série de anti-glicêmicos.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Produção de Gás na Austrália
 autoplot(a10) + ylab(&amp;quot;Demanda AntiDiabeticos&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-21-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-21-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Realizando a Previsão:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Produção de Gás na Austrália
 previsao_anti_diab_aditivo = hw(a10, seasonal = &amp;quot;additive&amp;quot;, PI= F)
@@ -343,7 +343,7 @@ previsao_anti_diab_multiplicativo = hw(a10, seasonal = &amp;quot;multiplicative&
 autoplot(a10) + ylab(&amp;quot;Demanda de Remédios&amp;quot;) +
   autolayer(previsao_anti_diab_aditivo, series=&amp;quot;HW Add.&amp;quot;) + 
   autolayer(previsao_anti_diab_multiplicativo, series=&amp;quot;HW Mult.&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-22-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-22-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;desafio&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Desafio:&lt;/h2&gt;
@@ -363,7 +363,7 @@ autoplot(a10) + ylab(&amp;quot;Demanda de Remédios&amp;quot;) +
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;modelo_arima = forecast::auto.arima(a10)
 
 autoplot(forecast(modelo_arima))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-23-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-23-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;mais-aspectos-técnicos&#34; class=&#34;section level1&#34; data-background=&#34;imgs/background-1.jpg&#34; data-background-size=&#34;cover&#34;&gt;
 &lt;h1&gt;Mais Aspectos Técnicos&lt;/h1&gt;
@@ -377,7 +377,7 @@ autoplot(oil, series=&amp;quot;Dados&amp;quot;) +
   xlab(&amp;quot;Ano&amp;quot;) +
   autolayer(fitted(previsao), series = &amp;quot;Previsao&amp;quot;) + 
   ggtitle(&amp;quot;Produção de Petróleo na Arábia Saudita&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-24-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-24-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;observando-os-erros&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Observando os Erros&lt;/h2&gt;
@@ -385,7 +385,7 @@ autoplot(oil, series=&amp;quot;Dados&amp;quot;) +
 &lt;li&gt;Os erros também podem ser plotados. Espera-se que os erros sejam “white noise”. Se isso é verdade, é provável que o modelo tenha captado toda a informação disponível nos dados.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;autoplot(residuals(previsao))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-25-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-25-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;pressupostos-sobre-os-erros&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Pressupostos sobre os Erros&lt;/h2&gt;
@@ -403,7 +403,7 @@ Propriedades úteis:&lt;/li&gt;
 &lt;li&gt;A função ‘checkresiduals’ verifica os pressupostos indicados anteriormente. Espera-se que o resultado do p-valor do Ljung-box seja acima de 0.05, indicando que os erros não são correlacionados.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;checkresiduals(previsao)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-26-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-26-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;## 
 ##  Ljung-Box test
 ## 
@@ -448,7 +448,7 @@ previsao = naive(treinamento,h = 10) # h = Número de períodos a prever
 autoplot(previsao) + 
   ylab(&amp;quot;Vendade Petróleo&amp;quot;) + 
   autolayer(teste, series = &amp;quot;Dados de Teste&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-27-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.pedronl.com/post/2018-10-10-previsao-de-series-temporais-com-o-r_files/figure-html/unnamed-chunk-27-1.png&#34; width=&#34;672&#34; style=&#34;display: block; margin: auto;&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;o-comando-accuracy&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;O Comando Accuracy&lt;/h2&gt;

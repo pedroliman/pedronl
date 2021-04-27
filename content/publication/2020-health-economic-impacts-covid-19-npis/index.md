@@ -27,7 +27,8 @@ publishDate: "2020-05-05T00:00:00Z"
 slides:
 summary: This model and tool helps local decision makers understand the impacts of Nonpharmaceutical interventions to tackle COVID-19.
 tags:
-- Source Themes
+- COVID-19
+- Simulation Modeling
 title: The Health and Economic Impacts of Nonpharmaceutical Interventions to Address COVID-19 - A Decision Support Tool for State and Local Policymakers
 url_code: ""
 url_dataset: ""

@@ -2,21 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Raffaele Vardavas | Pedro Nascimento de Lima</title>
-    <link>/author/raffaele-vardavas/</link>
-      <atom:link href="/author/raffaele-vardavas/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://www.pedronl.com/author/raffaele-vardavas/</link>
+      <atom:link href="https://www.pedronl.com/author/raffaele-vardavas/index.xml" rel="self" type="application/rss+xml" />
     <description>Raffaele Vardavas</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Built with R, hosted at Netlify.</copyright><lastBuildDate>Tue, 05 May 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Built with R, hosted at Netlify.</copyright><lastBuildDate>Mon, 26 Apr 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>https://www.pedronl.com/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Raffaele Vardavas</title>
-      <link>/author/raffaele-vardavas/</link>
+      <link>https://www.pedronl.com/author/raffaele-vardavas/</link>
     </image>
     
     <item>
+      <title>Reopening California: Seeking Robust, Non-Dominated COVID-19 Exit Strategies</title>
+      <link>https://www.pedronl.com/publication/2021-reopening-california-robust-decision-making/</link>
+      <pubDate>Mon, 26 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>https://www.pedronl.com/publication/2021-reopening-california-robust-decision-making/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Modeling COVID-19 Nonpharmaceutical Interventions: Exploring periodic NPI Strategies</title>
+      <link>https://www.pedronl.com/publication/2021-modeling-covid-19-npis/</link>
+      <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>https://www.pedronl.com/publication/2021-modeling-covid-19-npis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>The Health and Economic Impacts of Nonpharmaceutical Interventions to Address COVID-19 - A Decision Support Tool for State and Local Policymakers</title>
-      <link>/publication/2020-health-economic-impacts-covid-19-npis/</link>
+      <link>https://www.pedronl.com/publication/2020-health-economic-impacts-covid-19-npis/</link>
       <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/2020-health-economic-impacts-covid-19-npis/</guid>
+      <guid>https://www.pedronl.com/publication/2020-health-economic-impacts-covid-19-npis/</guid>
       <description></description>
     </item>
     

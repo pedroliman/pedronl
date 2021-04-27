@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Robert Ford | Pedro Nascimento de Lima</title>
-    <link>/author/robert-ford/</link>
-      <atom:link href="/author/robert-ford/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://www.pedronl.com/author/robert-ford/</link>
+      <atom:link href="https://www.pedronl.com/author/robert-ford/index.xml" rel="self" type="application/rss+xml" />
     <description>Robert Ford</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Built with R, hosted at Netlify.</copyright><lastBuildDate>Tue, 01 Sep 2015 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>https://www.pedronl.com/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Robert Ford</title>
-      <link>/author/robert-ford/</link>
+      <link>https://www.pedronl.com/author/robert-ford/</link>
     </image>
     
     <item>
       <title>An example journal article</title>
-      <link>/publication-not-used/journal-article/</link>
+      <link>https://www.pedronl.com/publication-not-used/journal-article/</link>
       <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>/publication-not-used/journal-article/</guid>
+      <guid>https://www.pedronl.com/publication-not-used/journal-article/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -34,9 +34,9 @@
     
     <item>
       <title>An example conference paper</title>
-      <link>/publication-not-used/conference-paper/</link>
+      <link>https://www.pedronl.com/publication-not-used/conference-paper/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
-      <guid>/publication-not-used/conference-paper/</guid>
+      <guid>https://www.pedronl.com/publication-not-used/conference-paper/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
