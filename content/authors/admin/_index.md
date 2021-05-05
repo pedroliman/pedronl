@@ -6,7 +6,10 @@ education:
   courses:
   - course: Ph.D. in Policy Analysis
     institution: Pardee RAND Graduate School
-    year: 202X
+    year: 202x
+  - course: M.Phil. in Policy Analysis
+    institution: Pardee RAND Graduate School
+    year: 2020
   - course: Msc in Production Engineering
     institution: UNISINOS University, Brazil
     year: 2017
@@ -16,7 +19,7 @@ education:
 email: "pedrolima.n@gmail.com"
 interests:
 - Simulation Modeling / Optimization
-- Decision Under Uncertianty
+- Decision Under Uncertainty
 - R Programming
 organizations:
 - name: RAND Corporation
@@ -25,6 +28,9 @@ organizations:
 - name: Pardee RAND Graduate School
   url: "https://www.prgs.edu/"
   role: Ph.D. Candidate in Policy Analysis
+- name: Argonne National Laboratory
+  url: "https://www.anl.gov/"
+  role: Visiting Student
 social:
 - icon: envelope
   icon_pack: fas
