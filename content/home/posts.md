@@ -8,7 +8,7 @@ active = true  # Activate this widget? true/false
 weight = 70  # Order that this section will appear.
 
 title = "Blog Posts"
-subtitle = ""
+subtitle = "Before my PhD life, I used to write blog posts. You'll still find some of those here."
 
 [content]
   # Page type to display. E.g. post, talk, or publication.

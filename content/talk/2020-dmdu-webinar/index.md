@@ -12,7 +12,7 @@ event: 2020 DMDU Webinar Series
 event_url: http://www.deepuncertainty.org/2020/04/14/dmdu-webinar-series/
 featured: false
 links: []
-location: Web
+location: 2020 DMDU Webinar Series
 math: true
 projects: []
 publishDate: "2017-01-01T00:00:00Z"

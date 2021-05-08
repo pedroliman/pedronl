@@ -8,7 +8,7 @@ active = true  # Activate this widget? true/false
 weight = 30  # Order that this section will appear.
 
 title = "Publications"
-subtitle = ""
+subtitle = "My recent work focuses on leveraging Decision under Deep Uncertainty (DMDU) methods to help tackle the COVID-19 pandemic."
 
 [content]
   # Page type to display. E.g. post, talk, or publication.

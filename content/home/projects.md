@@ -6,7 +6,7 @@ active = true  # Activate this widget? true/false
 weight = 65  # Order that this section will appear.
 
 title = "Software & Tools"
-subtitle = ""
+subtitle = "As an engineer, I like to build stuff. Here's a list of some of the tools I helped to create."
 
 [content]
   # Page type to display. E.g. project.

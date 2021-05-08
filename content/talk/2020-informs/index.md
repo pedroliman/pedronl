@@ -10,7 +10,7 @@ event: INFORMS Annual Meeting
 event_url: http://meetings2.informs.org/wordpress/annual2020/
 featured: false
 links: []
-location: Web
+location: INFORMS 2020
 math: true
 projects: []
 publishDate: "2017-01-01T00:00:00Z"

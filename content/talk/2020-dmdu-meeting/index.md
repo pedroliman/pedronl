@@ -16,7 +16,7 @@ event: DMDU Society 2020 Annual Meeting
 event_url: http://www.deepuncertainty.org/annual-meetings/2020-annual-meeting/
 featured: false
 links: []
-location: Web
+location: DMDU Society 2020 Annual Meeting
 math: true
 projects: []
 publishDate: "2017-01-01T00:00:00Z"
