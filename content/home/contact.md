@@ -6,7 +6,7 @@ active = true  # Activate this widget? true/false
 weight = 1300  # Order that this section will appear.
 
 title = "Let's Connect!"
-subtitle = "Couldn't find what you are looking for? Do you find any of this useful? Don't hesitate to reach out!"
+subtitle = "Couldn't find what you are looking for? Do you find any of this interesting? Let's connect!"
 
 # Automatically link email and phone?
 autolink = true

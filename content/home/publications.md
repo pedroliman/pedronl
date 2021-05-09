@@ -8,14 +8,14 @@ active = true  # Activate this widget? true/false
 weight = 30  # Order that this section will appear.
 
 title = "Publications"
-subtitle = "My recent work focuses on leveraging Decision under Deep Uncertainty (DMDU) methods to help tackle the COVID-19 pandemic."
+subtitle = "My latest research leverages modeling and Decision Under Deep Uncertainty (DMDU) methods to help inform health policy."
 
 [content]
   # Page type to display. E.g. post, talk, or publication.
   page_type = "publication"
   
   # Choose how much pages you would like to display (0 = all pages)
-  count = 3
+  count = 4
   
   # Choose how many pages you would like to offset by
   offset = 0
@@ -37,7 +37,7 @@ subtitle = "My recent work focuses on leveraging Decision under Deep Uncertainty
   #   2 = Compact
   #   3 = Card
   #   4 = Citation (publication only)
-  view = 3
+  view = 1
   
 [design.background]
   # Apply a background color, gradient, or image.
