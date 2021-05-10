@@ -20,7 +20,7 @@ publication: RAND Perspective
 publication_short: ""
 publication_types:
 - "0"
-publishDate: "2021-05-10T00:00:00Z"
+publishDate: "2021-05-09T00:00:00Z"
 slides:
 summary: We used the Robust Decision Making approach to stress-test California's COVID-19 reopening strategy. This Perspective presents lessons learned from these experiments and outlines four characteristics of the best reopening strategies.
 tags:
