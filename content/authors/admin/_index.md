@@ -16,7 +16,7 @@ education:
   - course: Bsc in Production Engineering
     institution: UNISINOS University, Brazil
     year: 2015
-email: "pedrolima.n@gmail.com"
+email: "plima@rand.org"
 interests:
 - Simulation Modeling / Optimization
 - Decision Under Uncertainty
