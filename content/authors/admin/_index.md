@@ -12,10 +12,10 @@ education:
     year: 2020
   - course: Msc in Production Engineering
     institution: UNISINOS University, Brazil
-    year: 2017
+    year: 2018
   - course: Bsc in Production Engineering
     institution: UNISINOS University, Brazil
-    year: 2015
+    year: 2016
 email: "plima@rand.org"
 interests:
 - Simulation Modeling / Optimization
@@ -25,6 +25,9 @@ organizations:
 - name: RAND Corporation
   url: "https://www.rand.org/about/people/l/lima_pedro_nascimento_de.html"
   role: Policy Research Assistant
+- name: USC Sol Price School of Public Policy
+  url: "https://priceschool.usc.edu/"
+  role: Adjunct Instructor
 - name: Pardee RAND Graduate School
   url: "https://www.prgs.edu/"
   role: Ph.D. Candidate in Policy Analysis
@@ -55,7 +58,7 @@ social:
   link: https://www.instagram.com/pedro.n.lima/
 - icon: cv
   icon_pack: ai
-  link: files/Pedro-Nascimento-de-Lima-CV-2021-06.pdf
+  link: files/Pedro-Nascimento-de-Lima-CV-2021-07.pdf
 superuser: true
 title: Pedro Nascimento de Lima
 user_groups:
@@ -64,6 +67,6 @@ user_groups:
 ---
 
 
-I am an assistant policy researcher at [RAND](https://rand.org), a Ph.D. candidate at the [Pardee RAND Graduate School](https://www.prgs.edu/) and a visiting graduate student at [Argonne National Laboratory](https://anl.gov). I hold a B.S. and an M.S. in production engineering from UNISINOS University in Brazil and an M.Phil in Policy Analysis from Pardee RAND.
+I am an assistant policy researcher at <u> [RAND](https://www.rand.org/about/people/l/lima_pedro_nascimento_de.html)</u>, a Ph.D. candidate at <u> [Pardee RAND Graduate School](https://www.prgs.edu/)</u>, an Adjunct Instructor at <u>[USC Price](http://priceschool.usc.edu/)</u>, and a visiting graduate student at <u>[Argonne National Laboratory](https://anl.gov)</u>. I hold a B.S. and an M.S. in production engineering from UNISINOS University in Brazil and an M.Phil in Policy Analysis from Pardee RAND.
 
-Prior to joining RAND, I was a lecturer at UNISINOS, Brazil, where I taught simulation modeling and other quantitative courses. In this page, you will find links to recent publications, links to presentation recordings, links to tools and software I helped to build and (occasional) blog posts. You will find up-to-date information on my RAND work at my [RAND profile](https://www.rand.org/about/people/l/lima_pedro_nascimento_de.html) page.
+Here you will find links to my <u>[recent publications](https://pedronl.com/#publications)</u>, <u>[tools and software](#projects)</u> I helped to build and more. Feel free to <u>[reach out](#contact)</u> if you find any of this interesting!
