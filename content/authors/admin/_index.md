@@ -67,6 +67,8 @@ user_groups:
 ---
 
 
-I am an assistant policy researcher at <u> [RAND](https://www.rand.org/about/people/l/lima_pedro_nascimento_de.html)</u>, a Ph.D. candidate at <u> [Pardee RAND Graduate School](https://www.prgs.edu/)</u>, an Adjunct Instructor at <u>[USC Price](http://priceschool.usc.edu/)</u>, and a visiting graduate student at <u>[Argonne National Laboratory](https://anl.gov)</u>. I hold a B.S. and an M.S. in production engineering from UNISINOS University in Brazil and an M.Phil in Policy Analysis from Pardee RAND.
+I am an assistant policy researcher at [RAND](https://www.rand.org/about/people/l/lima_pedro_nascimento_de.html), a Ph.D. candidate at [Pardee RAND Graduate School](https://www.prgs.edu/), an Adjunct Instructor at [USC Price](http://priceschool.usc.edu/), and a visiting graduate student at [Argonne National Laboratory](https://anl.gov). I hold a B.S. and an M.S. in production engineering from UNISINOS University in Brazil and an M.Phil in Policy Analysis from Pardee RAND.
 
-Here you will find links to my <u>[recent publications](https://pedronl.com/#publications)</u>, <u>[tools and software](#projects)</u> I helped to build and more. Feel free to <u>[reach out](#contact)</u> if you find any of this interesting!
+Here you will find links to my <u>[recent publications](#publications)</u>, <u>[tools and software](#projects)</u> I helped to build and more. 
+
+If you find any of this interesting, <u>[follow me on twitter](https://twitter.com/pedrolima_n)</u> or <u>[get in touch](#contact)</u>!
