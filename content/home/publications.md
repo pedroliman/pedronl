@@ -8,7 +8,7 @@ active = true  # Activate this widget? true/false
 weight = 30  # Order that this section will appear.
 
 title = "Publications"
-subtitle = "My latest research leverages modeling and Decision Under Deep Uncertainty (DMDU) methods to help inform health policy."
+subtitle = "My recent research leverages modeling and Decision Under Deep Uncertainty methods to inform pressing health policy decision-analytic problems."
 
 [content]
   # Page type to display. E.g. post, talk, or publication.
