@@ -58,7 +58,7 @@ social:
   link: https://www.instagram.com/pedro.n.lima/
 - icon: cv
   icon_pack: ai
-  link: files/Pedro-Nascimento-de-Lima-CV-2021-07.pdf
+  link: files/Pedro-Nascimento-de-Lima-CV-2021-11.pdf
 superuser: true
 title: Pedro Nascimento de Lima
 user_groups:
