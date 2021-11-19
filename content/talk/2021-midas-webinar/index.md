@@ -6,7 +6,7 @@ abstract: Changes in behaviors are often acknowledged as a major source of uncer
 authors: 
 - Raffaele Vardavas
 - admin
-date: "2021-11-19T14:00:00Z"
+date: "2021-11-19T10:00:00Z"
 event: MIDAS Webinar
 event_url: https://midasnetwork.us/midas-webinar-rand/
 featured: true
@@ -20,6 +20,6 @@ summary:
 tags: []
 url_code: ""
 url_pdf: ""
-url_slides: ""
+url_slides: "/../files/slides/Modeling-Infectious-Behaviors.pdf"
 url_video: ""
 ---
