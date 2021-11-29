@@ -21,5 +21,5 @@ tags: []
 url_code: ""
 url_pdf: ""
 url_slides: "/../files/slides/Modeling-Infectious-Behaviors.pdf"
-url_video: ""
+url_video: "https://www.youtube.com/watch?v=qKDSsIz_urk"
 ---
