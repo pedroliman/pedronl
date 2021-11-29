@@ -1,5 +1,5 @@
 ---
-title: A Primer on Robust Decision Making for Health Policy
+title: A Primer on Robust Decision Making for Health Policy Modelers
 
 abstract: In this presentation, I introduced RDM to CISNET Junior Investigators and presented our RDM work.
 
@@ -18,7 +18,7 @@ slides: []
 summary: 
 tags: []
 url_code: ""
-url_pdf: ""
+url_pdf: "/../files/slides/2021-11-11-RDM-CISNET-Junior-Investigators.pdf"
 url_slides: ""
 url_video: ""
 ---
