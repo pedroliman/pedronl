@@ -12,15 +12,15 @@
   name = "Publications"
   url = "#publications"
   weight = 20
-  
-[[main]]
-  name = "Software & Tools"
-  url = "#projects"
-  weight = 25
 
 [[main]]
   name = "Talks"
   url = "#talks"
+  weight = 25
+  
+[[main]]
+  name = "Software & Tools"
+  url = "#projects"
   weight = 30
 
 [[main]]
