@@ -29,7 +29,7 @@ url_pdf: ""
 url_poster: ""
 url_project: ""
 url_slides: ""
-url_source: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0259166"
+url_source: "https://doi.org/10.1158/1055-9965.EPI-21-1001"
 url_video: ""
 ---
 
