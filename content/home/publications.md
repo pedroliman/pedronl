@@ -64,6 +64,6 @@ subtitle = "My recent research leverages modeling and Decision Under Deep Uncert
  css_style = ""
  
  # CSS class.
- css_class = ""
+ css_class = "pubclass"
 +++
 

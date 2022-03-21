@@ -33,5 +33,8 @@ menu_title = "#fff"
 #menu_title = "#fff"
 
 # Home sections
-home_section_odd = "rgb(255, 255, 255)"
+background = "#F7F7F7"
+#home_section_odd = "#F7F7F7"
+#home_section_even = "#F7F7F7"
+home_section_odd = "rgb(255, 255, 255)" 
 home_section_even = "rgb(247, 247, 247)"
