@@ -6,7 +6,7 @@
 # Each configuration section is defined by a name in square brackets (e.g. `[outputs]`).
 
 # Title of your site
-baseurl = "https://www.pedronl.com/"
+baseurl = "https://www.pedrodelima.com/"
 
 # Title of your site
 title = "Pedro Nascimento de Lima"
