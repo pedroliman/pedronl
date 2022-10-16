@@ -2,37 +2,69 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>COVID-19 | Pedro Nascimento de Lima</title>
-    <link>https://www.pedronl.com/tag/covid-19/</link>
-      <atom:link href="https://www.pedronl.com/tag/covid-19/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://www.pedrodelima.com/tag/covid-19/</link>
+      <atom:link href="https://www.pedrodelima.com/tag/covid-19/index.xml" rel="self" type="application/rss+xml" />
     <description>COVID-19</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Built with R, hosted at Netlify.</copyright><lastBuildDate>Mon, 26 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Built with R, hosted at Netlify.</copyright><lastBuildDate>Mon, 15 Nov 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://www.pedronl.com/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>https://www.pedrodelima.com/media/pedro-nascimento-de-lima.jpg</url>
       <title>COVID-19</title>
-      <link>https://www.pedronl.com/tag/covid-19/</link>
+      <link>https://www.pedrodelima.com/tag/covid-19/</link>
     </image>
     
     <item>
-      <title>Reopening California: Seeking Robust, Non-Dominated COVID-19 Exit Strategies</title>
-      <link>https://www.pedronl.com/publication/2021-reopening-california-robust-decision-making/</link>
-      <pubDate>Mon, 26 Apr 2021 00:00:00 +0000</pubDate>
-      <guid>https://www.pedronl.com/publication/2021-reopening-california-robust-decision-making/</guid>
+      <title>Should We Mitigate or Suppress the Next Pandemic? Time-Horizons and Costs Shape Optimal Social Distancing Strategies</title>
+      <link>https://www.pedrodelima.com/publication/2021-mitigation-vs-suppression/</link>
+      <pubDate>Mon, 15 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://www.pedrodelima.com/publication/2021-mitigation-vs-suppression/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Modeling COVID-19 Nonpharmaceutical Interventions: Exploring periodic NPI Strategies</title>
-      <link>https://www.pedronl.com/publication/2021-modeling-covid-19-npis/</link>
+      <title>Reopening California: Seeking robust, non-Dominated COVID-19 exit strategies</title>
+      <link>https://www.pedrodelima.com/publication/2021-reopening-california-robust-decision-making/</link>
+      <pubDate>Tue, 26 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://www.pedrodelima.com/publication/2021-reopening-california-robust-decision-making/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Modeling Infectious Behaviors: The Need to Account for Behavioral Adaptation in COVID-19 Models</title>
+      <link>https://www.pedrodelima.com/publication/2021-modeling-infectious-behaviors/</link>
+      <pubDate>Mon, 20 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://www.pedrodelima.com/publication/2021-modeling-infectious-behaviors/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reopening Under Uncertainty: Stress-Testing California&#39;s COVID-19 Exit Strategy</title>
+      <link>https://www.pedrodelima.com/publication/2021-reopening-under-uncertainty-stress-testing-california-covid-19-exit-strategy/</link>
+      <pubDate>Mon, 10 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://www.pedrodelima.com/publication/2021-reopening-under-uncertainty-stress-testing-california-covid-19-exit-strategy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Will the United States Declare Freedom from COVID-19 Too Soon?</title>
+      <link>https://www.pedrodelima.com/publication/2021-will-the-us-declare-freedom-from-covid-19-too-soon/</link>
+      <pubDate>Sun, 09 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://www.pedrodelima.com/publication/2021-will-the-us-declare-freedom-from-covid-19-too-soon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Could Periodic Nonpharmaceutical Intervention Strategies Produce Better COVID-19 Health and Economic Outcomes?</title>
+      <link>https://www.pedrodelima.com/publication/2021-modeling-covid-19-npis/</link>
       <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
-      <guid>https://www.pedronl.com/publication/2021-modeling-covid-19-npis/</guid>
+      <guid>https://www.pedrodelima.com/publication/2021-modeling-covid-19-npis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>The Health and Economic Impacts of Nonpharmaceutical Interventions to Address COVID-19 - A Decision Support Tool for State and Local Policymakers</title>
-      <link>https://www.pedronl.com/publication/2020-health-economic-impacts-covid-19-npis/</link>
+      <link>https://www.pedrodelima.com/publication/2020-health-economic-impacts-covid-19-npis/</link>
       <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.pedronl.com/publication/2020-health-economic-impacts-covid-19-npis/</guid>
+      <guid>https://www.pedrodelima.com/publication/2020-health-economic-impacts-covid-19-npis/</guid>
       <description></description>
     </item>
     

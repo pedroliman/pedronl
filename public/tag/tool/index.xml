@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tool | Pedro Nascimento de Lima</title>
+    <link>https://www.pedrodelima.com/tag/tool/</link>
+      <atom:link href="https://www.pedrodelima.com/tag/tool/index.xml" rel="self" type="application/rss+xml" />
+    <description>Tool</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Built with R, hosted at Netlify.</copyright><lastBuildDate>Fri, 21 May 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://www.pedrodelima.com/media/pedro-nascimento-de-lima.jpg</url>
+      <title>Tool</title>
+      <link>https://www.pedrodelima.com/tag/tool/</link>
+    </image>
+    
+    <item>
+      <title>Allegheny County COVID-19 Tool</title>
+      <link>https://www.pedrodelima.com/project/allegheny-county-covid-19/</link>
+      <pubDate>Fri, 21 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://www.pedrodelima.com/project/allegheny-county-covid-19/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>COVID-19 Decision Support Tool</title>
+      <link>https://www.pedrodelima.com/project/covid-19-state-tool/</link>
+      <pubDate>Mon, 26 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>https://www.pedrodelima.com/project/covid-19-state-tool/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The &#34;Diet Tool&#34;</title>
+      <link>https://www.pedrodelima.com/project/diet-scenarios/</link>
+      <pubDate>Sun, 27 Mar 2016 00:00:00 +0000</pubDate>
+      <guid>https://www.pedrodelima.com/project/diet-scenarios/</guid>
+      <description>&lt;p&gt;This online tool shows the effect that improving diet quality in the United States could have on health and economic outcomes, such as the prevalence of diet-related illness, health care spending, and labor force participation, over a 30-year period. The user can explore the effects of a dietary improvement on several outcomes, across different metrics and population sub-groups.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

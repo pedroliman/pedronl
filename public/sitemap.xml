@@ -2,276 +2,325 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.pedronl.com/courses/example/example1/</loc>
+    <loc>https://www.pedrodelima.com/courses/example/example1/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/courses/example/</loc>
+    <loc>https://www.pedrodelima.com/courses/example/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/courses/example/example2/</loc>
+    <loc>https://www.pedrodelima.com/courses/example/example2/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/publication-type/0/</loc>
+    <loc>https://www.pedrodelima.com/authors/</loc>
+    <lastmod>2022-03-28T10:15:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/</loc>
+    <lastmod>2022-03-28T10:15:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/author/pedro-nascimento-de-lima/</loc>
+    <lastmod>2022-03-28T10:15:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/talk/2021-appam/</loc>
+    <lastmod>2022-03-28T10:15:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/talk/</loc>
+    <lastmod>2022-03-28T10:15:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/project/crcrdm/</loc>
+    <lastmod>2022-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/project/</loc>
+    <lastmod>2022-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/tag/r-package/</loc>
+    <lastmod>2022-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/tags/</loc>
+    <lastmod>2022-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/publication-type/0/</loc>
+    <lastmod>2022-01-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/author/carolyn-m.-rutter/</loc>
+    <lastmod>2022-01-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/author/jeffrey-k.-lee/</loc>
+    <lastmod>2022-01-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/author/jonathan-ozik/</loc>
+    <lastmod>2022-01-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/publication_types/</loc>
+    <lastmod>2022-01-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/publication/</loc>
+    <lastmod>2022-01-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/tag/simulation-modeling/</loc>
+    <lastmod>2022-01-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/publication/2022-too-good-to-be-true-cancer/</loc>
+    <lastmod>2022-01-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/talk/2021-dmdu-webinar/</loc>
+    <lastmod>2021-11-29T09:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/author/katriona-shea/</loc>
+    <lastmod>2021-11-29T09:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/author/matthew-biggerstaff/</loc>
+    <lastmod>2021-11-29T09:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/author/mike-runge/</loc>
+    <lastmod>2021-11-29T09:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/author/rebecca-borchering/</loc>
+    <lastmod>2021-11-29T09:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/author/robert-lempert/</loc>
+    <lastmod>2021-11-29T09:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/author/raffaele-vardavas/</loc>
+    <lastmod>2021-11-19T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/talk/2021-midas-webinar/</loc>
+    <lastmod>2021-11-19T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/tag/covid-19/</loc>
+    <lastmod>2021-11-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/author/sarah-a-nowak/</loc>
+    <lastmod>2021-11-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/publication/2021-mitigation-vs-suppression/</loc>
+    <lastmod>2021-11-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/talk/2021-cisnet-junior-investigators/</loc>
+    <lastmod>2021-11-11T08:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/author/jeanne-ringel/</loc>
+    <lastmod>2021-10-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/author/lawrence-baker/</loc>
+    <lastmod>2021-10-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/author/nicholson-collier/</loc>
+    <lastmod>2021-10-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/publication/2021-reopening-california-robust-decision-making/</loc>
+    <lastmod>2021-10-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/tag/robust-decision-making/</loc>
+    <lastmod>2021-10-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/author/andrew-m.-parker/</loc>
+    <lastmod>2021-09-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/publication/2021-modeling-infectious-behaviors/</loc>
+    <lastmod>2021-09-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/author/paul-k.-davis/</loc>
+    <lastmod>2021-09-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/project/allegheny-county-covid-19/</loc>
+    <lastmod>2021-05-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/tag/tool/</loc>
+    <lastmod>2021-05-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/talk/2021-midas-conference/</loc>
+    <lastmod>2021-05-12T14:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/publication/2021-reopening-under-uncertainty-stress-testing-california-covid-19-exit-strategy/</loc>
+    <lastmod>2021-05-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/publication/2021-will-the-us-declare-freedom-from-covid-19-too-soon/</loc>
+    <lastmod>2021-05-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/tag/code/</loc>
+    <lastmod>2021-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/project/reopening-california/</loc>
+    <lastmod>2021-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/project/covid-19-state-tool/</loc>
     <lastmod>2021-04-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/authors/</loc>
+    <loc>https://www.pedrodelima.com/tag/visualization/</loc>
     <lastmod>2021-04-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/author/carolyn-m.-rutter/</loc>
-    <lastmod>2021-04-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.pedronl.com/tag/covid-19/</loc>
-    <lastmod>2021-04-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.pedronl.com/author/jeanne-ringel/</loc>
-    <lastmod>2021-04-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.pedronl.com/author/jonathan-ozik/</loc>
-    <lastmod>2021-04-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.pedronl.com/author/lawrence-baker/</loc>
-    <lastmod>2021-04-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.pedronl.com/author/nicholson-collier/</loc>
-    <lastmod>2021-04-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.pedronl.com/</loc>
-    <lastmod>2021-04-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.pedronl.com/author/pedro-nascimento-de-lima/</loc>
-    <lastmod>2021-04-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.pedronl.com/publication_types/</loc>
-    <lastmod>2021-04-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.pedronl.com/publication/</loc>
-    <lastmod>2021-04-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.pedronl.com/author/raffaele-vardavas/</loc>
-    <lastmod>2021-04-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.pedronl.com/publication/2021-reopening-california-robust-decision-making/</loc>
-    <lastmod>2021-04-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.pedronl.com/author/robert-lempert/</loc>
-    <lastmod>2021-04-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.pedronl.com/tag/robust-decision-making/</loc>
-    <lastmod>2021-04-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.pedronl.com/tag/simulation-modeling/</loc>
-    <lastmod>2021-04-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.pedronl.com/tags/</loc>
-    <lastmod>2021-04-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.pedronl.com/publication/2021-modeling-covid-19-npis/</loc>
+    <loc>https://www.pedrodelima.com/publication/2021-modeling-covid-19-npis/</loc>
     <lastmod>2021-04-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/author/carlos-calvo-hernandez/</loc>
+    <loc>https://www.pedrodelima.com/author/carlos-calvo-hernandez/</loc>
     <lastmod>2020-11-10T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/author/david-groves/</loc>
+    <loc>https://www.pedrodelima.com/author/david-groves/</loc>
     <lastmod>2020-11-10T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/author/raffaelle-vardavas/</loc>
+    <loc>https://www.pedrodelima.com/author/raffaelle-vardavas/</loc>
     <lastmod>2020-11-10T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/talk/</loc>
+    <loc>https://www.pedrodelima.com/talk/2020-dmdu-meeting/</loc>
     <lastmod>2020-11-10T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/talk/2020-dmdu-meeting/</loc>
-    <lastmod>2020-11-10T13:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.pedronl.com/talk/2020-informs/</loc>
+    <loc>https://www.pedrodelima.com/talk/2020-informs/</loc>
     <lastmod>2020-11-07T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/talk/2020-dmdu-webinar/</loc>
+    <loc>https://www.pedrodelima.com/talk/2020-dmdu-webinar/</loc>
     <lastmod>2020-06-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/author/aaron-strong/</loc>
+    <loc>https://www.pedrodelima.com/author/aaron-strong/</loc>
     <lastmod>2020-05-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/author/jeanne-s.-ringel/</loc>
+    <loc>https://www.pedrodelima.com/author/jeanne-s.-ringel/</loc>
     <lastmod>2020-05-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/author/jennifer-bouey/</loc>
+    <loc>https://www.pedrodelima.com/author/jennifer-bouey/</loc>
     <lastmod>2020-05-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/author/jonathan-william-welburn/</loc>
+    <loc>https://www.pedrodelima.com/author/jonathan-william-welburn/</loc>
     <lastmod>2020-05-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/author/keren-zhu/</loc>
+    <loc>https://www.pedrodelima.com/author/keren-zhu/</loc>
     <lastmod>2020-05-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/author/lynn-hu/</loc>
+    <loc>https://www.pedrodelima.com/author/lynn-hu/</loc>
     <lastmod>2020-05-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/author/michelle-priest/</loc>
+    <loc>https://www.pedrodelima.com/author/michelle-priest/</loc>
     <lastmod>2020-05-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/publication/2020-health-economic-impacts-covid-19-npis/</loc>
+    <loc>https://www.pedrodelima.com/publication/2020-health-economic-impacts-covid-19-npis/</loc>
     <lastmod>2020-05-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/tag/arena/</loc>
+    <loc>https://www.pedrodelima.com/project/ai-health/</loc>
+    <lastmod>2020-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/project/gerbil/</loc>
+    <lastmod>2020-04-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.pedrodelima.com/tag/arena/</loc>
     <lastmod>2019-09-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/tag/arena-simualtion/</loc>
+    <loc>https://www.pedrodelima.com/tag/arena-simualtion/</loc>
     <lastmod>2019-09-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/categories/</loc>
+    <loc>https://www.pedrodelima.com/categories/</loc>
     <lastmod>2019-09-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/tag/discrete-event-simulation/</loc>
+    <loc>https://www.pedrodelima.com/tag/discrete-event-simulation/</loc>
     <lastmod>2019-09-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/post/</loc>
+    <loc>https://www.pedrodelima.com/post/</loc>
     <lastmod>2019-09-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/category/slides/</loc>
+    <loc>https://www.pedrodelima.com/category/slides/</loc>
     <lastmod>2019-09-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/post/slides-graduacao-simulacao-sistemas-de-informacaosistemas-produtivos/</loc>
+    <loc>https://www.pedrodelima.com/post/slides-graduacao-simulacao-sistemas-de-informacaosistemas-produtivos/</loc>
     <lastmod>2019-09-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/courses/</loc>
+    <loc>https://www.pedrodelima.com/courses/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/tag/arena2r/</loc>
+    <loc>https://www.pedrodelima.com/tag/arena2r/</loc>
     <lastmod>2019-04-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/tag/r/</loc>
+    <loc>https://www.pedrodelima.com/tag/r/</loc>
     <lastmod>2019-04-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/category/r/</loc>
+    <loc>https://www.pedrodelima.com/category/r/</loc>
     <lastmod>2019-04-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/category/r-blogs/</loc>
+    <loc>https://www.pedrodelima.com/category/r-blogs/</loc>
     <lastmod>2019-04-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/tag/simulation/</loc>
+    <loc>https://www.pedrodelima.com/tag/simulation/</loc>
     <lastmod>2019-04-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/</loc>
+    <loc>https://www.pedrodelima.com/post/teaching-factory-physics-flow-benchmarking-r-many-objective-visuals/</loc>
     <lastmod>2019-04-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/post/des-metamodeling-splines-r-arena/</loc>
+    <loc>https://www.pedrodelima.com/post/des-metamodeling-splines-r-arena/</loc>
     <lastmod>2019-04-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/tag/metamodeling/</loc>
+    <loc>https://www.pedrodelima.com/tag/metamodeling/</loc>
     <lastmod>2019-04-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/publication-type/3/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.pedronl.com/publication-not-used/preprint/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.pedronl.com/publication-not-used/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.pedronl.com/tag/source-themes/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.pedronl.com/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/</loc>
+    <loc>https://www.pedrodelima.com/post/making-sense-of-models-with-metamodels-low-order-polynomialss-with-arena-and-r/</loc>
     <lastmod>2019-03-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/slides/</loc>
+    <loc>https://www.pedrodelima.com/slides/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/slides/example/</loc>
+    <loc>https://www.pedrodelima.com/slides/example/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/publication-type/2/</loc>
-    <lastmod>2018-12-01T00:00:00-08:00</lastmod>
+    <loc>https://www.pedrodelima.com/publication-type/2/</loc>
+    <lastmod>2018-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/author/a-dresch/</loc>
-    <lastmod>2018-12-01T00:00:00-08:00</lastmod>
+    <loc>https://www.pedrodelima.com/author/a-dresch/</loc>
+    <lastmod>2018-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/author/dc-collato/</loc>
-    <lastmod>2018-12-01T00:00:00-08:00</lastmod>
+    <loc>https://www.pedrodelima.com/author/dc-collato/</loc>
+    <lastmod>2018-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/publication/2018-socioeconomic-factors/</loc>
-    <lastmod>2018-12-01T00:00:00-08:00</lastmod>
+    <loc>https://www.pedrodelima.com/publication/2018-socioeconomic-factors/</loc>
+    <lastmod>2018-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/author/dp-lacerda/</loc>
-    <lastmod>2018-12-01T00:00:00-08:00</lastmod>
+    <loc>https://www.pedrodelima.com/author/dp-lacerda/</loc>
+    <lastmod>2018-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/author/dr-veit/</loc>
-    <lastmod>2018-12-01T00:00:00-08:00</lastmod>
+    <loc>https://www.pedrodelima.com/author/dr-veit/</loc>
+    <lastmod>2018-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/publication/2018-smes-lean-tools/inducing-brazilian-smes-productivity-lean-manufacturing/</loc>
-    <lastmod>2018-12-01T00:00:00-08:00</lastmod>
+    <loc>https://www.pedrodelima.com/publication/2018-smes-lean-tools/inducing-brazilian-smes-productivity-lean-manufacturing/</loc>
+    <lastmod>2018-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/author/pn-lima/</loc>
-    <lastmod>2018-12-01T00:00:00-08:00</lastmod>
+    <loc>https://www.pedrodelima.com/author/pn-lima/</loc>
+    <lastmod>2018-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/category/conference/</loc>
+    <loc>https://www.pedrodelima.com/category/conference/</loc>
     <lastmod>2018-11-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/post/3d-printing-rdm-analysis-2018-dmdu-meeting/</loc>
+    <loc>https://www.pedrodelima.com/post/3d-printing-rdm-analysis-2018-dmdu-meeting/</loc>
     <lastmod>2018-11-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/tag/previsao-de-demanda/</loc>
+    <loc>https://www.pedrodelima.com/tag/previsao-de-demanda/</loc>
     <lastmod>2018-10-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/post/previsao-de-series-temporais-com-o-r/</loc>
+    <loc>https://www.pedrodelima.com/post/previsao-de-series-temporais-com-o-r/</loc>
     <lastmod>2018-10-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/tag/suavizacao-exponencial/</loc>
+    <loc>https://www.pedrodelima.com/tag/series-temporais/</loc>
     <lastmod>2018-10-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/tag/series-temporais/</loc>
+    <loc>https://www.pedrodelima.com/tag/suavizacao-exponencial/</loc>
     <lastmod>2018-10-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/post/arena2r-package-tutorial/</loc>
+    <loc>https://www.pedrodelima.com/post/arena2r-package-tutorial/</loc>
     <lastmod>2018-09-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/tag/r-package/</loc>
-    <lastmod>2018-09-27T00:00:00+00:00</lastmod>
+    <loc>https://www.pedrodelima.com/publication-type/6/</loc>
+    <lastmod>2018-09-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/publication-type/6/</loc>
-    <lastmod>2018-09-01T00:00:00-07:00</lastmod>
+    <loc>https://www.pedrodelima.com/author/lh-rodrigues/</loc>
+    <lastmod>2018-09-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/author/lh-rodrigues/</loc>
-    <lastmod>2018-09-01T00:00:00-07:00</lastmod>
+    <loc>https://www.pedrodelima.com/author/miwm-morandi/</loc>
+    <lastmod>2018-09-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/author/miwm-morandi/</loc>
-    <lastmod>2018-09-01T00:00:00-07:00</lastmod>
+    <loc>https://www.pedrodelima.com/publication/2019-additive-manufacturing-impacts/</loc>
+    <lastmod>2018-09-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/publication/2019-additive-manufacturing-impacts/</loc>
-    <lastmod>2018-09-01T00:00:00-07:00</lastmod>
-  </url><url>
-    <loc>https://www.pedronl.com/post/introducao-ao-r-aprendendo-com-o-moneyball/</loc>
+    <loc>https://www.pedrodelima.com/post/introducao-ao-r-aprendendo-com-o-moneyball/</loc>
     <lastmod>2017-10-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/tag/deep-learning/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+    <loc>https://www.pedrodelima.com/project/diet-scenarios/</loc>
+    <lastmod>2016-03-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.pedronl.com/tag/demo/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.pedronl.com/project/external-project/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.pedronl.com/project/internal-project/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.pedronl.com/project/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.pedronl.com/publication-not-used/journal-article/</loc>
-    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.pedronl.com/author/robert-ford/</loc>
-    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.pedronl.com/publication-type/1/</loc>
-    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.pedronl.com/publication-not-used/conference-paper/</loc>
-    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.pedronl.com/author/%E5%90%B3%E6%81%A9%E9%81%94/</loc>
+    <loc>https://www.pedrodelima.com/project/arena2r/</loc>
+    <lastmod>2016-01-27T00:00:00+00:00</lastmod>
   </url>
 </urlset>

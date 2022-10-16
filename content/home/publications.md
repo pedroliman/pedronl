@@ -8,7 +8,7 @@ active = true  # Activate this widget? true/false
 weight = 30  # Order that this section will appear.
 
 title = "Publications"
-subtitle = "My recent research leverages modeling and Decision Under Deep Uncertainty methods to inform pressing health policy decision-analytic problems."
+subtitle = "My research uses modeling to inform policy decisions."
 
 [content]
   # Page type to display. E.g. post, talk, or publication.

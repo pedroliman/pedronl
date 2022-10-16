@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code | Pedro Nascimento de Lima</title>
+    <link>https://www.pedrodelima.com/tag/code/</link>
+      <atom:link href="https://www.pedrodelima.com/tag/code/index.xml" rel="self" type="application/rss+xml" />
+    <description>Code</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Built with R, hosted at Netlify.</copyright><lastBuildDate>Tue, 27 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://www.pedrodelima.com/media/pedro-nascimento-de-lima.jpg</url>
+      <title>Code</title>
+      <link>https://www.pedrodelima.com/tag/code/</link>
+    </image>
+    
+    <item>
+      <title>Reopening California Code Repository</title>
+      <link>https://www.pedrodelima.com/project/reopening-california/</link>
+      <pubDate>Tue, 27 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>https://www.pedrodelima.com/project/reopening-california/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
