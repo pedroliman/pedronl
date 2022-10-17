@@ -66,7 +66,7 @@ user_groups:
 - Visitors
 ---
 
-Welcome to my personal website! I am an incoming <u>[Associate Engineer](https://www.rand.org/about/people/l/lima_pedro_nascimento_de.html)</u> at <u>[RAND](https://www.rand.org)</u>, a research organization dedicated to improving policy and decisionmaking through research and analysis. My <u>[research](#publications)</u> uses modeling to inform policy decisions. Here you will find links to my <u>[recent publications](#publications)</u>, <u>[tools and software](#projects)</u> I helped to build and more. 
+Welcome to my personal website! I am an <u>[Associate Engineer](https://www.rand.org/about/people/l/lima_pedro_nascimento_de.html)</u> at <u>[RAND](https://www.rand.org)</u>, a research organization dedicated to improving policy and decisionmaking through research and analysis. My <u>[research](#publications)</u> uses modeling to inform policy decisions. Here you will find links to my <u>[recent publications](#publications)</u>, <u>[tools and software](#projects)</u> I helped to build and more. 
 
 <u>[Follow me on Twitter](https://twitter.com/PedroNdeLima)</u> and connect on <u>[LinkedIn](https://www.linkedin.com/in/pedro-nascimento-de-lima)</u> to get updates from my research. I'm always interested in meeting people with similar interests, so don't hesitate <u>[reach out](#contact)</u> if you would like to chat!
 
